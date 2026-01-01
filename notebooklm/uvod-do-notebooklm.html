@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>NotebookLM: Kompletní přehled funkcí | AI Educator</title>
+    <meta name="description"
+        content="Detailní průvodce funkcemi NotebookLM: Audio, Video, Mind mapy, Flashcards, Kvízy a další nástroje pro moderní výuku.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap&subset=latin,latin-ext"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css?v=3">
+
+    <style>
+        .article-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: var(--spacing-xl);
+            padding-top: var(--spacing-3xl);
+        }
+
+        /* Keep main reading text centered and readable */
+        .article-header,
+        .article-content>p,
+        .article-content>h2,
+        .article-content>h3,
+        .article-content>.tip-box {
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Allow main image and grid to be wider */
+        .article-content>.article-image.float-right {
+            margin-right: calc((100% - 800px) / 2);
+            /* Align with text */
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .article-meta {
+            color: #60a5fa;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            display: block;
+            font-weight: 600;
+        }
+
+        .article-title {
+            font-size: clamp(2rem, 3.5vw, 3rem);
+            margin-bottom: 1.5rem;
+            line-height: 1.25;
+            color: var(--text-primary);
+        }
+
+        .article-content {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .article-content h2 {
+            color: var(--text-primary);
+            font-size: 1.75rem;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 0.5rem;
+        }
+
+        .article-content h3 {
+            color: #93c5fd;
+            font-size: 1.4rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .tool-icon {
+            font-size: 1.5rem;
+            background: rgba(96, 165, 250, 0.1);
+            padding: 0.5rem;
+            border-radius: 12px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+        }
+
+        /* Grid layout for features */
+        .features-grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .feature-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            transition: transform 0.2s ease;
+        }
+
+        .feature-box:hover {
+            border-color: rgba(96, 165, 250, 0.3);
+            background: rgba(255, 255, 255, 0.04);
+            transform: translateY(-2px);
+        }
+
+        .use-case-box {
+            background: rgba(16, 185, 129, 0.05);
+            /* Zelenkavé pozadí pro use-case */
+            border-left: 3px solid #10b981;
+            padding: 1rem 1.5rem;
+            margin-top: 1rem;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+        }
+
+        .use-case-title {
+            font-weight: 700;
+            color: #34d399;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .article-image {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-xl);
+            margin: 2rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        @media (min-width: 768px) {
+            .article-image.float-right {
+                float: right;
+                width: 40%;
+                margin: 0.5rem 0 1.5rem 2rem;
+            }
+
+            .feature-box.with-image {
+                display: grid;
+                grid-template-columns: 1.2fr 0.8fr;
+                /* Text wider than image */
+                gap: 3rem;
+                align-items: center;
+            }
+
+            .feature-box.with-image img {
+                margin-top: 0 !important;
+                height: 100%;
+                object-fit: cover;
+                max-height: 300px;
+                /* Contain height */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigace -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">✨ AI Educator</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Domů</a></li>
+                <li><a href="../index.html#explore" class="nav-link">Prozkoumejte AI</a></li>
+                <li><a href="../apps.html" class="nav-link">Nástroje</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Obsah článku -->
+    <article class="article-container">
+        <!-- Hlavička článku -->
+        <header class="article-header">
+            <span class="article-meta">Funkce & Náměty</span>
+            <h1 class="article-title">NotebookLM není jen chatbot: Co všechno umí vytvořit?</h1>
+        </header>
+
+        <!-- Tělo článku -->
+        <div class="article-content">
+            <p class="lead" style="font-size: 1.25rem; color: var(--text-primary);">
+                NotebookLM je jako švýcarský nožík pro zpracování dokumentů. Většina uživatelů zná chat, ale pod kapotou
+                se skrývají nástroje, které vám mohou ušetřit hodiny příprav. Podívejme se na 8 klíčových formátů, které
+                můžete vytvořit.
+            </p>
+
+
+
+            <div class="features-grid">
+
+                <!-- 1. Audio Přehled -->
+                <div class="feature-box">
+                    <h3><span class="tool-icon">🎧</span> Audio Přehled (Podcast)</h3>
+                    <p>
+                        Vlajková loď NotebookLM. AI přečte vaše zdroje a vytvoří z nich živou (anglickou) debatu dvou
+                        moderátorů. Dokáží vypíchnout zajímavosti a používají analogie.
+                    </p>
+                    <div class="use-case-box">
+                        <div class="use-case-title">🎓 Využití ve výuce</div>
+                        <p>
+                            <strong>Invertovaná třída:</strong> Pošlete studentům audio jako "podcast" k poslechu před
+                            hodinou. Ve škole pak už jen diskutujete o tom, co slyšeli.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 2. Video Přehled -->
+                <div class="feature-box with-image">
+                    <div class="feature-content">
+                        <h3><span class="tool-icon">📺</span> Video Přehled (YouTube Zdroje)</h3>
+                        <p>
+                            NotebookLM umí "sledovat" videa za vás. Když vložíte odkaz na YouTube, AI analyzuje přepis a
+                            kontext videa. Můžete se pak "bavit" s videem.
+                        </p>
+                        <div class="use-case-box">
+                            <div class="use-case-title">🎓 Využití ve výuce</div>
+                            <p>
+                                <strong>Rychlá kontrola obsahu:</strong> Chcete pustit dokument, ale nemáte čas vidět
+                                celou
+                                hodinu? Nechte AI vypsat nevhodné pasáže nebo klíčové momenty s časovými značkami.
+                            </p>
+                        </div>
+                    </div>
+                    <img src="../assets/notebooklm_inputs_viz.png" alt="Vizualizace multimodálních vstupů"
+                        class="article-image" style="margin-top: 0;">
+                </div>
+
+                <!-- 3. Myšlenková Mapa -->
+                <div class="feature-box with-image">
+                    <div class="feature-content">
+                        <h3><span class="tool-icon">🧠</span> Myšlenková Mapa</h3>
+                        <p>
+                            Ačkoli NotebookLM nekreslí, umí dokonale strukturovat data. Požádejte ho o "hierarchický
+                            seznam
+                            odrážek pro myšlenkovou mapu" nebo přímo o kód pro Mermaid.js.
+                        </p>
+                        <div class="use-case-box">
+                            <div class="use-case-title">🎓 Využití ve výuce</div>
+                            <p>
+                                <strong>Struktura učiva:</strong> Nahrajte kapitolu z učebnice a nechte si vygenerovat
+                                logickou strukturu témat na tabuli. Studenti hned uvidí souvislosti.
+                            </p>
+                        </div>
+                    </div>
+                    <img src="../assets/notebooklm_mindmap_viz.png" alt="Vizualizace myšlenkové mapy"
+                        class="article-image" style="margin-top: 0;">
+                </div>
+
+                <!-- 4. Zprávy (Briefing Doc) -->
+                <div class="feature-box">
+                    <h3><span class="tool-icon">📄</span> Zprávy (Briefing Doc)</h3>
+                    <p>
+                        Jedním kliknutím vytvoříte manažerské shrnutí. Tento dokument obsahuje hlavní teze, klíčové
+                        argumenty a závěry ze všech vašich zdrojů.
+                    </p>
+                    <div class="use-case-box">
+                        <div class="use-case-title">🎓 Využití ve výuce</div>
+                        <p>
+                            <strong>Příprava na poradu:</strong> Máte přečíst 50 stran nové školské legislativy?
+                            Briefing Doc vám dá "výcuc" toho podstatného na jednu stránku.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 5. Výukové Kartičky (Flashcards) -->
+                <div class="feature-box">
+                    <h3><span class="tool-icon">🃏</span> Výukové Kartičky</h3>
+                    <p>
+                        Ideální pro drilování pojmů. AI vygeneruje dvojice "Otázka – Odpověď" na základě definic
+                        nalezených v textu.
+                    </p>
+                    <div class="use-case-box">
+                        <div class="use-case-title">🎓 Využití ve výuce</div>
+                        <p>
+                            <strong>Slovníčky pojmů:</strong> Vytvořte kartičky pro cizí jazyky nebo odbornou
+                            terminologii v biologii. Studenti se mohou zkoušet navzájem.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 6. Kvíz (Quiz) -->
+                <div class="feature-box with-image">
+                    <div class="feature-content">
+                        <h3><span class="tool-icon">❓</span> Kvíz a Testy</h3>
+                        <p>
+                            AI navrhne otázky s výběrem z možností (Multiple Choice) nebo otevřené otázky, a to včetně
+                            správných řešení, která dokáže zdůvodnit citací z textu.
+                        </p>
+                        <div class="use-case-box">
+                            <div class="use-case-title">🎓 Využití ve výuce</div>
+                            <p>
+                                <strong>Bleskovky:</strong> 5 minut před koncem hodiny vygenerujte 3 kontrolní otázky.
+                                Okamžitě zjistíte, zda studenti dávali pozor.
+                            </p>
+                        </div>
+                    </div>
+                    <img src="../assets/notebooklm_study_tools.png" alt="Ukázka kvízu a kartiček" class="article-image"
+                        style="margin-top: 0;">
+                </div>
+
+                <!-- 7. Infografika (Data) -->
+                <div class="feature-box">
+                    <h3><span class="tool-icon">📊</span> Podklady pro Infografiku</h3>
+                    <p>
+                        Nahrajte tabulky nebo statistické reporty. NotebookLM vyhledá trendy a anomálie a popíše je tak,
+                        abyste je mohli graficky zpracovat.
+                    </p>
+                    <div class="use-case-box">
+                        <div class="use-case-title">🎓 Využití ve výuce</div>
+                        <p>
+                            <strong>Práce s daty:</strong> V dějepisu nebo zeměpisu nechte žáky porovnat data z různých
+                            zemí v čase. AI jim pomůže "vytáhnout" čísla z textu.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 8. Prezentace -->
+                <div class="feature-box">
+                    <h3><span class="tool-icon">🖥️</span> Osnova Prezentace</h3>
+                    <p>
+                        Potřebujete připravit slidy? Zadejte prompt "Vytvoř osnovu pro 10 slidů powerpointu". Dostanete
+                        nadpisy, body i poznámky pro řečníka.
+                    </p>
+                    <div class="use-case-box">
+                        <div class="use-case-title">🎓 Využití ve výuce</div>
+                        <p>
+                            <strong>Studentské referáty:</strong> Naučte studenty, že AI za ně prezentaci neudělá, ale
+                            pomůže jim strukturovat myšlenky, aby nečetli jen text ze slidu.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="tip-box"
+                style="margin-top: 3rem; background: rgba(99, 102, 241, 0.1); padding: 1.5rem; border-radius: 12px; border: 1px dashed #6366f1; text-align: center;">
+                <strong>💡 Tip pro pokročilé:</strong><br>
+                Zkuste kombinovat! Nechte si vygenerovat <em>Briefing Doc</em> jako podklad, z něj <em>Osnovu
+                    prezentace</em> pro výklad a nakonec <em>Kvíz</em> pro ověření znalostí. Vše z jednoho zdroje během
+                10 minut.
+            </div>
+
+        </div>
+
+        <!-- Odkazy -->
+        <div class="back-nav-container">
+            <a href="index.html" class="btn-back">← Zpět na NotebookLM</a>
+            <a href="../teachers.html" class="back-link">Zpět do AI Toolkit</a>
+        </div>
+    </article>
+
+    <!-- Patička -->
+    <footer>
+        <p>&copy; 2025 AI Educator. Vzdělávání s pomocí umělé inteligence.</p>
+    </footer>
+
+</body>
+
+</html>

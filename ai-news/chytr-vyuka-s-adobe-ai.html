@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chytrá výuka s Adobe AI a ChatGPT | AI Toolkit</title>
+    <meta name="description"
+        content="Jak propojení Photoshopu, Expressu a Acrobatu zjednoduší učiteli práci. Praktický průvodce využitím Adobe AI ve výuce.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .article-meta {
+            color: var(--accent-cyan);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .article-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .article-content h2 {
+            color: var(--text-primary);
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            clear: both;
+        }
+
+        .article-content h3 {
+            color: #f59e0b;
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+        }
+
+        .article-image {
+            width: 300px;
+            float: left;
+            margin: 0.5rem 2rem 1.5rem 0;
+            border-radius: var(--radius-xl);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .article-image.right {
+            float: right;
+            margin: 0.5rem 0 1.5rem 2rem;
+        }
+
+        /* Clearfix for floated element */
+        .article-content::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        @media (max-width: 768px) {
+
+            .article-image,
+            .article-image.right {
+                float: none;
+                width: 100%;
+                margin: 2rem 0;
+            }
+        }
+
+        .highlight-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .highlight-box h4 {
+            color: var(--accent-cyan);
+            margin-top: 0;
+        }
+
+        .article-content ul {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .article-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .prompt-box {
+            background: #1e1e1e;
+            border-left: 4px solid var(--accent-cyan);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            font-family: inherit;
+            color: #e5e5e5;
+            border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+        }
+
+        .back-nav-container {
+            margin-top: 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigace -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">✨ AI Educator</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Domů</a></li>
+                <li><a href="../teachers.html" class="nav-link active">AI Toolkit</a></li>
+                <li><a href="../index.html#explore" class="nav-link">Prozkoumejte AI</a></li>
+                <li><a href="../apps.html" class="nav-link">Nástroje</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Obsah článku -->
+    <article class="article-container">
+        <header class="article-header">
+            <span class="article-meta">AI Toolkit / Prosinec 2025</span>
+            <h1>Chytrá výuka s Adobe AI a ChatGPT</h1>
+            <p class="subtitle" style="color: var(--text-secondary); margin-top: 1rem;">Jak propojení Photoshopu,
+                Expressu a Acrobatu zjednoduší učiteli práci</p>
+        </header>
+
+        <div class="article-content">
+            <img src="../assets/adobe-ai-hero.png" alt="Adobe AI ve výuce" class="article-image">
+
+            <p>
+                Adobe dnes používá generativní AI Firefly a zároveň integruje chatový způsob práce přímo do svých
+                nástrojů. Výsledek: nepřepínáš pořád mezi aplikacemi, popisuješ, co chceš běžným jazykem, a AI pracuje
+                uvnitř nástroje, ne bokem.
+            </p>
+            <p>
+                <strong>Důležité:</strong> Nepřipojuješ si ChatGPT účet k Adobe. Adobe si udělalo vlastní „ChatGPT-like“
+                rozhraní. Pro učitele to znamená méně technického balastu a víc času na obsah.
+            </p>
+
+            <h2>2. Adobe Express + AI = učitelský zlatý důl</h2>
+            <p>
+                Pokud bys měla používat jen jeden nástroj, je to <strong>Express</strong>. Photoshop je silný, Acrobat
+                užitečný, ale Express je pedagogicky nejvděčnější.
+            </p>
+
+            <img src="../assets/adobe-express-class.png" alt="Adobe Express Generace" class="article-image right">
+
+            <div class="highlight-box">
+                <h4>Co umí zdarma:</h4>
+                <ul>
+                    <li>generovat obrázky z textu</li>
+                    <li>upravovat texty (zkrátit, přepsat, zjednodušit)</li>
+                    <li>tvořit plakáty, pracovní listy, prezentace</li>
+                    <li>rychle měnit styl pro žáky vs. kolegy</li>
+                </ul>
+            </div>
+
+            <p><strong>Jak to funguje v praxi:</strong> Nepíšeš „prompt“. Píšeš přání:</p>
+            <div class="prompt-box">
+                Vytvoř jednoduchý pracovní list pro střední školu na téma bezpečnost na internetu. Použij přehledný
+                styl, krátké bloky textu a ikony.
+            </div>
+            <p>
+                AI navrhne rozložení, vytvoří text a doplní grafiku. Učitel pak jen škrtá a přizpůsobuje třídě. Ideální
+                pro plakáty do třídy, titulní strany a infografiky.
+            </p>
+
+            <h2>3. Adobe Photoshop + AI: ano, ale s rozumem</h2>
+            <img src="../assets/photoshop-ai-edit.png" alt="Photoshop Generative Fill" class="article-image">
+            <p>
+                Photoshop je pořád profesionální nástroj. AI ho nedělá jednoduchým, jen méně bolestivým.
+            </p>
+            <ul>
+                <li><strong>Generativní výplně:</strong> doplň pozadí, odstraň objekt (např. rušivé prvky z fotky k
+                    prezentaci).</li>
+                <li><strong>Změna stylu:</strong> sjednoť styl obrázků v materiálech.</li>
+            </ul>
+            <p>
+                <em>Kdy to nedává smysl:</em> Pokud chceš jen rychlý obrázek, Express je lepší. Photoshop + AI je
+                zesilovač dovedností, ne náhrada.
+            </p>
+
+            <h2>4. Adobe Acrobat + AI: konečně smysluplná práce s PDF</h2>
+            <img src="../assets/acrobat-ai-summary.png" alt="Acrobat AI Analýza" class="article-image right">
+            <p>
+                Tady Adobe udělalo učitelům fakt službu. AI v Acrobatu umí shrnout dlouhé PDF, vytáhnout klíčové
+                informace nebo převést dokument na otázky.
+            </p>
+            <p><strong>Praktický scénář:</strong> Máš metodický dokument nebo RVP. Místo čtení 20 stran zadej:</p>
+            <div class="prompt-box">
+                Shrň tento dokument pro učitele SŠ do 10 bodů. Zvýrazni, co je podstatné pro výuku.
+            </div>
+            <p>
+                Tohle není lenost. To je efektivní práce s informacemi.
+            </p>
+
+            <h2>5. Jak to celé nahradí část práce s ChatGPT</h2>
+            <p>
+                <strong>Ideální workflow učitele:</strong>
+            </p>
+            <ul>
+                <li><strong>ChatGPT</strong> → obsah, struktura, otázky (lepší na didaktiku)</li>
+                <li><strong>Adobe Express</strong> → vizuální zpracování (lepší na formát)</li>
+                <li><strong>Acrobat</strong> → práce s PDF, zdroje, shrnutí</li>
+            </ul>
+
+            <h2>6. Časté mýty mezi učiteli</h2>
+            <div class="highlight-box">
+                <ul>
+                    <li>❌ „Je to složité“ → Express není složitější než PowerPoint</li>
+                    <li>❌ „AI za mě všechno udělá“ → Ne. Udělá první verzi. A to je správně.</li>
+                    <li>❌ „Žáci to pak nebudou umět sami“ → Stejný argument se říkal o kalkulačce.</li>
+                </ul>
+            </div>
+
+            <h2>Závěrečná poznámka</h2>
+            <p>
+                Adobe + AI není revoluce ve vzdělávání. Je to evoluce učitelské práce: méně mechaniky, víc myšlení. A
+                přesně tam má učitel zůstat.
+            </p>
+
+        </div>
+
+        <div class="back-nav-container">
+            <a href="../teachers.html" class="btn-back">← Zpět do AI Toolkit</a>
+            <a href="../index.html" class="back-link">Zpět na domovskou stránku</a>
+        </div>
+    </article>
+
+    <footer>
+        <p>&copy; 2025 AI Educator. Vzdělávání s pomocí umělé inteligence.</p>
+    </footer>
+</body>
+
+</html>

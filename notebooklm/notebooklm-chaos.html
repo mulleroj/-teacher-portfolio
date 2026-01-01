@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Konec administrativního chaosu | NotebookLM</title>
+    <meta name="description"
+        content="Jak využít NotebookLM pro zvládnutí školní administrativy. ŠVP, směrnice a zápisy z porad pod kontrolou AI.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css?v=3">
+
+    <style>
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .article-meta {
+            color: var(--accent-cyan);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .article-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .article-content h2 {
+            color: var(--text-primary);
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .article-content h3 {
+            color: var(--text-primary);
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .chaos-scenario {
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 4px solid var(--accent-pink);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+        }
+
+        .solution-box {
+            background: rgba(16, 185, 129, 0.05);
+            /* Green tint */
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            padding: 1.5rem;
+            border-radius: var(--radius-lg);
+            margin-top: 1rem;
+        }
+
+        .prompt-example {
+            font-family: monospace;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1rem;
+            border-radius: var(--radius-md);
+            color: #fbbf24;
+            /* Amber */
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigace -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">✨ AI Educator</a>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+                ☰
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="../index.html" class="nav-link">Domů</a></li>
+                <li><a href="../index.html#explore" class="nav-link">Prozkoumejte AI</a></li>
+                <li><a href="../apps.html" class="nav-link">Nástroje</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Obsah článku -->
+    <article class="article-container">
+        <!-- Hlavička článku -->
+        <header class="article-header">
+            <span class="article-meta">NotebookLM / Prosinec 2025</span>
+            <h1>Konec administrativního chaosu</h1>
+            <p class="lead lead-text">
+                ŠVP, směrnice, zápisy z porad, grantové žádosti... Papírování zabírá učitelům až 30 % času. NotebookLM
+                to může změnit.
+            </p>
+        </header>
+
+        <!-- Tělo článku -->
+        <div class="article-content">
+            <p>
+                Každý učitel to zná. Hledáte ve školním vzdělávacím programu (ŠVP) konkrétní výstup, snažíte se
+                vzpomenout, co se řešilo na pedagogické radě v září, nebo potřebujete narychlo sestavit zprávu z
+                projektu.
+            </p>
+            <p>
+                Místo prohledávání desítek PDF souborů si můžete vytvořit <strong>asistenta pro administrativu</strong>.
+                Zde jsou 3 scénáře, jak na to.
+            </p>
+
+            <!-- Scénář 1 -->
+            <h2>1. Strážce ŠVP a Směrnic</h2>
+            <div class="chaos-scenario">
+                <strong>🚨 Situace:</strong> Rodič si stěžuje na hodnocení. Potřebujete rychle najít přesné znění
+                klasifikačního řádu a soulad s ŠVP.
+            </div>
+
+            <div class="solution-box">
+                <h3>✅ Řešení: Zápisník "Legislativa školy"</h3>
+                <p>Nahrajte do NotebookLM:</p>
+                <ul class="list-tight">
+                    <li>Školní vzdělávací program (ŠVP)</li>
+                    <li>Klasifikační řád</li>
+                    <li>Školní řád</li>
+                </ul>
+                <p><strong>Prompt:</strong></p>
+                <div class="prompt-example">
+                    "Jaká jsou přesná pravidla pro komisionální přezkoušení v případě nesouhlasu s klasifikací podle
+                    našich dokumentů? Vypiš i příslušné paragrafy."
+                </div>
+            </div>
+
+            <!-- Scénář 2 -->
+            <h2>2. Archivář Porad</h2>
+            <div class="chaos-scenario">
+                <strong>🚨 Situace:</strong> "Nevíš, kdo měl na starosti ten Den Země? Řešili jsme to v listopadu, nebo
+                už v říjnu?"
+            </div>
+
+            <div class="solution-box">
+                <h3>✅ Řešení: Zápisník "Porady 2024/25"</h3>
+                <p>Nahrajte do NotebookLM zápisy z porad (Word/PDF).</p>
+                <p><strong>Prompt:</strong></p>
+                <div class="prompt-example">
+                    "Vytvoř časovou osu úkolů týkajících se Dne Země. Kdo je za co zodpovědný a jaké jsou termíny?"
+                </div>
+            </div>
+
+            <!-- Scénář 3 -->
+            <h2>3. Grantový Specialista</h2>
+            <div class="chaos-scenario">
+                <strong>🚨 Situace:</strong> Píšete zprávu o projektu. Potřebujete z textu projektu vytáhnout cíle a
+                porovnat je s vašimi poznámkami o realizaci.
+            </div>
+
+            <div class="solution-box">
+                <h3>✅ Řešení: Zápisník "Projekt XY"</h3>
+                <p>Nahrajte původní žádost o grant a vaše průběžné poznámky/fotodokumentaci.</p>
+                <p><strong>Prompt:</strong></p>
+                <div class="prompt-example">
+                    "Napiš návrh závěrečné zprávy. Porovnej původní cíle z dokumentu 'Žádost' s realizovanými aktivitami
+                    z 'Poznámky'. Vyzdvihni splněné indikátory."
+                </div>
+            </div>
+
+            <h2 class="mt-3rem">Jak začít?</h2>
+            <p>
+                Vytvořte si v NotebookLM nový zápisník s názvem <strong>"Administrativa"</strong>. Postupně do něj
+                nahrávejte klíčové dokumenty, které ve škole používáte.
+            </p>
+            <p>
+                Až se příště někdo zeptá "Kde je to napsané?", budete mít odpověď během vteřiny.
+            </p>
+
+        </div>
+
+        <!-- Odkaz zpět -->
+        <div class="back-button-container">
+            <a href="index.html" class="btn-back">← Zpět do NotebookLM</a>
+            <a href="../index.html" class="btn-back ml-2">← Zpět na úvod</a>
+        </div>
+    </article>
+
+    <!-- Patička -->
+    <footer>
+        <p>&copy; 2025 AI Educator. Vzdělávání s pomocí umělé inteligence.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

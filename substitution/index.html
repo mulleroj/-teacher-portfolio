@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suplovací Agent | Rychlé Aktivity</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background-gradient"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">✨ AI Educator</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Domů</a></li>
+                <li><a href="../index.html#explore" class="nav-link">Prozkoumejte AI</a></li>
+                <li><a href="../apps.html" class="nav-link">Nástroje</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="back-nav-container">
+        <a href="../apps.html" class="back-link">← Zpět na nástroje</a>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hub-hero">
+        <h1>✨ Suplovací Agent</h1>
+        <p class="hero-subtitle">Generátor rychlých aktivit pro učitele</p>
+    </div>
+
+    <main class="container">
+
+        <section class="card input-section">
+            <div class="form-group">
+                <label for="subject">Předmět</label>
+                <input type="text" id="subject" placeholder="např. Dějepis, Matematika, Angličtina" autocomplete="off">
+            </div>
+
+            <div class="form-group">
+                <label for="topic">Téma</label>
+                <input type="text" id="topic" placeholder="např. Druhá světová válka, Zlomky" autocomplete="off">
+            </div>
+
+            <div class="form-group">
+                <label>Časová dotace</label>
+                <div class="time-selector">
+                    <button class="time-btn" data-time="20">20 min</button>
+                    <button class="time-btn active" data-time="30">30 min</button>
+                    <button class="time-btn" data-time="45">45 min</button>
+                </div>
+            </div>
+
+            <div class="advanced-toggle" id="advancedToggle">
+                <span>⚙️ Pokročilé nastavení (API Klíč)</span>
+            </div>
+
+            <div class="advanced-options hidden" id="advancedOptions">
+                <div class="form-group">
+                    <label for="apiKey">OpenAI / Gemini API Klíč (Volitelné)</label>
+                    <input type="password" id="apiKey" placeholder="sk-..." autocomplete="off">
+                    <p class="hint">Pokud nezadáte klíč, vygeneruji pouze prompt, který můžete zkopírovat do ChatGPT.
+                    </p>
+                </div>
+                <div class="form-group">
+                    <label for="modelSelect">Model</label>
+                    <select id="modelSelect">
+                        <option value="gpt-4o-mini">GPT-4o Mini (OpenAI)</option>
+                        <option value="gpt-4o">GPT-4o (OpenAI)</option>
+                        <option value="gemini-1.5-flash">Gemini 1.5 Flash (Google)</option>
+                    </select>
+                </div>
+            </div>
+
+            <button id="generateBtn" class="primary-btn">
+                <span class="btn-text">Generovat Aktivitu</span>
+                <span class="loader hidden"></span>
+            </button>
+        </section>
+
+        <section class="card result-section hidden" id="resultSection">
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="preview">Náhled Aktivity</button>
+                <button class="tab-btn" data-tab="prompt">Zobrazit Prompt</button>
+            </div>
+
+            <div class="tab-content active" id="previewTab">
+                <div class="action-buttons">
+                    <button id="copyWordBtn" class="secondary-btn" title="Zkopírovat formátovaný text pro Word">
+                        📋 Kopírovat do Wordu
+                    </button>
+                    <button id="printBtn" class="secondary-btn" title="Vytisknout aktivitu">
+                        🖨️ Tisk
+                    </button>
+                </div>
+                <div id="outputContent" class="markdown-body">
+                    <!-- Result will appear here -->
+                    <div class="placeholder-text">Zde se objeví vygenerovaná aktivita...</div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="promptTab">
+                <div class="prompt-container">
+                    <textarea id="promptOutput" readonly></textarea>
+                    <button id="copyPromptBtn" class="secondary-btn">Zkopírovat Prompt</button>
+                </div>
+                <p class="hint">Tento prompt zkopírujte do ChatGPT, Claude nebo Gemini, pokud nemáte API klíč.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

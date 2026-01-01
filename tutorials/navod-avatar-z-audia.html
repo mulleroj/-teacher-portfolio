@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Návod: Jak vytvořit avatara z audia NotebookLM | AI Educator</title>
+    <meta name="description"
+        content="Podrobný návod krok za krokem, jak proměnit audio výstup z Google NotebookLM ve video s mluvícím AI avatarem pomocí HeyGen.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap&subset=latin,latin-ext"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css?v=3">
+
+    <style>
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing-xl);
+            padding-top: var(--spacing-3xl);
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .article-meta {
+            color: #34d399;
+            /* Green/Emerald for Tutorials */
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            display: block;
+            font-weight: 600;
+        }
+
+        .article-title {
+            font-size: clamp(2rem, 3.5vw, 3rem);
+            margin-bottom: 1.5rem;
+            line-height: 1.25;
+            color: var(--text-primary);
+        }
+
+        .article-content {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .article-content h2 {
+            color: var(--text-primary);
+            font-size: 1.75rem;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .article-content h3 {
+            color: #6ee7b7;
+            /* Light green */
+            font-size: 1.4rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .article-image {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-xl);
+            margin: 2rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        /* Standard responsive image float */
+        @media (min-width: 768px) {
+            .article-image {
+                float: left;
+                width: 45%;
+                margin: 0.5rem 2rem 1.5rem 0;
+            }
+
+            .article-image.full-width {
+                float: none;
+                width: 100%;
+                margin: 2rem 0;
+            }
+        }
+
+        /* Styling for quotes/tips */
+        .tip-box {
+            background: rgba(16, 185, 129, 0.1);
+            border-left: 4px solid #34d399;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+        }
+
+        .tip-box strong {
+            color: #6ee7b7;
+        }
+
+        .list-steps {
+            list-style: none;
+            padding-left: 0;
+            counter-reset: step-counter;
+        }
+
+        .list-steps li {
+            position: relative;
+            padding-left: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .list-steps li::before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2.5rem;
+            height: 2.5rem;
+            background: rgba(16, 185, 129, 0.2);
+            color: #34d399;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 2.5rem;
+            font-weight: bold;
+        }
+
+
+
+        .title-prefix {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .clear-heading {
+            clear: both;
+            padding-top: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigace -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">✨ AI Educator</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Domů</a></li>
+                <li><a href="../index.html#explore" class="nav-link">Prozkoumejte AI</a></li>
+                <li><a href="../apps.html" class="nav-link">Nástroje</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Obsah článku -->
+    <article class="article-container">
+        <!-- Hlavička článku -->
+        <header class="article-header">
+            <span class="article-meta">Návody • Prosinec 2025</span>
+            <h1 class="article-title"><span class="title-prefix">NÁVOD:</span> Jak proměnit audio z NotebookLM ve video
+                s mluvícím avatarem</h1>
+        </header>
+
+        <!-- Tělo článku -->
+        <div class="article-content">
+            <p class="lead" style="font-size: 1.25rem; color: var(--text-primary);">
+                V minulém článku jsme psali, že Google oficiální funkci videa teprve chystá. Ale vaši studenti nechtějí
+                čekat. Chtějí vidět "youtubera", ne poslouchat rádio. Máme pro vás skvělou zprávu: tu magii můžete
+                vytvořit už dnes. A je to jednodušší, než si myslíte.
+            </p>
+
+            <img src="../assets/avatar-audio-guide.png" alt="Proces tvorby AI Avatara z audia" class="article-image">
+
+            <p>
+                Tento návod je napsán pro každého učitele, i pro toho, kdo s AI nástroji teprve začíná. Pokud umíte
+                stáhnout soubor a kliknout myší, zvládnete vytvořit své první AI video do 20 minut.
+            </p>
+
+            <h2>Co budeme dělat? (Princip kouzla)</h2>
+            <p>Je to jako skládání lega. Spojíme dvě různé kostičky:</p>
+            <ul>
+                <li><strong>Hlas (Audio):</strong> Ten už máme. Je to ten skvělý, chytrý "podcast", který vám
+                    vygeneroval Google NotebookLM z vašich učebnic.</li>
+                <li><strong>Tvář (Video):</strong> Tu si půjčíme od jiného nástroje. Použijeme tzv. "avatara" –
+                    digitální postavu, která vypadá jako člověk.</li>
+            </ul>
+            <p>Naším cílem je vzít audio z Googlu a vložit ho do úst avatarovi, aby to vypadalo, že to říká on.</p>
+
+            <div class="tip-box">
+                <strong>Co si připravte (Ingredience):</strong>
+                <ul style="margin-top: 0.5rem; margin-bottom: 0;">
+                    <li>Počítač s připojením k internetu.</li>
+                    <li>Váš NotebookLM (kde už máte nahrané nějaké učivo).</li>
+                    <li>Zhruba 20 minut času a hrnek kávy ☕.</li>
+                </ul>
+            </div>
+
+            <h2>FÁZE 1: Získání "hlasu" z NotebookLM</h2>
+            <p>Nejprve musíme dostat tu skvělou audio debatu ven z Googlu do vašeho počítače.</p>
+            <ol class="list-steps">
+                <li>Otevřete si svůj sešit v NotebookLM.</li>
+                <li>Ujistěte se, že máte vygenerovaný <strong>Audio Overview</strong> (ten velký přehrávač vpravo
+                    nahoře).</li>
+                <li>Klíčový krok: Podívejte se na ten přehrávač. V jeho pravém rohu uvidíte tři malé tečky nad sebou
+                    (menu). Klikněte na ně.</li>
+                <li>Objeví se nabídka. Klikněte na <strong>Download (Stáhnout)</strong>.</li>
+                <li>Do vašeho počítače se uloží soubor s koncovkou .mp3 nebo .wav.</li>
+            </ol>
+            <p><em>Tip: Soubor si hned přejmenujte, např. na "Audio_Bitva_u_Lipan.mp3", ať ho pak snadno najdete.</em>
+            </p>
+            <p>Máme hlas. Fáze 1 hotova.</p>
+
+            <h2>FÁZE 2: Výběr "tváře" (Registrace do HeyGen)</h2>
+            <p>Pro vytvoření videa použijeme jeden z nejlepších nástrojů současnosti – HeyGen. Je velmi intuitivní a na
+                první pokusy je zdarma.</p>
+            <ol class="list-steps">
+                <li>Otevřete v prohlížeči stránku <strong>www.heygen.com</strong>.</li>
+                <li>Vpravo nahoře klikněte na "Try HeyGen for Free" (nebo "Get started").</li>
+                <li>Zaregistrujte se. Nejrychlejší cesta je kliknout na "Continue with Google".</li>
+            </ol>
+
+            <h2>FÁZE 3: Spojení hlasu a tváře (Tvorba videa)</h2>
+            <p>Teď přichází ta zábavná část. Jste v prostředí HeyGen.</p>
+
+            <h3>Krok A: Založení nového videa</h3>
+            <p>Na hlavní obrazovce klikněte vpravo nahoře na fialové tlačítko "Create Video" a vyberte "Landscape" (na
+                šířku).</p>
+
+            <h3>Krok B: Výběr moderátora (Avatara)</h3>
+            <p>Vlevo na obrazovce klikněte na záložku "Avatar". Vyberte si digitálního herce, který se hodí k vašemu
+                tématu. Klikněte na něj a on se objeví na plátně.</p>
+
+            <h3>Krok C: Vložení audia z NotebookLM (Nejdůležitější!)</h3>
+            <p>Musíme avatarovi říct, co má říkat.</p>
+            <ol class="list-steps">
+                <li>Podívejte se do dolní části obrazovky. Je tam textové pole "Type your script here". <strong>TO MY
+                        NECHCEME.</strong></li>
+                <li>Těsně nad tímto polem jsou záložky. Klikněte na tu s názvem <strong>"Audio Script"</strong> (ikona
+                    mikrofonu/noty).</li>
+                <li>Klikněte na tlačítko pro nahrání souboru ("Upload Audio").</li>
+                <li>Vyberte váš soubor z NotebookLM ("Audio_Bitva_u_Lipan.mp3").</li>
+            </ol>
+
+            <h3>Krok D: Generování (Kouzlo)</h3>
+            <p>Vpravo nahoře klikněte na "Submit" (Odeslat). Potvrďte a čekejte. Výroba videa trvá několik minut.</p>
+
+
+            <img src="../assets/ai-freud-avatar.png" alt="AI Avatar Sigmund Freud" class="article-image">
+            <h2>FÁZE 4: Hotovo! Stahujeme a promítáme</h2>
+            <p>Až bude video hotové, najdete ho ve svém seznamu videí. Přehrát si ho – uvidíte, že avatar hýbe rty
+                dokonale do rytmu audia. Stáhněte si ho jako .mp4 tlačítkem Download.</p>
+
+
+            <h3 class="clear-heading">Jak to použít ve výuce?</h3>
+            <ul>
+                <li>Vložte MP4 do PowerPoint prezentace.</li>
+                <li>Nahrajte ho do Google Classroom nebo Teams.</li>
+                <li>Pusťte ho na začátku hodiny.</li>
+            </ul>
+
+
+
+            <div class="tip-box">
+                <strong>Tip na závěr pro pokročilé:</strong><br>
+                V NotebookLM mluví dva lidé. HeyGen ve verzi zdarma umí jen jednoho avatara. Pro začátek stačí vybrat
+                jednoho avatara, který "přeříká" celý dialog. I tak je "wow efekt" zaručen.
+            </div>
+
+            <p>Gratulujeme! Právě jste vstoupili do éry multimodální výuky. Vaše přípravy už nikdy nebudou jako dřív.
+            </p>
+
+        </div>
+
+        <!-- Odkazy -->
+        <div
+            style="margin-top: 4rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem;">
+            <a href="../tutorials.html" class="btn-back">← Zpět na Návody</a>
+            <a href="../teachers.html" class="back-link">Zpět do AI Toolkit</a>
+        </div>
+    </article>
+
+    <!-- Patička -->
+    <footer>
+        <p>&copy; 2025 AI Educator. Vzdělávání s pomocí umělé inteligence.</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>NotebookLM: První kroky | AI Educator</title>
+    <meta name="description"
+        content="Kompletní průvodce pro začátečníky. Jak si založit účet, vytvořit první zápisník a nahrát zdroje do Google NotebookLM.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap&subset=latin,latin-ext"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css?v=3">
+
+    <style>
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing-xl);
+            padding-top: var(--spacing-3xl);
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .article-meta {
+            color: #60a5fa;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            display: block;
+            font-weight: 600;
+        }
+
+        .article-title {
+            font-size: clamp(2rem, 3.5vw, 3rem);
+            margin-bottom: 1.5rem;
+            line-height: 1.25;
+            color: var(--text-primary);
+        }
+
+        .article-content {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .article-content h2 {
+            color: var(--text-primary);
+            font-size: 1.75rem;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .article-content h3 {
+            color: #93c5fd;
+            font-size: 1.4rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .article-image {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-xl);
+            margin: 2rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        @media (min-width: 768px) {
+            .article-image.float-right {
+                float: right;
+                width: 45%;
+                margin: 0.5rem 0 1.5rem 2rem;
+            }
+        }
+
+        .step-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin: 2rem 0;
+            position: relative;
+        }
+
+        .step-number {
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: #60a5fa;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .highlight {
+            color: #60a5fa;
+            font-weight: 600;
+        }
+
+        .btn-action-mock {
+            display: inline-block;
+            background: #eef2ff;
+            color: #3730a3;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.9em;
+            font-weight: 600;
+            margin: 0 0.25rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigace -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">✨ AI Educator</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Domů</a></li>
+                <li><a href="../index.html#explore" class="nav-link">Prozkoumejte AI</a></li>
+                <li><a href="../apps.html" class="nav-link">Nástroje</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Obsah článku -->
+    <article class="article-container">
+        <!-- Hlavička článku -->
+        <header class="article-header">
+            <span class="article-meta">NotebookLM • Návod</span>
+            <h1 class="article-title">NotebookLM: První kroky s vaším osobním AI asistentem</h1>
+        </header>
+
+        <!-- Tělo článku -->
+        <div class="article-content">
+            <p class="lead" style="font-size: 1.25rem; color: var(--text-primary);">
+                Slyšeli jste o "chytrém sešitu" od Google, který si přečte vaše dokumenty a pak si o nich s vámi povídá?
+                Vítejte v NotebookLM. Pokud nevíte, jak začít, jste na správném místě. Provedeme vás založením prvního
+                zápisníku.
+            </p>
+
+            <img src="../assets/notebooklm-card.png" alt="NotebookLM Interface" class="article-image float-right">
+
+            <h2>Co to vlastně je?</h2>
+            <p>
+                NotebookLM není jako ChatGPT. Zatímco ChatGPT „ví všechno o všem“ (a občas si vymýšlí), NotebookLM
+                <strong>ví jen to, co mu dáte</strong>. Je to systém, který se nazývá RAG (Retrieval-Augmented
+                Generation).
+                Nahrajete mu svá PDFka, on si je nastuduje a pak odpovídá <strong>pouze</strong> na základě těchto
+                zdrojů.
+                Pro učitele je to ideální – máte jistotu, že AI vychází z ověřených materiálů.
+            </p>
+
+            <div class="step-box">
+                <div class="step-number">1</div>
+                <h3>Registrace a přihlášení</h3>
+                <p>
+                    Vše probíhá v prohlížeči. Nemusíte nic instalovat.
+                </p>
+                <ul>
+                    <li>Jděte na stránku <a href="https://notebooklm.google.com" target="_blank"
+                            class="highlight">notebooklm.google.com</a>.</li>
+                    <li>Klikněte na tlačítko <span class="btn-action-mock">Try NotebookLM</span>.</li>
+                    <li>Přihlaste se svým běžným Google účtem (Gmail).</li>
+                </ul>
+                <p><em>Poznámka: Služba je zdarma.</em></p>
+            </div>
+
+            <div class="step-box">
+                <div class="step-number">2</div>
+                <h3>Vytvoření nového zápisníku</h3>
+                <p>
+                    Po přihlášení uvidíte uvítací obrazovku (Dashboard). Zde uvidíte všechny své budoucí projekty.
+                </p>
+                <ul>
+                    <li>Klikněte na velký obdélník s plusem <span class="btn-action-mock">+ New Notebook</span>.</li>
+                    <li>Pojmenujte ho. Například: "Dějepis - Husitství" nebo "Příprava na maturitu".</li>
+                </ul>
+            </div>
+
+            <div class="step-box">
+                <div class="step-number">3</div>
+                <h3>Nahrání zdrojů (Krmení AI)</h3>
+                <p>
+                    Teď přijde to kouzlo. Musíme AI naučit to, co má umět. Po vytvoření sešitu se automaticky otevře
+                    okno pro přidání zdrojů.
+                </p>
+                <p>Máte několik možností:</p>
+                <ul>
+                    <li><strong>Google Drive:</strong> Vyberte dokumenty přímo ze svého disku.</li>
+                    <li><strong>PDF / Text file:</strong> Nahrajte soubory z počítače.</li>
+                    <li><strong>Copied text:</strong> Vložte text ze schránky (Ctrl+V).</li>
+                    <li><strong>Website:</strong> Vložte odkaz na webovou stránku.</li>
+                </ul>
+                <p>
+                    <strong>Tip:</strong> Můžete nahrát až 50 zdrojů do jednoho sešitu. Každý zdroj může mít až 500 000
+                    slov.
+                </p>
+            </div>
+
+            <div class="step-box">
+                <div class="step-number">4</div>
+                <h3>Začínáme konverzaci</h3>
+                <p>
+                    Jakmile jsou zdroje načteny, uvidíte dole chatovací okno. NotebookLM vám navrhne několik otázek,
+                    kterými můžete začít.
+                </p>
+                <p>Zkuste například:</p>
+                <ul>
+                    <li>"Vytvoř shrnutí toho nejdůležitějšího z těchto dokumentů."</li>
+                    <li>"Vytvoř kvíz o 10 otázkách pro studenty na základě textu."</li>
+                    <li>"Vysvětli mi pojem [složitý termín] jako pětiletému dítěti."</li>
+                </ul>
+                <p>
+                    V odpovědích uvidíte malá čísla (citace). Když na ně kliknete, NotebookLM vám ukáže přesně tu část
+                    vašeho dokumentu, ze které čerpal.
+                </p>
+            </div>
+
+            <h2>Bonus: Audio Overview</h2>
+            <p>
+                Nezapomeňte vyzkoušet funkci <strong>Audio Overview</strong>. Najdete ji nad seznamem zdrojů.
+                Jedním kliknutím vygenerujete "rozhlasovou debatu" dvou AI moderátorů, kteří vaše materiály proberou.
+                Je to skvělé pro poslech cestou do práce.
+            </p>
+
+        </div>
+
+        <!-- Odkazy -->
+        <div
+            style="margin-top: 4rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem;">
+            <a href="index.html" class="btn-back">← Zpět na NotebookLM</a>
+            <a href="../teachers.html" class="back-link">Zpět do AI Toolkit</a>
+        </div>
+    </article>
+
+    <!-- Patička -->
+    <footer>
+        <p>&copy; 2025 AI Educator. Vzdělávání s pomocí umělé inteligence.</p>
+    </footer>
+
+</body>
+
+</html>

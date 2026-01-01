@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kritické myšlení v době AI | AI Educator</title>
+    <meta name="description"
+        content="Proč je v době AI ještě důležitější umět kriticky myslet, ověřovat informace a nebrat vše za bernou minci.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .article-meta {
+            color: var(--accent-cyan);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .article-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .article-content h2 {
+            color: var(--text-primary);
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .article-content h3 {
+            color: #f59e0b;
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+        }
+
+        .article-content h4 {
+            color: var(--accent-cyan);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+            margin-top: 0;
+        }
+
+        .article-image {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-xl);
+            margin: 2rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .article-image.float-right {
+            float: right;
+            width: 40%;
+            margin: 0 0 1rem 2rem;
+        }
+
+        .article-image.float-left {
+            float: left;
+            width: 40%;
+            margin: 0 2rem 1rem 0;
+        }
+
+        @media (max-width: 768px) {
+
+            .article-image.float-right,
+            .article-image.float-left {
+                float: none;
+                width: 100%;
+                margin: 1rem 0;
+            }
+        }
+
+        .highlight-box,
+        .tip-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .highlight-box h4,
+        .tip-box h4 {
+            color: var(--accent-cyan);
+            margin-top: 0;
+        }
+
+        .warning-box {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            border-left: 4px solid #ef4444;
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .warning-box h4 {
+            color: #ef4444;
+            margin-top: 0;
+        }
+
+        .article-content ul {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .article-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .resource-link {
+            color: var(--accent-cyan);
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-block;
+            margin-top: 0.5rem;
+        }
+
+        .resource-link:hover {
+            text-decoration: underline;
+        }
+
+        .back-button-container {
+            margin-top: 4rem;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigace -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">✨ AI Educator</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Domů</a></li>
+                <li><a href="../index.html#explore" class="nav-link">Prozkoumejte AI</a></li>
+                <li><a href="../apps.html" class="nav-link">Nástroje</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Obsah článku -->
+    <article class="article-container">
+        <header class="article-header">
+            <span class="article-meta">Vzdělávání / Listopad 2025</span>
+            <h1>Kritické myšlení v době AI</h1>
+        </header>
+
+        <div class="article-content">
+            <img src="../assets/critical-thinking.png" alt="Kritické myšlení v AI" class="article-image float-right">
+            <p class="lead">
+                V éře generativní AI je kritické myšlení důležitější než kdy jindy. Deepfakes, halucinace modelů a
+                personalizované dezinformace vyžadují nový přístup k ověřování faktů. Tento článek nabízí praktické
+                nástroje
+                a cvičení, jak se nenechat oklamat.
+            </p>
+            <div style="clear: both;"></div>
+
+            <h2>🧠 Trénink myšlení</h2>
+            <div style="margin-bottom: 2rem; overflow: auto;">
+                <img src="../assets/critical_thinking_mind.png" alt="Training the Mind"
+                    class="article-image float-left">
+                <div class="tip-box">
+                    <h4>Cvičení 1: Tři zdroje</h4>
+                    <p>Nikdy nevěřte jedné informaci. Pokud AI něco tvrdí, najděte tři nezávislé zdroje, které to
+                        potvrzují.
+                        Pozor
+                        na "kruhové citace" - hledejte originální zdroje.</p>
+                </div>
+            </div>
+
+            <div class="tip-box">
+                <h4>Cvičení 2: Hledání perspektiv</h4>
+                <p>Vyberte kontroverzní téma a najděte 3 články s různými úhly pohledu:</p>
+                <ul>
+                    <li>Jeden, který s vámi souhlasí</li>
+                    <li>Jeden, který nesouhlasí</li>
+                    <li>Jeden, který je neutrální/vyvážený</li>
+                </ul>
+                <p>Analyzujte argumenty všech tří. Co je přesvědčivé? Co je slabé?</p>
+            </div>
+
+            <div class="warning-box">
+                <h4>Cvičení 3: Detekce manipulace</h4>
+                <p>Sledujte politickou reklamu nebo clickbait článek a zkuste identifikovat:</p>
+                <ul>
+                    <li>Emocionální manipulaci (snaží se vás naštvat nebo vyděsit?)</li>
+                    <li>Logické skoky a fauly</li>
+                    <li>Chybějící kontext (co vám neřekli?)</li>
+                    <li>Selektivní použití faktů (trhání třešniček)</li>
+                </ul>
+            </div>
+
+            <div class="tip-box">
+                <h4>Cvičení 4: AI Test</h4>
+                <p>Položte ChatGPT otázku o nějakém konkrétním faktu. Pak si ten fakt ověřte. AI měla pravdu? Nebo si
+                    něco vymyslela? Opakujte s
+                    různými typy otázek a hledejte tzv. "halucinace".</p>
+            </div>
+
+            <h2>📱 Nástroje pro fact-checking</h2>
+            <div style="margin-bottom: 2rem; overflow: auto;">
+                <img src="../assets/critical_thinking_analysis.png" alt="Fact Checking Tools"
+                    class="article-image float-right">
+                <p>Důvěřuj, ale prověřuj. Zde jsou nástroje, které vám pomohou odhalit pravdu:</p>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li style="margin-bottom: 1.5rem;">
+                        <strong>Google Reverse Image Search</strong><br>
+                        Ověřte původ obrázků. Je to fotka z včerejší demonstrace, nebo 5 let starý záběr z filmu?<br>
+                        <a href="https://images.google.com/" target="_blank" rel="noopener noreferrer"
+                            class="resource-link">Ověřit obrázek →</a>
+                    </li>
+                    <li style="margin-bottom: 1.5rem;">
+                        <strong>Demagog.cz</strong><br>
+                        Český projekt zaměřený na fact-checking politických výroků.<br>
+                        <a href="https://demagog.cz/" target="_blank" rel="noopener noreferrer"
+                            class="resource-link">Navštívit Demagog.cz →</a>
+                    </li>
+                    <li style="margin-bottom: 1.5rem;">
+                        <strong>Manipulátoři.cz</strong><br>
+                        Web věnující se odhalování hoaxů, manipulací a dezinformací v českém prostoru.<br>
+                        <a href="https://manipulatori.cz/" target="_blank" rel="noopener noreferrer"
+                            class="resource-link">Číst Manipulátoři.cz →</a>
+                    </li>
+                    <li style="margin-bottom: 1.5rem;">
+                        <strong>Snopes.com</strong><br>
+                        Nejznámější mezinárodní fact-checkingová stránka pro ověřování virálních zpráv.<br>
+                        <a href="https://www.snopes.com/" target="_blank" rel="noopener noreferrer"
+                            class="resource-link">Ověřit na Snopes →</a>
+                    </li>
+                </ul>
+            </div>
+
+            <h2>💭 Otázky k zamyšlení</h2>
+            <div style="margin-bottom: 2rem; overflow: auto;">
+                <img src="../assets/critical_thinking_questions.png" alt="Critical Questions"
+                    class="article-image float-left">
+                <div class="highlight-box">
+                    <h4>Než budete sdílet, zeptejte se:</h4>
+                    <ul>
+                        <li>Kdo to řekl/napsal a proč? (Cui bono - v čí prospěch?)</li>
+                        <li>Jaké mají pro svá tvrzení důkazy? Jsou dohledatelné?</li>
+                        <li>Kdo na tom vydělá (peníze, vliv), když tomu uvěřím?</li>
+                        <li>Co by řekla oponentní strana? Jaké jsou protiargumenty?</li>
+                        <li>Dává to logicky smysl, nebo to jen hraje na mé emoce?</li>
+                        <li>Mohl bych se mýlit já? (Intelektuální pokora)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>🌟 Závěr</h2>
+            <p>
+                Kritické myšlení není o tom být cynik, který nikomu a ničemu nevěří. Je to o tom být <strong>informovaný
+                    skeptik</strong> - člověk, který se ptá, ověřuje, analyzuje a pak formuje vlastní názor založený na
+                důkazech.
+            </p>
+            <p>
+                V době AI je tato dovednost důležitější než kdykoli předtím. Technologie se bude zlepšovat v generování
+                přesvědčivého obsahu, ale <strong>vaše schopnost myslet</strong> zůstává vaší největší zbraní proti
+                manipulaci.
+            </p>
+            <p>
+                Nebojte se ptát. Nebojte se pochybovat. A hlavně - nebojte se připustit,
+                že jste se mýlili, když najdete lepší důkazy. To je znakem skutečné inteligence.
+            </p>
+
+        </div>
+
+        <div
+            style="margin-top: 4rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem;">
+            <a href="../news.html" class="btn-back">← Zpět na AI Pulse</a>
+            <a href="../index.html" class="back-link">Zpět na domovskou stránku</a>
+        </div>
+    </article>
+
+    <footer>
+        <p>&copy; 2025 AI Educator. Vzdělávání s pomocí umělé inteligence.</p>
+    </footer>
+
+</body>
+
+</html>

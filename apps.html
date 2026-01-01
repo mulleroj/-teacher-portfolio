@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>🔧 AI Nástroje | Praktické aplikace pro vzdělávání</title>
+    <meta name="description"
+        content="AI nástroje pro moderní výuku - generátor testů, osmisměrek, křížovek a další praktické aplikace.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap&subset=latin,latin-ext"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=2">
+    <style>
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--spacing-xl);
+            padding: var(--spacing-3xl) var(--spacing-lg);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .app-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            transition: all var(--transition-base);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .app-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl), var(--shadow-glow);
+            border-color: rgba(99, 102, 241, 0.3);
+        }
+
+        .app-preview {
+            height: 200px;
+            background: linear-gradient(45deg, var(--bg-secondary), var(--primary-dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            overflow: hidden;
+        }
+
+        .app-preview--image {
+            padding: 0;
+        }
+
+        .app-preview--image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+
+        .app-card:hover .app-preview--image img {
+            transform: scale(1.1);
+        }
+
+        .app-content {
+            padding: var(--spacing-lg);
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .app-tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: rgba(99, 102, 241, 0.2);
+            color: var(--accent-cyan);
+            border-radius: var(--radius-sm);
+            font-size: var(--font-size-sm);
+            font-weight: 600;
+            margin-bottom: var(--spacing-sm);
+            align-self: flex-start;
+        }
+
+        .app-title {
+            font-size: var(--font-size-xl);
+            margin-bottom: var(--spacing-sm);
+            color: var(--text-primary);
+        }
+
+        .app-description {
+            color: var(--text-secondary);
+            margin-bottom: var(--spacing-lg);
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        .app-actions {
+            display: flex;
+            gap: var(--spacing-sm);
+            margin-top: auto;
+        }
+
+        .btn-launch {
+            flex: 1;
+            text-align: center;
+            padding: var(--spacing-sm);
+            background: var(--primary-gradient);
+            color: white;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            transition: all var(--transition-fast);
+        }
+
+        .btn-launch:hover {
+            opacity: 0.9;
+            transform: scale(1.02);
+        }
+
+        .btn-code {
+            padding: var(--spacing-sm);
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-primary);
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            transition: all var(--transition-fast);
+        }
+
+        .btn-code:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .section-divider {
+            text-align: center;
+            margin: var(--spacing-3xl) 0 var(--spacing-lg);
+            position: relative;
+        }
+
+        .section-divider::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--text-muted), transparent);
+            z-index: -1;
+        }
+
+        .section-divider span {
+            background: var(--bg-primary);
+            padding: 0 var(--spacing-md);
+            color: var(--text-muted);
+            font-size: var(--font-size-sm);
+            text-transform: uppercase;
+        }
+
+        .hub-hero {
+            min-height: 40vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: var(--spacing-3xl) var(--spacing-lg);
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(99, 102, 241, 0.1));
+            position: relative;
+        }
+
+        .hub-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('assets/tools-hero.png') center/cover no-repeat;
+            opacity: 0.15;
+            z-index: -1;
+        }
+
+        .hub-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .hub-hero .subtitle {
+            font-size: var(--font-size-xl);
+            color: var(--text-secondary);
+            max-width: 600px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            color: var(--text-secondary);
+            padding: var(--spacing-lg);
+            transition: color var(--transition-fast);
+        }
+
+        .back-link:hover {
+            color: var(--text-primary);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">✨ AI Educator</a>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+                ☰
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link" onclick="window.location.href='index.html'">Domů</a></li>
+                <li><a href="index.html#explore" class="nav-link"
+                        onclick="window.location.href='index.html#explore'">Prozkoumejte AI</a></li>
+                <li><a href="apps.html" class="nav-link active">Nástroje</a></li>
+                <li><a href="index.html#contact" class="nav-link"
+                        onclick="window.location.href='index.html#contact'">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="back-nav-container">
+        <a href="index.html" class="back-link">← Zpět na hlavní stránku</a>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hub-hero">
+        <h1>🔧 AI Nástroje</h1>
+        <p class="subtitle">Praktické aplikace pro moderní výuku</p>
+    </div>
+
+    <!-- Apps Grid -->
+    <div class="apps-grid">
+
+        <!-- Suplovací Agent -->
+        <div class="app-card">
+            <div class="app-preview app-preview--image">
+                <img src="assets/substitution-hero.png" alt="Suplovací Agent">
+            </div>
+            <div class="app-content">
+                <span class="app-tag">Nástroj</span>
+                <h3 class="app-title">Suplovací Agent</h3>
+                <p class="app-description">
+                    Generátor rychlých aktivit pro suplované hodiny.
+                    Zadejte předmět a téma a získejte okamžitou přípravu.
+                    Pro plné využití je nutné použít API klíč (doporučujeme ChatGPT).
+                </p>
+                <div class="app-actions">
+                    <a href="substitution/index.html" class="btn-launch">Spustit</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vocabulary App -->
+        <div class="app-card">
+            <div class="app-preview app-preview--image">
+                <img src="assets/vocabulary-hero.png" alt="Slovíčka">
+            </div>
+            <div class="app-content">
+                <span class="app-tag">Aplikace</span>
+                <h3 class="app-title">Slovíčka</h3>
+                <p class="app-description">
+                    Procvičování slovíček. Procvičení slovní zásoby učebnice Maturita Solutions v jazykové úrovni
+                    Elementary a Pre-Intermediate.
+                </p>
+                <div class="app-actions">
+                    <a href="https://englishworkshops.netlify.app/" class="btn-launch" target="_blank"
+                        rel="noopener noreferrer">Spustit</a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Word Search App -->
+        <div class="app-card">
+            <div class="app-preview app-preview--image">
+                <img src="assets/wordsearch-hero.png" alt="Generátor Osmisměrek">
+            </div>
+            <div class="app-content">
+                <span class="app-tag">Nástroj</span>
+                <h3 class="app-title">Generátor Osmisměrek</h3>
+                <p class="app-description">
+                    Vytvořte si vlastní osmisměrku ze zadaných slov. Ideální pro procvičování slovní zásoby.
+                </p>
+                <div class="app-actions">
+                    <a href="wordsearch.html" class="btn-launch">Spustit</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Crossword App -->
+        <div class="app-card">
+            <div class="app-preview app-preview--image">
+                <img src="assets/crossword-hero.png" alt="Generátor Křížovek">
+            </div>
+            <div class="app-content">
+                <span class="app-tag">Nástroj</span>
+                <h3 class="app-title">Generátor Křížovek</h3>
+                <p class="app-description">
+                    Vytvořte si vlastní křížovku z vašich slovíček a definic. Jednoduchý nástroj pro učitele.
+                    Pro plné využití je nutné použít API klíč (doporučujeme ChatGPT).
+                </p>
+                <div class="app-actions">
+                    <a href="crossword/index.html" class="btn-launch">Spustit</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- PromptVault -->
+        <div class="app-card">
+            <div class="app-preview app-preview--image">
+                <img src="assets/promptvault-hero.png" alt="PromptVault">
+            </div>
+            <div class="app-content">
+                <span class="app-tag">Nástroj</span>
+                <h3 class="app-title">PromptVault</h3>
+                <p class="app-description">
+                    Databáze promptů pro AI nástroje. Ukládejte, organizujte a sdílejte své oblíbené prompty.
+                    Rychlý přístup k osvědčeným promptům pro ChatGPT, Gemini a další AI asistenty.
+                </p>
+                <div class="app-actions">
+                    <a href="https://educatorai-promptvault.netlify.app/" class="btn-launch" target="_blank"
+                        rel="noopener noreferrer">Spustit</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recycling Helper -->
+        <div class="app-card">
+            <div class="app-preview app-preview--image">
+                <img src="assets/recycling-hero.png" alt="Pomocník s tříděním">
+            </div>
+            <div class="app-content">
+                <span class="app-tag" style="background: rgba(16, 185, 129, 0.2); color: #34d399;">Ekologie</span>
+                <h3 class="app-title">Pomocník s tříděním</h3>
+                <p class="app-description">
+                    Jednoduchý průvodce tříděním odpadu. Zjistěte, do kterého kontejneru patří váš odpad.
+                    Ideální pro výuku environmentální výchovy.
+                </p>
+                <div class="app-actions">
+                    <a href="https://recyklace.netlify.app/" class="btn-launch" target="_blank"
+                        rel="noopener noreferrer">Spustit</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- NotebookLM Průvodce -->
+        <div class="app-card">
+            <div class="app-preview app-preview--image">
+                <img src="assets/notebooklm_study_tools.png" alt="NotebookLM Průvodce">
+            </div>
+            <div class="app-content">
+                <span class="app-tag" style="background: rgba(168, 85, 247, 0.2); color: #c084fc;">Studium</span>
+                <h3 class="app-title">NotebookLM - Průvodce pro učitele</h3>
+                <p class="app-description">
+                    Komplexní průvodce NotebookLM - revolučního nástroje Google pro studium a výzkum.
+                    Usnadněte si přípravu na hodinu a inspirujte se řadou příkladů použití.
+                </p>
+                <div class="app-actions">
+                    <a href="https://notebooklm-pruvodce.netlify.app/" class="btn-launch" target="_blank"
+                        rel="noopener noreferrer">Spustit</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI Assistants Link -->
+        <a href="ai-assistants.html" class="app-card" style="text-decoration: none;">
+            <div class="app-preview app-preview--image">
+                <img src="assets/assistants-hero.png" alt="AI Asistenti">
+            </div>
+            <div class="app-content">
+                <span class="app-tag" style="background: rgba(139, 92, 246, 0.2); color: #a78bfa;">Pro žáky</span>
+                <h3 class="app-title">AI Asistenti (Gemy)</h3>
+                <p class="app-description">
+                    Rozcestník vašich vlastních AI asistentů pro žáky.
+                    EMP, ROZ a další předměty na jednom místě.
+                </p>
+                <div class="app-actions">
+                    <span class="btn-launch" style="background: linear-gradient(135deg, #7c3aed, #4f46e5);">Otevřít
+                        sekci</span>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 AI Educator. Vytvořeno s vášní pro vzdělávání a technologie.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

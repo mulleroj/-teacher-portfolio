@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generátor Osmisměrek | AI Educator</title>
+    <meta name="description" content="Nástroj pro učitele na generování osmisměrek do Wordu.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .tool-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-xl);
+            margin-top: 4rem;
+        }
+
+        .input-group {
+            margin-bottom: 2rem;
+        }
+
+        textarea {
+            width: 100%;
+            height: 150px;
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-md);
+            color: var(--text-primary);
+            padding: 1rem;
+            font-family: var(--font-primary);
+            margin-bottom: 1rem;
+            resize: vertical;
+        }
+
+        .controls {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .output-area {
+            background: white;
+            color: black;
+            padding: 2rem;
+            border-radius: var(--radius-md);
+            margin-top: 2rem;
+            overflow-x: auto;
+        }
+
+        .word-search-table {
+            border-collapse: collapse;
+            margin: 0 auto 20px auto;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .word-search-table td {
+            border: 1px solid #000;
+            width: 32px;
+            height: 32px;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .word-list {
+            margin-top: 2rem;
+            font-family: Arial, sans-serif;
+        }
+
+        .word-list ol {
+            padding-left: 25px;
+            columns: 2;
+        }
+
+        .word-list li {
+            margin-bottom: 0.5rem;
+            break-inside: avoid;
+        }
+
+        .debug-info {
+            background: #ffffcc;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 12px;
+            border: 1px solid #ccc;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(15, 23, 42, 0.9);
+            -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #6366f1, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: var(--text-secondary);
+            font-weight: 500;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover {
+            color: var(--text-primary);
+        }
+
+
+
+        /* Hub Hero */
+        .hub-hero {
+            min-height: 35vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.2), rgba(99, 102, 241, 0.1));
+            position: relative;
+        }
+
+        .hub-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('assets/wordsearch-hero.png') center/cover no-repeat;
+            opacity: 0.15;
+            z-index: -1;
+        }
+
+        .hub-hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 0.5rem;
+            background: linear-gradient(to right, #22d3ee, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hub-hero .hero-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">✨ AI Educator</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Domů</a></li>
+                <li><a href="index.html#explore" class="nav-link">Prozkoumejte AI</a></li>
+                <li><a href="apps.html" class="nav-link">Nástroje</a></li>
+                <li><a href="index.html#contact" class="nav-link">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="back-nav-container">
+        <a href="apps.html" class="back-link">← Zpět na nástroje</a>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hub-hero">
+        <h1>🔍 Generátor Osmisměrek</h1>
+        <p class="hero-subtitle">Vytvořte si vlastní osmisměrku pro studenty</p>
+    </div>
+
+    <div class="tool-container">
+        <p>Zadejte seznam slov (oddělená čárkou nebo na novém řádku) a vygenerujte si osmisměrku připravenou pro Word.
+        </p>
+
+        <div class="input-group">
+            <label for="wordsInput" style="display:block; margin-bottom:0.5rem; color:var(--text-secondary)">Seznam
+                slov:</label>
+            <textarea id="wordsInput" placeholder="pes, kočka, slon, žirafa..."></textarea>
+
+            <div class="controls">
+                <button onclick="generateWordSearch()" class="btn-primary">Vygenerovat Osmisměrku</button>
+                <button onclick="copyToClipboard()" class="btn-code">Kopírovat do Wordu</button>
+                <button onclick="copyTeacherHint()" class="btn-code">Kopírovat nápovědu pro učitele</button>
+            </div>
+        </div>
+
+        <div id="previewArea" class="output-area" style="display:none;">
+            <!-- Content will be generated here -->
+        </div>
+
+        <details style="margin-top: 1.5rem; color: var(--text-secondary); font-size: 0.9rem;">
+            <summary style="cursor: pointer; color: var(--accent-cyan);">📖 Jak číst nápovědu pro učitele?</summary>
+            <div style="margin-top: 1rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                <p><strong>Formát:</strong> <code>SLOVO na [řádek, sloupec] směr šipka</code></p>
+                <p><strong>Příklad:</strong> <code>KOČKA na [3,6] směr →</code> = slovo začíná na 3. řádku, 6. sloupci a
+                    pokračuje doprava</p>
+                <p style="margin-top: 0.5rem;"><strong>Směry:</strong></p>
+                <ul style="margin-left: 1.5rem;">
+                    <li>→ doprava | ← doleva</li>
+                    <li>↓ dolů | ↑ nahoru</li>
+                    <li>↘ diagonálně doprava dolů | ↖ diagonálně doleva nahoru</li>
+                    <li>↙ diagonálně doleva dolů | ↗ diagonálně doprava nahoru</li>
+                </ul>
+            </div>
+        </details>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 AI Educator.</p>
+    </footer>
+
+    <script>
+        function generateWordSearch() {
+            const input = document.getElementById('wordsInput').value;
+
+            // Split by comma or newline, trim whitespace, convert to uppercase
+            let words = input.split(/[\n,]+/)
+                .map(w => w.trim().toUpperCase())
+                .filter(w => w.length >= 2);
+
+            if (words.length === 0) {
+                alert("Prosím zadejte alespoň jedno slovo (minimálně 2 znaky).");
+                return;
+            }
+
+            // Remove duplicates
+            words = [...new Set(words)];
+
+            // Calculate grid size - make it MUCH bigger for safety
+            const maxLen = Math.max(...words.map(w => w.length));
+            const totalLetters = words.reduce((sum, w) => sum + w.length, 0);
+            let size = Math.max(maxLen + 4, Math.ceil(Math.sqrt(totalLetters * 3)) + 2);
+            size = Math.max(size, 15); // Minimum 15x15
+            size = Math.min(size, 25); // Maximum 25x25
+
+            // Create empty grid - use null to clearly distinguish from letters
+            const grid = [];
+            for (let i = 0; i < size; i++) {
+                const row = [];
+                for (let j = 0; j < size; j++) {
+                    row.push(null);
+                }
+                grid.push(row);
+            }
+
+            // All 8 directions: [rowDelta, colDelta]
+            const directions = [
+                { dr: 0, dc: 1, name: '→' },   // right
+                { dr: 1, dc: 0, name: '↓' },   // down
+                { dr: 1, dc: 1, name: '↘' },   // diagonal down-right
+                { dr: 1, dc: -1, name: '↙' },  // diagonal down-left
+                { dr: 0, dc: -1, name: '←' },  // left
+                { dr: -1, dc: 0, name: '↑' },  // up
+                { dr: -1, dc: -1, name: '↖' }, // diagonal up-left
+                { dr: -1, dc: 1, name: '↗' }   // diagonal up-right
+            ];
+
+            const placedWords = [];
+            const placementInfo = []; // For debugging
+            const failedWords = [];
+
+            // Sort by length descending - place longer words first
+            words.sort((a, b) => b.length - a.length);
+
+            for (const word of words) {
+                let placed = false;
+
+                // Try each direction in random order
+                const shuffledDirs = [...directions].sort(() => Math.random() - 0.5);
+
+                for (const dir of shuffledDirs) {
+                    if (placed) break;
+
+                    // Get all valid starting positions for this word and direction
+                    const positions = [];
+                    for (let r = 0; r < size; r++) {
+                        for (let c = 0; c < size; c++) {
+                            // Check if word fits
+                            const endR = r + dir.dr * (word.length - 1);
+                            const endC = c + dir.dc * (word.length - 1);
+                            if (endR >= 0 && endR < size && endC >= 0 && endC < size) {
+                                positions.push({ r, c });
+                            }
+                        }
+                    }
+
+                    // Shuffle positions
+                    positions.sort(() => Math.random() - 0.5);
+
+                    for (const pos of positions) {
+                        if (canPlaceWord(grid, word, pos.r, pos.c, dir.dr, dir.dc)) {
+                            placeWord(grid, word, pos.r, pos.c, dir.dr, dir.dc);
+                            placedWords.push(word);
+                            placementInfo.push({
+                                word: word,
+                                row: pos.r,
+                                col: pos.c,
+                                dir: dir.name
+                            });
+                            placed = true;
+                            break;
+                        }
+                    }
+                }
+
+                if (!placed) {
+                    failedWords.push(word);
+                }
+            }
+
+            // Verify all words are still in place before filling
+            const verifyBefore = [];
+            for (const info of placementInfo) {
+                const check = verifyWord(grid, info.word, placementInfo);
+                verifyBefore.push(`${info.word}: ${check ? '✓' : '✗'}`);
+            }
+
+            // Fill empty cells with random letters (only cells that are null)
+            const letters = 'AÁBCČDĎEÉĚFGHIÍJKLMNŇOÓPQRŘSŠTŤUÚŮVWXYÝZŽ';
+            for (let r = 0; r < size; r++) {
+                for (let c = 0; c < size; c++) {
+                    if (grid[r][c] === null) {
+                        grid[r][c] = letters[Math.floor(Math.random() * letters.length)];
+                    }
+                }
+            }
+
+            // Verify all words are still in place after filling
+            const verifyAfter = [];
+            for (const info of placementInfo) {
+                const check = verifyWord(grid, info.word, placementInfo);
+                verifyAfter.push(`${info.word}: ${check ? '✓' : '✗'}`);
+            }
+
+            renderOutput(grid, placedWords, failedWords, placementInfo, verifyBefore, verifyAfter);
+        }
+
+        function canPlaceWord(grid, word, row, col, dr, dc) {
+            for (let i = 0; i < word.length; i++) {
+                const r = row + dr * i;
+                const c = col + dc * i;
+                const cell = grid[r][c];
+                // Cell must be empty (null) OR contain the same letter
+                if (cell !== null && cell !== word[i]) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function placeWord(grid, word, row, col, dr, dc) {
+            for (let i = 0; i < word.length; i++) {
+                const r = row + dr * i;
+                const c = col + dc * i;
+                grid[r][c] = word[i];
+            }
+        }
+
+        function verifyWord(grid, word, placementInfo) {
+            // Find where this word was placed
+            const info = placementInfo.find(p => p.word === word);
+            if (!info) return false;
+
+            const dirMap = {
+                '→': { dr: 0, dc: 1 },
+                '↓': { dr: 1, dc: 0 },
+                '↘': { dr: 1, dc: 1 },
+                '↙': { dr: 1, dc: -1 },
+                '←': { dr: 0, dc: -1 },
+                '↑': { dr: -1, dc: 0 },
+                '↖': { dr: -1, dc: -1 },
+                '↗': { dr: -1, dc: 1 }
+            };
+
+            const dir = dirMap[info.dir];
+            for (let i = 0; i < word.length; i++) {
+                const r = info.row + dir.dr * i;
+                const c = info.col + dir.dc * i;
+                if (grid[r][c] !== word[i]) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function renderOutput(grid, placedWords, failedWords, placementInfo, verifyBefore, verifyAfter) {
+            const previewArea = document.getElementById('previewArea');
+            previewArea.style.display = 'block';
+
+            let html = '<div id="copyContent">';
+
+            // Grid Table
+            html += '<table class="word-search-table" border="1">';
+            for (const row of grid) {
+                html += '<tr>';
+                for (const cell of row) {
+                    html += `<td>${cell}</td>`;
+                }
+                html += '</tr>';
+            }
+            html += '</table>';
+
+            // Word List - only numbered lines
+            html += '<div class="word-list">';
+            html += `<p><strong>Najdi ${placedWords.length} slov:</strong></p>`;
+            html += '<ol>';
+            for (let i = 0; i < placedWords.length; i++) {
+                html += '<li>............................................</li>';
+            }
+            html += '</ol>';
+            html += '</div>';
+
+            html += '</div>';
+
+            // Teacher hint section - can be copied separately
+            html += '<div id="teacherHint">';
+
+            // Debug: Show placement details
+            html += '<div class="debug-info" style="background:#e8ffe8; border:1px solid #0a0;">';
+            html += `<strong>Umístěná slova (${placedWords.length}):</strong><br>`;
+            for (const info of placementInfo) {
+                html += `${info.word} na [${info.row + 1},${info.col + 1}] směr ${info.dir}<br>`;
+            }
+            html += '</div>';
+
+            // Verification
+            html += '<div class="debug-info" style="background:#e8e8ff; border:1px solid #00a;">';
+            html += `<strong>Ověření před vyplněním:</strong> ${verifyBefore.join(', ')}<br>`;
+            html += `<strong>Ověření po vyplnění:</strong> ${verifyAfter.join(', ')}`;
+            html += '</div>';
+
+            html += '</div>'; // End teacherHint
+
+            // Show warning if some words couldn't be placed
+            if (failedWords.length > 0) {
+                html += `<div class="debug-info" style="background:#ffe8e8; border:1px solid #a00;"><strong>⚠️ Neumístěná slova:</strong> ${failedWords.join(', ')}</div>`;
+            }
+
+            previewArea.innerHTML = html;
+        }
+
+        function copyToClipboard() {
+            const content = document.getElementById('copyContent');
+            if (!content) {
+                alert("Nejprve vygenerujte osmisměrku.");
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+
+            try {
+                document.execCommand('copy');
+                alert("Osmisměrka byla zkopírována! Nyní ji můžete vložit do Wordu (Ctrl+V).");
+            } catch (err) {
+                alert("Kopírování se nezdařilo. Zkuste označit obsah ručně a zkopírovat přes Ctrl+C.");
+            }
+
+            window.getSelection().removeAllRanges();
+        }
+
+        function copyTeacherHint() {
+            const hintContent = document.getElementById('teacherHint');
+            if (!hintContent) {
+                alert("Nejprve vygenerujte osmisměrku.");
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNode(hintContent);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+
+            try {
+                document.execCommand('copy');
+                alert("Nápověda pro učitele byla zkopírována! Nyní ji můžete vložit do Wordu (Ctrl+V).");
+            } catch (err) {
+                alert("Kopírování se nezdařilo. Zkuste označit obsah ručně a zkopírovat přes Ctrl+C.");
+            }
+
+            window.getSelection().removeAllRanges();
+        }
+    </script>
+</body>
+
+</html>

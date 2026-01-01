@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalizované učení s AI | AI Educator</title>
+    <meta name="description"
+        content="Jak AI umožňuje každému studentovi učit se vlastním tempem a stylem. Budoucnost vzdělávání je tady.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .article-meta {
+            color: var(--accent-cyan);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .article-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .article-content h2 {
+            color: var(--text-primary);
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .article-content h3 {
+            color: #f59e0b;
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+        }
+
+        .article-content h4 {
+            color: var(--accent-cyan);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .article-image {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-xl);
+            margin: 2rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .article-image.float-right {
+            float: right;
+            width: 40%;
+            margin: 0 0 1rem 2rem;
+        }
+
+        .article-image.float-left {
+            float: left;
+            width: 40%;
+            margin: 0 2rem 1rem 0;
+        }
+
+        @media (max-width: 768px) {
+
+            .article-image.float-right,
+            .article-image.float-left {
+                float: none;
+                width: 100%;
+                margin: 1rem 0;
+            }
+        }
+
+        .highlight-box,
+        .tip-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .highlight-box h4,
+        .tip-box h4 {
+            color: var(--accent-cyan);
+            margin-top: 0;
+        }
+
+        .article-content ul,
+        .article-content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .article-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .back-button-container {
+            margin-top: 4rem;
+            text-align: center;
+        }
+
+        .btn-back-custom {
+            background: var(--text-primary);
+            color: var(--bg-dark);
+            padding: 1rem 2rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigace -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">✨ AI Educator</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Domů</a></li>
+                <li><a href="../index.html#explore" class="nav-link">Prozkoumejte AI</a></li>
+                <li><a href="../apps.html" class="nav-link">Nástroje</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Obsah článku -->
+    <article class="article-container">
+        <header class="article-header">
+            <span class="article-meta">Vzdělávání / Září 2025</span>
+            <h1>Personalizované učení s AI</h1>
+        </header>
+
+        <div class="article-content">
+            <img src="../assets/personalized-learning.png" alt="Personalizované učení s AI"
+                class="article-image float-right">
+            <p class="lead">
+                Tradiční školství často funguje na principu "jedna velikost pro všechny". AI přináší revoluci v podobě
+                hyper-personalizace. Zjistěte, jak adaptivní systémy mohou identifikovat mezery ve znalostech a
+                proaktivně
+                nabídnout pomoc.
+            </p>
+            <p>
+                Každý student je jedinečný a AI to konečně dokáže zohlednit. Místo frustrace z nepochopení
+                nabízí AI trpělivého průvodce, který se neunaví a nevynáší soudy.
+            </p>
+            <div style="clear: both;"></div>
+
+            <h2>✨ Reálné příklady AI personalizace</h2>
+
+            <div style="margin-bottom: 2rem; overflow: auto;">
+                <img src="../assets/chatgpt-study-partner.png" alt="ChatGPT jako studijní partner"
+                    class="article-image float-left">
+                <p>
+                    AI nástroje se dokáží přizpůsobit vašim potřebám v reálném čase. Ať už potřebujete vysvětlit složitý
+                    pojem
+                    jako pětiletému dítěti, nebo naopak vyžadujete akademickou přesnost, AI změní svůj tón i úroveň
+                    detailu.
+                    Je to jako mít učitele, který se věnuje jen a pouze vám.
+                </p>
+            </div>
+
+            <div class="highlight-box">
+                <h4>🗣️ Duolingo</h4>
+                <p><strong>Jak personalizuje:</strong> AI sleduje, která slovíčka zapomínáte,
+                    a častěji je zařazuje do cvičení. Pokud máte problém s gramatickým jevem,
+                    dostanete více lekcí zaměřených na něj.</p>
+            </div>
+
+            <div class="highlight-box">
+                <h4>📐 Photomath</h4>
+                <p><strong>Jak personalizuje:</strong> Nejen řeší matematické příklady,
+                    ale vysvětluje každý krok. Pokud něčemu nerozumíte, můžete požádat o podrobnější vysvětlení nebo
+                    alternativní metodu řešení.</p>
+            </div>
+
+            <div class="highlight-box">
+                <h4>💬 ChatGPT jako osobní tutor</h4>
+                <p><strong>Jak personalizovat:</strong> "Jsem vizuální typ. Můžeš mi vysvětlit
+                    fotosyntézu pomocí analogie a pak mi dát 5 testových otázek? Pokud udělám chybu, vysvětli mi ji
+                    jednoduše."</p>
+            </div>
+
+            <h2>🎓 Jak využít AI pro vlastní personalizované učení</h2>
+            <h3>Krok 1: Zjistěte svůj učební styl</h3>
+            <ul>
+                <li><strong>Vizuální:</strong> Učíte se lépe s obrázky, diagramy, videí?</li>
+                <li><strong>Auditivní:</strong> Preferujete poslech a diskusi?</li>
+                <li><strong>Kinestetický:</strong> Potřebujete praktické činnosti?</li>
+                <li><strong>Čtení/psaní:</strong> Vyhovuje vám text a poznámky?</li>
+            </ul>
+
+            <h3>Krok 2: Nastavte si AI tutora</h3>
+            <div class="tip-box">
+                <h4>💡 Vzorový prompt pro ChatGPT</h4>
+                <p>"Chci, abys byl můj osobní tutor pro [předmět]. Jsem [začátečník/středně pokročilý/pokročilý].
+                    Učím se nejlépe [vizuálně/poslechem/praxí]. Když mi něco vysvětluješ,
+                    používej [analogie/příklady z reálného života/jednoduché vysvětlení]. Vždy se ujisti, že jsem
+                    pochopil/a, než půjdeš dál."</p>
+            </div>
+
+            <h3>Krok 3: Vytvořte si studijní plán</h3>
+            <p>Požádejte AI: "Vytvoř mi studijní plán na [téma] na [časový rámec].
+                Můžu studovat [X] hodin denně. Zaměř se na [specifické oblasti]."</p>
+
+            <h3>Krok 4: Pravidelná zpětná vazba</h3>
+            <p>Po každé studijní session řekněte AI, co fungovalo a co ne. AI se může přizpůsobit a příště zvolit lepší
+                přístup.</p>
+
+            <h2>🌈 Výhody personalizovaného učení s AI</h2>
+            <h3>Pro studenty, kteří jsou napřed</h3>
+            <ul>
+                <li>Nemusíte čekat na ostatní</li>
+                <li>Můžete zkoumat pokročilá témata</li>
+                <li>AI vás neustále vyzývá novými výzvami</li>
+            </ul>
+
+            <h3>Pro studenty, kteří potřebují více času</h3>
+            <ul>
+                <li>Učte se vlastním tempem bez stresu</li>
+                <li>Dostanete vysvětlení tolikrát, kolikrát potřebujete</li>
+                <li>Nikdo vás nehodnotí za "pomalost"</li>
+            </ul>
+
+            <h3>Pro všechny</h3>
+            <ul>
+                <li>24/7 dostupnost - učte se kdy chcete</li>
+                <li>Soukromí - nebojte se dělat chyby</li>
+                <li>Neomezená trpělivost</li>
+                <li>Zaměření na vaše specifické potřeby</li>
+            </ul>
+
+            <h2>⚖️ Limity a výzvy</h2>
+            <h3>AI není (zatím) dokonalá</h3>
+            <ul>
+                <li>Může dělat chyby v obsahu</li>
+                <li>Nemá lidskou empatii a emocionální inteligenci</li>
+                <li>Nedokáže motivovat jako inspirující učitel</li>
+            </ul>
+
+            <h3>Riziko izolace</h3>
+            <ul>
+                <li>Učení není jen o obsahu - je i o sociálních interakcích</li>
+                <li>Diskuze s vrstevníky vás učí jiné perspektivy</li>
+                <li>Týmová práce je důležitá dovednost</li>
+            </ul>
+
+            <h3>Potřeba sebekázně</h3>
+            <ul>
+                <li>S flexibilitou přichází odpovědnost</li>
+                <li>Musíte si sami plánovat a dodržovat harmonogram</li>
+                <li>Není tam učitel, který by vás "donutil" pracovat</li>
+            </ul>
+
+            <div class="tip-box">
+                <h4>✅ Nejlepší přístup</h4>
+                <p>Kombinujte AI personalizované učení s tradičním vzděláváním. AI je skvělý doplněk, ale nemůže (a
+                    neměl
+                    by) úplně nahradit lidské učitele a spolužáky.</p>
+            </div>
+
+            <h2>🔮 Budoucnost personalizovaného učení</h2>
+
+            <div style="margin-bottom: 2rem; overflow: auto;">
+                <img src="../assets/notebooklm-avatar-future.png" alt="AI budoucnosti"
+                    class="article-image float-right">
+                <p>
+                    Vstupujeme do éry, kdy učení bude plynulé a všudypřítomné. Technologie se stanou neviditelnými
+                    pomocníky,
+                    kteří nás budou znát lépe než my sami, a pomohou nám dosahovat našeho plného potenciálu bez
+                    zbytečného tření.
+                </p>
+            </div>
+            <p>Co můžeme očekávat v příštích letech?</p>
+            <ul>
+                <li><strong>VR/AR integrace:</strong> Učte se v imerzivních prostředích</li>
+                <li><strong>Emoční AI:</strong> Systémy schopné rozpoznat frustraci nebo nudu a reagovat</li>
+                <li><strong>Holistické profily:</strong> AI sledující nejen akademickou výkonnost, ale i well-being</li>
+                <li><strong>Peer-to-peer AI:</strong> AI propojující studenty s podobnými zájmy</li>
+                <li><strong>Celoživotní učení:</strong> AI, které vás doprovází celou kariérou</li>
+            </ul>
+
+            <h2>🎯 Váš akční plán</h2>
+            <ol>
+                <li><strong>Tento týden:</strong> Vyzkoušejte jednu AI učební platformu (Duolingo, Khan Academy, ChatGPT
+                    jako tutor)</li>
+                <li><strong>Tento měsíc:</strong> Vytvořte si personalizovaný studijní plán s pomocí AI pro jeden
+                    předmět
+                </li>
+                <li><strong>Dlouhodobě:</strong> Experimentujte s různými přístupy,
+                    sledujte své pokroky a upravujte strategii</li>
+            </ol>
+
+            <h2>🌟 Závěr</h2>
+            <p>Personalizované učení s AI není science fiction - je to dostupná realita právě teď. Každý student je
+                jedinečný, učí se jiným způsobem a jiným tempem. Poprvé v historii máme technologii, která může tuto
+                jedinečnost respektovat a podporovat ve velkém měřítku.</p>
+            <p>Využijte těchto nástrojů. Experimentujte. Najděte si, co vám vyhovuje. A pamatujte - cílem není
+                technologie
+                sama o sobě, ale <strong>lepší učení, hlubší porozumění a radost z objevování nového</strong>.</p>
+            <p>Budoucnost vzdělávání je personalizovaná. A tato budoucnost začíná dnes, s vámi.</p>
+        </div>
+
+        <div class="back-button-container">
+            <a href="../teachers-news.html" class="btn-back">← Zpět na Novinky</a>
+        </div>
+    </article>
+
+    <footer>
+        <p>&copy; 2025 AI Educator. Vzdělávání s pomocí umělé inteligence.</p>
+    </footer>
+
+</body>
+
+</html>

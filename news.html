@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>⚡ AI Pulse | Novinky ze světa AI</title>
+    <meta name="description"
+        content="Nejnovější trendy, etika a budoucnost umělé inteligence. Co je nového ve světě AI?">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap&subset=latin,latin-ext"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=3">
+    <style>
+        .hub-hero {
+            min-height: 40vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: var(--spacing-3xl) var(--spacing-lg);
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(6, 182, 212, 0.1));
+            position: relative;
+        }
+
+        .hub-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('assets/news-hero.png') center/cover no-repeat;
+            opacity: 0.15;
+            z-index: -1;
+        }
+
+        .hub-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .hub-hero .subtitle {
+            font-size: var(--font-size-xl);
+            color: var(--text-secondary);
+            max-width: 600px;
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--spacing-xl);
+            padding: var(--spacing-3xl) var(--spacing-lg);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .article-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-xl);
+            transition: all var(--transition-base);
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl), var(--shadow-glow);
+            border-color: rgba(16, 185, 129, 0.3);
+        }
+
+        .article-card .date {
+            font-size: var(--font-size-sm);
+            color: #10b981;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .article-card h3 {
+            font-size: var(--font-size-xl);
+            margin-bottom: var(--spacing-md);
+            color: var(--text-primary);
+        }
+
+        .article-card p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .article-card .read-more {
+            color: #34d399;
+            font-weight: 600;
+            transition: color var(--transition-fast);
+        }
+
+        .article-card .read-more:hover {
+            color: #6ee7b7;
+        }
+
+        .article-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: var(--radius-lg);
+            margin-bottom: var(--spacing-md);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">✨ AI Educator</a>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+                ☰
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Domů</a></li>
+                <li><a href="index.html#explore" class="nav-link">Prozkoumejte AI</a></li>
+                <li><a href="apps.html" class="nav-link">Nástroje</a></li>
+                <li><a href="index.html#contact" class="nav-link">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="back-nav-container">
+        <a href="index.html" class="back-link">← Zpět na domovskou stránku</a>
+    </div>
+
+    <!-- Hub Hero -->
+    <div class="hub-hero">
+        <h1>⚡ AI Pulse</h1>
+        <p class="subtitle">Co je nového ve světě umělé inteligence</p>
+    </div>
+
+    <!-- Articles Grid -->
+    <div class="articles-grid">
+        <div class="article-card">
+            <img src="assets/gemini-3-5-hero.png" alt="Gemini 3.5 Hype">
+            <span class="date">Prosinec 2025</span>
+            <h3>Gemini 3.5: Hype vs Realita</h3>
+            <p>
+                Co je potvrzené, co je hype a jaká je realita o domnělém modelu Gemini 3.5?
+                Rozbor úniků, faktů a spekulací o "Fierce Falcon".
+            </p>
+            <a href="ai-news/gemini-3-5.html" class="read-more">Číst více →</a>
+        </div>
+        <div class="article-card">
+            <img src="assets/news-week-50-hero.png" alt="AI News Week 50">
+            <span class="date">Prosinec 2025</span>
+            <h3>Přehled týdne: AI modely & Regulace</h3>
+            <p>
+                Týdenní přehled AI novinek: Claude Opus 4.5, DeepSeek V3.2, Google Gemini 3, regulace USA a další.
+                Co přinesl druhý prosincový týden?
+            </p>
+            <a href="ai-news/novinky-tyden-50-2025.html" class="read-more">Číst více →</a>
+        </div>
+
+        <div class="article-card">
+            <img src="assets/ai-ethics.png" alt="Etika AI">
+            <span class="date">Říjen 2025</span>
+            <h3>Etika AI: Co by měl každý vědět</h3>
+            <p>
+                Diskuze o etických otázkách spojených s umělou inteligencí.
+                Proč je důležité rozumět AI nejen jako nástroji, ale i jejím dopadům na společnost.
+            </p>
+            <a href="ai-news/ai-ethics.html" class="read-more">Číst více →</a>
+        </div>
+
+        <div class="article-card">
+            <img src="assets/critical-thinking.png" alt="Kritické myšlení">
+            <span class="date">Září 2025</span>
+            <h3>Kritické myšlení v době AI</h3>
+            <p>
+                Proč je v době AI ještě důležitější umět kriticky myslet, ověřovat informace
+                a nebrat vše za bernou minci. Praktické návody.
+            </p>
+            <a href="ai-news/critical-thinking.html" class="read-more">Číst více →</a>
+        </div>
+
+        <!-- Placeholder for future articles -->
+        <div class="article-card" style="opacity: 0.6; border-style: dashed;">
+            <span class="date">Připravujeme</span>
+            <h3>Další novinky již brzy</h3>
+            <p>
+                Sledujeme nejnovější trendy ve světě AI.
+                Brzy přidáme další zajímavé články!
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 AI Educator. Vzdělávání s pomocí umělé inteligence.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

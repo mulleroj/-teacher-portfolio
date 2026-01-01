@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NotebookLM a Gemini: Synergie | AI Educator</title>
+    <meta name="description"
+        content="Jak propojit NotebookLM a Gemini pro maximální efektivitu ve výuce. 4 expertní scénáře pro učitele.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css?v=3">
+
+    <style>
+        /* Specifické styly pro článek */
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .article-meta {
+            color: var(--accent-cyan);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .article-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .article-content h2 {
+            color: var(--text-primary);
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .article-content h3 {
+            color: var(--text-primary);
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .article-content ul {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .article-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Tile Layout Styles */
+        .scenario-tile {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: var(--radius-xl);
+            padding: 2rem;
+            margin-bottom: 3rem;
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .scenario-tile:nth-child(even) {
+            grid-template-columns: 1.5fr 1fr;
+        }
+
+        .scenario-tile:nth-child(even) .tile-image-container {
+            order: 2;
+        }
+
+        .tile-image {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-lg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .tile-content h2 {
+            margin-top: 0;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .tile-subtitle {
+            color: var(--accent-cyan);
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .tile-content h3 {
+            color: var(--text-primary);
+            font-size: 1.2rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            border-left: 3px solid var(--accent-cyan);
+            padding-left: 0.8rem;
+        }
+
+        .prompt-box {
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: var(--radius-md);
+            padding: 1rem;
+            margin: 1rem 0;
+            font-family: monospace;
+            font-size: 0.95rem;
+            color: #fbbf24;
+        }
+
+        .key-rule {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(147, 51, 234, 0.1));
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            padding: 2.5rem;
+            border-radius: var(--radius-xl);
+            margin-top: 4rem;
+            text-align: center;
+        }
+
+        @media (max-width: 900px) {
+
+            .scenario-tile,
+            .scenario-tile:nth-child(even) {
+                grid-template-columns: 1fr;
+            }
+
+            .scenario-tile:nth-child(even) .tile-image-container {
+                order: 0;
+                /* Rezef order on mobile */
+            }
+        }
+
+        /* Hero Text Integration */
+        .hero-container {
+            margin-bottom: 4rem;
+        }
+
+        .hero-container::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .hero-image {
+            float: left;
+            width: 320px;
+            max-width: 100%;
+            margin-right: 2.5rem;
+            margin-bottom: 1rem;
+            border-radius: var(--radius-xl);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .hero-image {
+                float: none;
+                display: block;
+                width: 100%;
+                margin: 0 auto 2rem auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigace -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">✨ AI Educator</a>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+                ☰
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="../index.html" class="nav-link">Domů</a></li>
+                <li><a href="../index.html#explore" class="nav-link">Prozkoumejte AI</a></li>
+                <li><a href="../apps.html" class="nav-link">Nástroje</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Obsah článku -->
+    <article class="article-container" style="max-width: 1000px;">
+        <!-- Hlavička článku -->
+        <header class="article-header">
+            <span class="article-meta">NotebookLM / Prosinec 2025</span>
+            <h1>AI Revoluce ve třídě: Synergie NotebookLM a Gemini</h1>
+        </header>
+
+        <!-- Tělo článku -->
+        <div class="article-content">
+
+            <div class="hero-container">
+                <img src="../assets/notebook_gemini_hero.png" alt="NotebookLM a Gemini Synergie" class="hero-image">
+                <p class="lead" style="margin-top: 0;">
+                    Spojení hluboké, uzemněné znalostní báze (vaše kurikulum, poznámky, studentské práce) s kreativní,
+                    celosvětově informovanou AI (Gemini) je okamžikem, kdy se pedagogická efektivita exponenciálně
+                    zvyšuje.
+                </p>
+                <p>
+                    To je ta nejdůležitější otázka v moderním vzdělávání: <strong>Jak proměnit 1 + 1 na 3.</strong>
+                </p>
+            </div>
+
+            <p style="max-width: 800px; margin: 0 auto 3rem auto;">
+                Zatímco vaše osobní úložiště dat (představte si jako <strong>NotebookLM pro učitele</strong>) se
+                striktně drží faktů a vašich ověřených materiálů, <strong>Gemini</strong> dokáže tvořit, personalizovat
+                a má přístup k aktuálním světovým trendům. Zde jsou <strong>4 expertní scénáře</strong>, jak toto
+                propojení využít naplno:
+            </p>
+
+            <!-- Scenario 1 -->
+            <div class="scenario-tile">
+                <div class="tile-image-container">
+                    <img src="../assets/tovarna_hodiny.png" alt="Továrna na hodiny" class="tile-image">
+                </div>
+                <div class="tile-content">
+                    <h2>1. „Továrna na Poutavé Hodiny“</h2>
+                    <span class="tile-subtitle">Od suchého RVP k virálnímu obsahu</span>
+                    <p>Vaše dokumentace má fakta, Gemini má styl a kontext. Toto je klíčová aplikace pro převod
+                        povinného, ale nudného učiva do poutavých materiálů.</p>
+
+                    <h3>Problém</h3>
+                    <p>Máte skvělý, ale suchý studijní materiál. Potřebujete z toho udělat čtivý příspěvek pro školní
+                        Instagram nebo interaktivní aktivitu.</p>
+
+                    <h3>Workflow</h3>
+                    <p>Data z NotebookLM + Gemini Prompt</p>
+
+                    <h3>Prompt pro Gemini</h3>
+                    <div class="prompt-box">
+                        "Vezmi tato fakta z mého dokumentu... Přepiš je do krátkého textu ve formátu '10 tipů, jak...' a
+                        použij tón pro studenty SŠ..."
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scenario 2 -->
+            <div class="scenario-tile">
+                <div class="tile-image-container">
+                    <img src="../assets/zpetna_vazba.png" alt="Zpětná vazba" class="tile-image">
+                </div>
+                <div class="tile-content">
+                    <h2>2. „Autonomní Generátor Zpětné Vazby“</h2>
+                    <span class="tile-subtitle">Hodnocení na steroidech</span>
+                    <p>AI pro masivní personalizaci výuky a zefektivnění jedné z časově nejnáročnějších částí učitelské
+                        práce.</p>
+
+                    <h3>Problém</h3>
+                    <p>Potřebujete napsat personalizovanou zpětnou vazbu ke 30 esejům s ohledem na IVP a rubriky.</p>
+
+                    <h3>Prompt</h3>
+                    <div class="prompt-box">
+                        "Přečti si esej... Podívej se do rubriky a IVP a ověř splnění... Navrhni diplomatickou, ale
+                        upřímnou zpětnou vazbu..."
+                    </div>
+
+                    <h3>Výsledek</h3>
+                    <p>Konkrétní, motivující zpětná vazba opřená o vaše oficiální dokumenty.</p>
+                </div>
+            </div>
+
+            <!-- Scenario 3 -->
+            <div class="scenario-tile">
+                <div class="tile-image-container">
+                    <img src="../assets/studijni_pruvodce.png" alt="Studijní průvodce" class="tile-image">
+                </div>
+                <div class="tile-content">
+                    <h2>3. „Hyper-Personalizovaný Studijní Průvodce“</h2>
+                    <span class="tile-subtitle">Pro ne-šprty i génie</span>
+                    <p>Gemini umí tvořit otázky, ale nezná strukturu vaší zkoušky. Propojení to mění.</p>
+
+                    <h3>Scénář</h3>
+                    <p>Student potřebuje opakovat látku k testu na míru, učebnice ho nudí.</p>
+
+                    <h3>Prompt</h3>
+                    <div class="prompt-box">
+                        "Vytvoř 15 kvízových otázek pro studenta s dyslexií, založených striktně jen na kapitolách [X,
+                        Y, Z]... Použij PŘESNÉ formulace z mých podkladů..."
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scenario 4 -->
+            <div class="scenario-tile">
+                <div class="tile-image-container">
+                    <!-- Placeholder or reuse hero style image if no specific one -->
+                    <img src="../assets/notebooklm_mindmap_viz.png" alt="Strategie" class="tile-image">
+                </div>
+                <div class="tile-content">
+                    <h2>4. „Strategický Simulátor“</h2>
+                    <span class="tile-subtitle">What-If Analýza budoucnosti třídy</span>
+                    <p>Vaše data znají historii třídy, Gemini zná světové trendy.</p>
+
+                    <h3>Scénář</h3>
+                    <p>Třída má dlouhodobě nízké výsledky a docházku. Chcete vytvořit plán.</p>
+
+                    <h3>Prompt pro Gemini</h3>
+                    <div class="prompt-box">
+                        "Jsi kurikulární poradce. Vezmi data o nízké úspěšnosti... Porovnej s trendy v gamifikaci...
+                        Vytvoř návrh krizového scénáře."
+                    </div>
+
+                    <h3>Výsledek</h3>
+                    <p>Akční plán kombinující vaše data s moderními metodikami.</p>
+                </div>
+            </div>
+
+            <div class="key-rule">
+                <h3>🎯 Jednoduché Pravidlo pro Učitele</h3>
+                <p>Když potřebujete <strong>přesnost, paměť a fakta</strong> (z kurikula, od studenta) <br>👉 ptejte se
+                    <strong>své datové báze/dokumentů</strong>.
+                </p>
+                <div style="margin-top: 1rem;"></div>
+                <p>Když potřebujete <strong>hodnocení, aktivitu, e-mail nebo nový nápad</strong> <br>👉 ptejte se
+                    <strong>Gemini</strong> a řekněte jí, ať se "podívá do vašich podkladů".
+                </p>
+            </div>
+        </div>
+
+        </div>
+
+        <!-- Odkaz zpět -->
+        <div class="back-button-container">
+            <a href="index.html" class="btn-back">← Zpět do NotebookLM</a>
+            <a href="../index.html" class="btn-back" style="margin-left: 1rem;">← Zpět na úvod</a>
+        </div>
+    </article>
+
+    <!-- Patička -->
+    <footer>
+        <p>&copy; 2025 AI Educator. Vzdělávání s pomocí umělé inteligence.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+
+Chytrá výuka s Adobe AI a ChatGPT
+
+Jak propojení Photoshopu, Expressu a Acrobatu zjednoduší učiteli práci (a kdy to nedává smysl)
+
+1. Co se vlastně myslí „Adobe propojené s ChatGPT“
+Adobe dnes používá generativní AI Firefly a zároveň integruje chatový způsob práce přímo do svých nástrojů. Výsledek:
+nepřepínáš pořád mezi aplikacemi
+popisuješ, co chceš běžným jazykem
+AI pracuje uvnitř nástroje, ne bokem
+Důležité:👉 Nepřipojuješ si ChatGPT účet k Adobe👉 Adobe si udělalo vlastní „ChatGPT-like“ rozhraní
+Pro učitele to znamená méně technického balastu a víc času na obsah.
+
+2. Adobe Express + AI = učitelský zlatý důl
+Pokud bys měla používat jen jeden nástroj, je to Express.Photoshop je silný, Acrobat užitečný, ale Express je pedagogicky nejvděčnější.
+Co umí zdarma:
+generovat obrázky z textu
+upravovat texty (zkrátit, přepsat, zjednodušit)
+tvořit plakáty, pracovní listy, prezentace
+rychle měnit styl pro žáky vs. kolegy
+Jak to funguje v praxi
+Nepíšeš „prompt“. Píšeš přání:
+Vytvoř jednoduchý pracovní list pro střední školu na téma bezpečnost na internetu.Použij přehledný styl, krátké bloky textu a ikony.
+AI:
+navrhne rozložení
+vytvoří text
+doplní grafiku
+Učitel pak:
+jen škrtá
+přizpůsobuje třídě
+neřeší design od nuly
+Konkrétní využití pro učitele
+plakáty do třídy
+titulní strany pracovních listů
+infografiky k látce
+přehledy učiva pro žáky, co chyběli
+Tohle je přesně práce, která žere čas a nepřidává didaktickou hodnotu. Tady má AI makat.
+
+3. Adobe Photoshop + AI: ano, ale s rozumem
+Photoshop je pořád profesionální nástroj.AI ho nedělá jednoduchým, jen méně bolestivým.
+Co AI v Photoshopu umí:
+generativní výplně (doplň pozadí, odstraň objekt)
+změna stylu obrázku podle popisu
+úprava obrázků bez přesného výběru
+Jak to pomůže učiteli
+Reálné scénáře:
+upravíš obrázek k prezentaci (odstraníš rušivé prvky)
+přizpůsobíš ilustraci věku žáků
+sjednotíš styl obrázků v materiálech
+Kdy to nedává smysl
+pokud chceš jen rychlý obrázek → Express je lepší
+pokud neumíš základy Photoshopu → AI tě nezachrání
+Photoshop + AI je zesilovač dovedností, ne náhrada.
+
+4. Adobe Acrobat + AI: konečně smysluplná práce s PDF
+Tady Adobe udělalo učitelům fakt službu.
+Co umí AI v Acrobatu:
+shrnout dlouhé PDF
+vytáhnout klíčové informace
+převést dokument na otázky / přehled
+odpovídat na dotazy nad obsahem souboru
+Praktický učitelský scénář
+Máš:
+metodický dokument
+RVP / ŠVP
+odborný článek
+dlouhý studijní text
+Místo čtení 20 stran:
+Shrň tento dokument pro učitele SŠ do 10 bodů.Zvýrazni, co je podstatné pro výuku.
+Nebo:
+Vytvoř z tohoto textu pracovní list s otázkami pro žáky.
+Tohle není lenost.To je efektivní práce s informacemi, kterou bys žákům stejně doporučovala.
+
+5. Jak to celé nahradí část práce s ChatGPT
+Upřímně:
+ChatGPT je pořád lepší na text, strukturu a didaktiku
+Adobe je lepší na vizuál a formát
+Ideální workflow učitele:
+ChatGPT → obsah, struktura, otázky
+Adobe Express → vizuální zpracování
+Acrobat → práce s PDF, zdroje, shrnutí
+Když to děláš opačně, je to trápení.
+
+6. Co to učiteli reálně zjednoduší
+Bez obalu:
+méně klikání
+méně přepisování
+méně „jak to udělat hezké“
+víc času na přemýšlení nad výukou
+AI tady nekrade práci učiteli.Krade práci grafikovi, sazeči a administrativě – což učitel nikdy být neměl.
+
+7. Časté mýty mezi učiteli
+❌ „Je to složité“→ Express není složitější než PowerPoint
+❌ „AI za mě všechno udělá“→ Ne. Udělá první verzi. A to je správně.
+❌ „Žáci to pak nebudou umět sami“→ Stejný argument se říkal o kalkulačce, Wordu i Googlu
+Technologie mění způsob práce, ne potřebu myslet.
+
+8. Pro koho má Adobe + AI smysl
+✔ učitelé, co připravují vlastní materiály✔ učitelé, co chtějí hezčí výstupy bez grafických nervů✔ školy, co chtějí sjednotit vizuální styl✔ učitelé, co už používají ChatGPT a chtějí ho doplnit
+Pokud jen kopíruješ pracovní listy z učebnice, AI tě nespasí.Pokud tvoříš, zrychlí tě brutálně.
+
+Závěrečná poznámka
+Adobe + AI není revoluce ve vzdělávání.Je to evoluce učitelské práce: méně mechaniky, víc myšlení.
+A přesně tam má učitel zůstat.

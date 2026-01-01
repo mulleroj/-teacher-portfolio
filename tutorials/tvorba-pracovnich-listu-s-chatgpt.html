@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tvorba pracovních listů s ChatGPT | AI Educator</title>
+    <meta name="description"
+        content="Praktický návod pro učitele: jak vytvořit perfektní pracovní list s ChatGPT od prvního promptu po hotový materiál.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .article-meta {
+            color: var(--accent-cyan);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .article-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .article-content h2 {
+            color: var(--text-primary);
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            clear: both;
+            /* Ensure headers clear floated images */
+        }
+
+        .article-content h3 {
+            color: #f59e0b;
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+        }
+
+        .article-image {
+            width: 300px;
+            float: left;
+            margin: 0.5rem 2rem 1.5rem 0;
+            border-radius: var(--radius-xl);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .article-image.right {
+            float: right;
+            margin: 0.5rem 0 1.5rem 2rem;
+        }
+
+        /* Clearfix for floated element */
+        .article-content::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        @media (max-width: 768px) {
+
+            .article-image,
+            .article-image.right {
+                float: none;
+                width: 100%;
+                margin: 2rem 0;
+            }
+        }
+
+        .highlight-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .highlight-box h4 {
+            color: var(--accent-cyan);
+            margin-top: 0;
+        }
+
+        .article-content ul {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .article-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .article-content code {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 0.2em 0.4em;
+            border-radius: 4px;
+            font-family: monospace;
+            color: var(--accent-cyan);
+        }
+
+        .prompt-box {
+            background: #1e1e1e;
+            border-left: 4px solid var(--accent-cyan);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            font-family: inherit;
+            color: #e5e5e5;
+            border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+        }
+
+        .back-nav-container {
+            margin-top: 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+        }
+
+        .btn-back,
+        .back-link {
+            transition: color var(--transition-fast);
+        }
+
+        .btn-back:hover,
+        .back-link:hover {
+            color: var(--accent-cyan);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigace -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">✨ AI Educator</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Domů</a></li>
+                <li><a href="../index.html#explore" class="nav-link">Prozkoumejte AI</a></li>
+                <li><a href="../apps.html" class="nav-link">Nástroje</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Obsah článku -->
+    <article class="article-container">
+        <header class="article-header">
+            <span class="article-meta">Návody / Prosinec 2025</span>
+            <h1>Tvorba pracovních listů s ChatGPT</h1>
+            <p class="subtitle" style="color: var(--text-secondary); margin-top: 1rem;">Praktický návod pro učitele (od
+                prvního promptu po hotový list)</p>
+        </header>
+
+        <div class="article-content">
+            <h2>1. Co ChatGPT při tvorbě pracovních listů skutečně umí</h2>
+            <img src="../assets/worksheets-hero.png" alt="Tvorba pracovních listů" class="article-image">
+            <p>
+                Než se do toho pustíme, sundejme růžové brýle. Berte ChatGPT jako rychlého asistenta, ne jako náhradu
+                učitele. Učitel bez myšlení je horší než žák s TikTokem.
+            </p>
+
+            <div class="highlight-box">
+                <h4>✅ Co ChatGPT UMÍ</h4>
+                <ul>
+                    <li>Generuje úlohy, texty, otázky, zadání</li>
+                    <li>Diferencuje obtížnost (lehké / střední / náročné)</li>
+                    <li>Přizpůsobí styl věku, oboru i úrovni žáků</li>
+                    <li>Navrhne řešení a klíč</li>
+                    <li>Vysvětlí látku jinými slovy, klidně třemi způsoby</li>
+                </ul>
+                <h4 style="margin-top: 1.5rem; color: #ef4444;">❌ Co NEUMÍ</h4>
+                <ul>
+                    <li>Znát tvou konkrétní třídu</li>
+                    <li>Odhadnout reálnou časovou náročnost bez korekce</li>
+                    <li>Automaticky hlídat RVP, ŠVP a školní zvyklosti (to je pořád vaše práce)</li>
+                </ul>
+            </div>
+
+            <h2>2. Základní princip: dobrý pracovní list = dobrý vstup</h2>
+            <p>
+                Nejčastější chyba začátečníků: <em>„Vytvoř mi pracovní list na minulý čas.“</em>
+            </p>
+            <img src="../assets/prompt-structure.png" alt="Struktura promptu" class="article-image right">
+            <p>
+                Výsledek? Generická kaše, použitelná maximálně jako inspirace. Místo toho potřebuješ říct: pro koho to
+                je, na co přesně, v jaké formě, jak dlouho to má trvat a co má žák po splnění umět. Tohle je rozdíl mezi
+                náhodným generováním a řízenou tvorbou.
+            </p>
+
+            <h2>3. Univerzální kostra promptu (doporučeno uložit)</h2>
+            <p>
+                Toto je základ, který funguje napříč předměty:
+            </p>
+            <div class="prompt-box">
+                Jsi zkušený učitel [PŘEDMĚT].<br>
+                Vytvoř pracovní list pro žáky [ROČNÍK / VĚK].<br>
+                Téma: [KONKRÉTNÍ TÉMA].<br>
+                Cíl pracovního listu: [CO SE MAJÍ NAUČIT].<br>
+                Časová dotace: [NAPŘ. 45 MINUT].<br><br>
+                Pracovní list má obsahovat:<br>
+                - krátké úvodní vysvětlení<br>
+                - úlohy od lehkých po náročnější<br>
+                - různé typy úloh (doplňování, výběr, otevřená otázka, aplikace)<br>
+                - místo pro odpovědi<br><br>
+                Na konec přidej řešení pro učitele.
+            </div>
+            <p>
+                Tohle není magie. To je pedagogická disciplína přenesená do textu.
+            </p>
+
+            <h2>4. Konkrétní příklady (a proč fungují)</h2>
+
+            <h3>Příklad 1: Jazyk – začátečník</h3>
+            <img src="../assets/subject-examples.png" alt="Příklady předmětů" class="article-image">
+            <div class="prompt-box">
+                Vytvoř pracovní list z angličtiny pro 7. ročník ZŠ. Téma: Past Simple – pravidelná slovesa. Cíl: žák
+                správně tvoří kladné věty v minulém čase. Čas: 30 minut. Použij jednoduchý jazyk a krátké věty.
+            </div>
+            <p>
+                <strong>Výsledek:</strong> použitelný list, minimum balastu, dobře diferencované úlohy.
+            </p>
+
+            <h3>Příklad 2: Odborný předmět – střední škola</h3>
+            <div class="prompt-box">
+                Jsi učitel elektrotechniky. Vytvoř pracovní list pro 2. ročník SŠ. Téma: PE a PEN vodič – funkce a
+                bezpečnost. Zaměř se na praktické porozumění a typické chyby v zapojení. Přidej jednu úlohu typu „Co by
+                se stalo, kdyby…“.
+            </div>
+            <p>
+                Tohle je přesně místo, kde ChatGPT září – scénáře, vysvětlování chyb, modelové situace.
+            </p>
+
+            <h2>5. Diferenciace: stejný list, různé úrovně</h2>
+            <img src="../assets/differentiation-levels.png" alt="Diferenciace výuky" class="article-image right">
+            <p>
+                Velká výhoda ChatGPT oproti učebnicím: nestojí tě to žádný čas navíc. Stačí dodat:
+            </p>
+            <div class="prompt-box">
+                Připrav tři varianty úloh:<br>
+                A – základní<br>
+                B – standardní<br>
+                C – rozšiřující (pro nadané žáky)
+            </div>
+            <p>
+                Najednou máš materiál pro inkluzi, klidnější hodinu a jistotu, že se slabší žáci neutopí a silní nenudí.
+                Tohle by ti žádná učebnice nedala bez dalšího plánování.
+            </p>
+
+            <h2>6. Pracovní list jako stavebnice</h2>
+            <p>
+                Důležitá pedagogická pravda: Pracovní list není hotový produkt. Je to polotovar.
+            </p>
+            <ul>
+                <li>Nech ChatGPT vygenerovat návrh</li>
+                <li>Projdi ho učitelským okem</li>
+                <li>Zkrať, vyhoď, uprav formulace</li>
+                <li>Přidej vlastní příklad nebo školní kontext</li>
+            </ul>
+            <p>
+                Učitel, který bere výstup AI jako hotovou pravdu, si zadělává na průšvih. Stejně jako ten, kdo kdysi
+                slepě věřil Wikipedii.
+            </p>
+
+            <h2>7. Export a použití v praxi</h2>
+            <p>
+                ChatGPT může formátovat text pro Word, připravit obsah pro PDF, strukturovat otázky pro Microsoft Forms
+                / Google Forms nebo rozdělit úlohy na kartičky.
+            </p>
+            <div class="prompt-box">
+                Naformátuj pracovní list tak, aby šel přímo vložit do Wordu. Použij nadpisy, očíslované úlohy a prostor
+                na odpovědi.
+            </div>
+
+            <h2>8. Ukázky promptů podle předmětů (SŠ)</h2>
+            <div class="highlight-box">
+                <h3>Český jazyk a literatura</h3>
+                <p><strong>Gramatika:</strong> <em>"Zaměř se na: rozpoznání typu věty v souvislém textu, praktické
+                        použití (ne definice zpaměti)."</em></p>
+                <p><strong>Literatura:</strong> <em>"Vytvoř otázky: na pochopení textu, na interpretaci, jednu otevřenou
+                        diskuzní otázku."</em></p>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Angličtina</h3>
+                <p><strong>Gramatika s kontextem:</strong> <em>"Použij: reálné situace (cestování, práce), krátké
+                        dialogy, postup od jednoduchých vět ke složitějším."</em></p>
+                <p><strong>Odborná angličtina:</strong> <em>"Úkoly: slovní zásoba, porozumění krátkému textu, tvorba
+                        jednoduchých vět v kontextu BOZP."</em></p>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Ekonomika / ZSV</h3>
+                <p><strong>Ekonomie:</strong> <em>"Zaměř se na: praktické příklady z běžného života, jednoduché modelové
+                        situace, úlohu co se stane, když…"</em></p>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Odborné technické předměty</h3>
+                <p><strong>Elektrotechnika:</strong> <em>"Zaměř se na: bezpečnost, typické chyby v zapojení, praktické
+                        otázky z praxe."</em></p>
+            </div>
+
+
+            <h2>9. Shrnutí bez pozlátka</h2>
+            <ul>
+                <li>Dobrý prompt = polovina hotového pracovního listu</li>
+                <li>Čím konkrétnější zadání, tím méně oprav</li>
+                <li>ChatGPT je nejsilnější v scénářích, aplikaci, diferenciaci</li>
+            </ul>
+            <p>
+                ChatGPT nenahrazuje učitele. Nahrazuje únavu, rutinu a prázdné zírání do monitoru v neděli večer. A to
+                je přesně to místo, kde má technologie sloužit.
+            </p>
+
+        </div>
+
+        <div class="back-nav-container">
+            <a href="../tutorials.html" class="btn-back">← Zpět na Návody</a>
+            <a href="../index.html" class="back-link">Zpět na domovskou stránku</a>
+        </div>
+    </article>
+
+    <footer>
+        <p>&copy; 2025 AI Educator. Vzdělávání s pomocí umělé inteligence.</p>
+    </footer>
+</body>
+
+</html>

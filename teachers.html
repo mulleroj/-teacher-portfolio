@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>AI Toolkit | AI Educator</title>
+    <meta name="description"
+        content="Centrální rozcestník pro učitele. Najděte novinky ze světa AI a specializované zdroje pro NotebookLM.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap&subset=latin,latin-ext"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=3">
+    <style>
+        .hub-hero {
+            min-height: 40vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: var(--spacing-3xl) var(--spacing-lg);
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(168, 85, 247, 0.1));
+            /* Purple/Indigo theme */
+            position: relative;
+        }
+
+        .hub-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('assets/teachers-hero.png') center/cover no-repeat;
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        .hub-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .hub-hero .subtitle {
+            font-size: var(--font-size-xl);
+            color: var(--text-secondary);
+            max-width: 600px;
+        }
+
+        .hub-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--spacing-2xl);
+            padding: var(--spacing-3xl) var(--spacing-lg);
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .hub-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            transition: all var(--transition-base);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            text-decoration: none;
+            color: inherit;
+            position: relative;
+        }
+
+        .hub-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-2xl), 0 0 20px rgba(99, 102, 241, 0.2);
+            border-color: rgba(99, 102, 241, 0.4);
+        }
+
+        .hub-card-image {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .hub-card-content {
+            padding: var(--spacing-xl);
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .hub-card h2 {
+            font-size: 1.75rem;
+            margin-bottom: var(--spacing-sm);
+            color: var(--text-primary);
+        }
+
+        .hub-card p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: var(--spacing-lg);
+            flex-grow: 1;
+        }
+
+        .hub-card-footer {
+            margin-top: auto;
+            color: var(--primary);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Contextual styling for NotebookLM card */
+        .notebooklm-card .hub-card-image {
+            object-fit: cover;
+            /* Ensure generated image covers nicely */
+            background: #eef2ff;
+            /* Fallback */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">✨ AI Educator</a>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+                ☰
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Domů</a></li>
+                <li><a href="index.html#explore" class="nav-link">Prozkoumejte AI</a></li>
+                <li><a href="apps.html" class="nav-link">Nástroje</a></li>
+                <li><a href="index.html#contact" class="nav-link">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="back-nav-container">
+        <a href="index.html" class="back-link">← Zpět na domovskou stránku</a>
+    </div>
+
+    <!-- Hub Hero -->
+    <div class="hub-hero">
+        <h1>👨‍🏫 AI Toolkit</h1>
+        <p class="subtitle">Vše co potřebujete pro integraci AI do vaší výuky na jednom místě.</p>
+    </div>
+
+    <!-- Hub Actions Grid -->
+    <div class="hub-grid">
+        <!-- News Card -->
+        <a href="teachers-news.html" class="hub-card">
+            <img src="assets/ai-news-card.png" alt="AI News" class="hub-card-image">
+            <div class="hub-card-content">
+                <h2>AI novinky</h2>
+                <p>
+                    Nejnovější články, tipy a triky pro učitele. Objevte nové AI nástroje pro hodnocení,
+                    jazyky a personalizovanou výuku.
+                </p>
+                <div class="hub-card-footer">
+                    Přejít na novinky <span>→</span>
+                </div>
+            </div>
+        </a>
+
+        <!-- NotebookLM Card -->
+        <a href="notebooklm/index.html" class="hub-card">
+            <div class="hub-card-image"
+                style="background: linear-gradient(135deg, #1e1b4b, #312e81); display: flex; align-items: center; justify-content: center; padding: 0 1.5rem;">
+                <img src="assets/notebooklm-card.png" alt="NotebookLM Logo"
+                    style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-md); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);">
+            </div>
+            <div class="hub-card-content">
+                <h2>NotebookLM</h2>
+                <p>
+                    Vše o revolučním nástroji od Google. Jak ho využít pro přípravu materiálů,
+                    studium a tvorbu interaktivního obsahu.
+                </p>
+                <div class="hub-card-footer">
+                    Otevřít sekci NotebookLM <span>→</span>
+                </div>
+            </div>
+            <!-- Tutorials Card -->
+            <a href="tutorials.html" class="hub-card">
+                <div class="hub-card-image"
+                    style="background: linear-gradient(135deg, #064e3b, #065f46); display: flex; align-items: center; justify-content: center; padding: 0 1.5rem;">
+                    <img src="assets/tutorials-card.png" alt="Návody a tutoriály"
+                        style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-md); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);">
+                </div>
+                <div class="hub-card-content">
+                    <h2>Návody aneb jak na to?</h2>
+                    <p>
+                        Praktické postupy krok za krokem. Naučte se efektivně ovládat AI nástroje
+                        a implementovat je do svých hodin.
+                    </p>
+                    <div class="hub-card-footer">
+                        Zobrazit návody <span>→</span>
+                    </div>
+                </div>
+            </a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 AI Educator. Vzdělávání s pomocí umělé inteligence.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

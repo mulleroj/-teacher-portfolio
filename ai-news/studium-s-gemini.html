@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studium s Gemini: Jak využívat odkazy pro efektivní učení | AI Lab</title>
+    <meta name="description"
+        content="Gemini není jen vyhledávač. Naučte se, jak využít odkazy na články a videa k efektivnímu studiu, přípravě na testy a pochopení složité látky.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .article-meta {
+            color: var(--accent-cyan);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .article-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .article-content h2 {
+            color: var(--text-primary);
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            clear: both;
+        }
+
+        .article-content h3 {
+            color: #f59e0b;
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+        }
+
+        .article-image {
+            width: 300px;
+            float: left;
+            margin: 0.5rem 2rem 1.5rem 0;
+            border-radius: var(--radius-xl);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .article-image.right {
+            float: right;
+            margin: 0.5rem 0 1.5rem 2rem;
+        }
+
+        .article-content::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        @media (max-width: 768px) {
+
+            .article-image,
+            .article-image.right {
+                float: none;
+                width: 100%;
+                margin: 2rem 0;
+            }
+        }
+
+        .highlight-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .highlight-box h4 {
+            color: var(--accent-cyan);
+            margin-top: 0;
+        }
+
+        .article-content ul {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .article-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .prompt-box {
+            background: #1e1e1e;
+            border-left: 4px solid var(--accent-cyan);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            font-family: inherit;
+            color: #e5e5e5;
+            border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+        }
+
+        .back-nav-container {
+            margin-top: 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigace -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">✨ AI Educator</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Domů</a></li>
+                <li><a href="../students.html" class="nav-link active">AI Lab</a></li>
+                <li><a href="../index.html#explore" class="nav-link">Prozkoumejte AI</a></li>
+                <li><a href="../apps.html" class="nav-link">Nástroje</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Obsah článku -->
+    <article class="article-container">
+        <header class="article-header">
+            <span class="article-meta">AI Lab / Prosinec 2025</span>
+            <h1>Studium s Gemini: Jak využívat odkazy pro efektivní učení</h1>
+            <p class="subtitle" style="color: var(--text-secondary); margin-top: 1rem;">Odemkněte plný potenciál Gemini
+                prací s konkrétními zdroji</p>
+        </header>
+
+        <div class="article-content">
+            <img src="../assets/gemini-study-hero.png" alt="Studium s Gemini" class="article-image">
+
+            <p>
+                Gemini má jednu konkrétní funkci (a speciálně v jeho verzi pro učení), která je absolutním
+                „game-changerem“ pro studium. Jde o práci s odkazy (URL).
+            </p>
+            <p>
+                Mnoho studentů používá Gemini jen jako „chytřejší vyhledávač“. Píšete mu otázky a čekáte odpověď. To je
+                fajn, ale skutečná magie nastává, když Gemini řeknete: „Tady je tento konkrétní článek/video, nastuduj
+                ho a pak mě z něj vyzkoušej.“
+            </p>
+            <p>
+                Pojďme se podívat, jak tuto funkci v nástrojích „Učení s vedením“ (nebo v klasickém Gemini) využít na
+                maximum.
+            </p>
+
+            <h2>🧠 Proč používat odkazy, a ne jen obecné otázky?</h2>
+            <p>
+                Když se zeptáte Gemini „Vysvětli mi fotosyntézu“, vytáhne informace ze své obecné tréninkové databáze.
+                To je obvykle správně, ale může to být příliš obecné, nebo naopak příliš složité, a nemusí to odpovídat
+                tomu, co po vás chce váš učitel.
+            </p>
+
+            <img src="../assets/gemini-links.png" alt="Gemini a odkazy" class="article-image right">
+
+            <p><strong>Když vložíte odkaz na konkrétní článek nebo YouTube video:</strong></p>
+            <ul>
+                <li><strong>Ukotvíte AI v realitě:</strong> Gemini pracuje přímo s vaším studijním materiálem (skripta,
+                    článek na Wiki, výukové video).</li>
+                <li><strong>Omezíte halucinace:</strong> AI si méně vymýšlí, protože má „před sebou“ text.</li>
+                <li><strong>Šetříte čas:</strong> Nemusíte číst 20 stran textu, abyste zjistili, zda je relevantní.</li>
+            </ul>
+
+            <h2>🛠️ Jak to funguje prakticky (Krok za krokem)</h2>
+            <p>Je to jednodušší, než se zdá:</p>
+            <ol>
+                <li>Zkopírujte URL adresu (webové stránky, PDF online, YouTube videa).</li>
+                <li>Vložte ji do chatovacího okna Gemini.</li>
+                <li>Ihned za odkaz připište instrukci (prompt). Nenechávejte odkaz jen tak viset, řekněte AI, co s ním
+                    má dělat.</li>
+            </ol>
+
+            <h2>📚 3 Praktické scénáře pro studenty</h2>
+            <p>Zde jsou mé ověřené „recepty“, jak s odkazy pracovat. Můžete je rovnou zkopírovat a vyzkoušet.</p>
+
+            <h3>Scénář 1: Rychlé pochopení složitého videa (YouTube)</h3>
+            <img src="../assets/youtube-analysis.png" alt="Analýza YouTube videa" class="article-image">
+            <p>Máte za úkol podívat se na 40minutovou přednášku na YouTube, ale ztrácíte se v ní?</p>
+            <div class="prompt-box">
+                Analyzuj toto video: [vložte odkaz]. Vypiš mi 5 nejdůležitějších myšlenek v odrážkách a vysvětli mi je
+                tak, jako bych byl úplný začátečník. Na konci uveď časové značky (timestamps) pro klíčové momenty.
+            </div>
+            <p><strong>Výsledek:</strong> Dostanete strukturovaný výpis. Pokud něčemu nerozumíte, můžete se doptat: „Co
+                přesně myslel řečník v bodě 3?“</p>
+
+            <h3>Scénář 2: Příprava na test z dlouhého článku (Historie/ZSV)</h3>
+            <p>Učitel vám poslal odkaz na dlouhý článek o Velké francouzské revoluci a zítra z něj píšete test.</p>
+            <div class="prompt-box">
+                Přečti si tento článek: [vložte odkaz]. Chci se naučit klíčová data a jména. Vytvoř pro mě tabulku, kde
+                v prvním sloupci bude 'Událost/Osobnost', ve druhém 'Datum' a ve třetím 'Proč je to důležité'. Potom mi
+                z obsahu článku vytvoř 5 testových otázek s výběrem z možností (a, b, c).
+            </div>
+            <p><strong>Výsledek:</strong> Máte okamžitý studijní přehled a cvičný test na míru.</p>
+
+            <h3>Scénář 3: Přeměna pasivního čtení na aktivní učení (Jazyky/Biologie)</h3>
+            <p>Máte online učebnici nebo PDF a potřebujete si látku zapamatovat.</p>
+            <div class="prompt-box">
+                Vycházej z tohoto textu: [vložte odkaz]. Chovej se jako můj přísný učitel biologie. Pokládej mi jednu
+                otázku po druhé, počkej na mou odpověď, a pak ji ohodnoť. Pokud odpovím špatně, naved' mě ke správné
+                odpovědi, ale neprozrazuj ji hned.
+            </div>
+            <p><strong>Výsledek:</strong> Toto je metoda Sokratovského dotazování. Místo abyste text jen tupě četli,
+                musíte nad ním přemýšlet.</p>
+
+            <div class="highlight-box">
+                <h4>⚠️ Na co si dát pozor (Rady zkušeného učitele)</h4>
+                <ul>
+                    <li><strong>Paywally:</strong> Pokud je článek zamčený, Gemini se na něj nedostane. Zkopírujte text
+                        (CTRL+C) a vložte ho přímo (CTRL+V).</li>
+                    <li><strong>Halucinace u videí:</strong> Gemini čte primárně titulky. Pokud jsou špatné, analýza
+                        může být nepřesná.</li>
+                    <li><strong>Ověřování:</strong> Vždy si namátkově zkontrolujte, zda to, co Gemini tvrdí, v textu
+                        skutečně je. Důvěřuj, ale prověřuj!</li>
+                </ul>
+            </div>
+
+            <h2>🚀 Závěr</h2>
+            <p>
+                Používání odkazů v Gemini mění roli studenta. Už nejste jen „sběrač informací“, stáváte se „editorem
+                svého vzdělání“. Nástroj udělá hrubou práci (čtení, shrnování), vy děláte tu důležitou (chápání
+                souvislostí).
+            </p>
+            <p><strong>Chcete si to vyzkoušet hned teď?</strong> Najděte si na internetu článek k tématu, které se
+                zrovna učíte ve škole, a zkuste to!
+            </p>
+
+        </div>
+
+        <div class="back-nav-container">
+            <a href="../students.html" class="btn-back">← Zpět do AI Lab</a>
+            <a href="../index.html" class="back-link">Zpět na domovskou stránku</a>
+        </div>
+    </article>
+
+    <footer>
+        <p>&copy; 2025 AI Educator. Vzdělávání s pomocí umělé inteligence.</p>
+    </footer>
+</body>
+
+</html>

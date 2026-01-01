@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>AI ve vzdělávání | Nástroje, novinky a inspirace pro učitele</title>
+    <meta name="description"
+        content="Objevte nejnovější trendy umělé inteligence ve vzdělávání. Praktické nástroje, tipy a novinky pro moderní výuku.">
+    <meta name="keywords"
+        content="AI ve vzdělávání, umělá inteligence, vzdělávací nástroje, moderní výuka, EdTech, AI tools">
+    <meta name="author" content="AI Educator">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="AI ve vzdělávání">
+    <meta property="og:description" content="Nástroje, novinky a inspirace pro moderní učitele">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap&subset=latin,latin-ext"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">✨ AI Educator</a>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+                ☰
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#" class="nav-link active">Domů</a></li>
+                <li><a href="#explore" class="nav-link">Prozkoumejte AI</a></li>
+                <li><a href="apps.html" class="nav-link" onclick="window.location.href='apps.html'">Nástroje</a></li>
+                <li><a href="#contact" class="nav-link">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1 class="fade-in">AI ve vzdělávání</h1>
+            <p class="hero-subtitle fade-in">Nástroje, novinky a inspirace pro moderní výuku</p>
+            <p class="hero-description fade-in">
+                Objevte, jak umělá inteligence mění vzdělávání. Praktické tipy, nástroje a aktuální trendy.
+            </p>
+            <a href="#explore" class="btn-primary">Prozkoumejte AI →</a>
+        </div>
+    </section>
+
+
+
+    <!-- Explore Sections -->
+    <section id="explore" class="explore-sections">
+        <div class="section-header">
+            <h2 class="section-title">Prozkoumejte svět AI</h2>
+            <p class="section-description">
+                Vyberte si oblast, která vás zajímá
+            </p>
+        </div>
+
+        <div class="explore-grid">
+            <!-- Students Section -->
+            <a href="students.html" class="explore-card explore-card--students">
+                <div class="explore-card__image">
+                    <img src="assets/students-hero.png" alt="AI Lab pro studenty">
+                </div>
+                <div class="explore-card__content">
+                    <h3 class="explore-card__title">🧪 AI Lab</h3>
+                    <p class="explore-card__subtitle">Pro studenty</p>
+                    <p class="explore-card__description">
+                        Experimentuj s AI, nauč se nové dovednosti a objev možnosti umělé inteligence
+                    </p>
+                    <span class="explore-card__cta">Prozkoumat →</span>
+                </div>
+            </a>
+
+            <!-- Teachers Section -->
+            <a href="teachers.html" class="explore-card explore-card--teachers">
+                <div class="explore-card__image">
+                    <img src="assets/teachers-hero.png" alt="AI Toolkit pro učitele">
+                </div>
+                <div class="explore-card__content">
+                    <h3 class="explore-card__title">🛠️ AI Toolkit</h3>
+                    <p class="explore-card__subtitle">Pro učitele</p>
+                    <p class="explore-card__description">
+                        Nástroje a tipy pro moderní výuku s umělou inteligencí
+                    </p>
+                    <span class="explore-card__cta">Prozkoumat →</span>
+                </div>
+            </a>
+
+            <!-- News Section -->
+            <a href="news.html" class="explore-card explore-card--news">
+                <div class="explore-card__image">
+                    <img src="assets/news-hero.png" alt="AI Pulse novinky">
+                </div>
+                <div class="explore-card__content">
+                    <h3 class="explore-card__title">⚡ AI Pulse</h3>
+                    <p class="explore-card__subtitle">Novinky ze světa AI</p>
+                    <p class="explore-card__description">
+                        Co je nového ve světě umělé inteligence? Trendy, etika a budoucnost.
+                    </p>
+                    <span class="explore-card__cta">Prozkoumat →</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Recent Articles Section -->
+    <section id="recent-articles" class="recent-articles-section">
+        <div class="section-header">
+            <h2 class="section-title">Nejnovější články</h2>
+            <p class="section-description">
+                Aktuální příspěvky ze všech sekcí webu
+            </p>
+        </div>
+
+        <div id="recent-articles-grid" class="recent-articles-grid">
+            <!-- Articles will be populated by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="contact">
+            <h2 class="section-title">Kontakt</h2>
+            <p class="section-description">
+                Máte dotaz nebo chcete diskutovat o AI ve vzdělávání?
+            </p>
+
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <strong>Email</strong>
+                    <a href="mailto:ucitelka@example.com">ucitelka@example.com</a>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">🏫</div>
+                    <strong>Škola</strong>
+                    <p>Vaše škola</p>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">💬</div>
+                    <strong>Konzultace</strong>
+                    <p>Po domluvě</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 AI Educator. Vzdělávání s pomocí umělé inteligence.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="articles.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

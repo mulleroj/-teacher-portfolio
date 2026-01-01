@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>NotebookLM ve výuce: Inspirace pro učitele | AI Educator</title>
+    <meta name="description"
+        content="Praktické nápady a scénáře, jak využít NotebookLM ve škole. Od přípravy na hodinu přes tvorbu pracovních listů až po diferenciovanou výuku.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap&subset=latin,latin-ext"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css?v=3">
+
+    <style>
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing-xl);
+            padding-top: var(--spacing-3xl);
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .article-meta {
+            color: #60a5fa;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            display: block;
+            font-weight: 600;
+        }
+
+        .article-title {
+            font-size: clamp(2rem, 3.5vw, 3rem);
+            margin-bottom: 1.5rem;
+            line-height: 1.25;
+            color: var(--text-primary);
+        }
+
+        .article-content {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .article-content h2 {
+            color: var(--text-primary);
+            font-size: 1.75rem;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .article-content h3 {
+            color: #93c5fd;
+            font-size: 1.4rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .article-list {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 2rem;
+        }
+
+        .article-list li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .article-list li::before {
+            content: "✨";
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .use-case-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(60, 165, 250, 0.2);
+            border-left: 4px solid #60a5fa;
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .use-case-title {
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .prompt-example {
+            background: #1e1b4b;
+            padding: 1rem 1.5rem;
+            border-radius: var(--radius-md);
+            border: 1px dashed rgba(255, 255, 255, 0.2);
+            color: #a5b4fc;
+            font-family: monospace;
+            margin-top: 1rem;
+        }
+
+        .btn-tag {
+            display: inline-block;
+            background: rgba(96, 165, 250, 0.1);
+            color: #60a5fa;
+            padding: 0.2rem 0.6rem;
+            border-radius: 999px;
+            font-size: 0.8em;
+            font-weight: 600;
+            margin-right: 0.5rem;
+        }
+
+        .article-image {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-xl);
+            margin: 2rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (min-width: 768px) {
+            .article-image.float-right {
+                float: right;
+                width: 40%;
+                margin: 0.5rem 0 1.5rem 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigace -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">✨ AI Educator</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Domů</a></li>
+                <li><a href="../index.html#explore" class="nav-link">Prozkoumejte AI</a></li>
+                <li><a href="../apps.html" class="nav-link">Nástroje</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Obsah článku -->
+    <article class="article-container">
+        <!-- Hlavička článku -->
+        <header class="article-header">
+            <span class="article-meta">Inspirace pro učitele</span>
+            <h1 class="article-title">NotebookLM ve výuce: Jak proměnit hromadu materiálů v interaktivní hodinu</h1>
+        </header>
+
+        <!-- Tělo článku -->
+        <div class="article-content">
+            <p class="lead" style="font-size: 1.25rem; color: var(--text-primary);">
+                Máte pocit, že se topíte v přípravách? Nebo hledáte způsob, jak oživit látku, která studenty nebaví?
+                NotebookLM není jen další AI chatbot. Je to nástroj, který rozumí <em>vašim</em> materiálům. Pojďme se
+                podívat na konkrétní scénáře, jak vám může zítra ve škole ušetřit práci.
+            </p>
+
+            <img src="../assets/notebooklm-card.png" alt="NotebookLM Concept" class="article-image float-right">
+
+            <h2>Proč právě NotebookLM do školy?</h2>
+            <p>
+                Klíčový rozdíl oproti ChatGPT je <strong>uzavřenost dat</strong>. NotebookLM nehalucinuje fakta o Marii
+                Terezii, pokud mu nahrajete kvalitní skripta. Pracuje jen s tím, co mu dáte. To je pro školství "game
+                changer".
+            </p>
+
+            <h3>1. Super-rychlá příprava testů</h3>
+            <div class="use-case-box">
+                <div class="use-case-title">🎓 Scénář: Písemka z dějepisu</div>
+                <p>
+                    Nahrajte do NotebookLM PDF s kapitolou učebnice o 2. světové válce. Místo abyste hodinu vymýšleli
+                    otázky, prostě se zeptejte.
+                </p>
+                <div class="prompt-example">
+                    "Vytvoř mi test pro středoškoláky o 10 otázkách. 5 jednoduchých s výběrem z možností (A,B,C) a 3
+                    otevřené otázky na kritické myšlení. Přidej i správné řešení."
+                </div>
+            </div>
+
+            <h3>2. Diferenciovaná výuka (Inkluze snadno)</h3>
+            <p>
+                Máte ve třídě nadané žáky i žáky s SPU? NotebookLM umí přepsat složitý text do jednodušší formy.
+            </p>
+            <div class="use-case-box">
+                <div class="use-case-title">🧩 Scénář: Složitý odborný článek</div>
+                <p>
+                    Nahrajte vědeckou studii o fotosyntéze.
+                </p>
+                <div class="prompt-example">
+                    "Dáš mi 3 verze vysvětlení tohoto textu: 1. Pro žáka 5. třídy ZŠ. 2. Pro maturanta. 3. Vytvoř glosář
+                    10 nejtěžších pojmů s jednoduchou definicí."
+                </div>
+            </div>
+
+            <h3>3. Moderní debaty (Audio Overview)</h3>
+            <p>
+                Funkce Audio Overview je naprostý hit. Z jakéhokoli textu (i nudné směrnice školního řádu) vytvoří
+                dynamický podcast dvou moderátorů.
+            </p>
+            <ul class="article-list">
+                <li><strong>Puštění v hodině:</strong> Místo výkladu pusťte 5 minut "rádia". Studenti zbystří.</li>
+                <li><strong>Domácí úkol jinak:</strong> "Poslechněte si cestou autobusem tento podcast o buňce a zapište
+                    si 3 věci, které vás zaujaly."</li>
+            </ul>
+
+            <h3>4. Osobní tutor pro studenty</h3>
+            <p>
+                Sdílejte zápisník se studenty (jako "Viewer"). Oni sami se mohou AI doptávat, pokud něčemu nerozumí, a
+                AI jim odpovídá přesně podle vašich poznámek.
+            </p>
+
+            <div class="use-case-box">
+                <div class="use-case-title">💡 Tip na projekt</div>
+                <p>
+                    Nechte studenty vytvořit vlastní NotebookLM na téma jejich ročníkové práce. Mohou tam nahrát všechny
+                    zdroje a pak pomocí chatu hledat souvislosti pro svou esej.
+                </p>
+            </div>
+
+            <h2>Závěr</h2>
+            <p>
+                NotebookLM nebere učiteli práci. Bere mu tu část práce, která je rutinní (tvorba testů, hledání v
+                textech), a dává mu čas na to podstatné – věnovat se studentům.
+            </p>
+        </div>
+
+        <!-- Odkazy -->
+        <div
+            style="margin-top: 4rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem;">
+            <a href="index.html" class="btn-back">← Zpět na NotebookLM</a>
+            <a href="../teachers.html" class="back-link">Zpět do AI Toolkit</a>
+        </div>
+    </article>
+
+    <!-- Patička -->
+    <footer>
+        <p>&copy; 2025 AI Educator. Vzdělávání s pomocí umělé inteligence.</p>
+    </footer>
+
+</body>
+
+</html>

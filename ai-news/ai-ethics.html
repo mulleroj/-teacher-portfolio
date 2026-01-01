@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etika AI: Co by měl každý vědět | AI Educator</title>
+    <meta name="description"
+        content="Diskuze o etických otázkách spojených s umělou inteligencí, deepfakes, předpojatostí a jejím dopadu na společnost.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .article-meta {
+            color: var(--accent-cyan);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .article-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .article-content h2 {
+            color: var(--text-primary);
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .article-content h3 {
+            color: #f59e0b;
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+        }
+
+        .article-content h4 {
+            color: var(--accent-cyan);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+            margin-top: 0;
+        }
+
+        .article-image {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-xl);
+            margin: 2rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .article-image.float-right {
+            float: right;
+            width: 40%;
+            margin: 0 0 1rem 2rem;
+        }
+
+        .article-image.float-left {
+            float: left;
+            width: 40%;
+            margin: 0 2rem 1rem 0;
+        }
+
+        @media (max-width: 768px) {
+
+            .article-image.float-right,
+            .article-image.float-left {
+                float: none;
+                width: 100%;
+                margin: 1rem 0;
+            }
+        }
+
+        .ethics-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-left: 4px solid var(--accent-purple);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .warning-box {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            border-left: 4px solid #ef4444;
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .warning-box h4 {
+            color: #ef4444;
+        }
+
+        .article-content ul {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .article-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .resource-link {
+            color: var(--accent-cyan);
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-block;
+            margin-top: 0.5rem;
+        }
+
+        .resource-link:hover {
+            text-decoration: underline;
+        }
+
+        .back-button-container {
+            margin-top: 4rem;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigace -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">✨ AI Educator</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Domů</a></li>
+                <li><a href="../index.html#explore" class="nav-link">Prozkoumejte AI</a></li>
+                <li><a href="../apps.html" class="nav-link">Nástroje</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Obsah článku -->
+    <article class="article-container">
+        <header class="article-header">
+            <span class="article-meta">Společnost / Říjen 2025</span>
+            <h1>Etika AI: Co by měl každý vědět</h1>
+        </header>
+
+        <div class="article-content">
+            <img src="../assets/ai-ethics.png" alt="Etika umělé inteligence" class="article-image float-right">
+            <p class="lead">
+                Umělá inteligence přináší obrovské možnosti, ale také nové etické výzvy. Od předpojatosti algoritmů po
+                otázky soukromí a problematiku deepfakes. Je důležité, abychom těmto tématům rozuměli a používali AI
+                zodpovědně.
+            </p>
+            <div style="clear: both;"></div>
+
+            <h2>⚖️ Klíčové etické otázky</h2>
+
+            <div style="margin-bottom: 2rem; overflow: auto;">
+                <img src="../assets/ai_ethics_bias.png" alt="Algorithmic Bias" class="article-image float-left">
+                <div class="ethics-box">
+                    <h4>1. Předpojatost (Algorithmic Bias)</h4>
+                    <p>AI modely se učí z dat, která vytvořili lidé. Pokud tato data obsahují historické předsudky
+                        (rasové,
+                        genderové,
+                        sociální), AI je může nevědomky převzít a zesílit. Je důležité používat modely, které jsou
+                        trénovány
+                        na vyvážených datech.</p>
+                </div>
+            </div>
+
+            <div class="ethics-box">
+                <h4>2. Soukromí a data</h4>
+                <p>Máte kontrolu nad tím, co o vás AI ví? Ochrana osobních údajů je klíčová. Vyhněte se nahrávání
+                    citlivých osobních dat do veřejných AI chatbotů.</p>
+            </div>
+
+            <div class="ethics-box">
+                <h4>3. Halucinace a dezinformace</h4>
+                <p>AI může znít velmi přesvědčivě, i když si vymýšlí. Vždy ověřujte fakta z důvěryhodných zdrojů a
+                    nespoléhejte se slepě na výstupy generované AI.</p>
+            </div>
+
+            <h2>🎭 Deepfakes a manipulace</h2>
+            <div style="margin-bottom: 2rem; overflow: auto;">
+                <img src="../assets/ai_ethics_deepfake.png" alt="Deepfakes" class="article-image float-right">
+                <p>
+                    Jedním z největších rizik současné AI jsou tzv. <strong>deepfakes</strong> - realisticky vypadající
+                    videa nebo audionahrávky, které byly digitálně zfalšovány.
+                </p>
+
+                <div class="warning-box">
+                    <h4>⚠️ Jak rozpoznat Deepfake?</h4>
+                    <ul>
+                        <li><strong>Nepřirozené mrkání:</strong> Postavy mohou mrkat buď příliš málo, nebo divně.</li>
+                        <li><strong>Synchronizace rtů:</strong> Pohyb úst nemusí přesně odpovídat zvuku.</li>
+                        <li><strong>Detaily:</strong> Sledujte špatně vykreslené uši, stíny nebo vlasy.</li>
+                        <li><strong>Kontext:</strong> Působí video příliš šokujícím nebo emocinálním dojmem? Ověřte
+                            zdroj.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>👨‍🏫 AI ve vzdělávání</h2>
+            <div style="margin-bottom: 2rem; overflow: auto;">
+                <img src="../assets/ai_ethics_education.png" alt="AI in Education" class="article-image float-left">
+                <p>
+                    Při používání AI ve škole je třeba dbát na akademickou integritu.
+                </p>
+                <ul>
+                    <li><strong>Transparentnost:</strong> Pokud použijete AI k vypracování úkolu, vždy to přiznejte a
+                        citujte.</li>
+                    <li><strong>Vlastní přínos:</strong> AI by měla být nástrojem pro podporu vašeho myšlení, ne jeho
+                        náhradou.</li>
+                </ul>
+            </div>
+
+            <h2>📚 Zdroje a nástroje pro ověřování</h2>
+            <p>Zde je několik užitečných odkazů pro hlubší studium etiky a nástroje na detekci AI obsahu:</p>
+
+            <ul style="list-style: none; padding-left: 0;">
+                <li style="margin-bottom: 1.5rem;">
+                    <strong>Have I Been Trained?</strong><br>
+                    Zjistěte, zda byla vaše data nebo obrázky použity k trénování AI modelů.<br>
+                    <a href="https://haveibeentrained.com/" target="_blank" rel="noopener noreferrer"
+                        class="resource-link">Navštívit haveibeentrained.com →</a>
+                </li>
+                <li style="margin-bottom: 1.5rem;">
+                    <strong>AI or Not</strong><br>
+                    Nástroj pomáhající detekovat, zda byl obrázek nebo zvuk vygenerován AI.<br>
+                    <a href="https://www.aiornot.com/" target="_blank" rel="noopener noreferrer"
+                        class="resource-link">Vyzkoušet AI or Not →</a>
+                </li>
+                <li>
+                    <strong>UNESCO: Etika AI</strong><br>
+                    Globální standardy a doporučení pro etický vývoj AI.<br>
+                    <a href="https://www.unesco.org/en/artificial-intelligence/recommendation-ethics" target="_blank"
+                        rel="noopener noreferrer" class="resource-link">Číst doporučení UNESCO →</a>
+                </li>
+            </ul>
+
+            <h2>🌟 Závěr: Co můžeme dělat my?</h2>
+            <p>
+                Etika AI není jen téma pro experty - týká se nás všech. Buďte kritičtí, ptejte se na původ informací a
+                používejte technologie s rozvahou.
+                Technologie je nástroj. To, zda bude sloužit dobrému účelu, záleží na nás lidech.
+            </p>
+        </div>
+
+        <div
+            style="margin-top: 4rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem;">
+            <a href="../news.html" class="btn-back">← Zpět na AI Pulse</a>
+            <a href="../index.html" class="back-link">Zpět na domovskou stránku</a>
+        </div>
+    </article>
+
+    <footer>
+        <p>&copy; 2025 AI Educator. Vzdělávání s pomocí umělé inteligence.</p>
+    </footer>
+
+</body>
+
+</html>

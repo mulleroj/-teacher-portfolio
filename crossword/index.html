@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generátor Křížovek | AI Educator</title>
+    <meta name="description" content="Nástroj pro učitele na generování křížovek s tajenkou.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">✨ AI Educator</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Domů</a></li>
+                <li><a href="../index.html#explore" class="nav-link">Prozkoumejte AI</a></li>
+                <li><a href="../apps.html" class="nav-link">Nástroje</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="back-nav-container">
+        <a href="../apps.html" class="back-link">← Zpět na nástroje</a>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hub-hero">
+        <h1>📝 Generátor Křížovek</h1>
+        <p class="hero-subtitle">Vytvořte si vlastní křížovku s tajenkou</p>
+    </div>
+
+    <div class="tool-container">
+        <p>Zadejte tajenku a seznam slov. Agent vygeneruje křížovku, kterou můžete zkopírovat do Wordu nebo vytisknout.
+        </p>
+
+        <div class="input-section">
+            <div class="input-group">
+                <label for="tajemkaInput">Tajenka (řešení):</label>
+                <div style="display: flex; gap: 0.5rem;">
+                    <input type="text" id="tajemkaInput" placeholder="NAPŘ. KOMENSKÝ" maxlength="15"
+                        style="flex-grow: 1;">
+                    <button id="suggestBtn" class="btn-secondary" style="white-space: nowrap;">✨ Navrhnout z mých
+                        slov</button>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="wordsInput">Seznam slov (jedno na řádek):</label>
+                <textarea id="wordsInput"
+                    placeholder="Můžete zadat jen slova, nebo slova s nápovědou:&#10;ŠKOLA - Budova kde se učíme&#10;UČITEL - Ten kdo učí&#10;TABULE&#10;..."></textarea>
+                <p class="hint">Tip: Zadejte více slov, než je délka tajenky. Agent vybere ta nejvhodnější.</p>
+            </div>
+
+            <div class="input-group">
+                <label>Možnosti nápovědy:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="clueMode" value="manual" checked> Doplním si sám (ve
+                        Wordu/tisku)</label>
+                    <label><input type="radio" name="clueMode" value="ai_auto"> 🤖 Automaticky vygenerovat nápovědy
+                        (API)</label>
+                    <label><input type="radio" name="clueMode" value="ai_prompt"> Chci vygenerovat prompt pro AI
+                        (ChatGPT/Gemini)</label>
+                </div>
+            </div>
+
+            <div id="apiConfig" class="input-group hidden"
+                style="background: rgba(0,0,0,0.1); padding: 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
+                <label for="apiKey">API Klíč (OpenAI nebo Gemini):</label>
+                <input type="password" id="apiKey" placeholder="sk-...">
+
+                <label for="modelSelect" style="margin-top: 0.5rem;">Model:</label>
+                <select id="modelSelect"
+                    style="width: 100%; padding: 0.5rem; background: rgba(0,0,0,0.2); color: white; border: 1px solid rgba(255,255,255,0.1); border-radius: 4px;">
+                    <option value="gpt-4o">GPT-4o (OpenAI)</option>
+                    <option value="gpt-4o-mini">GPT-4o Mini (OpenAI)</option>
+                    <option value="gemini-1.5-flash">Gemini 1.5 Flash (Google)</option>
+                    <option value="gemini-1.5-pro">Gemini 1.5 Pro (Google)</option>
+                </select>
+                <p class="hint">Klíč se nikam neukládá, slouží jen pro tento požadavek.</p>
+            </div>
+
+            <div class="controls">
+                <button id="generateBtn" class="btn-primary">Vygenerovat Křížovku</button>
+                <button id="generatePromptBtn" class="btn-secondary hidden">Vygenerovat Prompt pro AI</button>
+            </div>
+        </div>
+
+        <div id="resultSection" class="output-area hidden">
+            <div class="result-controls">
+                <button id="copyBtn" class="btn-code">Kopírovat do Wordu</button>
+                <button id="printBtn" class="btn-code">Tisk</button>
+            </div>
+            <div id="crosswordPreview">
+                <!-- Crossword will be rendered here -->
+            </div>
+        </div>
+
+        <div id="promptSection" class="output-area hidden">
+            <h3>Prompt pro AI</h3>
+            <p>Zkopírujte tento text a vložte ho do ChatGPT nebo Gemini. AI vám vytvoří křížovku i s definicemi.</p>
+            <textarea id="promptOutput" readonly></textarea>
+            <button id="copyPromptBtn" class="btn-code">Zkopírovat Prompt</button>
+        </div>
+    </div>
+
+    <!-- Suggestion Modal -->
+    <div id="suggestionModal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Vyberte slova pro doplnění</h2>
+            <p>AI navrhla následující slova pro chybějící písmena tajenky. Vyberte ta, která chcete použít.</p>
+            <div id="suggestionList" class="suggestion-list">
+                <!-- Items will be injected here -->
+            </div>
+            <div class="modal-actions">
+                <button id="closeModalBtn" class="btn-secondary">Zrušit</button>
+                <button id="applySuggestionsBtn" class="btn-primary">Použít vybraná</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 AI Educator.</p>
+    </footer>
+
+    <script src="logic.js"></script>
+</body>
+
+</html>

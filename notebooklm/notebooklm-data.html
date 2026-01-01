@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Data v NotebookLM: Bezpečnost a Formáty | AI Educator</title>
+    <meta name="description"
+        content="Vše co potřebujete vědět o datech v NotebookLM. Bezpečnost, podporované formáty, limity a tipy pro přípravu podkladů.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css?v=3">
+
+    <style>
+        /* Specifické styly pro článek - převzaté z template */
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .article-meta {
+            color: var(--accent-cyan);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .article-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .article-content h2 {
+            color: var(--text-primary);
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .article-content h3 {
+            color: var(--text-primary);
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .article-content ul {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+            list-style-type: disc;
+        }
+
+        .article-content li {
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+        }
+
+        .info-box {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .info-box h3 {
+            margin-top: 0;
+            color: #60a5fa;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .security-shield {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(5, 150, 105, 0.1));
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            border-radius: var(--radius-xl);
+            padding: 2rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: var(--radius-xl);
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .format-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .format-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 1.5rem;
+            border-radius: var(--radius-md);
+            text-align: center;
+        }
+
+        .format-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigace -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">✨ AI Educator</a>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+                ☰
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="../index.html" class="nav-link">Domů</a></li>
+                <li><a href="../index.html#explore" class="nav-link">Prozkoumejte AI</a></li>
+                <li><a href="../apps.html" class="nav-link">Nástroje</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Obsah článku -->
+    <article class="article-container">
+        <!-- Hlavička článku -->
+        <header class="article-header">
+            <span class="article-meta">NotebookLM / Prosinec 2025</span>
+            <h1>Data v NotebookLM: Vše, co učitel potřebuje vědět</h1>
+            <p class="lead lead-text">
+                Učitelé pracují s citlivými daty i velkým objemem materiálů. Jak je to s bezpečností v NotebookLM, co
+                vše
+                můžete nahrát a kde jsou limity?
+            </p>
+        </header>
+
+        <!-- Tělo článku -->
+        <div class="article-content">
+
+            <div class="security-shield">
+                <h3>🛡️ Bezpečnost na prvním místě</h3>
+                <p class="mb-0">
+                    Je to nejčastější otázka učitelů: "Trénuje se Google na mých písemkách?"<br>
+                    <strong>Odpověď zní: NE.</strong>
+                </p>
+                <p class="text-sm-muted mt-2">
+                    Data v osobním NotebookLM v rámci Google Workspace (a většiny osobních účtů) <strong>nejsou
+                        používána k trénování modelu</strong>. Zůstávají ve vašem soukromém prostoru.
+                </p>
+            </div>
+
+            <h2>Co můžete do NotebookLM nahrát?</h2>
+            <p>
+                NotebookLM je navržen jako "multimodální" nástroj - rozumí nejen textu, ale i zvuku a prezentacím. Toto
+                jsou podporované zdroje:
+            </p>
+
+            <div class="format-grid">
+                <div class="format-card">
+                    <span class="format-icon">📄</span>
+                    <strong>PDF</strong>
+                    <div class="format-card-desc">Učebnice, skripta,
+                        pracovní listy</div>
+                </div>
+                <div class="format-card">
+                    <span class="format-icon">📝</span>
+                    <strong>Textové soubory</strong>
+                    <div class="format-card-desc">.txt, .md, poznámky
+                    </div>
+                </div>
+                <div class="format-card">
+                    <span class="format-icon">📃</span>
+                    <strong>Google Docs</strong>
+                    <div class="format-card-desc">Vaše přípravy a
+                        plány</div>
+                </div>
+                <div class="format-card">
+                    <span class="format-icon">📊</span>
+                    <strong>Google Slides</strong>
+                    <div class="format-card-desc">Prezentace do
+                        hodin</div>
+                </div>
+                <div class="format-card">
+                    <span class="format-icon">🌐</span>
+                    <strong>Webové odkazy</strong>
+                    <div class="format-card-desc">Články, Wikipedie
+                    </div>
+                </div>
+                <div class="format-card">
+                    <span class="format-icon">📋</span>
+                    <strong>Kopírovaný text</strong>
+                    <div class="format-card-desc">Obsah schránky
+                        (Ctrl+V)</div>
+                </div>
+                <div class="format-card">
+                    <span class="format-icon">🎥</span>
+                    <strong>YouTube</strong>
+                    <div class="format-card-desc">Přepis videa (veřejná
+                        videa s titulky)</div>
+                </div>
+                <div class="format-card">
+                    <span class="format-icon">🎵</span>
+                    <strong>Audio soubory</strong>
+                    <div class="format-card-desc">MP3, WAV (záznamy
+                        přednášek)</div>
+                </div>
+            </div>
+
+            <h2>Limity a Kapacity (Prosinec 2025)</h2>
+            <p>
+                NotebookLM je velkorysý, ale pro plynulý chod je dobré znát mantinely:
+            </p>
+            <ul>
+                <li><strong>Maximální počet zdrojů v jednom zápisníku:</strong> 50</li>
+                <li><strong>Maximální počet slov na jeden zdroj:</strong> 500 000 slov (to je víc než Pán Prstenů!)</li>
+                <li><strong>Celkový limit zápisníku:</strong> NotebookLM zvládne zpracovat obrovské množství kontextu,
+                    až 25 milionů tokenů (v závislosti na verzi modelu Gemmini Pro 1.5).</li>
+            </ul>
+
+            <div class="info-box">
+                <h3>💡 Tip pro učitele: Jak organizovat data?</h3>
+                <p>
+                    Nesnažte se "nacpat" vše do jednoho zápisníku. Tvořte tematické zápisníky:
+                </p>
+                <ul class="mb-0">
+                    <li>📁 <strong>Zápisník "Dějepis 9. třída"</strong> (Učebnice, vaše přípravy, zdroje)</li>
+                    <li>📁 <strong>Zápisník "Administrativa"</strong> (ŠVP, Klasifikační řád, Směrnice)</li>
+                    <li>📁 <strong>Zápisník "Projektový den"</strong> (Zdroje, harmonogram, inspirace)</li>
+                </ul>
+            </div>
+
+            <h2>Jak připravit data pro nejlepší výsledky?</h2>
+
+            <h3>1. Čistota textu</h3>
+            <p>
+                Pokud nahráváte skenovaná PDF (obrázky), OCR NotebookLM je sice silné, ale nejlepší výsledky dosáhnete s
+                digitálním textem. Ujistěte se, že PDF je čitelné.
+            </p>
+
+            <h3>2. Struktura dokumentů</h3>
+            <p>
+                AI miluje strukturu. Nadpisy, odrážky a jasné členění v Google Docsu pomohou modelu lépe pochopit
+                hierarchii informací.
+            </p>
+
+            <h3>3. Názvy souborů</h3>
+            <p>
+                Pojmenujte své zdroje smysluplně (např. "Kapitola 3 - Průmyslová revoluce" místo "scan001.pdf").
+                NotebookLM bude v citacích odkazovat na tyto názvy.
+            </p>
+
+            <h2 class="section-separator">Shrnutí</h2>
+            <p>
+                NotebookLM je bezpečný nástroj pro práci se školními materiály, který zvládne většinu formátů, které ve
+                škole používáte. Díky oddělení od veřejných trénovacích dat můžete bez obav pracovat i s interními
+                směrnicemi nebo vlastními autorskými texty.
+            </p>
+
+        </div>
+
+        <!-- Odkaz zpět -->
+        <div class="back-button-container">
+            <a href="index.html" class="btn-back">← Zpět do NotebookLM</a>
+            <a href="../index.html" class="btn-back ml-2">← Zpět na úvod</a>
+        </div>
+    </article>
+
+    <!-- Patička -->
+    <footer>
+        <p>&copy; 2025 AI Educator. Vzdělávání s pomocí umělé inteligence.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

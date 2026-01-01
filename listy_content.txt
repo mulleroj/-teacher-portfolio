@@ -1,0 +1,195 @@
+
+Tvorba pracovních listů s ChatGPT
+Praktický návod pro učitele (od prvního promptu po hotový list)
+
+1. Co ChatGPT při tvorbě pracovních listů skutečně umí
+Než se do toho pustíme, sundejme růžové brýle.
+ChatGPT:
+generuje úlohy, texty, otázky, zadání
+diferencuje obtížnost (lehké / střední / náročné)
+přizpůsobí styl věku, oboru i úrovni žáků
+navrhne řešení a klíč
+vysvětlí látku jinými slovy, klidně třemi způsoby
+ChatGPT neumí:
+znát tvou konkrétní třídu
+odhadnout reálnou časovou náročnost bez korekce
+automaticky hlídat RVP, ŠVP a školní zvyklosti(to je pořád tvoje práce – a je to tak správně)
+Ber ho jako rychlého asistenta, ne jako náhradu učitele. Učitel bez myšlení je horší než žák s TikTokem.
+
+2. Základní princip: dobrý pracovní list = dobrý vstup
+Nejčastější chyba začátečníků:
+„Vytvoř mi pracovní list na minulý čas.“
+Výsledek? Generická kaše, použitelná maximálně jako inspirace.
+Místo toho potřebuješ říct:
+pro koho to je
+na co přesně
+v jaké formě
+jak dlouho to má trvat
+co má žák po splnění umět
+Tohle je rozdíl mezi náhodným generováním a řízenou tvorbou.
+
+3. Univerzální kostra promptu (doporučeno uložit)
+Toto je základ, který funguje napříč předměty:
+Jsi zkušený učitel [PŘEDMĚT].Vytvoř pracovní list pro žáky [ROČNÍK / VĚK].Téma: [KONKRÉTNÍ TÉMA].Cíl pracovního listu: [CO SE MAJÍ NAUČIT].Časová dotace: [NAPŘ. 45 MINUT].
+Pracovní list má obsahovat:
+krátké úvodní vysvětlení
+úlohy od lehkých po náročnější
+různé typy úloh (doplňování, výběr, otevřená otázka, aplikace)
+místo pro odpovědi
+Na konec přidej řešení pro učitele.
+Tohle není magie. To je pedagogická disciplína přenesená do textu.
+
+4. Konkrétní příklady (a proč fungují)
+Příklad 1: Jazyk – začátečník
+Vytvoř pracovní list z angličtiny pro 7. ročník ZŠ.Téma: Past Simple – pravidelná slovesa.Cíl: žák správně tvoří kladné věty v minulém čase.Čas: 30 minut.Použij jednoduchý jazyk a krátké věty.
+Výsledek:
+použitelný list
+minimum balastu
+dobře diferencované úlohy
+Příklad 2: Odborný předmět – střední škola
+Jsi učitel elektrotechniky.Vytvoř pracovní list pro 2. ročník SŠ.Téma: PE a PEN vodič – funkce a bezpečnost.Zaměř se na praktické porozumění a typické chyby v zapojení.Přidej jednu úlohu typu „Co by se stalo, kdyby…“.
+Tohle je přesně místo, kde ChatGPT září – scénáře, vysvětlování chyb, modelové situace.
+
+5. Diferenciace: stejný list, různé úrovně
+Velká výhoda ChatGPT oproti učebnicím: nestojí tě to žádný čas navíc.
+Stačí dodat:
+Připrav tři varianty úloh:A – základníB – standardníC – rozšiřující (pro nadané žáky)
+Najednou:
+máš materiál pro inkluzi
+máš klidnější hodinu
+slabší žáci se neutopí, silní se nenudí
+Tohle by ti žádná učebnice nedala bez dalšího plánování.
+
+6. Pracovní list jako stavebnice, ne jako svatá relikvie
+Důležitá pedagogická pravda:Pracovní list není hotový produkt. Je to polotovar.
+Doporučený postup:
+Nech ChatGPT vygenerovat návrh
+Projdi ho učitelským okem
+Zkrať, vyhoď, uprav formulace
+Přidej vlastní příklad nebo školní kontext
+Učitel, který bere výstup AI jako hotovou pravdu, si zadělává na průšvih. Stejně jako ten, kdo kdysi slepě věřil Wikipedii.
+
+7. Export a použití v praxi
+ChatGPT může:
+formátovat text pro Word
+připravit obsah pro PDF
+strukturovat otázky pro Microsoft Forms / Google Forms
+rozdělit úlohy na kartičky, test, opakovací list
+Stačí dodat:
+Naformátuj pracovní list tak, aby šel přímo vložit do Wordu.Použij nadpisy, očíslované úlohy a prostor na odpovědi.
+
+8. Nejčastější chyby učitelů (bez obalu)
+příliš obecné zadání → špatný výstup
+žádná kontrola faktů → průšvih před třídou
+přetížení úlohami → žáci vypnou
+snaha „nechat to celé na AI“ → pedagogická lenost převlečená za inovaci
+Technologie není omluvenka pro rezignaci na řemeslo.
+
+9. Proč to celé dává smysl (i tradičnímu učiteli)
+Ano, dřív jsme psali pracovní listy ručně.Ano, fungovalo to.
+Ale:
+dřív nebylo 30 úloh za 5 minut
+dřív nebyla možnost okamžité diferenciace
+dřív jsme neměli asistenta, který nebrblá a maká pořád
+ChatGPT nenahrazuje učitele.Nahrazuje únavu, rutinu a prázdné zírání do monitoru v neděli večer.
+A to je přesně to místo, kde má technologie sloužit.
+Ukázky promptů podle předmětů (SŠ)
+
+ČESKÝ JAZYK A LITERATURA
+1️⃣ Gramatika – prakticky, ne teoreticky
+Jsi učitel českého jazyka na střední škole.Vytvoř pracovní list pro 2. ročník SŠ.Téma: Vedlejší věty (přívlastkové, předmětné, příslovečné).
+Zaměř se na:
+rozpoznání typu věty v souvislém textu
+praktické použití (ne definice zpaměti)
+Přidej krátký úvod, 6–8 úloh různé obtížnosti a řešení.
+2️⃣ Literatura – porozumění textu
+Připrav pracovní list k literární ukázce.Autor: Karel ČapekZaměření: porozumění textu, práce s významem, vlastní názor.
+Vytvoř otázky:
+na pochopení textu
+na interpretaci
+jednu otevřenou diskuzní otázku.
+
+ANGLIČTINA
+3️⃣ Gramatika s kontextem
+Jsi učitel angličtiny na střední škole.Vytvoř pracovní list pro 1. ročník SŠ.Téma: Present Perfect vs. Past Simple.
+Použij:
+reálné situace (cestování, práce, zážitky)
+krátké dialogy
+postup od jednoduchých vět ke složitějším
+Přidej řešení a stručné vysvětlení typických chyb.
+4️⃣ Odborná angličtina
+Vytvoř pracovní list z odborné angličtiny pro technickou SŠ.Téma: Safety at workplace.
+Úkoly:
+slovní zásoba
+porozumění krátkému textu
+tvorba jednoduchých vět v kontextu BOZP.
+
+EKONOMIKA / ZSV / ZÁKLADY EKONOMIE
+5️⃣ Ekonomie bez suchopáru
+Jsi učitel ekonomiky na SŠ.Vytvoř pracovní list pro 3. ročník.Téma: Nabídka a poptávka.
+Zaměř se na:
+praktické příklady z běžného života
+jednoduché modelové situace
+jednu úlohu typu „co se stane, když…“
+Vyhni se dlouhým definicím.
+6️⃣ Finanční gramotnost
+Připrav pracovní list na téma osobní rozpočet.Cílová skupina: 1.–2. ročník SŠ.
+Vytvoř:
+modelovou situaci studenta
+tabulku příjmů a výdajů
+otázky vedoucí k rozhodování
+Důraz na reálnost, ne teorii.
+
+EKOLOGIE / ENVIRONMENTÁLNÍ VÝCHOVA
+7️⃣ Ekologie v kontextu reality
+Jsi učitel ekologie na střední škole.Vytvoř pracovní list k tématu: Udržitelný rozvoj.
+Zaměř se na:
+lokální příklady (město, škola, domácnost)
+dopady lidské činnosti
+jednu úlohu na vlastní návrh řešení problému.
+8️⃣ Kritické myšlení
+Připrav pracovní list k ekologickému tématu klimatické změny.
+Vytvoř:
+krátký informační text
+otázky na rozlišení faktů a názorů
+jednu diskuzi „pro a proti“.
+
+ODBORNÉ TECHNICKÉ PŘEDMĚTY (elektro, strojírenství, IT)
+9️⃣ Elektrotechnika
+Jsi učitel elektrotechniky.Vytvoř pracovní list pro 2. ročník SŠ.Téma: Funkce PE a PEN vodiče.
+Zaměř se na:
+bezpečnost
+typické chyby v zapojení
+praktické otázky z praxe
+Přidej jednu modelovou havarijní situaci.
+🔟 Strojírenství / technické kreslení
+Vytvoř pracovní list k tématu technická dokumentace.
+Úkoly:
+čtení jednoduchého výkresu
+identifikace chyb
+vysvětlení významu značek.
+
+ICT / INFORMATIKA
+1️⃣1️⃣ Základy informatiky
+Jsi učitel ICT na střední škole.Vytvoř pracovní list k tématu: Hardware vs. Software.
+Použij:
+reálné příklady zařízení
+přiřazovací úlohy
+jednu úlohu na vysvětlení vlastními slovy.
+1️⃣2️⃣ Digitální gramotnost
+Připrav pracovní list na téma bezpečnost na internetu.
+Zaměř se na:
+phishing
+silná hesla
+práci s osobními údaji
+Přidej scénáře „Co bys udělal/a, kdyby…“.
+
+Bonus: univerzální „upgrade“ prompt
+Tenhle řádek můžeš přidat ke kterémukoli promptu:
+Pracovní list má být srozumitelný, praktický a použitelný v běžné vyučovací hodině.Nepoužívej zbytečně odborný jazyk tam, kde to není nutné.
+Je to malý detail, ale dramaticky zlepší výstup.
+
+Shrnutí bez pozlátka
+dobrý prompt = polovina hotového pracovního listu
+čím konkrétnější zadání, tím méně oprav
+ChatGPT je nejsilnější v scénářích, aplikaci, diferenciaci

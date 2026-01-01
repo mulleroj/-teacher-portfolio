@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI generátory obrázků ve výuce | AI Toolkit</title>
+    <meta name="description"
+        content="Jak AI generátory obrázků mění výuku. Praktické tipy, nástroje a cvičení pro učitele.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .article-meta {
+            color: var(--accent-cyan);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .article-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .article-content h2 {
+            color: var(--text-primary);
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .article-content h3 {
+            color: #f59e0b;
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+        }
+
+        .article-content h4 {
+            color: var(--accent-cyan);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+            margin-top: 0;
+        }
+
+        .article-image {
+            width: 100%;
+            margin: 2rem 0;
+            border-radius: var(--radius-xl);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .article-image.float-right {
+            float: right;
+            width: 40%;
+            margin: 0 0 1rem 2rem;
+        }
+
+        .article-image.float-left {
+            float: left;
+            width: 40%;
+            margin: 0 2rem 1rem 0;
+        }
+
+        @media (max-width: 768px) {
+
+            .article-image.float-right,
+            .article-image.float-left {
+                float: none;
+                width: 100%;
+                margin: 1rem 0;
+            }
+        }
+
+        .highlight-box,
+        .tip-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .highlight-box h4,
+        .tip-box h4 {
+            color: var(--accent-cyan);
+            margin-top: 0;
+        }
+
+        .article-content ul,
+        .article-content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .article-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .back-button-container {
+            margin-top: 4rem;
+            text-align: center;
+        }
+
+        .btn-back-custom {
+            background: var(--text-primary);
+            color: var(--bg-dark);
+            padding: 1rem 2rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: opacity 0.2s;
+        }
+
+        .btn-back-custom:hover {
+            opacity: 0.9;
+        }
+
+        /* Tool link styles */
+        .tool-link {
+            color: var(--accent-cyan);
+            text-decoration: none;
+            border-bottom: 1px dashed var(--accent-cyan);
+            transition: all 0.2s;
+        }
+
+        .tool-link:hover {
+            color: #fff;
+            border-bottom-style: solid;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigace -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">✨ AI Educator</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Domů</a></li>
+                <li><a href="../teachers.html" class="nav-link">AI Toolkit</a></li>
+                <li><a href="../apps.html" class="nav-link">Nástroje</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Obsah článku -->
+    <article class="article-container">
+        <header class="article-header">
+            <span class="article-meta">Učitelé / Prosinec 2025</span>
+            <h1>AI generátory obrázků: mění dějiny, víc smyslu ve výuce</h1>
+        </header>
+
+        <div class="article-content">
+            <p class="lead">
+                Učit dnes znamená soutěžit o pozornost. Ne s TikTokem, ale s únavou, přetížením a pocitem "k čemu mi to
+                bude".
+                Právě tady mají AI obrázkové nástroje překvapivě silné místo.
+            </p>
+
+            <img src="../assets/ai_art_teaching_hero.png" alt="Učitel používající AI pro generování obrázků ve třídě"
+                class="article-image float-left">
+
+            <h2>Proč by vás to mělo zajímat jako učitele</h2>
+            <p>
+                Protože <strong>obraz zjednodušuje vysvětlení</strong>, zrychluje pochopení a zvyšuje zapojení studentů.
+                Nejde o efekt pro efekt. Jde o didaktiku.
+            </p>
+
+            <h2>Praktické využití ve výuce</h2>
+            <img src="../assets/visual_learning_concept.png"
+                alt="Vizualizace historie a abstraktních pojmů pro studenty" class="article-image float-right">
+            <ul>
+                <li><strong>Vizualizace abstraktních témat</strong>: dějiny, společenské procesy, přírodní jevy,
+                    technické systémy.</li>
+                <li><strong>Podpora porozumění textu</strong>: literatura, cizí jazyky, odborné texty.</li>
+                <li><strong>Rychlá příprava materiálů</strong>: prezentace, pracovní listy, infografiky, plakáty.</li>
+                <li><strong>Aktivní zapojení studentů</strong>: místo pasivního sledování studenti tvoří, vysvětlují,
+                    obhajují svá vizuální řešení.</li>
+            </ul>
+
+            <div class="highlight-box">
+                <h4>💡 Co to přináší vám?</h4>
+                <ul>
+                    <li><strong>Úspora času</strong> - nemusíte hledat "ten správný obrázek", vytvoříte ho přesně na
+                        míru.</li>
+                    <li><strong>Flexibilita</strong> - upravíte obrázek podle úrovně třídy, tématu i cíle hodiny.</li>
+                    <li><strong>Zpestření výuky</strong> bez cirkusu a zbytečné technické složitosti.</li>
+                    <li><strong>Rozvoj digitální gramotnosti žáků</strong>, který dává smysl a není samoúčelný.</li>
+                </ul>
+            </div>
+
+            <h2>Etika a odpovědnost jako součást výuky</h2>
+            <p>
+                AI obrázky jsou ideální příležitostí, jak přirozeně otevřít témata:
+            </p>
+            <ul>
+                <li>autorství a originalita,</li>
+                <li>dezinformace a manipulace obrazem,</li>
+                <li>rozdíl mezi realitou a generovaným obsahem.</li>
+            </ul>
+            <p>Tohle nejsou "extra témata". To je moderní občanská výchova v praxi.</p>
+
+            <div class="tip-box">
+                <h4>⚠️ Důležitá poznámka na závěr</h4>
+                <p>
+                    AI nenahrazuje učitele. Nenahrazuje myšlení. Nenahrazuje porozumění.
+                    Je to nástroj, který <strong>zjednodušuje přípravu, rozšiřuje možnosti výkladu a dává studentům
+                        důvod se ptát</strong>.
+                    A to je přesně to, co dobrá výuka potřebuje.
+                </p>
+            </div>
+
+            <h2>Přehled AI obrázkových nástrojů - pro učitele</h2>
+            <p>Hodnoceno z pohledu: efektivita, kontrola, použitelnost ve výuce.</p>
+
+            <h3>1. DALL·E (<a href="https://chat.openai.com/" target="_blank" class="tool-link">ChatGPT</a>)</h3>
+            <p><strong>Proč dává smysl učitelům:</strong> jeden nástroj na text i obrázky, rychlá příprava materiálů,
+                minimální technické bariéry.</p>
+            <p><strong>Ideální pro:</strong> ilustrace k výkladu, pracovní listy, ukázkové vizualizace pojmů.</p>
+            <p><strong>Pedagogická výhoda:</strong> snadno vysvětlitelný princip studentům, dobrý nástroj pro etiku AI
+                (citace, autorství).</p>
+
+            <h3>2. <a href="https://www.canva.com/education/" target="_blank" class="tool-link">Canva for Education</a>
+            </h3>
+            <p><strong>Proč je to učitelský pracant:</strong> obrázek + výukový materiál v jednom, spolupráce se
+                studenty, sdílení, úpravy, šablony.</p>
+            <p><strong>Ideální pro:</strong> prezentace, infografiky, plakáty do třídy, projektovou výuku.</p>
+            <p><strong>Pedagogická výhoda:</strong> studenti pracují strukturovaně, učitel má kontrolu nad výstupem.</p>
+
+            <h3>3. Adobe <a href="https://firefly.adobe.com/" target="_blank" class="tool-link">Firefly</a></h3>
+            <p><strong>Proč je zajímavé pro školy:</strong> důraz na etiku a legálnost, vhodné pro oficiální materiály.
+            </p>
+            <p><strong>Ideální pro:</strong> školní web, oficiální prezentace, materiály pro rodiče a veřejnost.</p>
+            <p><strong>Pedagogická výhoda:</strong> minimální riziko porušení autorských práv.</p>
+
+            <h3>4. <a href="https://www.midjourney.com/" target="_blank" class="tool-link">Midjourney</a> (pro pokročilé
+                učitele)</h3>
+            <p><strong>Proč má smysl jen někdy:</strong> špičková vizuální kvalita, silný "wow efekt".</p>
+            <p><strong>Ideální pro:</strong> inspirační ukázky, umělecké a výtvarné obory, diskusi o limitech AI.</p>
+            <p><strong>Limity ve škole:</strong> technicky náročnější, nevhodné pro běžné žáky bez vedení.</p>
+
+            <h3>5. Specializované nástroje (věda, technika)</h3>
+            <p>Např. nástroje pro schémata, technické ilustrace, jednoduché diagramy.</p>
+            <p><strong>Ideální pro:</strong> fyziku, biologii, odborné předměty, vysvětlení procesů krok za krokem.</p>
+
+            <h2>Stručné porovnání pohledem reality</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+                <div>
+                    <h4>Student potřebuje:</h4>
+                    <ul>
+                        <li>rychlý výsledek</li>
+                        <li>jednoduché ovládání</li>
+                        <li>prostor pro kreativitu</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Učitel potřebuje:</h4>
+                    <ul>
+                        <li>spolehlivost</li>
+                        <li>kontrolu nad výstupem</li>
+                        <li>úsporu času</li>
+                        <li>pedagogický smysl</li>
+                    </ul>
+                </div>
+            </div>
+            <p>Jeden nástroj to všechno neumí. A to je v pořádku.</p>
+
+            <h2>Kreativní cvičení pro studenty</h2>
+            <img src="../assets/creative_student_work.png"
+                alt="Student prezentující svůj vizuální příběh vytvořený s AI" class="article-image float-right">
+
+            <h3>Cvičení 1: Vizuální slovník</h3>
+            <p>Vyberte 10 složitých slova z angličtiny a vytvořte pro každé vizuální reprezentaci. Pomůže vám to lépe si
+                je zapamatovat!</p>
+
+            <h3>Cvičení 2: Reimaginace</h3>
+            <p>Vezměte známý obraz (Mona Lisa, Starry Night...) a přepište ho do jiného stylu nebo éry. "Mona Lisa jako
+                cyberpunk portrét v roce 2080".</p>
+
+            <h3>Cvičení 3: Příběh v obrázcích</h3>
+            <p>Vytvořte sérii 4-6 obrázků, které vyprávějí krátký příběh. Pouze vizuálně, bez textu. Můžete to použít
+                pro kreativní psaní nebo prezentaci.</p>
+
+            <h3>Cvičení 4: Vědecká vizualizace</h3>
+            <p>Vyberte složitý vědecký koncept (černá díra, evaporace, fotosyntéza...) a vytvořte sérii obrázků, které
+                ho vysvětlují krok za krokem.</p>
+
+        </div>
+
+        <div class="back-button-container">
+            <a href="../teachers-news.html" class="btn-back">← Zpět na Novinky</a>
+        </div>
+    </article>
+
+    <footer>
+        <p>&copy; 2025 AI Educator. Vzdělávání s pomocí umělé inteligence.</p>
+    </footer>
+
+</body>
+
+</html>

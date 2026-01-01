@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>🛠️ AI Toolkit | Novinky pro učitele</title>
+    <meta name="description"
+        content="Nástroje a tipy pro moderní výuku s umělou inteligencí. Praktický průvodce pro učitele - novinky.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap&subset=latin,latin-ext"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=3">
+    <style>
+        .hub-hero {
+            min-height: 40vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: var(--spacing-3xl) var(--spacing-lg);
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(217, 119, 6, 0.1));
+            position: relative;
+        }
+
+        .hub-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('assets/teachers-hero.png') center/cover no-repeat;
+            opacity: 0.15;
+            z-index: -1;
+        }
+
+        .hub-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .hub-hero .subtitle {
+            font-size: var(--font-size-xl);
+            color: var(--text-secondary);
+            max-width: 600px;
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--spacing-xl);
+            padding: var(--spacing-3xl) var(--spacing-lg);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .article-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-xl);
+            transition: all var(--transition-base);
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl), var(--shadow-glow);
+            border-color: rgba(245, 158, 11, 0.3);
+        }
+
+        .article-card .date {
+            font-size: var(--font-size-sm);
+            color: #f59e0b;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .article-card h3 {
+            font-size: var(--font-size-xl);
+            margin-bottom: var(--spacing-md);
+            color: var(--text-primary);
+        }
+
+        .article-card p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .article-card .read-more {
+            color: #fbbf24;
+            font-weight: 600;
+            transition: color var(--transition-fast);
+        }
+
+        .article-card .read-more:hover {
+            color: #fcd34d;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            color: var(--text-secondary);
+            padding: var(--spacing-lg);
+            transition: color var(--transition-fast);
+        }
+
+        .back-link:hover {
+            color: var(--text-primary);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">✨ AI Educator</a>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+                ☰
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Domů</a></li>
+                <li><a href="index.html#explore" class="nav-link">Prozkoumejte AI</a></li>
+                <li><a href="apps.html" class="nav-link">Nástroje</a></li>
+                <li><a href="index.html#contact" class="nav-link">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Point back to teachers hub -->
+    <div class="back-nav-container">
+        <a href="teachers.html" class="back-link">← Zpět do AI Toolkit</a>
+    </div>
+
+    <!-- Hub Hero -->
+    <div class="hub-hero">
+        <h1>🛠️ AI Toolkit: Novinky</h1>
+        <p class="subtitle">Nástroje a tipy pro moderní výuku s umělou inteligencí</p>
+    </div>
+
+    <!-- Articles Grid -->
+    <div class="articles-grid">
+        <div class="article-card">
+            <span class="date">Prosinec 2025</span>
+            <h3>Chytrá výuka s Adobe AI a ChatGPT</h3>
+            <p>
+                Jak propojení Photoshopu, Expressu a Acrobatu zjednoduší učiteli práci.
+                Srovnání s ChatGPT a praktické scénáře pro tvorbu materiálů.
+            </p>
+            <a href="ai-news/chytr-vyuka-s-adobe-ai.html" class="read-more">Číst více →</a>
+        </div>
+        <div class="article-card">
+            <span class="date">Prosinec 2025</span>
+            <h3>AI generátory obrázků ve výuce</h3>
+            <p>
+                Jak využít sílu vizualizace v hodinách? Praktický průvodce nástroji jako DALL-E či Canva,
+                včetně tipů na cvičení a etické otázky.
+            </p>
+            <a href="ai-news/ai-images-for-teachers.html" class="read-more">Číst více →</a>
+        </div>
+
+        <div class="article-card">
+            <span class="date">Prosinec 2025</span>
+            <h3>TOP 5 AI nástrojů pro hodnocení</h3>
+            <p>
+                Přehled nejlepších AI nástrojů, které ušetří čas při tvorbě testů a hodnocení studentů.
+                MagicSchool, QuestionWell a další pomocníci zdarma.
+            </p>
+            <a href="ai-news/5-ai-nastroju-pro-hodnoceni.html" class="read-more">Číst více →</a>
+        </div>
+
+        <div class="article-card">
+            <span class="date">Listopad 2025</span>
+            <h3>AI nástroje pro jazykové dovednosti</h3>
+            <p>
+                Objevte nejlepší AI aplikace pro výuku angličtiny: od výslovnosti
+                přes gramatiku až po konverzaci. Moderní cesty k jazykovému vzdělávání.
+            </p>
+            <a href="ai-news/ai-language-tools.html" class="read-more">Číst více →</a>
+        </div>
+
+        <div class="article-card">
+            <span class="date">Září 2025</span>
+            <h3>Personalizované učení s AI</h3>
+            <p>
+                Jak AI umožňuje každému studentovi učit se vlastním tempem a stylem.
+                Budoucnost vzdělávání je tady a je personalizovaná.
+            </p>
+            <a href="ai-news/personalized-learning.html" class="read-more">Číst více →</a>
+        </div>
+
+        <!-- Placeholder for future articles -->
+        <div class="article-card" style="opacity: 0.6; border-style: dashed;">
+            <span class="date">Připravujeme</span>
+            <h3>Další články již brzy</h3>
+            <p>
+                Připravujeme další praktické tipy a nástroje pro učitele.
+                Sledujte novinky!
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 AI Educator. Vzdělávání s pomocí umělé inteligence.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

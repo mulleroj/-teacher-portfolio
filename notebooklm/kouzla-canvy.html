@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kouzla Canvy s prezentací z NotebookLM | AI Educator</title>
+    <meta name="description"
+        content="Zjistěte, jak proměnit statické snímky z NotebookLM na plně editovatelné prezentace pomocí magické funkce v Canva Pro.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap&subset=latin,latin-ext"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css?v=3">
+
+    <style>
+        .article-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: var(--spacing-xl);
+            padding-top: var(--spacing-3xl);
+        }
+
+        /* Keep main reading text centered and readable */
+        .article-header,
+        .article-content>p,
+        .article-content>h2,
+        .article-content>h3,
+        .article-content>.tip-box,
+        .article-content>ol,
+        .article-content>ul,
+        .article-content>blockquote {
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .article-meta {
+            color: #60a5fa;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            display: block;
+            font-weight: 600;
+        }
+
+        .article-title {
+            font-size: clamp(2rem, 3.5vw, 3rem);
+            margin-bottom: 1.5rem;
+            line-height: 1.25;
+            color: var(--text-primary);
+        }
+
+        .hero-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: var(--radius-xl);
+            margin: 0 auto 2rem auto;
+            display: block;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .article-content {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            text-align: justify;
+        }
+
+        .article-content h2 {
+            color: var(--text-primary);
+            font-size: 1.75rem;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 0.5rem;
+            text-align: left;
+        }
+
+        .article-content h3 {
+            color: #93c5fd;
+            font-size: 1.4rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .article-image {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-lg);
+            margin: 2rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .quotebox {
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 4px solid #60a5fa;
+            padding: 1.5rem 2rem;
+            font-style: italic;
+            margin: 2rem auto;
+            border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+        }
+
+        .tip-box {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px dashed #10b981;
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin: 3rem auto;
+        }
+
+        @media (min-width: 768px) {
+            .article-image.float-right {
+                float: right;
+                width: 40%;
+                max-width: 350px;
+                margin: 0.5rem 0 1.5rem 2rem;
+            }
+
+            .article-image.float-left {
+                float: left;
+                width: 40%;
+                max-width: 350px;
+                margin: 0.5rem 2rem 1.5rem 0;
+            }
+        }
+
+        .step-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin: 2rem 0;
+            position: relative;
+        }
+
+        .step-number {
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: #60a5fa;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .highlight {
+            color: #60a5fa;
+            font-weight: 600;
+        }
+
+        .btn-action-mock {
+            display: inline-block;
+            background: #eef2ff;
+            color: #3730a3;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.9em;
+            font-weight: 600;
+            margin: 0 0.25rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">✨ AI Educator</a>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+                ☰
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="../index.html" class="nav-link">Domů</a></li>
+                <li><a href="../index.html#explore" class="nav-link">Prozkoumejte AI</a></li>
+                <li><a href="../apps.html" class="nav-link">Nástroje</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <article class="article-container">
+
+
+        <!-- Hero Section -->
+        <header class="article-header">
+            <span class="article-meta">Návod • Prosinec 2025</span>
+            <h1 class="article-title">Kouzla Canvy s prezentací z NotebookLM</h1>
+            <div class="article-content">
+                <p class="lead" style="font-size: 1.25rem; color: var(--text-primary); margin-bottom: 2rem;">
+                    Vytvořili jste v NotebookLM perfektní prezentaci, ale po stažení zjišťujete, že text nejde upravit?
+                    Ukážeme vám trik, jak statické obrázky proměnit v plně editovatelné slidy.
+                </p>
+
+                <img src="../assets/notebooklm-canva-hero.png" alt="NotebookLM a Canva magická transformace"
+                    class="article-image float-right">
+
+                <p>
+                    Obsah je na jedničku, struktura dává smysl a jste připraveni ji předvést. Teď ji jen potřebujete
+                    doladit
+                    v PowerPointu nebo Google Slides. Nahrajete ji, otevřete a… narazíte na problém. Text nejde upravit.
+                    Každý snímek je jen statický obrázek a vy nemůžete změnit ani čárku.
+                </p>
+
+                <p>
+                    Tato frustrující situace je častější, než si myslíte. Mnoho uživatelů se domnívá, že přímý převod z
+                    PDF
+                    na PPTX soubor automaticky zpřístupní text k úpravám. Realita je však jiná a skrývá se v ní
+                    nečekané,
+                    ale velmi účinné řešení, které vám ušetří hodiny marných pokusů. Klíč se nachází v nástroji, který
+                    možná
+                    již používáte – v <strong>Canvě</strong>.
+                </p>
+
+                <h2>1. Překvapení č. 1: Přímý převod vytvoří pouze needitovatelné obrázky</h2>
+
+                <img src="../assets/notebooklm-static-slide.png" alt="Statický slide z NotebookLM"
+                    class="article-image float-right">
+
+                <p>
+                    První a nejlogičtější krok, který většina z nás udělá, je nahrání PDF souboru z NotebookLM do Canvy
+                    a
+                    jeho okamžité stažení ve formátu PPTX nebo uložení na Google Drive. Tento postup se zdá být přímý a
+                    správný, ale vede k nečekanému zjištění. <strong>Výsledkem není plně editovatelná
+                        prezentace.</strong>
+                </p>
+                <p>
+                    Proces totiž pouze vezme každou stránku vašeho PDF, převede ji na statický obrázek a ten vloží na
+                    samostatný snímek v PowerPointu nebo Google Slides. Text, nadpisy a odrážky jsou součástí tohoto
+                    obrázku
+                    a nelze s nimi manipulovat jako s běžným textovým polem.
+                </p>
+                <blockquote class="quotebox">
+                    "So you don't have the images or the file that's going to be editable what you have are images on
+                    top of
+                    the slides just like you have inside of Google Slides."
+                </blockquote>
+                <p>
+                    Pochopení tohoto mechanismu je zásadní. Ušetří vám čas a frustraci z pokusů o úpravu něčeho, co ze
+                    své
+                    podstaty upravit nejde. Skutečné řešení vyžaduje jiný, méně intuitivní přístup.
+                </p>
+
+                <div style="clear: both;"></div>
+
+                <h2>2. Překvapení č. 2: Skutečné řešení vyžaduje placenou verzi Canvy</h2>
+                <p>
+                    Klíč k odemknutí textu a jeho zpřístupnění pro úpravy se neskrývá v samotném převodu formátů, ale v
+                    pokročilé funkci Canvy. Je však důležité vědět, že tato funkce je dostupná pouze pro uživatele
+                    placené
+                    verze <strong>Canva Pro</strong>.
+                </p>
+                <p>
+                    Tato exkluzivní funkce se nachází v prostředí nazvaném <strong>Magic Studio</strong>. V uživatelském
+                    rozhraní Canvy jsou prémiové nástroje, které vyžadují verzi Pro, jasně označeny malou ikonou
+                    korunky.
+                    Pokud se tedy snažíte text na obrázku upravit a nedaří se vám to, pravděpodobně narážíte na limit
+                    bezplatné verze.
+                </p>
+                <p>
+                    Ačkoliv to znamená nutnost investice, pro uživatele, kteří pravidelně pracují s prezentacemi z
+                    různých
+                    zdrojů, může předplatné Canva Pro představovat významnou úsporu času a zefektivnění celého
+                    pracovního
+                    postupu.
+                </p>
+
+                <h2>3. Klíčový trik: Jak použít funkci "Grab Text"</h2>
+
+                <img src="../assets/canva-grab-text.png" alt="Funkce Zachytit text v Canvě"
+                    class="article-image float-left">
+
+                <p>
+                    Jakmile máte přístup k Canva Pro, samotný proces je již překvapivě jednoduchý a rychlý. Postupujte
+                    podle těchto kroků a proměňte statický obrázek v plně editovatelný snímek:
+                </p>
+
+                <ol style="margin-bottom: 2rem;">
+                    <li>V Canvě klikněte na <strong>obrázek snímku</strong>, který chcete upravit.</li>
+                    <li>Po kliknutí na obrázek snímku se přímo u něj objeví kontextové menu. V tomto menu zvolte možnost
+                        <strong>'Editovat fotografii'</strong>.
+                    </li>
+                    <li>Tento krok vás přenese do prostředí Magic Studio, kde vyberete funkci <strong>"Grab
+                            Text"</strong>
+                        (v české verzi může být označena například jako 'Zachytit text').</li>
+                    <li>Po kliknutí Canva analyzuje obrázek, identifikuje na něm text a automaticky jej převede na
+                        standardní, plně editovatelné textové pole.</li>
+                </ol>
+
+                <p>
+                    Nyní můžete text libovolně měnit – například smazat slovo "digital" z nadpisu, opravit překlepy nebo
+                    doplnit nové informace.
+                </p>
+
+                <div style="clear: both;"></div>
+
+                <div class="tip-box">
+                    <strong>💡 Tip pro experty:</strong><br>
+                    Jako expert na digitální produktivitu bych rád přidal jeden tip týkající se profesní etiky. Ačkoliv
+                    nyní
+                    můžete upravit cokoliv, je dobrým zvykem ponechat na snímcích vodoznak NotebookLM nebo jinou formou
+                    uvést zdroj. Tím dáváte najevo transparentnost a respektujete původní nástroj, který vám pomohl
+                    obsah
+                    vytvořit.
+                </div>
+
+                <p>
+                    Jakmile dokončíte všechny úpravy, je naprosto klíčové prezentaci <strong>znovu stáhnout</strong>
+                    jako
+                    soubor PPTX nebo ji opět uložit na váš Google Drive. Teprve tímto krokem uložíte finální, nyní již
+                    plně
+                    editovatelnou verzi souboru.
+                </p>
+
+                <h2>Od obrázku k editovatelnému mistrovskému dílu</h2>
+                <p>
+                    Cesta k plně editovatelné prezentaci z NotebookLM nevede přes přímý export, ale vyžaduje chytrý
+                    mezikrok. Řešením je využití pokročilé funkce "Grab Text" v rámci Canva Pro, která dokáže extrahovat
+                    text ze statického obrázku a proměnit jej v upravitelný obsah.
+                </p>
+                <p class="final-question"
+                    style="font-weight: bold; color: #93c5fd; text-align: center; margin-top: 2rem;">
+                    <em>Jaké další skryté funkce v nástrojích, které denně používáte, by vám mohly ušetřit hodiny práce
+                        a
+                        zjednodušit vaše workflow?</em>
+                </p>
+            </div>
+
+            <!-- Odkazy -->
+            <div
+                style="margin-top: 4rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem;">
+                <a href="index.html" class="btn-back">← Zpět na NotebookLM</a>
+                <a href="../teachers.html" class="back-link">Zpět do AI Toolkit</a>
+            </div>
+    </article>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 AI Educator. Vzdělávání s pomocí umělé inteligence.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../script.js"></script>
+</body>
+
+</html>

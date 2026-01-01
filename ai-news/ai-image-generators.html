@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI generátory obrázků v kreativitě | AI Educator</title>
+    <meta name="description"
+        content="Jak využít DALL-E, Midjourney a další nástroje pro školní projekty a rozvoj kreativního myšlení.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .article-meta {
+            color: var(--accent-cyan);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .article-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .article-content h2 {
+            color: var(--text-primary);
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .article-content h3 {
+            color: #f59e0b;
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+        }
+
+        .article-content h4 {
+            color: var(--accent-cyan);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+            margin-top: 0;
+        }
+
+        .article-image {
+            width: 300px;
+            float: right;
+            margin: 0 0 2rem 2rem;
+            border-radius: var(--radius-xl);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .article-content::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        @media (max-width: 768px) {
+            .article-image {
+                float: none;
+                width: 100%;
+                margin: 2rem 0;
+            }
+        }
+
+        .highlight-box,
+        .tip-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .tool-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--accent-cyan);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .tool-link:hover {
+            text-decoration: underline;
+        }
+
+        .highlight-box h4,
+        .tip-box h4 {
+            color: var(--accent-cyan);
+            margin-top: 0;
+        }
+
+        .article-content ul,
+        .article-content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .article-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .back-button-container {
+            margin-top: 4rem;
+            text-align: center;
+        }
+
+
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .tools-grid .tip-box {
+            margin: 0;
+            padding: 1rem;
+        }
+
+        .tools-grid h4 {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .tools-grid p {
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigace -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">✨ AI Educator</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Domů</a></li>
+                <li><a href="../index.html#explore" class="nav-link">Prozkoumejte AI</a></li>
+                <li><a href="../apps.html" class="nav-link">Nástroje</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Obsah článku -->
+    <article class="article-container">
+        <header class="article-header">
+            <span class="article-meta">Kreativita / Říjen 2025</span>
+            <h1>AI generátory obrázků v kreativitě</h1>
+        </header>
+
+        <div class="article-content">
+            <p class="lead">
+                Jak využít DALL-E, Midjourney a další nástroje pro školní projekty a rozvoj kreativního myšlení.
+                Vizuální komunikace je dnes klíčová. AI generátory obrázků umožňují každému vytvořit profesionální
+                grafiku během několika sekund.
+            </p>
+
+            <h2>🎨 Populární nástroje</h2>
+            <div class="tools-grid">
+                <div class="tip-box">
+                    <h4>DALL-E 3 (v ChatGPT)</h4>
+                    <p>Nejdostupnější a velmi schopný. Skvěle rozumí kontextu a češtině. Ideální pro začátečníky.</p>
+                    <a href="https://chat.openai.com" target="_blank" rel="noopener noreferrer"
+                        class="tool-link">Vyzkoušet
+                        v ChatGPT →</a>
+                </div>
+
+                <div class="tip-box">
+                    <h4>Midjourney</h4>
+                    <p>Nejvyšší umělecká kvalita, ale běží přes Discord a je placený. Pro pokročilé tvůrce.</p>
+                    <a href="https://www.midjourney.com" target="_blank" rel="noopener noreferrer" class="tool-link">Web
+                        Midjourney →</a>
+                </div>
+
+                <div class="tip-box">
+                    <h4>Bing Image Creator</h4>
+                    <p>Zdarma (s limity), běží na DALL-E 3. Dobrá alternativa pro studenty.</p>
+                    <a href="https://www.bing.com/images/create" target="_blank" rel="noopener noreferrer"
+                        class="tool-link">Vyzkoušet Bing Creator →</a>
+                </div>
+
+                <div class="tip-box">
+                    <h4>Canva Magic Media</h4>
+                    <p>Integrované přímo v Canvě. Skvělé pro vytváření prvků do prezentací.</p>
+                    <a href="https://www.canva.com/ai-image-generator/" target="_blank" rel="noopener noreferrer"
+                        class="tool-link">Otevřít Canvu →</a>
+                </div>
+
+                <div class="tip-box">
+                    <h4>Nano Banana</h4>
+                    <p>Nový a rychlý generátor poháněný Google Gemini technologií. Vyniká v konzistenci postav a
+                        přesných
+                        úpravách.</p>
+                    <a href="https://nano-banana.ai" target="_blank" rel="noopener noreferrer"
+                        class="tool-link">Vyzkoušet
+                        Nano Banana →</a>
+                </div>
+
+                <div class="tip-box">
+                    <h4>Leonardo.ai</h4>
+                    <p>Skvělá volba pro herní grafiku a umělecké styly. Nabízí denní kredity zdarma a pokročilé
+                        nastavení.
+                    </p>
+                    <a href="https://leonardo.ai" target="_blank" rel="noopener noreferrer" class="tool-link">Zkusit
+                        Leonardo.ai →</a>
+                </div>
+
+                <div class="tip-box">
+                    <h4>Adobe Firefly</h4>
+                    <p>Bezpečný pro komerční použití, skvělý na textové efekty a fotorealistické úpravy přímo v
+                        prohlížeči.
+                    </p>
+                    <a href="https://firefly.adobe.com" target="_blank" rel="noopener noreferrer"
+                        class="tool-link">Vyzkoušet Firefly →</a>
+                </div>
+            </div>
+
+            <h2>🏫 Využití ve výuce</h2>
+            <img src="../assets/ai-image-generators.png" alt="AI generátory obrázků" class="article-image">
+            <h3>1. Vizualizace historie</h3>
+            <p>Studenti mohou vytvořit vizuální reprezentace historických momentů pro prezentace,
+                což pomáhá lépe pochopit a zapamatovat si látku.</p>
+
+            <h3>2. Ilustrace literárních děl</h3>
+            <p>Prompt: "Scéna z Romea a Julie, renesanční Verona, balkón, měsíční svit, romantická atmosféra"</p>
+            <p>Vytváření vizuálních interpretací knih podporuje hlubší porozumění textu a kreativitu.</p>
+
+            <h3>3. Vědecké koncepty</h3>
+            <p>Prompt: "Struktura DNA molekuly, detailní vizualizace, vzdělávací styl, popisky, barevné rozlišení"</p>
+            <p>Složité vědecké koncepty se stávají přístupnějšími skrze vizuální reprezentaci.</p>
+
+            <h3>4. Prezentace a infografiky</h3>
+            <ul>
+                <li>Vytváření originálních ilustrací pro PowerPoint</li>
+                <li>Designové prvky pro postery a letáky</li>
+                <li>Ikony a grafika pro webové projekty</li>
+            </ul>
+
+            <h3>5. Kreativní psaní</h3>
+            <p>Vygenerujte obrázek jako inspiraci pro příběh. Nebo naopak - napište příběh a pak ho vizualizujte pomocí
+                AI.</p>
+
+            <h2>✍️ Jak psát efektivní prompty</h2>
+            <div class="tip-box">
+                <h4>🎯 Základní struktura promptu</h4>
+                <ol>
+                    <li><strong>Předmět:</strong> Co chcete zobrazit (osoba, místo, věc)</li>
+                    <li><strong>Akce:</strong> Co předmět dělá</li>
+                    <li><strong>Prostředí:</strong> Kde se to děje</li>
+                    <li><strong>Styl:</strong> Jak to má vypadat (realistické, malebné, pixelart...)</li>
+                    <li><strong>Nálada:</strong> Jakou atmosféru vytvořit (dramatická, veselá, tajemná...)</li>
+                    <li><strong>Detaily:</strong> Specifické požadavky (barvy, osvětlení, perspektiva...)</li>
+                </ol>
+            </div>
+
+            <h3>Příklady:</h3>
+            <p><strong>Špatný prompt:</strong> "kočka"</p>
+            <p><strong>Dobrý prompt:</strong> "Oranžová kočka sedící na okně, pozorující déšť venku,
+                útulná atmosféra, teplé osvětlení, realistický styl fotografie"</p>
+
+            <p><strong>Pro školní projekt o Egyptu:</strong></p>
+            <p>"Stavba pyramid ve starověkém Egyptě, stovky pracovníků tahajících obří kameny,
+                pouštní krajina, žhavé slunce, realistický historický styl, vzdělávací ilustrace"</p>
+
+            <h2>⚠️ Důležitá etická pravidla</h2>
+            <h3>1. Autorská práva a originalita</h3>
+            <ul>
+                <li>AI obrázky NEJSOU zcela vaše - technicky vznikly pomocí AI</li>
+                <li>Vždy uveďte, že obrázek byl vytvořen AI</li>
+                <li>Netvrtce, že jste ho nakreslili ručně</li>
+            </ul>
+
+            <h3>2. Nepřijatelné použití</h3>
+            <ul>
+                <li>❌ Vytváření deepfakes reálných lidí</li>
+                <li>❌ Generování násilného nebo nevhodného obsahu</li>
+                <li>❌ Napodobování konkrétních umělců bez uvedení</li>
+                <li>❌ Dezinformace (falešné fotografie jako "pravdivé")</li>
+            </ul>
+
+            <h3>3. Citace AI generovaného obsahu</h3>
+            <p>Při použití v projektu uveďte:</p>
+            <div class="tip-box">
+                <p><em>"Obrázek vygenerován pomocí [DALL-E/Midjourney/...], prompt: '[váš prompt]',
+                        [datum vytvoření]"</em></p>
+            </div>
+
+            <h2>🎓 Kreativní cvičení pro studenty</h2>
+            <h3>Cvičení 1: Vizuální slovník</h3>
+            <p>Vyberte 10 složitých slov z angličtiny a vytvořte pro každé vizuální reprezentaci. Pomůže vám to lépe si
+                je
+                zapamatovat!</p>
+
+            <h3>Cvičení 2: Reimaginace</h3>
+            <p>Vezměte známý obraz (Mona Lisa, Starry Night...) a přepište ho do jiného stylu nebo éry. "Mona Lisa jako
+                cyberpunk portrét v roce 2080"</p>
+
+            <h3>Cvičení 3: Příběh v obrázcích</h3>
+            <p>Vytvořte sérii 4-6 obrázků, které vyprávějí krátký příběh. Pouze vizuálně,
+                bez textu. Můžete to použít pro kreativní psaní nebo prezentaci.</p>
+
+            <h3>Cvičení 4: Vědecká vizualizace</h3>
+            <p>Vyberte složitý vědecký koncept (černá díra, evaporace, fotosyntéza...) a vytvořte serie obrázků, které
+                ho
+                vysvětlují krok za krokem.</p>
+
+            <h2>🔮 Budoucnost AI generování</h2>
+            <p>AI generátory se rychle zlepšují. Co můžeme očekávat?</p>
+            <ul>
+                <li>Ještě realističtější výsledky</li>
+                <li>Video generování (už začíná!)</li>
+                <li>3D modely z textových popisů</li>
+                <li>Interaktivní scény a animace</li>
+                <li>Lepší kontrola nad detaily</li>
+            </ul>
+
+            <h2>🌟 Závěr</h2>
+            <p>
+                AI generátory obrázků jsou mocný nástroj pro kreativitu a vzdělávání. Umožňují materializovat představy,
+                vizualizovat koncepty a vytvářet originální obsah.
+                Ale nezapomeňte - AI je nástroj, který rozšiřuje vaši kreativitu, nenahrazuje ji.
+            </p>
+            <p>
+                Experimentujte, tvořte, učte se. A vždy používejte tyto nástroje odpovědně a eticky!
+            </p>
+        </div>
+
+        <div
+            style="margin-top: 4rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem;">
+            <a href="../students.html" class="btn-back">← Zpět na AI Lab</a>
+            <a href="../index.html" class="back-link">Zpět na domovskou stránku</a>
+        </div>
+    </article>
+
+    <footer>
+        <p>&copy; 2025 AI Educator. Vzdělávání s pomocí umělé inteligence.</p>
+    </footer>
+
+</body>
+
+</html>

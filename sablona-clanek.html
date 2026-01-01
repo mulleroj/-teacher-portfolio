@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ZDE UPRAVIT: Titulek a popisek pro vyhledávače -->
+    <title>Název Článku | AI Educator</title>
+    <meta name="description" content="Krátký popis článku pro Google (perex).">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Specifické styly pro článek */
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            margin-top: 4rem;
+            /* Aby text nebyl pod navigací */
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .article-meta {
+            color: var(--accent-cyan);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .article-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .article-content h2 {
+            color: var(--text-primary);
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .article-content ul {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .article-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .article-image {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-xl);
+            margin: 2rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigace (Neměnit) -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="logo">✨ AI Educator</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Domů</a></li>
+                <li><a href="index.html#explore" class="nav-link">Prozkoumejte AI</a></li>
+                <li><a href="apps.html" class="nav-link">Nástroje</a></li>
+                <li><a href="index.html#contact" class="nav-link">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Obsah článku -->
+    <article class="article-container">
+        <!-- Hlavička článku -->
+        <header class="article-header">
+            <span class="article-meta">Kategorie / Datum</span>
+            <h1>Zde napište hlavní nadpis článku</h1>
+        </header>
+
+        <!-- Tělo článku -->
+        <div class="article-content">
+            <p class="lead">
+                Zde napište úvodní odstavec (perex), který shrnuje, o čem článek bude. Měl by být poutavý a vtáhnout
+                čtenáře do děje.
+            </p>
+
+            <h2>První podnadpis</h2>
+            <p>
+                Sem pište text vašeho článku. Můžete používat <strong>tučné písmo</strong> nebo <em>kurzívu</em> pro
+                zvýraznění důležitých myšlenek.
+            </p>
+
+            <!-- Příklad obrázku (pokud chcete) -->
+            <!-- <img src="cesta-k-obrazku.jpg" alt="Popis obrázku" class="article-image"> -->
+
+            <h2>Další sekce</h2>
+            <p>
+                Další odstavec textu. Pokud chcete udělat seznam, můžete využít odrážky:
+            </p>
+            <ul>
+                <li>První bod seznamu</li>
+                <li>Druhý bod seznamu</li>
+                <li>Třetí bod s důležitou informací</li>
+            </ul>
+
+            <p>
+                Závěrečný odstavec článku.
+            </p>
+        </div>
+
+        <!-- Odkaz zpět -->
+        <div class="back-button-container">
+            <a href="index.html#explore" class="btn-back">← Zpět na přehled</a>
+        </div>
+    </article>
+
+    <!-- Patička (Neměnit) -->
+    <footer>
+        <p>&copy; 2025 AI Educator. Vzdělávání s pomocí umělé inteligence.</p>
+    </footer>
+
+</body>
+
+</html>

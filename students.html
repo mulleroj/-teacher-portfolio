@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>🧪 AI Lab | Experimenty s AI pro studenty</title>
+    <meta name="description"
+        content="Objevte svět umělé inteligence. Praktické tipy, nástroje a experimenty pro studenty.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap&subset=latin,latin-ext"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=3">
+    <style>
+        .hub-hero {
+            min-height: 40vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: var(--spacing-3xl) var(--spacing-lg);
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.1));
+            position: relative;
+        }
+
+        .hub-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('assets/students-hero.png') center/cover no-repeat;
+            opacity: 0.15;
+            z-index: -1;
+        }
+
+        .hub-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .hub-hero .subtitle {
+            font-size: var(--font-size-xl);
+            color: var(--text-secondary);
+            max-width: 600px;
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--spacing-xl);
+            padding: var(--spacing-3xl) var(--spacing-lg);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .article-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            transition: all var(--transition-base);
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl), var(--shadow-glow);
+            border-color: rgba(99, 102, 241, 0.3);
+        }
+
+        .article-card-image {
+            height: 200px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .article-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+
+        .article-card:hover .article-card-image img {
+            transform: scale(1.05);
+        }
+
+        .article-card-content {
+            padding: var(--spacing-xl);
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-card .date {
+            font-size: var(--font-size-sm);
+            color: var(--accent-cyan);
+            margin-bottom: var(--spacing-sm);
+            display: block;
+        }
+
+        .article-card h3 {
+            font-size: var(--font-size-xl);
+            margin-bottom: var(--spacing-md);
+            color: var(--text-primary);
+        }
+
+        .article-card p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: var(--spacing-lg);
+            flex-grow: 1;
+        }
+
+        .article-card .read-more {
+            color: var(--primary-light);
+            font-weight: 600;
+            transition: color var(--transition-fast);
+        }
+
+        .article-card .read-more:hover {
+            color: var(--accent-cyan);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            color: var(--text-secondary);
+            padding: var(--spacing-lg);
+            transition: color var(--transition-fast);
+        }
+
+        .back-link:hover {
+            color: var(--text-primary);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">✨ AI Educator</a>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+                ☰
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Domů</a></li>
+                <li><a href="index.html#explore" class="nav-link">Prozkoumejte AI</a></li>
+                <li><a href="apps.html" class="nav-link">Nástroje</a></li>
+                <li><a href="index.html#contact" class="nav-link">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="back-nav-container">
+        <a href="index.html" class="back-link">← Zpět na domovskou stránku</a>
+    </div>
+
+    <!-- Hub Hero -->
+    <div class="hub-hero">
+        <h1>🧪 AI Lab</h1>
+        <p class="subtitle">Experimentuj s AI, nauč se nové dovednosti a objev možnosti umělé inteligence</p>
+    </div>
+
+    <!-- Articles Grid -->
+    <div class="articles-grid">
+        <!-- AI Assistants Link (Always First) -->
+        <a href="ai-assistants.html" class="article-card"
+            style="text-decoration: none; border-color: rgba(167, 139, 250, 0.4);">
+            <div class="article-card-image"
+                style="background: linear-gradient(135deg, rgba(167, 139, 250, 0.1), rgba(79, 70, 229, 0.1)); display: flex; align-items: center; justify-content: center;">
+                <img src="assets/assistants-hero.png" alt="AI Asistenti" style="object-fit: cover;">
+            </div>
+            <div class="article-card-content">
+                <h3 style="color: #a78bfa;">AI Asistenti pro žáky</h3>
+                <p>
+                    Spusťte si svého AI asistenta pro předměty EMP a ROZ.
+                    Personalizované procvičování a interaktivní podpora.
+                </p>
+                <div class="read-more" style="color: #a78bfa;">Otevřít asistenty →</div>
+            </div>
+        </a>
+
+        <!-- Articles by date (Newest first) -->
+        <a href="ai-news/studium-s-gemini.html" class="article-card">
+            <div class="article-card-image">
+                <img src="assets/gemini-study-hero.png" alt="Studium s Gemini">
+            </div>
+            <div class="article-card-content">
+                <span class="date">Prosinec 2025</span>
+                <h3>Studium s Gemini: Práce s odkazy</h3>
+                <p>
+                    Gemini není jen vyhledávač. Naučte se, jak využít odkazy na články a videa k efektivnímu studiu.
+                </p>
+                <div class="read-more">Číst více →</div>
+            </div>
+        </a>
+
+        <a href="ai-news/chatgpt-study-partner.html" class="article-card">
+            <div class="article-card-image">
+                <img src="assets/chatgpt-study-partner.png" alt="ChatGPT Studium">
+            </div>
+            <div class="article-card-content">
+                <span class="date">Listopad 2025</span>
+                <h3>ChatGPT jako studijní partner</h3>
+                <p>
+                    Jak efektivně využívat ChatGPT a další AI asistenty při přípravě na testy,
+                    psaní esejí a procvičování látky. Praktické tipy a osvědčené postupy.
+                </p>
+                <div class="read-more">Číst více →</div>
+            </div>
+        </a>
+
+        <a href="ai-news/ai-image-generators.html" class="article-card">
+            <div class="article-card-image">
+                <img src="assets/ai-image-generators.png" alt="AI Generátory obrázků">
+            </div>
+            <div class="article-card-content">
+                <span class="date">Říjen 2025</span>
+                <h3>AI generátory obrázků v kreativitě</h3>
+                <p>
+                    Jak využít DALL-E, Midjourney a další nástroje pro školní projekty,
+                    prezentace a rozvoj kreativního myšlení.
+                </p>
+                <div class="read-more">Číst více →</div>
+            </div>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 AI Educator. Vzdělávání s pomocí umělé inteligence.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

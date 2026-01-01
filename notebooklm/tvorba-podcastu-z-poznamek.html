@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tvorba podcastů z poznámek – NotebookLM</title>
+    <meta name="description"
+        content="Kompletní návod, jak pomocí NotebookLM převést poznámky na profesionální audio podcast, včetně interaktivních otázek a odpovědí v reálném čase.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap&subset=latin,latin-ext"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css?v=3">
+    <style>
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing-xl);
+            padding-top: var(--spacing-3xl);
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .article-meta {
+            color: #60a5fa;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .article-title {
+            font-size: clamp(2rem, 3.5vw, 3rem);
+            margin-bottom: 1.5rem;
+            line-height: 1.25;
+            color: var(--text-primary);
+        }
+
+        .article-content {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .article-content h2 {
+            color: var(--text-primary);
+            font-size: 1.75rem;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 0.5rem;
+        }
+
+        .article-content h3 {
+            color: #93c5fd;
+            font-size: 1.4rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .article-image {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-xl);
+            margin: 2rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            color: #60a5fa;
+            font-weight: 600;
+        }
+
+        @media (min-width: 768px) {
+            .article-image.float-right {
+                float: right;
+                width: 40%;
+                margin: 0.5rem 0 1.5rem 2rem;
+            }
+
+            .article-image.float-left {
+                float: left;
+                width: 40%;
+                margin: 0.5rem 2rem 1.5rem 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">✨ AI Educator</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Domů</a></li>
+                <li><a href="../index.html#explore" class="nav-link">Prozkoumejte AI</a></li>
+                <li><a href="../apps.html" class="nav-link">Nástroje</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <article class="article-container">
+        <header class="article-header">
+            <span class="article-meta">Audio Overview</span>
+            <h1 class="article-title">Tvorba podcastů z poznámek</h1>
+        </header>
+        <div class="article-content">
+            <p class="lead" style="font-size:1.25rem; color:var(--text-primary);">
+                NotebookLM umožňuje převést vaše poznámky, výukové materiály nebo výzkumné texty přímo do
+                profesionálního audio podcastu. Navíc můžete během poslechu klást otázky a AI vám v reálném čase doplní
+                odpovědi.
+            </p>
+            <img src="../assets/podcast_creation.png" alt="Tvorba podcastu" class="article-image float-right">
+
+            <h2>1. Přehled funkce</h2>
+            <p>
+                <strong>Audio Overview (Podcast)</strong> je navržený tak, aby z textu vytvořil plynulý dialog dvou
+                virtuálních moderátorů. Výsledný soubor můžete stáhnout, sdílet nebo ho použít jako výukový materiál.
+            </p>
+
+            <h2>2. Jak vytvořit podcast</h2>
+            <img src="../assets/notebooklm_audio_generation.png" alt="Generování audia v NotebookLM"
+                class="article-image float-right">
+            <ol>
+                <li>Otevřete NotebookLM a načtěte zdroj – může to být <em>Google Docs</em>, <em>PDF</em>, <em>plain
+                        text</em> nebo <em>poznámky z Google Keep</em>.</li>
+                <li>Do konverzace zadejte prompt, např.
+                    <code>Vytvoř podcast o tomto textu, dva moderátory, délka 10 minut.</code>
+                </li>
+                <li>AI vygeneruje skript a následně audio soubor. Můžete si vybrat hlas (mužský/ženský) a rychlost
+                    čtení.</li>
+                <li>Stáhněte si soubor <code>.mp3</code> a případně ho upravte v editoru (např. Audacity).</li>
+            </ol>
+
+            <h2>3. Interaktivní otázky během poslechu</h2>
+            <img src="../assets/notebooklm_interactive_qa.png" alt="Interaktivní otázky při poslechu"
+                class="article-image float-left">
+            <p>
+                V české verzi NotebookLM je tato funkce <strong>k dispozici</strong>. Po spuštění podcastu můžete během
+                poslechu zadat otázku (např. <em>„Co je hlavní myšlenka první kapitoly?“</em>) a AI v reálném čase
+                doplní odpověď, která se přehraje jako krátký úsek mezi hlavními částmi.
+            </p>
+            <p>
+                Tato možnost je užitečná při výuce – studenti mohou okamžitě ověřit porozumění a učitelé získají
+                dynamický nástroj pro kontrolu znalostí.
+            </p>
+
+            <h2>4. Další možnosti a úpravy</h2>
+            <ul>
+                <li><strong>Rozdělení na kapitoly:</strong> Vytvořte samostatné podcasty pro každou kapitolu nebo sekci.
+                </li>
+                <li><strong>Vkládání hudby či zvukových efektů:</strong> Přidejte jemné pozadí nebo zvukové signály pro
+                    zvýšení pozornosti.</li>
+                <li><strong>Export do různých formátů:</strong> Kromě MP3 můžete získat OGG nebo WAV.</li>
+            </ul>
+
+            <h2>5. Omezení a tipy</h2>
+            <p>
+                • V současné české verzi je podpora interaktivních otázek omezená na textové vstupy – hlasové dotazy
+                ještě nejsou plně podporovány.
+                <br>• Pro nejlepší výsledek používejte dobře strukturované a srozumitelné texty (odstavce, nadpisy).
+                <br>• Délka podcastu by neměla přesáhnout 30 minut – delší soubory mohou mít sníženou kvalitu
+                přehrávání.
+            </p>
+
+            <div class="back-nav-container">
+                <a href="index.html" class="btn-back">← Zpět na NotebookLM</a>
+                <a href="../teachers.html" class="back-link">Zpět do AI Toolkit</a>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+        <p>&copy; 2025 AI Educator. Vzdělávání s pomocí umělé inteligence.</p>
+    </footer>
+</body>
+
+</html>

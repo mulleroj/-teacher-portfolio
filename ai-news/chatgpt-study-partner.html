@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT jako studijní partner | AI Educator</title>
+    <meta name="description"
+        content="Jak efektivně využívat ChatGPT a další AI asistenty při přípravě na testy, psaní esejí a procvičování látky.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .article-meta {
+            color: var(--accent-cyan);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .article-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .article-content h2 {
+            color: var(--text-primary);
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .article-content h3 {
+            color: #f59e0b;
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+        }
+
+        .article-content h4 {
+            color: var(--accent-cyan);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+            margin-top: 0;
+        }
+
+        .article-image {
+            width: 300px;
+            float: left;
+            margin: 0 2rem 2rem 0;
+            border-radius: var(--radius-xl);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: var(--shadow-xl);
+        }
+
+        /* Clearfix for floated element if needed, though usually text wraps around */
+        .article-content::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Responsive placement on small screens */
+        @media (max-width: 768px) {
+            .article-image {
+                float: none;
+                width: 100%;
+                margin: 2rem 0;
+            }
+        }
+
+        .highlight-box,
+        .tip-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .highlight-box h4,
+        .tip-box h4 {
+            color: var(--accent-cyan);
+            margin-top: 0;
+        }
+
+        .article-content ul,
+        .article-content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .article-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .status-valid {
+            color: #22c55e;
+            font-weight: 600;
+        }
+
+        .status-invalid {
+            color: #ef4444;
+            font-weight: 600;
+        }
+
+        .back-button-container {
+            margin-top: 4rem;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigace -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">✨ AI Educator</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Domů</a></li>
+                <li><a href="../index.html#explore" class="nav-link">Prozkoumejte AI</a></li>
+                <li><a href="../apps.html" class="nav-link">Nástroje</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Obsah článku -->
+    <article class="article-container">
+        <header class="article-header">
+            <span class="article-meta">Studenti / Listopad 2025</span>
+            <h1>ChatGPT jako studijní partner</h1>
+        </header>
+
+        <div class="article-content">
+            <p class="lead">
+                V dnešní době je ChatGPT a další AI asistenti neodmyslitelnou součástí moderního vzdělávání. Ale jak je
+                používat správně a odpovědně? Tento článek vám ukáže osvědčené postupy, které vám pomohou vytěžit
+                maximum z AI nástrojů při studiu.
+            </p>
+
+            <img src="../assets/chatgpt-study-partner.png" alt="ChatGPT jako studijní partner" class="article-image">
+
+            <h2>🎯 Co je ChatGPT a jak funguje?</h2>
+            <p>
+                ChatGPT je pokročilý jazykový model vyvinutý společností OpenAI. Umí rozumět přirozenému jazyku a
+                generovat smysluplné odpovědi na vaše otázky. Je to jako mít k dispozici neustále dostupného tutora,
+                který vám může pomoci s nejrůznějšími studijními úkoly.
+            </p>
+
+            <div class="highlight-box">
+                <h4>✅ Kdy ChatGPT POUŽÍT</h4>
+                <ul>
+                    <li><span class="status-valid">Vysvětlení složitých konceptů</span> - Požádejte AI, aby vysvětlila
+                        těžkou látku jednodušeji</li>
+                    <li><span class="status-valid">Generování příkladů</span> - Potřebujete více cvičných příkladů? AI
+                        vám jich vytvoří kolik chcete</li>
+                    <li><span class="status-valid">Brainstorming</span> - Hledáte inspiraci pro esej nebo projekt? AI
+                        pomůže s nápady</li>
+                    <li><span class="status-valid">Kontrola gramatiky</span> - Zkontrolujte si anglické texty nebo české
+                        slohové práce</li>
+                    <li><span class="status-valid">Studijní plány</span> - AI vám pomůže vytvořit harmonogram učení</li>
+                    <li><span class="status-valid">Procvičování</span> - Nechte si vytvořit kvízy a testové otázky</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box" style="border-left-color: #ef4444;">
+                <h4 style="color: #ef4444;">❌ Kdy ChatGPT NEPOUŽÍVAT</h4>
+                <ul>
+                    <li><span class="status-invalid">Opisování domácích úkolů</span> - To není učení, to je podvádění
+                    </li>
+                    <li><span class="status-invalid">Psaní celých esejí za vás</span> - Připravíte se tím o rozvoj
+                        vlastního myšlení</li>
+                    <li><span class="status-invalid">Nahrazení vlastního přemýšlení</span> - AI je pomocník, ne náhražka
+                        vašeho mozku</li>
+                    <li><span class="status-invalid">Bez ověření faktů</span> - AI občas dělá chyby, vždy si informace
+                        ověřte</li>
+                </ul>
+            </div>
+
+            <div class="tip-box">
+                <h4>💡 Zlaté pravidlo</h4>
+                <p>
+                    Používejte AI jako <strong>studijního partnera</strong>, ne jako náhradu za studium. AI by vám měla
+                    pomáhat <em>pochopit</em> látku, ne jen dodat hotové odpovědi.
+                </p>
+            </div>
+
+            <h2>📚 Praktické tipy pro efektivní využití</h2>
+
+            <h3>1. Formulujte konkrétní otázky</h3>
+            <p>Místo: "Řekni mi něco o fotosyntéze"</p>
+            <p>Zkuste: "Vysvětli mi fotosyntézu jednoduše, jako bych měl/a 12 let, a uveď praktický příklad"</p>
+
+            <h3>2. Používejte AI pro hlubší pochopení</h3>
+            <p>
+                Když něčemu nerozumíte z učebnice, požádejte AI o vysvětlení jinými slovy, pomocí analogií nebo
+                praktických příkladů.
+            </p>
+
+            <h3>3. Nechte si vytvořit studijní materiály</h3>
+            <p>
+                "Vytvoř mi 10 testových otázek z dějepisu na téma první světová válka, včetně správných odpovědí"
+            </p>
+
+            <h3>4. Procvičujte jazyky</h3>
+            <p>
+                ChatGPT je skvělý konverzační partner pro angličtinu. Můžete si s ním psát, nechat si opravit chyby a
+                dokonce procvičovat konkrétní gramatické jevy.
+            </p>
+
+            <h3>5. Požádejte o zpětnou vazbu</h3>
+            <p>
+                Napište vlastní text a požádejte AI o konstruktivní kritiku - co by se dalo zlepšit, kde jsou chyby, jak
+                text lépe strukturovat.
+            </p>
+
+            <div class="tip-box">
+                <h4>🎓 Příklad efektivního použití</h4>
+                <p><strong>Špatně:</strong> "Napiš mi esej o klimatických změnách"</p>
+                <p><strong>Dobře:</strong> "Pomoz mi pochopit hlavní příčiny klimatických změn. Pak mi pomoz vytvořit
+                    osnovu pro esej. Když budu mít napsaný úvod, dáš mi na něj zpětnou vazbu?"</p>
+            </div>
+
+            <h2>🔍 Kritické myšlení je klíčové</h2>
+            <p>
+                AI někdy dělá chyby nebo si vymýšlí fakta. Proto je důležité:
+            </p>
+            <ul>
+                <li>Vždy si ověřujte fakta z více zdrojů</li>
+                <li>Ptejte se "dává to smysl?"</li>
+                <li>Porovnávejte s učebnicí nebo spolehlivými zdroji</li>
+                <li>Nebojte se AI zeptat "Jsi si jistý? Můžeš uvést zdroj?"</li>
+            </ul>
+
+            <h2>🌟 Závěr</h2>
+            <p>
+                ChatGPT a další AI nástroje jsou úžasní studijní partneři, pokud je používáte správně. Pomohou vám
+                pochopit látku hlouběji, ušetří čas při přípravě a umožní vám učit se vlastním tempem. Ale nezapomeňte -
+                jejich cíl není dělat práci za vás, ale pomáhat vám se učit efektivněji.
+            </p>
+            <p>
+                Experimentujte, zkoušejte různé přístupy a najděte si svůj vlastní způsob, jak AI zapojit do svého
+                studia. A pokud máte jakékoliv otázky, neváhejte se zeptat!
+            </p>
+        </div>
+
+        <div
+            style="margin-top: 4rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem;">
+            <a href="../students.html" class="btn-back">← Zpět na AI Lab</a>
+            <a href="../index.html" class="back-link">Zpět na domovskou stránku</a>
+        </div>
+    </article>
+
+    <footer>
+        <p>&copy; 2025 AI Educator. Vzdělávání s pomocí umělé inteligence.</p>
+    </footer>
+
+</body>
+
+</html>

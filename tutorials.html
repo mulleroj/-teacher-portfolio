@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Návody aneb jak na to? | AI Educator</title>
+    <meta name="description"
+        content="Praktické návody a postupy krok za krokem pro využití AI ve výuce. Naučte se efektivně pracovat s moderními nástroji.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap&subset=latin,latin-ext"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=3">
+    <style>
+        .hub-hero {
+            min-height: 40vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: var(--spacing-3xl) var(--spacing-lg);
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(5, 150, 105, 0.1));
+            /* Emerald/Green theme */
+            position: relative;
+        }
+
+        .hub-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('assets/tutorials-card.png') center/cover no-repeat;
+            opacity: 0.15;
+            z-index: -1;
+            filter: blur(4px);
+        }
+
+        .hub-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .hub-hero .subtitle {
+            font-size: var(--font-size-xl);
+            color: var(--text-secondary);
+            max-width: 600px;
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--spacing-xl);
+            padding: var(--spacing-3xl) var(--spacing-lg);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .article-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-xl);
+            transition: all var(--transition-base);
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl), var(--shadow-glow);
+            border-color: rgba(16, 185, 129, 0.3);
+        }
+
+        .article-card .date {
+            font-size: var(--font-size-sm);
+            color: #34d399;
+            /* Greenish for Tutorials theme */
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .article-card h3 {
+            font-size: var(--font-size-xl);
+            margin-bottom: var(--spacing-md);
+            color: var(--text-primary);
+        }
+
+        .article-card p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .article-card .read-more {
+            color: #34d399;
+            font-weight: 600;
+            transition: color var(--transition-fast);
+        }
+
+        .article-card .read-more:hover {
+            color: #6ee7b7;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            color: var(--text-secondary);
+            padding: var(--spacing-lg);
+            transition: color var(--transition-fast);
+        }
+
+        .back-link:hover {
+            color: var(--text-primary);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">✨ AI Educator</a>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+                ☰
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Domů</a></li>
+                <li><a href="index.html#explore" class="nav-link">Prozkoumejte AI</a></li>
+                <li><a href="apps.html" class="nav-link">Nástroje</a></li>
+                <li><a href="index.html#contact" class="nav-link">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Point back to teachers hub -->
+    <div class="back-nav-container">
+        <a href="teachers.html" class="back-link">← Zpět do AI Toolkit</a>
+    </div>
+
+    <!-- Hub Hero -->
+    <div class="hub-hero">
+        <h1>💡 Návody aneb jak na to?</h1>
+        <p class="subtitle">Praktické postupy, tutoriály a průvodce krok za krokem</p>
+    </div>
+
+    <!-- Articles Grid -->
+    <div class="articles-grid">
+        <!-- Article 1: Avatar from Audio -->
+        <div class="article-card">
+            <span class="date">Prosinec 2025</span>
+            <h3>Jak vytvořit mluvícího AI avatara?</h3>
+            <p>
+                Podrobný návod, jak proměnit audio výstup z NotebookLM ve video
+                s mluvící postavou pomocí nástroje HeyGen.
+            </p>
+            <a href="tutorials/navod-avatar-z-audia.html" class="read-more">Číst návod →</a>
+        </div>
+
+        <!-- Placeholder Article 2 -->
+        <div class="article-card">
+            <span class="date">Prosinec 2025</span>
+            <h3>Tvorba pracovních listů s ChatGPT</h3>
+            <p>
+                Krok za krokem: Jak efektivně promptovat, abyste získali kvalitní
+                výukové materiály a ušetřili hodiny příprav. Praktický návod od A do Z.
+            </p>
+            <a href="tutorials/tvorba-pracovnich-listu-s-chatgpt.html" class="read-more">Číst návod →</a>
+        </div>
+
+        <!-- Placeholder Article 3 -->
+        <div class="article-card">
+            <span class="date">Připravujeme</span>
+            <h3>AI pro hodnocení žáků</h3>
+            <p>
+                Návod na využití AI nástrojů pro zpětnou vazbu a hodnocení prací žáků.
+                Jak nastavit kritéria a udržet objektivitu.
+            </p>
+            <span class="read-more">Již brzy...</span>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 AI Educator. Vzdělávání s pomocí umělé inteligence.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
