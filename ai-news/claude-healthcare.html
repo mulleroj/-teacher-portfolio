@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anthropic představuje nástroje AI pro zdravotnictví krátce po OpenAI | AI Pulse</title>
+    <meta name="description"
+        content="Anthropic uvedl Claude for Healthcare pouhé dny po OpenAI. Závod technologických gigantů o AI ve zdravotnictví se zostřuje.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .article-meta {
+            color: var(--accent-cyan);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .article-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .article-content h2 {
+            color: var(--text-primary);
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            clear: both;
+        }
+
+        .article-content h3 {
+            color: #f59e0b;
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+        }
+
+        .article-image {
+            width: 300px;
+            float: left;
+            margin: 0.5rem 2rem 1.5rem 0;
+            border-radius: var(--radius-xl);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .article-image.right {
+            float: right;
+            margin: 0.5rem 0 1.5rem 2rem;
+        }
+
+        .article-content::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        @media (max-width: 768px) {
+
+            .article-image,
+            .article-image.right {
+                float: none;
+                width: 100%;
+                margin: 2rem 0;
+            }
+        }
+
+        .highlight-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .highlight-box h4 {
+            color: var(--accent-cyan);
+            margin-top: 0;
+        }
+
+        .highlight-box.warning {
+            border-color: rgba(245, 158, 11, 0.3);
+            background: rgba(245, 158, 11, 0.05);
+        }
+
+        .highlight-box.warning h4 {
+            color: #f59e0b;
+        }
+
+        .highlight-box.purple {
+            border-color: rgba(147, 51, 234, 0.3);
+            background: rgba(147, 51, 234, 0.05);
+        }
+
+        .highlight-box.purple h4 {
+            color: #a78bfa;
+        }
+
+        .article-content ul {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .article-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .comparison-table th {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-primary);
+        }
+
+        .comparison-table td {
+            color: var(--text-secondary);
+        }
+
+        .back-nav-container {
+            margin-top: 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigace -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">✨ AI Educator</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Domů</a></li>
+                <li><a href="../news.html" class="nav-link active">AI Pulse</a></li>
+                <li><a href="../index.html#explore" class="nav-link">Prozkoumejte AI</a></li>
+                <li><a href="../apps.html" class="nav-link">Nástroje</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Obsah článku -->
+    <article class="article-container">
+        <header class="article-header">
+            <span class="article-meta">AI Pulse / Leden 2026</span>
+            <h1>Anthropic představuje nástroje AI pro zdravotnictví krátce po OpenAI</h1>
+            <p class="subtitle">Závod technologických gigantů o AI ve zdravotnictví se zostřuje</p>
+        </header>
+
+        <div class="article-content">
+
+            <h2>🏃 Závod o zdravotnickou AI</h2>
+
+            <img src="../assets/claude-healthcare-hero.png" alt="Claude for Healthcare" class="article-image right">
+
+            <p>
+                Anthropic v neděli představil <strong>Claude for Healthcare</strong> a uvedl sadu nástrojů umělé
+                inteligence pro pacienty a poskytovatele zdravotní péče pouhé dny poté, co OpenAI spustila konkurenční
+                produkt, čímž se zostřil závod technologických společností o zabudování AI do jednoho z nejcitlivějších
+                sektorů ekonomiky.
+            </p>
+
+            <p>
+                Oznámení, načasované spolu s konferencí <strong>JPMorgan Healthcare Conference</strong> v San Franciscu,
+                umožňuje americkým předplatitelům tarifů Pro a Max společnosti Anthropic připojit osobní zdravotní
+                záznamy k chatbotu Claude pro lékařské poznatky.
+            </p>
+
+            <p>
+                Uvedení na trh následuje po spuštění ChatGPT Health společností OpenAI 7. ledna, která nabízí podobnou
+                funkčnost a přilákala více než <strong>230 milionů týdenních uživatelů</strong> ptajících se na otázky
+                související se zdravím.
+            </p>
+
+            <h2>🔗 Partnerství pro přístup ke zdravotním záznamům</h2>
+
+            <p>
+                Obě laboratoře umělé inteligence navázaly partnerství se společnostmi zabývajícími se infrastrukturou
+                zdravotních dat, aby umožnily bezpečný přístup k lékařským záznamům:
+            </p>
+
+            <table class="comparison-table">
+                <tr>
+                    <th>Společnost</th>
+                    <th>Partner</th>
+                    <th>Pokrytí</th>
+                </tr>
+                <tr>
+                    <td><strong>Anthropic</strong></td>
+                    <td>HealthEx</td>
+                    <td>50 000+ zdravotnických systémů</td>
+                </tr>
+                <tr>
+                    <td><strong>OpenAI</strong></td>
+                    <td>b.well</td>
+                    <td>2,2 mil. poskytovatelů, 320 zdravotních plánů</td>
+                </tr>
+            </table>
+
+            <p>
+                Uživatelé obou platforem mohou také integrovat wellness aplikace včetně <strong>Apple Health</strong>,
+                <strong>MyFitnessPal</strong> a <strong>Function Health</strong>.
+            </p>
+
+            <h2>🏥 Nástroje pro poskytovatele zdravotní péče a výzkumníky</h2>
+
+            <img src="../assets/ai-healthcare-providers.png" alt="AI pro poskytovatele zdravotní péče"
+                class="article-image">
+
+            <p>
+                Společnost Anthropic uvedla, že Claude for Healthcare zahrnuje infrastrukturu připravenou pro HIPAA
+                určenou lékařským institucím, s novými připojeními k průmyslovým databázím:
+            </p>
+
+            <ul>
+                <li>Centers for Medicare & Medicaid Services – databáze pokrytí</li>
+                <li>Data lékařského kódování <strong>ICD-10</strong></li>
+                <li>National Provider Identifier Registry</li>
+                <li>PubMed</li>
+            </ul>
+
+            <p>
+                Tyto nástroje mohou zefektivnit žádosti o předběžnou autorizaci a odvolání proti pojišťovnám tím, že
+                propojí klinické směrnice se záznamy pacientů.
+            </p>
+
+            <div class="highlight-box purple">
+                <h4>🔬 Platforma poháněná Claude Opus 4.5</h4>
+                <p>
+                    Platforma také rozšířila možnosti pro farmaceutické společnosti přidáním integrací s
+                    <strong>ClinicalTrials.gov</strong> a <strong>bioRxiv</strong> pro podporu úkolů v oblasti vývoje
+                    léků.
+                </p>
+            </div>
+
+            <h3>Významní partneři</h3>
+
+            <p>
+                S Anthropic spolupracují významné zdravotnické a farmaceutické společnosti:
+            </p>
+
+            <ul>
+                <li><strong>AstraZeneca</strong></li>
+                <li><strong>Sanofi</strong></li>
+                <li><strong>Banner Health</strong></li>
+                <li><strong>Flatiron Health</strong></li>
+            </ul>
+
+            <p>
+                OpenAI podobně oznámilo ChatGPT for Healthcare 8. ledna, nabízející nástroje vyhovující normě HIPAA pro
+                lékařské instituce poháněné modely GPT-5.
+            </p>
+
+            <h2>⚠️ Obavy o soukromí přetrvávají</h2>
+
+            <img src="../assets/ai-privacy-concerns.png" alt="Obavy o soukromí AI" class="article-image right">
+
+            <p>
+                Uvedení produktů na trh přichází uprostřed zvýšené kontroly systémů umělé inteligence ve zdravotnictví.
+            </p>
+
+            <div class="highlight-box warning">
+                <h4>⚖️ Nedávné právní případy</h4>
+                <p>
+                    Character.AI a Google se 7. ledna dohodly na urovnání několika žalob, které tvrdily, že jejich
+                    chatboti přispěli k problémům duševního zdraví a sebevraždám mezi teenagery, včetně případu matky z
+                    Floridy, jejíž 14letý syn zemřel sebevraždou v roce 2024.
+                </p>
+                <p>
+                    Urovnání představuje jedno z prvních vyřešení vysoce medializovaných případů tvrzených škod
+                    způsobených chatboty s umělou inteligencí.
+                </p>
+            </div>
+
+            <h3>Bezpečnostní záruky</h3>
+
+            <p>
+                Anthropic i OpenAI zdůraznily, že:
+            </p>
+
+            <ul>
+                <li>Uživatelská zdravotní data <strong>nebudou použita k trénování AI modelů</strong></li>
+                <li>Konverzace zůstávají šifrované se zvýšenou ochranou soukromí</li>
+            </ul>
+
+            <p>
+                Odborníci však upozorňují, že nástroje AI ve zdravotnictví <strong>nespadají pod zákon HIPAA</strong>,
+                když jsou poskytovány přímo spotřebitelům, což uživatelům ponechává omezené možnosti v případě úniku
+                dat.
+            </p>
+
+            <div class="highlight-box">
+                <h4>💬 Vyjádření Anthropic</h4>
+                <p>
+                    <em>„Tyto nástroje jsou neuvěřitelně výkonné. V kritických situacích, kde záleží na každém detailu,
+                        byste však měli informace určitě ověřit."</em>
+                </p>
+                <p style="text-align: right; margin-bottom: 0;">
+                    — Eric Kauderer-Abrams, vedoucí divize life sciences, Anthropic
+                </p>
+            </div>
+
+        </div>
+
+        <div class="back-nav-container">
+            <a href="../news.html" class="btn-back">← Zpět na AI Pulse</a>
+            <a href="../index.html" class="back-link">Zpět na domovskou stránku</a>
+        </div>
+    </article>
+
+    <footer>
+        <p>&copy; 2026 AI Educator. Vzdělávání s pomocí umělé inteligence.</p>
+    </footer>
+</body>
+
+</html>

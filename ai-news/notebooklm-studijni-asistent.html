@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NotebookLM jako studijní asistent: Kompletní průvodce pro studenty | AI Lab</title>
+    <meta name="description"
+        content="Jak využít NotebookLM pro efektivní studium. Přehledy, otázky, audio shrnutí z vlastních materiálů. Praktické tipy pro studenty.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .article-meta {
+            color: var(--accent-cyan);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .article-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .article-content h2 {
+            color: var(--text-primary);
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            clear: both;
+        }
+
+        .article-content h3 {
+            color: #f59e0b;
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+        }
+
+        .article-image {
+            width: 300px;
+            float: left;
+            margin: 0.5rem 2rem 1.5rem 0;
+            border-radius: var(--radius-xl);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .article-image.right {
+            float: right;
+            margin: 0.5rem 0 1.5rem 2rem;
+        }
+
+        .article-content::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        @media (max-width: 768px) {
+
+            .article-image,
+            .article-image.right {
+                float: none;
+                width: 100%;
+                margin: 2rem 0;
+            }
+        }
+
+        .highlight-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .highlight-box h4 {
+            color: var(--accent-cyan);
+            margin-top: 0;
+        }
+
+        .highlight-box.tip {
+            border-color: rgba(16, 185, 129, 0.3);
+            background: rgba(16, 185, 129, 0.05);
+        }
+
+        .highlight-box.tip h4 {
+            color: #10b981;
+        }
+
+        .highlight-box.warning {
+            border-color: rgba(245, 158, 11, 0.3);
+            background: rgba(245, 158, 11, 0.05);
+        }
+
+        .highlight-box.warning h4 {
+            color: #f59e0b;
+        }
+
+        .article-content ul,
+        .article-content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .article-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .use-case-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .use-case-card h4 {
+            color: var(--accent-cyan);
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+        }
+
+        .back-nav-container {
+            margin-top: 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigace -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">✨ AI Educator</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Domů</a></li>
+                <li><a href="../students.html" class="nav-link active">AI Lab</a></li>
+                <li><a href="../index.html#explore" class="nav-link">Prozkoumejte AI</a></li>
+                <li><a href="../apps.html" class="nav-link">Nástroje</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Obsah článku -->
+    <article class="article-container">
+        <header class="article-header">
+            <span class="article-meta">AI Lab / Leden 2026</span>
+            <h1>NotebookLM jako studijní asistent: Kompletní průvodce pro studenty</h1>
+            <p class="subtitle">Jak šetřit čas a prohlubovat porozumění pomocí AI</p>
+        </header>
+
+        <div class="article-content">
+
+            <h2>📚 Proč NotebookLM pro studium?</h2>
+
+            <img src="../assets/notebooklm-study-hero.png" alt="NotebookLM pro studenty" class="article-image right">
+
+            <p>
+                NotebookLM se studentům vyplatí hlavně jako <strong>studijní asistent nad vlastními materiály</strong>:
+                umí z nahraných zdrojů dělat přehledy, otázky, audio shrnutí a pomáhá tak šetřit čas i prohlubovat
+                porozumění.
+            </p>
+
+            <p>
+                Na rozdíl od běžných chatbotů, které „vědí všechno z internetu", NotebookLM pracuje výhradně s vašimi
+                materiály – což znamená relevantní a přesné odpovědi přesně na to, co se učíte.
+            </p>
+
+            <h2>🎯 Základní principy práce</h2>
+
+            <div class="highlight-box tip">
+                <h4>✅ Tři zlatá pravidla</h4>
+                <ol>
+                    <li><strong>Vždy nahrávat vlastní zdroje</strong> (skripta, prezentace, články, zápisky) –
+                        nečekejte, že NotebookLM „ví všechno z webu"</li>
+                    <li><strong>Mít pro každý předmět/téma samostatný sešit</strong> – ne jeden velký „chaos sešit"</li>
+                    <li><strong>Ptát se konkrétně:</strong> „Vysvětli mi krok za krokem…", „Porovnej tyto dva pojmy…",
+                        „Vytvoř otázky na opakování z kapitoly 3."</li>
+                </ol>
+            </div>
+
+            <h2>💡 Doporučení pro efektivní studium</h2>
+
+            <img src="../assets/notebooklm-workflow.png" alt="Pracovní postup s NotebookLM" class="article-image">
+
+            <ol>
+                <li><strong>Začněte nahráním materiálů</strong> – poslední seminárky, zápisky a prezentace. Zkuste si
+                    nechat udělat souhrn, otázky a vysvětlení nejasných částí.</li>
+                <li><strong>Využívejte různé formáty výstupů:</strong>
+                    <ul>
+                        <li>Přehled</li>
+                        <li>FAQ</li>
+                        <li>Studijní průvodce</li>
+                        <li>Časová osa</li>
+                        <li>Audio přehled</li>
+                    </ul>
+                    Každý typ pomáhá jinému stylu učení.
+                </li>
+                <li><strong>Při přípravě na zkoušku</strong> si nechte vygenerovat studijní příručku a sadu otázek/kvízů
+                    – ty potom ručně projděte a doplňte vlastní poznámky.</li>
+            </ol>
+
+            <h2>🎓 Typické use-casy pro studenty</h2>
+
+            <div class="use-case-card">
+                <h4>📖 Pochopení náročného učiva</h4>
+                <p>
+                    Nahrajte kapitolu učebnice / skripta a nechte si vysvětlit pojmy <strong>„jako pro
+                        deváťáka"</strong>. Požádejte o příklady, analogie a kontrolní otázky.
+                </p>
+            </div>
+
+            <div class="use-case-card">
+                <h4>📝 Příprava na test/zkoušku</h4>
+                <p>
+                    Z materiálů vygenerujte studijní průvodce, seznam klíčových pojmů, krátké otázky a odpovědi,
+                    případně flashcards (např. export do Quizletu).
+                </p>
+            </div>
+
+            <div class="use-case-card">
+                <h4>📄 Seminárky a projekty</h4>
+                <p>
+                    Sloučte články, výzkumy, poznámky a nechte si vygenerovat osnovu, seznam argumentů pro/proti,
+                    kontrolní seznam literatury – <strong>ale text pište a strukturujte už aktivně, ne ho jen
+                        kopírovat</strong>.
+                </p>
+            </div>
+
+            <h2>🚀 Pokročilejší scénáře</h2>
+
+            <img src="../assets/notebooklm-advanced.png" alt="Pokročilé funkce NotebookLM" class="article-image right">
+
+            <h3>Práce s více zdroji najednou</h3>
+            <p>
+                V jednom sešitu můžete mít až desítky–stovky zdrojů (PDF, Docs, web) a pak zadávat otázky typu:
+            </p>
+            <ul>
+                <li>„Najdi, kde si autoři odporují"</li>
+                <li>„Sestav přehled různých teorií k tématu…"</li>
+            </ul>
+
+            <h3>Audio shrnutí a „podcast"</h3>
+            <p>
+                Nechte si látku převyprávět jako <strong>dialog dvou mluvčích</strong> a poslouchejte ji cestou do školy
+                nebo při opakování. Ideální pro auditivní typ učení!
+            </p>
+
+            <h3>Skupinové projekty</h3>
+            <p>
+                Vytvořte <strong>sdílený sešit pro tým</strong>, kde všichni nahrávají zdroje a AI pak pomáhá se
+                souhrny, rozdělením práce a návrhem struktury prezentace.
+            </p>
+
+            <h2>⚠️ Didaktická doporučení / bezpečné používání</h2>
+
+            <div class="highlight-box warning">
+                <h4>🔍 Důležité zásady</h4>
+                <ul>
+                    <li><strong>Brát NotebookLM jako nástroj na práci se zdroji, ne jako náhradu učení</strong> –
+                        student má vždy ověřovat, doplňovat a přepisovat vlastními slovy.</li>
+                    <li><strong>Učit se kontrolovat citace a původ informací:</strong> ptejte se „Z jakého dokumentu
+                        tato informace pochází?" a porovnejte s originálem.</li>
+                    <li><strong>V hodinách ho používat na činnosti vyššího řádu:</strong> porovnání názorů, tvorba
+                        otázek, hledání vztahů – ne jen „udělej mi referát".</li>
+                </ul>
+            </div>
+
+            <h2>🎯 Shrnutí</h2>
+
+            <p>
+                NotebookLM je výborný pomocník pro studium, ale vyžaduje aktivní přístup. Nejlepší výsledky dostanete,
+                když:
+            </p>
+
+            <ul>
+                <li>Nahrajete kvalitní vlastní materiály</li>
+                <li>Ptáte se konkrétně a cíleně</li>
+                <li>Výstupy AI vždy ověřujete a doplňujete</li>
+                <li>Používáte různé formáty výstupů podle situace</li>
+            </ul>
+
+            <p>
+                <strong>Pamatujte:</strong> AI vám pomůže s organizací a porozuměním, ale skutečné učení se odehrává ve
+                vaší hlavě!
+            </p>
+
+        </div>
+
+        <div class="back-nav-container">
+            <a href="../students.html" class="btn-back">← Zpět do AI Lab</a>
+            <a href="../index.html" class="back-link">Zpět na domovskou stránku</a>
+        </div>
+    </article>
+
+    <footer>
+        <p>&copy; 2026 AI Educator. Vzdělávání s pomocí umělé inteligence.</p>
+    </footer>
+</body>
+
+</html>

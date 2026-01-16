@@ -1,5 +1,40 @@
 const recentArticles = [
     {
+        title: "NotebookLM jako studijní asistent",
+        description: "Kompletní průvodce pro studenty. Jak využít NotebookLM pro přehledy, otázky a audio shrnutí z vlastních materiálů.",
+        link: "ai-news/notebooklm-studijni-asistent.html",
+        date: "Leden 2026",
+        category: "AI Lab"
+    },
+    {
+        title: "Anthropic představuje Claude for Healthcare",
+        description: "Závod o AI ve zdravotnictví se zostřuje. Anthropic uvedl Claude for Healthcare pouhé dny po OpenAI.",
+        link: "ai-news/claude-healthcare.html",
+        date: "Leden 2026",
+        category: "AI Pulse"
+    },
+    {
+        title: "OpenAI spouští zdravotního asistenta s AI",
+        description: "ChatGPT Health pro spotřebitele a ChatGPT for Healthcare pro nemocnice. Nejambicióznější expanze AI do zdravotnictví.",
+        link: "ai-news/chatgpt-health.html",
+        date: "Leden 2026",
+        category: "AI Pulse"
+    },
+    {
+        title: "OpenAI testuje reklamy v ChatGPT",
+        description: "OpenAI oznámilo testování reklam v ChatGPT pro bezplatné uživatele. Co to znamená pro uživatele a jaká jsou bezpečnostní opatření?",
+        link: "ai-news/chatgpt-reklamy.html",
+        date: "Leden 2026",
+        category: "AI Pulse"
+    },
+    {
+        title: "AI ve vzdělávání 2025-2026",
+        description: "Komplexní přehled klíčových iniciativ, nástrojů a trendů v oblasti AI ve vzdělávání. Program základka.ai, kurikulum AI dětem, praktické nástroje pro pedagogy.",
+        link: "ai-news/ai-ve-vzdelavani-2025-2026.html",
+        date: "Leden 2026",
+        category: "AI Pulse"
+    },
+    {
         title: "Konec administrativního chaosu",
         description: "Jak využít NotebookLM pro zvládnutí školní administrativy. ŠVP, směrnice a zápisy z porad pod kontrolou AI.",
         link: "notebooklm/notebooklm-chaos.html",

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenAI spouští zdravotního asistenta s AI a platformu pro nemocnice | AI Pulse</title>
+    <meta name="description"
+        content="OpenAI představil ChatGPT Health pro spotřebitele a ChatGPT for Healthcare pro nemocnice. Ambiciózní expanze AI do zdravotnictví.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .article-meta {
+            color: var(--accent-cyan);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .article-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .article-content h2 {
+            color: var(--text-primary);
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            clear: both;
+        }
+
+        .article-content h3 {
+            color: #f59e0b;
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+        }
+
+        .article-image {
+            width: 300px;
+            float: left;
+            margin: 0.5rem 2rem 1.5rem 0;
+            border-radius: var(--radius-xl);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .article-image.right {
+            float: right;
+            margin: 0.5rem 0 1.5rem 2rem;
+        }
+
+        .article-content::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        @media (max-width: 768px) {
+
+            .article-image,
+            .article-image.right {
+                float: none;
+                width: 100%;
+                margin: 2rem 0;
+            }
+        }
+
+        .highlight-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .highlight-box h4 {
+            color: var(--accent-cyan);
+            margin-top: 0;
+        }
+
+        .highlight-box.warning {
+            border-color: rgba(245, 158, 11, 0.3);
+            background: rgba(245, 158, 11, 0.05);
+        }
+
+        .highlight-box.warning h4 {
+            color: #f59e0b;
+        }
+
+        .highlight-box.success {
+            border-color: rgba(16, 185, 129, 0.3);
+            background: rgba(16, 185, 129, 0.05);
+        }
+
+        .highlight-box.success h4 {
+            color: #10b981;
+        }
+
+        .article-content ul {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .article-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .back-nav-container {
+            margin-top: 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigace -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">✨ AI Educator</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Domů</a></li>
+                <li><a href="../news.html" class="nav-link active">AI Pulse</a></li>
+                <li><a href="../index.html#explore" class="nav-link">Prozkoumejte AI</a></li>
+                <li><a href="../apps.html" class="nav-link">Nástroje</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Obsah článku -->
+    <article class="article-container">
+        <header class="article-header">
+            <span class="article-meta">AI Pulse / Leden 2026</span>
+            <h1>OpenAI spouští zdravotního asistenta s AI a platformu pro nemocnice</h1>
+            <p class="subtitle">Nejambicióznější expanze umělé inteligence do zdravotnického sektoru</p>
+        </header>
+
+        <div class="article-content">
+
+            <h2>🏥 Dvojí zdravotnická strategie</h2>
+
+            <img src="../assets/chatgpt-health-hero.png" alt="ChatGPT Health" class="article-image right">
+
+            <p>
+                OpenAI tento týden odhalil dvojí zdravotnickou strategii, kdy představil jak spotřebitelského
+                zdravotního asistenta, tak enterprise platformu, která je nyní nasazována v <strong>osmi velkých
+                    amerických nemocničních systémech</strong>.
+            </p>
+
+            <p>
+                Sanfranciská společnost 7. ledna oznámila <strong>ChatGPT Health</strong>, vyhrazený prostor ve svém
+                populárním chatbotu, kde mohou uživatelé propojit zdravotní záznamy a wellness aplikace a získat
+                personalizované zdravotní rady.
+            </p>
+
+            <p>
+                Zároveň OpenAI uvedl <strong>ChatGPT for Healthcare</strong>, samostatný podnikový produkt kompatibilní
+                s HIPAA, který již používají přední americké nemocnice.
+            </p>
+
+            <div class="highlight-box success">
+                <h4>🏨 Nemocniční partneři</h4>
+                <ul>
+                    <li>Boston Children's Hospital</li>
+                    <li>Memorial Sloan Kettering Cancer Center</li>
+                    <li>Stanford Medicine Children's Health</li>
+                    <li>Cedars-Sinai Medical Center</li>
+                    <li>University of California San Francisco</li>
+                    <li>AdventHealth</li>
+                    <li>Baylor Scott & White Health</li>
+                    <li>HCA Healthcare</li>
+                </ul>
+            </div>
+
+            <h2>📊 Rostoucí poptávka po zdravotnických AI nástrojích</h2>
+
+            <p>
+                Dvojí uvedení odráží rostoucí poptávku po zdravotnických nástrojích s umělou inteligencí. Podle analýzy
+                OpenAI deidentifikovaných konverzací pokládá více než <strong>230 milionů lidí po celém světě
+                    týdně</strong> ChatGPT otázky týkající se zdraví a wellness.
+            </p>
+
+            <p>
+                American Medical Association uvádí, že využívání umělé inteligence lékaři se mezi lety 2023 a 2024
+                <strong>téměř zdvojnásobilo</strong>.
+            </p>
+
+            <h2>🏢 Podniková platforma klade důraz na dodržování předpisů</h2>
+
+            <img src="../assets/hospital-ai-platform.png" alt="AI platforma pro nemocnice" class="article-image">
+
+            <p>
+                ChatGPT pro zdravotnictví, poháněný modely <strong>GPT-5.2</strong> od OpenAI, zahrnuje:
+            </p>
+
+            <ul>
+                <li>Vyhledávání důkazů s citacemi z recenzovaných studií</li>
+                <li>Šablony pro propouštěcí zprávy a pokyny pro pacienty</li>
+                <li>Integraci s nemocničními systémy (Microsoft SharePoint)</li>
+            </ul>
+
+            <div class="highlight-box">
+                <h4>🔐 Bezpečnostní funkce pro nemocnice</h4>
+                <ul>
+                    <li>Smlouvy o obchodním partnerství (Business Associate Agreements)</li>
+                    <li>Protokoly auditu</li>
+                    <li>Šifrovací klíče spravované zákazníkem</li>
+                    <li>Možnosti rezidence dat pro soulad s HIPAA</li>
+                    <li><strong>Údaje o pacientech nejsou používány k trénování modelů AI</strong></li>
+                </ul>
+            </div>
+
+            <p>
+                API platforma již nyní pohání tisíce zdravotnických aplikací prostřednictvím partnerů včetně Abridge,
+                Ambience a EliseAI pro klinickou dokumentaci a plánování.
+            </p>
+
+            <h2>⚠️ Spotřební produkt vyvolává otázky ohledně ochrany soukromí</h2>
+
+            <img src="../assets/health-data-privacy.png" alt="Ochrana zdravotních dat" class="article-image right">
+
+            <p>
+                Spotřebitelská verze ChatGPT Health umožňuje uživatelům připojit zdravotní záznamy prostřednictvím
+                partnerství s <strong>b.well</strong>, která se napojuje na přibližně 2,2 milionu zdravotnických
+                poskytovatelů v USA. Uživatelé mohou také integrovat data z aplikací:
+            </p>
+
+            <ul>
+                <li>Apple Health</li>
+                <li>MyFitnessPal</li>
+                <li>Weight Watchers</li>
+                <li>Další wellness aplikace</li>
+            </ul>
+
+            <div class="highlight-box warning">
+                <h4>⚠️ Důležité upozornění</h4>
+                <p>
+                    ChatGPT Health <strong>není v souladu s normou HIPAA</strong>. „V případě spotřebitelských produktů
+                    se norma HIPAA nepoužije – vztahuje se na klinická nebo profesionální zdravotnická prostředí," řekl
+                    novinářům Nate Gross, vedoucí zdravotní divize OpenAI.
+                </p>
+            </div>
+
+            <p>
+                Odborníci na ochranu soukromí varují, že zdravotní údaje sdílené s platformou by mohly podléhat soudním
+                předvolání nebo právnímu dokazování.
+            </p>
+
+            <p>
+                <em>„I když společnosti tvrdí, že mají zavedena ochranná opatření pro soukromí, spotřebitelé často
+                    nemají dostatečný souhlas, jasnost ani kontrolu nad tím, jak jsou jejich data využívána,"</em> řekl
+                médiím J.B. Branch, zastánce odpovědnosti v technologiích z organizace Public Citizen.
+            </p>
+
+            <h3>Bezpečnostní opatření OpenAI</h3>
+
+            <p>
+                OpenAI zdůraznila, že:
+            </p>
+
+            <ul>
+                <li>Zdravotní konverzace probíhají v samostatném, šifrovaném prostoru</li>
+                <li>Nejsou využívány k trénování modelů</li>
+                <li>Uživatelé mohou zdravotní data smazat v nastavení</li>
+                <li>Společnost nabízí vícefaktorovou autentizaci</li>
+            </ul>
+
+            <h2>👨‍⚕️ Spolupráce s lékaři a bezpečnostní opatření</h2>
+
+            <p>
+                Oba produkty byly vyvinuty za spolupráce s více než <strong>260 lékaři</strong> praktikujícími v 60
+                zemích a desítkách specializací, kteří během dvou let poskytli zpětnou vazbu k výstupům modelu
+                <strong>více než 600 000krát</strong>.
+            </p>
+
+            <p>
+                Tato spolupráce podle Miry Murati, technologické ředitelky OpenAI, formovala způsob, jakým systém
+                sděluje lékařské informace, kdy doporučit klinickou návštěvu a jak upřednostnit bezpečnost.
+            </p>
+
+            <div class="highlight-box">
+                <h4>📋 HealthBench hodnotící rámec</h4>
+                <p>
+                    OpenAI vyhodnocuje platformy pomocí <strong>HealthBench</strong>, hodnotícího rámce, který měří
+                    odpovědi podle rubrik vypracovaných lékaři se zaměřením na:
+                </p>
+                <ul>
+                    <li>Bezpečnost</li>
+                    <li>Srozumitelnost</li>
+                    <li>Vhodnou eskalaci péče</li>
+                    <li>Kontext</li>
+                </ul>
+            </div>
+
+            <p>
+                Společnost zdůraznila, že oba produkty jsou navrženy tak, aby <strong>podporovaly lékařskou péči, nikoli
+                    ji nahrazovaly</strong>, a nejsou určeny k diagnostice ani léčbě.
+            </p>
+
+            <h2>🌍 Dostupnost</h2>
+
+            <p>
+                ChatGPT Health se postupně zavádí pro uživatele s tarify <strong>Free, Go, Plus a Pro</strong> mimo
+                Evropský hospodářský prostor, Švýcarsko a Spojené království.
+            </p>
+
+            <p>
+                Integrace lékařských záznamů je v současnosti omezena na Spojené státy.
+            </p>
+
+        </div>
+
+        <div class="back-nav-container">
+            <a href="../news.html" class="btn-back">← Zpět na AI Pulse</a>
+            <a href="../index.html" class="back-link">Zpět na domovskou stránku</a>
+        </div>
+    </article>
+
+    <footer>
+        <p>&copy; 2026 AI Educator. Vzdělávání s pomocí umělé inteligence.</p>
+    </footer>
+</body>
+
+</html>
