@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NotebookLM a příprava na zkoušky: Kompletní systém | AI Lab</title>
+    <meta name="description"
+        content="Jak využít NotebookLM pro strukturovanou přípravu na zkoušky. Studijní průvodce, kartičky, kvízy a odhalení slabých míst.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .article-meta {
+            color: var(--accent-cyan);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .article-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .article-content h2 {
+            color: var(--text-primary);
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            clear: both;
+        }
+
+        .article-content h3 {
+            color: #f59e0b;
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+        }
+
+        .article-image {
+            width: 300px;
+            float: left;
+            margin: 0.5rem 2rem 1.5rem 0;
+            border-radius: var(--radius-xl);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .article-image.right {
+            float: right;
+            margin: 0.5rem 0 1.5rem 2rem;
+        }
+
+        .article-content::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        @media (max-width: 768px) {
+
+            .article-image,
+            .article-image.right {
+                float: none;
+                width: 100%;
+                margin: 2rem 0;
+            }
+        }
+
+        .highlight-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .highlight-box h4 {
+            color: var(--accent-cyan);
+            margin-top: 0;
+        }
+
+        .highlight-box.tip {
+            border-color: rgba(16, 185, 129, 0.3);
+            background: rgba(16, 185, 129, 0.05);
+        }
+
+        .highlight-box.tip h4 {
+            color: #10b981;
+        }
+
+        .highlight-box.purple {
+            border-color: rgba(147, 51, 234, 0.3);
+            background: rgba(147, 51, 234, 0.05);
+        }
+
+        .highlight-box.purple h4 {
+            color: #a78bfa;
+        }
+
+        .article-content ul,
+        .article-content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .article-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .step-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--accent-cyan);
+        }
+
+        .step-card h4 {
+            color: var(--accent-cyan);
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .step-number {
+            background: var(--accent-cyan);
+            color: var(--bg-primary);
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .back-nav-container {
+            margin-top: 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            margin-top: 1rem;
+        }
+
+        .prompt-example {
+            background: rgba(0, 0, 0, 0.3);
+            border-left: 3px solid #a78bfa;
+            padding: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigace -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">✨ AI Educator</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Domů</a></li>
+                <li><a href="../students.html" class="nav-link active">AI Lab</a></li>
+                <li><a href="../index.html#explore" class="nav-link">Prozkoumejte AI</a></li>
+                <li><a href="../apps.html" class="nav-link">Nástroje</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Obsah článku -->
+    <article class="article-container">
+        <header class="article-header">
+            <span class="article-meta">AI Lab / Leden 2026</span>
+            <h1>NotebookLM a příprava na zkoušky: Kompletní systém</h1>
+            <p class="subtitle">Od chaosu k strukturovanému učení s pomocí AI</p>
+        </header>
+
+        <div class="article-content">
+
+            <h2>📚 Proč systém místo chaosu?</h2>
+
+            <img src="../assets/exam-prep-hero.png" alt="Příprava na zkoušky s NotebookLM" class="article-image right">
+
+            <p>
+                NotebookLM může z přípravy na zkoušky udělat <strong>strukturovaný systém</strong>: pomůže ti seřadit
+                materiály, udělat z nich studijní průvodce, kartičky, kvízy a odhalit slabá místa v látce.
+            </p>
+
+            <p>
+                Místo toho, abys chaoticky listoval/a poznámkami, můžeš mít vše organizované a připravené k efektivnímu
+                opakování.
+            </p>
+
+            <h2>📋 Krok 1: Organizace materiálů před zkouškovým</h2>
+
+            <div class="step-card">
+                <h4><span class="step-number">1</span> Vytvoř strukturu sešitů</h4>
+                <p>
+                    Pro každý předmět (nebo velký okruh) vytvoř <strong>samostatný sešit</strong> a nahraj všechny
+                    relevantní zdroje:
+                </p>
+                <ul>
+                    <li>Sylabus předmětu</li>
+                    <li>Prezentace z přednášek</li>
+                    <li>Skripta a učebnice</li>
+                    <li>Vlastní poznámky</li>
+                    <li>Přepisy přednášek</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box tip">
+                <h4>💡 Tip pro rozsáhlé předměty</h4>
+                <p>
+                    U rozsáhlejších předmětů rozděl sešity podle témat (např. „Ústavní systém", „Lidská práva") –
+                    usnadní to cílené učení a dotazování.
+                </p>
+            </div>
+
+            <h2>📖 Krok 2: Tvorba studijního průvodce</h2>
+
+            <img src="../assets/study-guide-creation.png" alt="Tvorba studijního průvodce" class="article-image">
+
+            <div class="step-card">
+                <h4><span class="step-number">2</span> Nech AI vytvořit přehled</h4>
+                <p>
+                    Po nahrání materiálů nech NotebookLM vytvořit <strong>„study guide"</strong> – přehled hlavních
+                    pojmů, témat a vztahů, ideálně s odkazy na zdroje.
+                </p>
+            </div>
+
+            <p>Můžeš si vynutit konkrétní formát:</p>
+
+            <div class="prompt-example">
+                „Vytvoř shrnutí pro zkoušku ve 3 úrovních: klíčové pojmy, hlavní myšlenky, typické příklady/úlohy."
+            </div>
+
+            <h2>🎯 Krok 3: Aktivní opakování</h2>
+
+            <div class="step-card">
+                <h4><span class="step-number">3</span> Otázky, kvízy, kartičky</h4>
+                <p>
+                    Požádej o generování otázek a kvízů z celého sešitu, abys simuloval/a ústní nebo písemnou zkoušku.
+                </p>
+            </div>
+
+            <div class="prompt-example">
+                „Polož mi sadu zkouškových otázek a po jedné mě zkoušej."
+            </div>
+
+            <div class="highlight-box purple">
+                <h4>🃏 Flashcards pro každodenní opakování</h4>
+                <p>
+                    Nech si vytvořit sadu <strong>flashcards</strong> (pojem ↔ definice / příklad) a ty pak používej ke
+                    krátkým opakováním během dne.
+                </p>
+            </div>
+
+            <h2>🔍 Krok 4: Hledání slabých míst</h2>
+
+            <img src="../assets/finding-weak-spots.png" alt="Hledání slabých míst v učení" class="article-image right">
+
+            <div class="step-card">
+                <h4><span class="step-number">4</span> Prohloubení porozumění</h4>
+                <p>
+                    Po studiu se ptej na oblasti, které ti nejdou:
+                </p>
+            </div>
+
+            <div class="prompt-example">
+                „Z čeho podle těchto materiálů nejméně chápu?"
+            </div>
+
+            <div class="prompt-example">
+                „Vysvětli mi ještě jednou rozdíl mezi X a Y a dej mi kontrolní otázky."
+            </div>
+
+            <p>
+                Využij možnost <strong>FAQ</strong>: z materiálů se nech vygenerovat sadu „otázky, které bych si měl/a
+                umět zodpovědět před zkouškou" a projdi je bez dívání se do poznámek.
+            </p>
+
+            <h2>🎧 Krok 5: Příprava „na cestu"</h2>
+
+            <div class="step-card">
+                <h4><span class="step-number">5</span> Audio a mikro-sezení</h4>
+                <p>
+                    Z klíčových okruhů si nech vytvořit <strong>audio přehled/podcast</strong> (např. 5–10 minut na
+                    jedno téma) a poslouchej je při chůzi, cestě do školy nebo uklízení.
+                </p>
+            </div>
+
+            <div class="prompt-example">
+                „Ptej se mě 10 minut na náhodné otázky z tohoto sešitu, začni lehkými a pak přidej těžší."
+            </div>
+
+            <h2>📊 Shrnutí: 5 kroků k úspěšné zkoušce</h2>
+
+            <div class="highlight-box">
+                <h4>✅ Checklist před zkouškou</h4>
+                <ol>
+                    <li><strong>Organizace</strong> – materiály v oddělených sešitech podle předmětů/témat</li>
+                    <li><strong>Studijní průvodce</strong> – přehled klíčových pojmů a vztahů</li>
+                    <li><strong>Aktivní opakování</strong> – kvízy, otázky, flashcards</li>
+                    <li><strong>Slabá místa</strong> – cílené dotazy na nejasnosti</li>
+                    <li><strong>Audio na cestu</strong> – podcast a mikro-sezení pro efektivní využití času</li>
+                </ol>
+            </div>
+
+            <p>
+                S tímto systémem se příprava na zkoušky stane strukturovanějším a efektivnějším procesem. NotebookLM ti
+                pomůže nejen s organizací, ale i s aktivním učením a identifikací oblastí, které potřebují víc
+                pozornosti.
+            </p>
+
+        </div>
+
+        <div class="back-nav-container">
+            <a href="../students.html" class="btn-back">← Zpět do AI Lab</a>
+            <a href="../index.html" class="back-link">Zpět na domovskou stránku</a>
+        </div>
+    </article>
+
+    <footer>
+        <p>&copy; 2026 AI Educator. Vzdělávání s pomocí umělé inteligence.</p>
+    </footer>
+</body>
+
+</html>

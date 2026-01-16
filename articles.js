@@ -1,5 +1,12 @@
 const recentArticles = [
     {
+        title: "NotebookLM a příprava na zkoušky",
+        description: "Kompletní systém pro přípravu na zkoušky. Studijní průvodce, kartičky, kvízy a odhalení slabých míst.",
+        link: "ai-news/notebooklm-priprava-zkousky.html",
+        date: "Leden 2026",
+        category: "AI Lab"
+    },
+    {
         title: "NotebookLM jako studijní asistent",
         description: "Kompletní průvodce pro studenty. Jak využít NotebookLM pro přehledy, otázky a audio shrnutí z vlastních materiálů.",
         link: "ai-news/notebooklm-studijni-asistent.html",
