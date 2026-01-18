@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI ve vzdělávání: Strategie, regulace a nástup studijních asistentů | AI Lab</title>
+    <meta name="description"
+        content="Přehled klíčových trendů v AI a vzdělávání: strategický nástup AI na vysokých školách, nové politiky a regulace, a masivní růst AI studijních nástrojů.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .article-meta {
+            color: var(--accent-cyan);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .article-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .article-content h2 {
+            color: var(--text-primary);
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            clear: both;
+        }
+
+        .article-content h3 {
+            color: #f59e0b;
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+        }
+
+        .article-image {
+            width: 300px;
+            float: left;
+            margin: 0.5rem 2rem 1.5rem 0;
+            border-radius: var(--radius-xl);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .article-image.right {
+            float: right;
+            margin: 0.5rem 0 1.5rem 2rem;
+        }
+
+        .article-content::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        @media (max-width: 768px) {
+
+            .article-image,
+            .article-image.right {
+                float: none;
+                width: 100%;
+                margin: 2rem 0;
+            }
+        }
+
+        .highlight-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .highlight-box h4 {
+            color: var(--accent-cyan);
+            margin-top: 0;
+        }
+
+        .highlight-box.tip {
+            border-color: rgba(16, 185, 129, 0.3);
+            background: rgba(16, 185, 129, 0.05);
+        }
+
+        .highlight-box.tip h4 {
+            color: #10b981;
+        }
+
+        .highlight-box.purple {
+            border-color: rgba(147, 51, 234, 0.3);
+            background: rgba(147, 51, 234, 0.05);
+        }
+
+        .highlight-box.purple h4 {
+            color: #a78bfa;
+        }
+
+        .highlight-box.warning {
+            border-color: rgba(245, 158, 11, 0.3);
+            background: rgba(245, 158, 11, 0.05);
+        }
+
+        .highlight-box.warning h4 {
+            color: #f59e0b;
+        }
+
+        .article-content ul,
+        .article-content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .article-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .topic-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--accent-cyan);
+        }
+
+        .topic-card.green {
+            border-left-color: #10b981;
+        }
+
+        .topic-card.orange {
+            border-left-color: #f59e0b;
+        }
+
+        .topic-card.purple {
+            border-left-color: #a78bfa;
+        }
+
+        .topic-card.red {
+            border-left-color: #ef4444;
+        }
+
+        .topic-card h4 {
+            color: var(--accent-cyan);
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .topic-card.green h4 {
+            color: #10b981;
+        }
+
+        .topic-card.orange h4 {
+            color: #f59e0b;
+        }
+
+        .topic-card.purple h4 {
+            color: #a78bfa;
+        }
+
+        .topic-card.red h4 {
+            color: #ef4444;
+        }
+
+        .back-nav-container {
+            margin-top: 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            margin-top: 1rem;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .tool-badge {
+            background: rgba(6, 182, 212, 0.1);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            border-radius: var(--radius-md);
+            padding: 0.75rem 1rem;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .tool-badge.green {
+            background: rgba(16, 185, 129, 0.1);
+            border-color: rgba(16, 185, 129, 0.3);
+        }
+
+        .tool-badge.purple {
+            background: rgba(147, 51, 234, 0.1);
+            border-color: rgba(147, 51, 234, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigace -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">✨ AI Educator</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Domů</a></li>
+                <li><a href="../students.html" class="nav-link active">AI Lab</a></li>
+                <li><a href="../index.html#explore" class="nav-link">Prozkoumejte AI</a></li>
+                <li><a href="../apps.html" class="nav-link">Nástroje</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Obsah článku -->
+    <article class="article-container">
+        <header class="article-header">
+            <span class="article-meta">AI Toolkit: Novinky / Leden 2026</span>
+            <h1>AI ve vzdělávání: Strategie, regulace a nástup studijních asistentů</h1>
+            <p class="subtitle">Klíčové trendy posledního týdne v oblasti školství a umělé inteligence</p>
+        </header>
+
+        <div class="article-content">
+
+            <img src="../assets/ai-education-hero.png" alt="AI ve vzdělávání" class="article-image right">
+
+            <p>
+                V posledním týdnu se v oblasti školství a umělé inteligence řeší hlavně tři věci: <strong>AI se stává
+                    strategickou součástí vysokých škol</strong>, státy i univerzity zpřesňují pravidla používání
+                generativní AI a zároveň rychle rostou nabídky „AI studijních asistentů" pro žáky a studenty.
+            </p>
+
+            <h2>🏛️ Strategický nástup AI na vysokých školách</h2>
+
+            <div class="topic-card">
+                <h4>📊 Od experimentů ke strategii</h4>
+                <p>
+                    Univerzity přecházejí od jednotlivých experimentů k tomu, že AI plánují jako <strong>klíčovou
+                        součást institucionální strategie</strong> (vedle financí, náboru studentů či studijních
+                    programů).
+                </p>
+            </div>
+
+            <p>
+                To znamená zásadní změny v několika oblastech:
+            </p>
+
+            <ul>
+                <li><strong>Hodnocení studentů</strong> – nové přístupy k ověřování znalostí</li>
+                <li><strong>Zpětná vazba</strong> – AI asistované poskytování feedbacku</li>
+                <li><strong>Podpora studentů</strong> – organizace podpory napříč celým „studentským životním cyklem"
+                    (od náboru po absolventy)</li>
+            </ul>
+
+            <h2>⚖️ Politiky a regulace generativní AI</h2>
+
+            <img src="../assets/ai-policy-regulation.png" alt="Politiky a regulace AI" class="article-image">
+
+            <div class="topic-card green">
+                <h4>📜 Nová pravidla předních univerzit</h4>
+                <p>
+                    Významné univerzity (<strong>Oxford, Caltech, Columbia, UCLA</strong> aj.) v roce 2025 zavedly nebo
+                    zpřesnily politiky generativní AI: typicky povolují AI pro studium, ale omezují ji v souhrnném
+                    hodnocení a vyžadují přiznání použití AI.
+                </p>
+            </div>
+
+            <div class="highlight-box tip">
+                <h4>📈 Klíčový trend</h4>
+                <p>
+                    Trend jde od <strong>plošných zákazů</strong> k jemně odstupňovaným pravidlům „podle předmětu",
+                    přičemž neautorizované využití AI se posuzuje jako plagiát či nepovolená pomoc.
+                </p>
+            </div>
+
+            <h2>🏛️ Státní a vládní iniciativy pro školy</h2>
+
+            <div class="topic-card orange">
+                <h4>🧪 Regulatorní sandboxy</h4>
+                <p>
+                    Některé státy (např. <strong>Kalifornie, Connecticut, Texas</strong>) vytvářejí „regulatorní
+                    sandboxy" – řízená prostředí, kde školy mohou AI nástroje testovat před plošným nasazením.
+                </p>
+            </div>
+
+            <div class="highlight-box warning">
+                <h4>⚠️ Absence federální regulace</h4>
+                <p>
+                    V USA se zároveň diskutuje, že federální regulace AI ve vzdělávání prakticky neexistuje, což
+                    zvyšuje tlak na školy, aby si samy tvořily etické a bezpečnostní rámce.
+                </p>
+            </div>
+
+            <h2>🤖 Masivní nástup AI nástrojů pro studenty</h2>
+
+            <img src="../assets/ai-study-tools.png" alt="AI nástroje pro studenty" class="article-image right">
+
+            <p>
+                Mezi nejčastěji zmiňované studijní nástroje patří:
+            </p>
+
+            <div class="tools-grid">
+                <div class="tool-badge">💬 ChatGPT</div>
+                <div class="tool-badge">🤖 Claude</div>
+                <div class="tool-badge purple">✨ Gemini</div>
+                <div class="tool-badge green">🔍 Perplexity</div>
+                <div class="tool-badge">📝 Notion AI</div>
+                <div class="tool-badge purple">✍️ Grammarly</div>
+                <div class="tool-badge green">📚 Quillbot</div>
+                <div class="tool-badge">📖 ScholarAI</div>
+            </div>
+
+            <div class="topic-card purple">
+                <h4>🎯 Personalizace jako nový trend</h4>
+                <p>
+                    Novým trendem je <strong>personalizace</strong>: nástroje jako <strong>Notion AI</strong> nebo
+                    <strong>ClickUp Brain</strong> se učí z pracovních návyků studenta, umí:
+                </p>
+                <ul>
+                    <li>Plánovat učení</li>
+                    <li>Generovat testové otázky</li>
+                    <li>Tvořit flashcards</li>
+                    <li>Hlídat „zapomínací křivku"</li>
+                </ul>
+            </div>
+
+            <h2>⚠️ Rizika a dopady na školy a výuku</h2>
+
+            <div class="topic-card red">
+                <h4>🧠 Kognitivní a emoční rizika</h4>
+                <p>
+                    Výzkumné a expertní zprávy zdůrazňují možná rizika pro <strong>kognitivní a emoční vývoj
+                        žáků</strong> při nadměrném spoléhání na AI, i ztrátu kritického myšlení a psacích dovedností.
+                </p>
+            </div>
+
+            <div class="highlight-box purple">
+                <h4>🇪🇪 Příklad Estonska</h4>
+                <p>
+                    AI ve školách se prosazuje i na úrovni států – příklad <strong>Estonska</strong> ukazuje, že když
+                    přes 90% středoškoláků používá chatbota pro úkoly, vláda raději vyvíjí <strong>národní AI
+                        program</strong>, než aby se tvářila, že problém neexistuje.
+                </p>
+            </div>
+
+            <h2>📊 Shrnutí: Co to znamená pro učitele?</h2>
+
+            <div class="highlight-box">
+                <h4>✅ Klíčové body pro praxi</h4>
+                <ul>
+                    <li><strong>AI se stává součástí strategie</strong> – nejen experimentem, ale strategickým
+                        nástrojem škol</li>
+                    <li><strong>Pravidla se zpřesňují</strong> – od zákazů k nuancovaným politikám podle předmětu</li>
+                    <li><strong>Studijní asistenti rostou</strong> – personalizované nástroje mění způsob, jak se
+                        studenti učí</li>
+                    <li><strong>Rizika je třeba řešit</strong> – ale proaktivně, ne ignorováním reality</li>
+                </ul>
+            </div>
+
+            <p>
+                Tyto trendy naznačují, že AI ve vzdělávání není přechodnou módou, ale trvalou změnou, na kterou se musí
+                připravit školy, učitelé i studenti.
+            </p>
+
+        </div>
+
+        <div class="back-nav-container">
+            <a href="../students.html" class="btn-back">← Zpět do AI Lab</a>
+            <a href="../index.html" class="back-link">Zpět na domovskou stránku</a>
+        </div>
+    </article>
+
+    <footer>
+        <p>&copy; 2026 AI Educator. Vzdělávání s pomocí umělé inteligence.</p>
+    </footer>
+</body>
+
+</html>
+</CodeContent>
+<parameter name="EmptyFile">false
