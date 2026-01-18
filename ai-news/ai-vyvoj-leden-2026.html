@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nejnovější vývoj v AI pro vzdělávání (leden 2026) | AI Toolkit</title>
+    <meta name="description"
+        content="Komplexní přehled vývoje AI ve vzdělávání: GPT-5, Claude 4, Gemini 2.5, NotebookLM, česká iniciativa základka.ai a ScioBot.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .article-container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .article-meta {
+            color: #f59e0b;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .article-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .article-content h2 {
+            color: var(--text-primary);
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            clear: both;
+            border-bottom: 2px solid rgba(245, 158, 11, 0.3);
+            padding-bottom: 0.5rem;
+        }
+
+        .article-content h3 {
+            color: #f59e0b;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            font-size: 1.4rem;
+        }
+
+        .article-content h4 {
+            color: var(--accent-cyan);
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .article-image {
+            width: 320px;
+            float: left;
+            margin: 0.5rem 2rem 1.5rem 0;
+            border-radius: var(--radius-xl);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .article-image.right {
+            float: right;
+            margin: 0.5rem 0 1.5rem 2rem;
+        }
+
+        .article-image.full {
+            float: none;
+            width: 100%;
+            max-width: 600px;
+            display: block;
+            margin: 2rem auto;
+        }
+
+        .article-content::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        @media (max-width: 768px) {
+
+            .article-image,
+            .article-image.right {
+                float: none;
+                width: 100%;
+                margin: 2rem 0;
+            }
+        }
+
+        .highlight-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .highlight-box h4 {
+            color: var(--accent-cyan);
+            margin-top: 0;
+        }
+
+        .highlight-box.tip {
+            border-color: rgba(16, 185, 129, 0.3);
+            background: rgba(16, 185, 129, 0.05);
+        }
+
+        .highlight-box.tip h4 {
+            color: #10b981;
+        }
+
+        .highlight-box.warning {
+            border-color: rgba(245, 158, 11, 0.3);
+            background: rgba(245, 158, 11, 0.05);
+        }
+
+        .highlight-box.warning h4 {
+            color: #f59e0b;
+        }
+
+        .highlight-box.purple {
+            border-color: rgba(147, 51, 234, 0.3);
+            background: rgba(147, 51, 234, 0.05);
+        }
+
+        .highlight-box.purple h4 {
+            color: #a78bfa;
+        }
+
+        .highlight-box.red {
+            border-color: rgba(239, 68, 68, 0.3);
+            background: rgba(239, 68, 68, 0.05);
+        }
+
+        .highlight-box.red h4 {
+            color: #ef4444;
+        }
+
+        .article-content ul,
+        .article-content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .article-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .model-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .model-card.green {
+            border-left: 4px solid #10b981;
+        }
+
+        .model-card.orange {
+            border-left: 4px solid #f59e0b;
+        }
+
+        .model-card.blue {
+            border-left: 4px solid #3b82f6;
+        }
+
+        .model-card.purple {
+            border-left: 4px solid #a78bfa;
+        }
+
+        .model-card h4 {
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+        }
+
+        .model-card.green h4 {
+            color: #10b981;
+        }
+
+        .model-card.orange h4 {
+            color: #f59e0b;
+        }
+
+        .model-card.blue h4 {
+            color: #3b82f6;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .stat-item {
+            background: rgba(6, 182, 212, 0.1);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            border-radius: var(--radius-md);
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .stat-item .number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent-cyan);
+            display: block;
+        }
+
+        .stat-item .label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .back-nav-container {
+            margin-top: 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            margin-top: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .executive-summary {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(217, 119, 6, 0.05));
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            border-radius: var(--radius-xl);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .executive-summary h3 {
+            color: #fbbf24;
+            margin-top: 0;
+        }
+
+        .tool-recommendation {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .tool-recommendation h5 {
+            color: var(--accent-cyan);
+            margin: 0 0 0.5rem 0;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigace -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">✨ AI Educator</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Domů</a></li>
+                <li><a href="../teachers.html" class="nav-link active">AI Toolkit</a></li>
+                <li><a href="../index.html#explore" class="nav-link">Prozkoumejte AI</a></li>
+                <li><a href="../apps.html" class="nav-link">Nástroje</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Obsah článku -->
+    <article class="article-container">
+        <header class="article-header">
+            <span class="article-meta">AI Toolkit: Novinky / Leden 2026</span>
+            <h1>Nejnovější vývoj v AI pro vzdělávání</h1>
+            <p class="subtitle">Komplexní přehled transformace vzdělávání pomocí umělé inteligence</p>
+        </header>
+
+        <div class="article-content">
+
+            <!-- Executive Summary -->
+            <div class="executive-summary">
+                <h3>📋 Výkonné shrnutí</h3>
+                <img src="../assets/ai-education-2026-hero.png" alt="AI ve vzdělávání 2026" class="article-image right">
+                <p>
+                    Rok 2025 a začátek roku 2026 přinesly zásadní transformaci AI ve vzdělávání. Nejde více o
+                    experimentech—systémy založené na umělé inteligenci jsou nyní <strong>integrovanou součástí
+                        infrastruktury tisíců škol</strong> po světě.
+                </p>
+                <p>
+                    V Česku to dokumentuje spuštění největšího vzdělávacího programu pro učitele a rostoucí adopce
+                    domácího nástroje <strong>ScioBot</strong>, který již pomáhá více než 45 000 pedagogům. Současně
+                    však vyvstávají kritické otázky kolem halucinací AI modelů, bezpečnosti dat a etických standardů.
+                </p>
+            </div>
+
+            <h2>🤖 Nové generace jazykových modelů</h2>
+
+            <img src="../assets/ai-models-comparison.png" alt="Srovnání AI modelů" class="article-image">
+
+            <p>Praktický přehled pro učitele o nejnovějších AI modelech a jejich možnostech ve vzdělávání.</p>
+
+            <div class="model-card green">
+                <h4>🌿 OpenAI GPT-5</h4>
+                <p>
+                    Model GPT-5 se stal standardem pro vzdělávání od listopadu 2025. Jeho klíčová vylepšení zahrnují:
+                </p>
+                <ul>
+                    <li><strong>Persistent memory</strong> – pamatuje si preference a kontext z předchozích rozhovorů
+                    </li>
+                    <li><strong>Unified intelligence</strong> – dynamicky volí mezi rychlým odpovídáním a hlubokou
+                        analýzou</li>
+                    <li><strong>256K kontextové okno</strong> – analýza celoročních učebních materiálů v jednom
+                        rozhovoru</li>
+                </ul>
+                <p>
+                    V praxi to znamená, že student má <strong>konzistentního učitele</strong>, který se postupně učí
+                    jeho styl učení.
+                </p>
+            </div>
+
+            <div class="model-card orange">
+                <h4>🧠 Claude 4 Opus a Sonnet</h4>
+                <p>
+                    Anthropic představila v září 2025 <strong>Claude Sonnet 4.5</strong>, který překvapivě překonal
+                    konkurenční modely v benchmark testech:
+                </p>
+                <ul>
+                    <li>77% úspěšnosti v náročném SWE-Bench Verified testu</li>
+                    <li>Autonomní kódování až 30 hodin bez přerušení</li>
+                    <li>Nižší halucinace a přirozenější projev</li>
+                    <li>Výrazně lepší v matematice a logickém uvažování</li>
+                </ul>
+                <p>Pro učitele informatiky prakticky <strong>neomezený AI asistent</strong> pro tvorbu cvičení.</p>
+            </div>
+
+            <div class="model-card blue">
+                <h4>✨ Google Gemini 2.5 Pro a LearnLM</h4>
+                <p>
+                    Google vyvinul speciální rodinu modelů <strong>LearnLM</strong>, která je od základu fin-tunována
+                    podle principů pedagogické vědy:
+                </p>
+                <ul>
+                    <li><strong>Guided Learning</strong> – interaktivní tutoriál krok za krokem</li>
+                    <li><strong>Automatická integrace vizuálů</strong> – YouTube videa a diagramy přímo v odpovědích
+                    </li>
+                    <li><strong>Gemini Canvas</strong> – interaktivní prostor pro spolupráci AI a člověka</li>
+                    <li><strong>Audio Overviews</strong> – převod dokumentů na poslouchatelné podcasty</li>
+                </ul>
+                <p>Gemini je integrován <strong>zdarma</strong> do Google Classroom pro školy s Google Workspace for
+                    Education.</p>
+            </div>
+
+            <h2>🛠️ Pedagogické nástroje a aplikace</h2>
+
+            <h3>NotebookLM: Revoluce v práci s vlastním obsahem</h3>
+
+            <img src="../assets/notebooklm-classroom.png" alt="NotebookLM ve třídě" class="article-image right">
+
+            <p>
+                NotebookLM zůstává jedním z nejuniverzálnějších nástrojů pro učitele. Genialita spočívá v tom, že
+                <strong>stane se expertem pouze na vaše dokumenty</strong> (ŠVP, učebnice, vlastní materiály).
+            </p>
+
+            <div class="highlight-box tip">
+                <h4>📦 Největší aktualizace prosinec 2025</h4>
+                <ul>
+                    <li>Limit instrukcí vzrostl z 500 na <strong>10 000 znaků</strong></li>
+                    <li>Plnohodnotná <strong>mobilní aplikace</strong> s fotografováním tabule</li>
+                    <li><strong>Interactive Mode</strong> pro podcasty (přerušit, zeptat se, pokračovat)</li>
+                    <li><strong>Studio suite:</strong> automatické flashcards, kvízy, studijní příručky</li>
+                    <li>Integrace s Google Classroom bez ručního uploadu</li>
+                </ul>
+            </div>
+
+            <h3>Canvas LMS s OpenAI: Instituční přístup</h3>
+
+            <p>
+                Instructure a OpenAI oznámili v červenci 2025 historické partnerství. Učitelé mohou nyní přímo v Canvas
+                LMS vytvářet <strong>LLM-Enabled Assignments</strong>—interaktivní AI cvičení.
+            </p>
+
+            <div class="highlight-box">
+                <h4>🔒 Kritické vlastnosti</h4>
+                <ul>
+                    <li>Studentská data zůstávají v Canvas a nejsou sdílena s OpenAI</li>
+                    <li>Učitel si udržuje plnou kontrolu nad AI prompty</li>
+                    <li>„Evidence učení" — interakce se zobrazí v Gradebook jako měřitelná kritéria</li>
+                </ul>
+            </div>
+
+            <h2>🇨🇿 Česká situace: Od iniciativ k masové adopci</h2>
+
+            <img src="../assets/czech-ai-education.png" alt="Česká AI iniciativa" class="article-image">
+
+            <h3>Program základka.ai: Největší vzdělávací iniciativa</h3>
+
+            <p>
+                Česká republika spustila v říjnu 2025 ambiciózní program <strong>základka.ai</strong>, jehož cílem je
+                během školního roku 2025/2026 proškolit všechny učitele základních škol.
+            </p>
+
+            <div class="highlight-box purple">
+                <h4>📚 Co program zahrnuje</h4>
+                <ul>
+                    <li>Více než <strong>100 hodin</strong> vzdělávacího obsahu</li>
+                    <li>Online kurzy, praktické webináře, expertní konference</li>
+                    <li>Budování strategické podpory AI na školách</li>
+                    <li>Partneři: AI dětem, Národní pedagogický institut, Česká asociace AI</li>
+                </ul>
+            </div>
+
+            <h3>ScioBot: Domácí úspěch</h3>
+
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="number">45 000+</span>
+                    <span class="label">pedagogů</span>
+                </div>
+                <div class="stat-item">
+                    <span class="number">2 300</span>
+                    <span class="label">českých škol</span>
+                </div>
+                <div class="stat-item">
+                    <span class="number">5 min</span>
+                    <span class="label">příprava hodiny</span>
+                </div>
+            </div>
+
+            <p>
+                <strong>ScioBot</strong>, vyvíjený českými specialisty, získal v listopadu 2024 ocenění AI Awards v
+                kategorii AI ve vzdělávání. Klíčové prvky:
+            </p>
+
+            <ul>
+                <li><strong>Konstruktivistický model E-U-R</strong> (Experience-Understanding-Reflection)</li>
+                <li><strong>Inkluze:</strong> automatizace přizpůsobení pro žáky s ADHD, cizím jazykem, SVP</li>
+                <li><strong>ScioChatBot 2025:</strong> AI asistent optimalizovaný pro české školství</li>
+            </ul>
+
+            <h3>GPT-EDU: Moderovaný přístup</h3>
+
+            <p>
+                GPT-EDU poskytuje přístup k GPT-5 prostřednictvím <strong>moderovaného rozhraní</strong> vhodného i pro
+                žáky prvního ročníku. Obsah je filtrován v souladu s RVP ZV a pedagogickými zásadami.
+            </p>
+
+            <h2>🎯 Personalizace a diferenciace</h2>
+
+            <img src="../assets/personalized-learning-ai.png" alt="Personalizované učení" class="article-image right">
+
+            <h3>Adaptivní učení na velkém měřítku</h3>
+
+            <p>
+                AI umožňuje to, o čem učitelé dlouhodobě sní: <strong>skutečné personalizované učení</strong>. Nikoliv
+                všechny žáky jedinou metodou, ale přizpůsobení tempa, obsahu a zpětné vazby každému jednotlivci.
+            </p>
+
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="number">54%</span>
+                    <span class="label">vyšší skóre v testech</span>
+                </div>
+                <div class="stat-item">
+                    <span class="number">30%</span>
+                    <span class="label">lepší dlouhodobé výsledky</span>
+                </div>
+                <div class="stat-item">
+                    <span class="number">10×</span>
+                    <span class="label">více zapojení</span>
+                </div>
+                <div class="stat-item">
+                    <span class="number">70%</span>
+                    <span class="label">vyšší completion rate</span>
+                </div>
+            </div>
+
+            <h3>Diferenciace bez přetížení učitele</h3>
+
+            <p>AI umožňuje učiteli během minuty generovat:</p>
+
+            <ul>
+                <li>Sadu úloh pro nadané žáky (komplexnější úkoly, výzkumné projekty)</li>
+                <li>Zjednodušené verze pro žáky se SVP</li>
+                <li>Průměrné úkoly pro zbytek třídy</li>
+                <li>Studijní průvodce, flashcards, kvízy—v libovolném počtu variací</li>
+            </ul>
+
+            <p>To, co dřív trvalo <strong>2-3 hodiny</strong> ruční práce, teď trvá <strong>10 minut</strong>.</p>
+
+            <h2>⚠️ Bezpečnost, etika a halucinace</h2>
+
+            <div class="highlight-box red">
+                <h4>🚨 Halucinace zůstávají problémem</h4>
+                <p>Halucinace (model si vymýšlí přesvědčivě znějící, ale nepravdivé informace) nejsou vyřešeny:</p>
+                <ul>
+                    <li>GPT 3.5 halucinuje v <strong>40%</strong> případů při citování zdrojů</li>
+                    <li>GPT 4.0 halucinuje v <strong>29%</strong> případů</li>
+                    <li>Nové modely o3 a o4-mini mají vyšší míru halucinací než předchozí generace</li>
+                </ul>
+            </div>
+
+            <h3>Řešení pro pedagogickou praxi</h3>
+
+            <ul>
+                <li><strong>Učit žáky ověřovat</strong> všechny AI výstupy</li>
+                <li>Používat AI jako <strong>brainstormingový nástroj</strong>, nikoliv primární zdroj</li>
+                <li>Chápat, že halucinace jsou <strong>inherentní vlastností</strong> jazykových modelů</li>
+            </ul>
+
+            <h3>Plagiáty a podvádění</h3>
+
+            <p>Strategie doporučená odborníky:</p>
+
+            <ul>
+                <li>Přesunout hodnocení do třídy (nad domácí práci)</li>
+                <li>AI přijmout jako partnera pro přípravu mimo vyučování</li>
+                <li>Cíl: žáci jsou schopní pracovat s AI, ale i bez ní</li>
+            </ul>
+
+            <h2>📊 Praktická doporučení pro rok 2026</h2>
+
+            <div class="tool-recommendation">
+                <h5>🎯 Pro přípravu výuky</h5>
+                <ul>
+                    <li><strong>NotebookLM:</strong> ideální pro vlastní osnovu, materiály, ŠVP</li>
+                    <li><strong>Gemini 2.5 Pro:</strong> generování učebních materiálů, tvorba kvízů</li>
+                    <li><strong>ScioBot (v ČR):</strong> kompletní příprava na základě ročníku a tématu</li>
+                </ul>
+            </div>
+
+            <div class="tool-recommendation">
+                <h5>📚 V samotné výuce</h5>
+                <ul>
+                    <li><strong>Canvas + OpenAI:</strong> interaktivní AI cvičení s evaluací přímo v LMS</li>
+                    <li><strong>Gemini Live:</strong> diskuse s AI o složitých tématech</li>
+                    <li><strong>GPT-EDU (v ČR):</strong> moderovaný přístup vhodný i pro mladší žáky</li>
+                </ul>
+            </div>
+
+            <div class="tool-recommendation">
+                <h5>✅ Pro hodnocení</h5>
+                <ul>
+                    <li><strong>NotebookLM Studio:</strong> generování rubrik, skeletů pro feedback</li>
+                    <li><strong>Gradescope:</strong> automatické hodnocení s detailními insights</li>
+                </ul>
+            </div>
+
+            <h2>🔐 Základní bezpečnostní pravidla</h2>
+
+            <div class="highlight-box warning">
+                <h4>📋 Checklist pro pedagogy</h4>
+                <ol>
+                    <li><strong>Ověřujte vždy:</strong> Pokud AI cituje zdroj, ověřte ho. Halucinace jsou běžné.</li>
+                    <li><strong>Učte mediální gramotnost:</strong> Žáci musí chápat limity AI.</li>
+                    <li><strong>Data a soukromí:</strong> V Google Workspace for Education vaše data nejsou trénovací
+                        data.</li>
+                    <li><strong>Transparentnost:</strong> Řekněte studentům, že při přípravě hodin používáte AI.</li>
+                    <li><strong>Bias-aware:</strong> AI modely odrážejí zkreslení v datech. Diskutujte to se studenty.
+                    </li>
+                </ol>
+            </div>
+
+            <h2>🎯 Závěr: Nový normál</h2>
+
+            <p>
+                Umělá inteligence ve vzdělávání je v roce 2026 už <strong>realitou, ne budoucností</strong>. Tisíce škol
+                po světě ji aktivně používají. V Česku konkrétní programy (základka.ai, ScioBot, GPT-EDU) demonstrují,
+                že AI je lokalizována pro české školství.
+            </p>
+
+            <div class="highlight-box">
+                <h4>💡 Klíčové závěry</h4>
+                <ul>
+                    <li>AI není řešením; je to <strong>nástroj</strong>, který posiluje dobré pedagogy</li>
+                    <li>Halucinace a bias nejsou vyřešeny; kritické myšlení je nutnost</li>
+                    <li>Personalizace v měřítku je skutečně dosažitelná</li>
+                    <li><strong>Učitel zůstává protagonistou</strong>; AI je asistent</li>
+                </ul>
+            </div>
+
+            <p>
+                Rok 2026 bude rokem, kdy se pedagogové budou muset rozhodnout: přijmout AI a transformovat svou praxi,
+                nebo ji odepřít. Historie učitelství již jednou prošla transformacemi (tisk, TV, počítače). Toto není
+                jinak—s výjimkou toho, že změna je tentokrát rychlejší.
+            </p>
+
+        </div>
+
+        <div class="back-nav-container">
+            <a href="../teachers-news.html" class="btn-back">← Zpět do AI Toolkit</a>
+            <a href="../index.html" class="back-link">Zpět na domovskou stránku</a>
+        </div>
+    </article>
+
+    <footer>
+        <p>&copy; 2026 AI Educator. Vzdělávání s pomocí umělé inteligence.</p>
+    </footer>
+</body>
+
+</html>
+</CodeContent>
+<parameter name="Complexity">4
