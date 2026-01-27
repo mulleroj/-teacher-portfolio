@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8 AI PROMPTŮ PRO ZVLÁDNUTÍ SOUKROMÉHO A BEZPEČNÉHO ŽIVOTA | AI Educator</title>
+    <meta name="description"
+        content="Praktická sada 8 AI promptů pro ochranu vašeho soukromí, bezpečí a duševního klidu v digitální i reálném světě.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .article-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .article-meta {
+            color: var(--accent-cyan);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .article-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .article-content h2 {
+            color: var(--text-primary);
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-img {
+            width: 100%;
+            border-radius: var(--radius-xl);
+            margin-bottom: 3rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .prompt-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-xl);
+            padding: 2rem;
+            margin-bottom: 3rem;
+            transition: transform var(--transition-base);
+        }
+
+        .prompt-card:hover {
+            border-color: rgba(16, 185, 129, 0.3);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .prompt-card h3 {
+            color: #10b981;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .how-it-helps {
+            background: rgba(16, 185, 129, 0.1);
+            border-left: 4px solid #10b981;
+            padding: 1rem 1.5rem;
+            border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+            margin-bottom: 1.5rem;
+        }
+
+        .how-it-helps strong {
+            color: #34d399;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        .prompt-box {
+            background: #0f172a;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .prompt-box::before {
+            content: '📋 DOKONALÝ PROMPT™';
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: rgba(16, 185, 129, 0.2);
+            padding: 0.25rem 0.75rem;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: #34d399;
+            border-bottom-left-radius: var(--radius-lg);
+        }
+
+        .prompt-box code {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            color: var(--text-primary);
+            white-space: pre-wrap;
+            display: block;
+        }
+
+        .back-nav {
+            margin-top: 4rem;
+            display: flex;
+            gap: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+        }
+
+        .btn-copy {
+            background: rgba(16, 185, 129, 0.2);
+            color: #34d399;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-md);
+            font-size: 0.8rem;
+            cursor: pointer;
+            margin-top: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all var(--transition-fast);
+        }
+
+        .btn-copy:hover {
+            background: rgba(16, 185, 129, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .article-container {
+                padding: 1rem;
+            }
+
+            .prompt-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigace -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">✨ AI Educator</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Domů</a></li>
+                <li><a href="../news.html" class="nav-link active">AI Pulse</a></li>
+                <li><a href="../index.html#explore" class="nav-link">Prozkoumejte AI</a></li>
+                <li><a href="../apps.html" class="nav-link">Nástroje</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Obsah článku -->
+    <article class="article-container">
+        <header class="article-header">
+            <span class="article-meta">AI Pulse / Leden 2026</span>
+            <h1>8 AI PROMPTŮ PRO ZVLÁDNUTÍ SOUKROMÉHO A BEZPEČNÉHO ŽIVOTA</h1>
+            <p class="subtitle">Ochraňte svou polohu, plány, rodinu i duševní klid.</p>
+        </header>
+
+        <img src="../assets/ai-privacy-hero.png" alt="Digitální soukromí a AI" class="hero-img">
+
+        <div class="article-content">
+            <p class="lead">
+                V dnešním propojeném světě je soukromí luxusem, který si musíme aktivně chránit. Umělá inteligence může
+                být v tomto boji vaším mocným spojencem. Zde je 8 specializovaných promptů, které vám pomohou nastavit
+                hranice a zabezpečit váš digitální i fyzický život.
+            </p>
+
+            <!-- Prompt 1 -->
+            <div class="prompt-card">
+                <h3>① Digitální stratég pro soukromí a geolokaci</h3>
+                <div class="how-it-helps">
+                    <strong>💡 Jak to pomáhá:</strong>
+                    Tento prompt vám pomůže zavést pravidlo „sdílej až po odchodu“, které zvyšuje vaši fyzickou
+                    bezpečnost tím, že brání sledování polohy v reálném čase.
+                </div>
+                <div class="prompt-box">
+                    <code>Chovej se jako expert na kybernetickou bezpečnost a osobní soukromí. 
+Kontext: Zavádím nové pravidlo pro své sociální sítě a digitální přítomnost: nesdílet svou polohu, dokud už jsem dané místo neopustil/a. Potřebuji najít rovnováhu mezi udržováním kontaktu s přáteli a ochranou svého bezpečí a soukromí. [Vlož používané sociální sítě].
+Úkol: Vytvoř pětikrokový kontrolní seznam digitální bezpečnosti pro zveřejňování cestovatelských nebo událostních příspěvků tak, aby nikdy nebyla prozrazena moje aktuální poloha. Zahrň tipy na odstranění metadat z fotografií a správu „živých“ příběhů.
+Polož mi případné doplňující otázky.</code>
+                </div>
+            </div>
+
+            <!-- Prompt 2 -->
+            <div class="prompt-card">
+                <h3>② Strategický plánovač „dalšího kroku“</h3>
+                <div class="how-it-helps">
+                    <strong>💡 Jak to pomáhá:</strong>
+                    Udržením plánů v soukromí zabráníte ostatním narušovat váš postup nebo promítat své pochybnosti do
+                    vašich cílů.
+                </div>
+                <div class="prompt-box">
+                    <code>Chovej se jako strategický životní kouč a konzultant výkonu.
+Kontext: Chci uplatňovat princip: „Další krok si nech pro sebe. Lidé mohou narušit jen to, o čem vědí.“ Pracuji na významném cíli [vlož cíl nebo projekt] a mám tendenci příliš sdílet svůj postup.
+Úkol: Vypracuj komunikační strategii, jak mluvit o svém životě, aniž bych odhaloval/a svůj „další krok“. Poskytni tři „odkláněcí scénáře“, které mohu použít, když se mě lidé ptají na konkrétní detaily mých budoucích plánů.
+Polož mi případné doplňující otázky.</code>
+                </div>
+            </div>
+
+            <!-- Prompt 3 -->
+            <div class="prompt-card">
+                <h3>③ Architekt rodinných hranic</h3>
+                <div class="how-it-helps">
+                    <strong>💡 Jak to pomáhá:</strong>
+                    Tento prompt vás chrání před zbytečným dramatem a nedorozuměními tím, že vám pomůže udržet rodinné
+                    záležitosti v soukromí.
+                </div>
+                <div class="prompt-box">
+                    <code>Chovej se jako vztahový poradce a odborník na osobní hranice.
+Kontext: Zaměřuji se na pravidlo: „Rodinné problémy se nesdílejí s přáteli.“ Chci si udržet zdravá přátelství, aniž bych je zatahoval/a do rodinného dramatu. [Vlož konkrétní situaci, pokud je relevantní].
+Úkol: Poskytni návod, jak rozlišit témata „pouze pro rodinu“ od témat „bezpečných pro přátele“. Zahrň radu, jak příteli laskavě sdělit, že určité rodinné téma je mimo hranice diskuse.
+Polož mi případné doplňující otázky.</code>
+                </div>
+            </div>
+
+            <!-- Prompt 4 -->
+            <div class="prompt-card">
+                <h3>④ Strážce finančního soukromí</h3>
+                <div class="how-it-helps">
+                    <strong>💡 Jak to pomáhá:</strong>
+                    Udržování soukromí ohledně příjmů a dluhů vás chrání před soudy, závistí a predátorskou sociální
+                    dynamikou.
+                </div>
+                <div class="prompt-box">
+                    <code>Chovej se jako správce majetku a expert na společenskou etiketu.
+Kontext: Zavádím přísné pravidlo soukromí týkající se mého finančního života, včetně příjmů a dluhů, abych se vyhnul/a hodnocení nebo závisti. [Vlož typ profesního/společenského okruhu].
+Úkol: Vytvoř rámec pro zvládání finančních rozhovorů ve společenských situacích. Uveď pět zdvořilých, ale pevných způsobů, jak ukončit konverzaci, když se někdo ptá na můj plat, čisté jmění nebo konkrétní finanční závazky.
+Polož mi případné doplňující otázky.</code>
+                </div>
+            </div>
+
+            <!-- Prompt 5 -->
+            <div class="prompt-card">
+                <h3>⑤ Specialista na „tichý pokrok“</h3>
+                <div class="how-it-helps">
+                    <strong>💡 Jak to pomáhá:</strong>
+                    Tento přístup přesouvá pozornost od hledání vnějšího uznání k dosahování skutečných a udržitelných
+                    výsledků.
+                </div>
+                <div class="prompt-box">
+                    <code>Chovej se jako kouč psychologického růstu a disciplíny.
+Kontext: Chci žít podle pravidla: „Nech ostatní myslet si, že děláš méně, než ve skutečnosti děláš.“ Pracuji na [vlož projekt / cíl seberozvoje] a chci upřednostnit tichý pokrok před okázalým úspěchem.
+Úkol: Navrhni rutinu „Tichého pokroku“, která se zaměřuje na vnitřní milníky místo vnější chvály. Zahrň týdenní reflexní prompt, který mi pomůže hledat potvrzení v sobě samém/samé, nikoli na sociálních sítích nebo u okolí.
+Polož mi případné doplňující otázky.</code>
+                </div>
+            </div>
+
+            <!-- Prompt 6 -->
+            <div class="prompt-card">
+                <h3>⑥ Ochránce klidu a soukromí</h3>
+                <div class="how-it-helps">
+                    <strong>💡 Jak to pomáhá:</strong>
+                    Tento prompt vám pomůže chránit duševní klid tím, že si své štěstí necháte spíše pro sebe a mimo
+                    negativní vlivy.
+                </div>
+                <div class="prompt-box">
+                    <code>Chovej se jako specialista na mindfulness a duševní zdraví.
+Kontext: Přijímám myšlenku, že „štěstí často vyžaduje ticho“, a že potřebuji chránit svůj klid tím, že budu žít nenápadně. [Vlož oblast života, kterou chceš chránit nejvíce].
+Úkol: Vytvoř „audit soukromí“ mých každodenních návyků. Identifikuj pět běžných chování, která zbytečně „unikají“ s mým osobním štěstím na veřejnost, a navrhni pět nenápadných alternativ, které mé radosti udrží soukromé a chráněné.
+Polož mi případné doplňující otázky.</code>
+                </div>
+            </div>
+
+            <!-- Prompt 7 -->
+            <div class="prompt-card">
+                <h3>⑦ Workshop nenápadného stanovování cílů</h3>
+                <div class="how-it-helps">
+                    <strong>💡 Jak to pomáhá:</strong>
+                    Tento prompt šetří čas tím, že vám umožní plánovat zásadní životní změny bez zásahů vnějších názorů.
+                </div>
+                <div class="prompt-box">
+                    <code>Chovej se jako vysoce úrovňový strategický plánovač.
+Kontext: Plánuji zásadní změnu v oblasti [vlož oblast: kariéra, místo bydliště nebo vztah] a chci ji realizovat s naprostým soukromím až do dosažení finálního výsledku.
+Úkol: Navrhni „plán nenápadné realizace“. Rozděl přechod do fází a přesně určuj, které informace mají zůstat pouze v režimu „jen pro nezbytné osoby“. Uveď seznam toho, kdo má být informován a v jaké fázi procesu.
+Polož mi případné doplňující otázky.</code>
+                </div>
+            </div>
+
+            <!-- Prompt 8 -->
+            <div class="prompt-card">
+                <h3>⑧ Filtr sociálního okruhu</h3>
+                <div class="how-it-helps">
+                    <strong>💡 Jak to pomáhá:</strong>
+                    Tento prompt vám pomůže vyhodnotit vztahy a zjistit, kdo respektuje vaše nové hranice soukromí.
+                </div>
+                <div class="prompt-box">
+                    <code>Chovej se jako analytik sociální inteligence a lidského chování.
+Kontext: Přecházím na soukromější způsob života založený na „6 pravidlech soukromého života“. Potřebuji sledovat, jak na tyto nové hranice reaguje můj současný sociální okruh. [Vlož obecný popis sociální skupiny].
+Úkol: Poskytni seznam „indikátorů reakcí“. Jak poznám, že je přítel podporující mé nové soukromí, oproti někomu, kdo se cítí mít nárok na mé osobní informace? Zahrň rady, jak se postupně distancovat od „překračovatelů hranic“.
+Polož mi případné doplňující otázky.</code>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="back-nav">
+            <a href="../news.html" class="btn-back">← Zpět do AI Pulse</a>
+            <a href="../index.html" class="back-link">Zpět na domovskou stránku</a>
+        </div>
+    </article>
+
+    <footer>
+        <p>&copy; 2026 AI Educator. Vzdělávání s pomocí umělé inteligence.</p>
+    </footer>
+
+    <script>
+        // Jednoduchá funkce pro kopírování textu promptů
+        document.querySelectorAll('.prompt-box').forEach(box => {
+            box.style.cursor = 'pointer';
+            box.addEventListener('click', () => {
+                const text = box.querySelector('code').innerText;
+                navigator.clipboard.writeText(text).then(() => {
+                    const originalBefore = getComputedStyle(box, '::before').content;
+                    // Pro zjednodušení jen alert, protože manipulace s ::before v JS je složitější
+                    alert('Prompt byl zkopírován do schránky!');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
