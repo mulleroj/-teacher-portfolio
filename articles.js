@@ -138,7 +138,7 @@ function renderRecentArticles() {
     const container = document.getElementById('recent-articles-grid');
     if (!container) return;
 
-    const html = recentArticles.map(article => `
+    const html = recentArticles.slice(0, 9).map(article => `
         <a href="${article.link}" class="recent-article-card">
             <div class="recent-article-meta">
                 <span class="recent-article-category">${article.category}</span>
