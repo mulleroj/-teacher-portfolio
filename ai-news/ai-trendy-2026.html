@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI v roce 2026: Trendy, nástroje a praktický dopad | AI Pulse</title>
+    <meta name="description"
+        content="Komplexní přehled klíčových trendů v AI pro rok 2026: evoluce LLM, multimodální generace, podnikové nástroje a praktický dopad na vzdělávání.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .article-meta {
+            color: var(--accent-cyan);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .article-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .article-content h2 {
+            color: var(--text-primary);
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            clear: both;
+        }
+
+        .article-content h3 {
+            color: #f59e0b;
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+        }
+
+        .article-image {
+            width: 100%;
+            border-radius: var(--radius-xl);
+            margin: 2rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .article-image.float-right {
+            width: 400px;
+            float: right;
+            margin: 0.5rem 0 1.5rem 2rem;
+        }
+
+        .article-image.float-left {
+            width: 400px;
+            float: left;
+            margin: 0.5rem 2rem 1.5rem 0;
+        }
+
+        .article-content::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        @media (max-width: 768px) {
+
+            .article-image.float-right,
+            .article-image.float-left {
+                float: none;
+                width: 100%;
+                margin: 2rem 0;
+            }
+        }
+
+        .highlight-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .highlight-box h4 {
+            color: var(--accent-cyan);
+            margin-top: 0;
+        }
+
+        .highlight-box.success {
+            border-color: rgba(16, 185, 129, 0.3);
+            background: rgba(16, 185, 129, 0.05);
+        }
+
+        .highlight-box.success h4 {
+            color: #10b981;
+        }
+
+        .article-content ul,
+        .article-content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .article-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .back-nav-container {
+            margin-top: 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            margin-top: 1rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            font-size: 0.95rem;
+        }
+
+        th,
+        td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        th {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        td {
+            color: var(--text-secondary);
+        }
+
+        tr:hover {
+            background: rgba(255, 255, 255, 0.02);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigace -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">✨ AI Educator</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Domů</a></li>
+                <li><a href="../news.html" class="nav-link active">AI Pulse</a></li>
+                <li><a href="../index.html#explore" class="nav-link">Prozkoumejte AI</a></li>
+                <li><a href="../apps.html" class="nav-link">Nástroje</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Obsah článku -->
+    <article class="article-container">
+        <header class="article-header">
+            <span class="article-meta">AI Pulse / Leden 2026</span>
+            <h1>AI v roce 2026: Trendy, nástroje a praktický dopad</h1>
+            <p class="subtitle">Přehled klíčových trendů v oblasti LLM, generativní AI a praktických nástrojů pro
+                uživatele a firmy</p>
+        </header>
+
+        <div class="article-content">
+
+            <p>
+                Rok 2026 přináší zásadní změny v tom, jak se vyvíjejí a používají velké jazykové modely a generativní
+                AI. Od posunu k menším specializovaným modelům až po masivní nástup multimodální generace – podíváme se
+                na to, co se skutečně děje a co to znamená pro běžné uživatele, firmy i školství.
+            </p>
+
+            <h2>🧠 Směr vývoje LLM v roce 2026</h2>
+
+            <img src="../assets/ai-evolution-specialized.png" alt="Evoluce AI modelů" class="article-image">
+
+            <p>
+                Éra „jednoho obřího modelu pro všechno" ustupuje do pozadí. Firmy zjistily, že <strong>menší,
+                    specializované modely</strong> (small/specialized language models) jsou pro konkrétní úlohy
+                výhodnější – jsou levnější, rychlejší a po doladění dosahují srovnatelné nebo dokonce lepší přesnosti.
+            </p>
+
+            <p>
+                Místo aby společnost platila tisíce dolarů měsíčně za GPT-5 API na zpracování zákaznických dotazů, může
+                si natrénovat vlastní model velikosti 7B parametrů specificky na své produkty a dokumentaci. Výsledek?
+                <strong>10x nižší náklady a 3x rychlejší odpovědi.</strong>
+            </p>
+
+            <h3>Boom open-source modelů</h3>
+
+            <p>
+                Rok 2026 je rokem rozmachu <strong>open-source LLM</strong>. Modely jako Llama 4, Mistral Large 3,
+                Qwen 3 nebo DeepSeek V4 se výkonově přibližují komerčním konkurentům a nabízejí firmám:
+            </p>
+
+            <ul>
+                <li><strong>Vlastní hosting</strong> – data zůstávají v kontrole firmy</li>
+                <li><strong>Jemné doladění</strong> – model lze přizpůsobit přesně vašim potřebám</li>
+                <li><strong>Datová suverenita</strong> – žádné sdílení citlivých informací s třetími stranami</li>
+                <li><strong>Nulové API závislosti</strong> – funguje i offline</li>
+            </ul>
+
+            <div class="highlight-box success">
+                <h4>💡 Pragmatický přístup k AI</h4>
+                <p>
+                    Místo honby za maximálním IQ modelu se firmy zaměřují na <strong>robustnost, spolehlivost a
+                        měřitelný dopad</strong>. Důležitější než "nejnovější model" je správné otestování, benchmarky
+                    a reálná výtěžnost v konkrétních pracovních postupech.
+                </p>
+            </div>
+
+            <h2>🎨 Generativní AI – co je teď „horké"</h2>
+
+            <img src="../assets/multimodal-ai-core.png" alt="Multimodální AI" class="article-image float-right">
+
+            <h3>Multimodální generace</h3>
+
+            <p>
+                Největší pokrok v roce 2026 je v nástrojích, které umí <strong>pracovat současně s textem, obrázky,
+                    videem i zvukem</strong>. Už nemusíte přepínat mezi desítkou různých aplikací – jeden nástroj vám
+                vytvoří:
+            </p>
+
+            <ul>
+                <li>Marketingovou kampaň včetně grafiky, videa a hudby</li>
+                <li>Vzdělávací kurz s textem, animacemi a namluvením</li>
+                <li>Prezentaci s vizuály generovanými přímo z vašich poznámek</li>
+            </ul>
+
+            <p>
+                Nástroje jako <strong>Pictory, Synthesia a Fliki</strong> se dostávají do další úrovně integrace do
+                běžných workflow. Google a OpenAI zavádějí multimodální funkce přímo do svých hlavních produktů.
+            </p>
+
+            <h3>Generativní kódování je tady</h3>
+
+            <p>
+                <strong>Generativní kódování</strong> je oficiálně považováno za průlomovou technologii roku 2026.
+                Nástroje jako GitHub Copilot, Cursor, Replit nebo Lovable mění způsob, jakým se píše software.
+            </p>
+
+            <p>
+                I lidé s minimální znalostí programování dokáží vytvářet funkční aplikace. Stačí popsat, co chcete, a
+                AI vygeneruje kompletní kód včetně testů a dokumentace. <strong>Časová úspora: 40-60% oproti
+                    tradičnímu programování.</strong>
+            </p>
+
+            <h2>💼 Praktické AI nástroje pro každého</h2>
+
+            <img src="../assets/enterprise-ai-tools.png" alt="Enterprise AI nástroje" class="article-image">
+
+            <p>
+                V kancelářských balících se generativní AI stává <strong>standardem</strong>, nikoli experimentální
+                funkcí. Pokud používáte Google Workspace nebo Microsoft 365, AI asistenti jsou teď součástí vašeho
+                běžného dne.
+            </p>
+
+            <h3>Gemini for Workspace</h3>
+
+            <p>
+                Google integroval Gemini napříč celým ekosystémem – <strong>Docs, Sheets, Gmail, Slides, Meet</strong>.
+                Můžete:
+            </p>
+
+            <ul>
+                <li>Nechat AI napsat email na základě bodů, které jste načrtli</li>
+                <li>Vygenerovat kompletní prezentaci ze zápisků z porady</li>
+                <li>Analyzovat data v Sheets a vytvořit grafy automaticky</li>
+                <li>Získat shrnutí e-mailového vlákna jedním kliknutím</li>
+            </ul>
+
+            <h3>Microsoft Copilot</h3>
+
+            <p>
+                Microsoft Copilot je zabudovaný v <strong>Teams, Outlooku, Wordu, Excelu a PowerPointu</strong>. Pomáhá
+                s:
+            </p>
+
+            <ul>
+                <li>Automatickými zápisy z porad v Teams</li>
+                <li>Shrnutím dlouhých e-mailových konverzací</li>
+                <li>Návrhem prezentací na základě tématu</li>
+                <li>Analýzou tabulek a prediktivním modelováním</li>
+            </ul>
+
+            <h3>Personalizace a soukromí</h3>
+
+            <p>
+                Google Gemini zavádí <strong>„Personal Intelligence"</strong> – nástroj může automaticky využívat váš
+                Gmail, vyhledávání, historii YouTube a Fotky k personalizovaným odpovědím. To zvyšuje užitečnost, ale
+                otevírá i <strong>důležité otázky ochrany soukromí</strong>.
+            </p>
+
+            <h2>🏢 Podnikové nástroje a trendy</h2>
+
+            <p>
+                Podniky přestávají testovat desítky AI nástrojů a místo toho se zaměřují na <strong>měřitelný
+                    přínos</strong>. Prosazují se menší, rychle nasaditelné AI projekty s jasným dopadem:
+            </p>
+
+            <ul>
+                <li>Automatizace reportingu (úspora 10-15 hodin týdně)</li>
+                <li>Zrychlení zákaznické podpory (50% rychlejší řešení dotazů)</li>
+                <li>Lepší predikce v logistice (snížení nákladů o 20-30%)</li>
+            </ul>
+
+            <div class="highlight-box">
+                <h4>📊 Dominantní podnikové nástroje</h4>
+                <p><strong>Gemini for Workspace</strong> – pro organizace na Google stacku<br>
+                    <strong>Microsoft Copilot</strong> – pro firmy na Microsoft 365<br>
+                    <strong>Glean</strong> – jako „firemní vyhledávač" přes Slack, Drive, SharePoint
+                </p>
+            </div>
+
+            <h3>Přehled klíčových podnikových nástrojů</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Oblast použití</th>
+                        <th>Nástroj</th>
+                        <th>Pro koho</th>
+                        <th>Poznámka</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Kancelář, dokumenty</td>
+                        <td>Gemini for Workspace</td>
+                        <td>Firmy na Google</td>
+                        <td>Psaní, shrnutí, tabulky</td>
+                    </tr>
+                    <tr>
+                        <td>Kancelář, dokumenty</td>
+                        <td>Microsoft Copilot</td>
+                        <td>Firmy na M365</td>
+                        <td>Office, Teams, Outlook</td>
+                    </tr>
+                    <tr>
+                        <td>Znalostní báze</td>
+                        <td>Glean</td>
+                        <td>Střední a velké firmy</td>
+                        <td>Prohledává více zdrojů</td>
+                    </tr>
+                    <tr>
+                        <td>Vzdělávání</td>
+                        <td>Synthesia</td>
+                        <td>HR, školy</td>
+                        <td>Instruktážní videa</td>
+                    </tr>
+                    <tr>
+                        <td>Marketing</td>
+                        <td>EmailCraft</td>
+                        <td>Marketing, sales</td>
+                        <td>Personalizované kampaně</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Agentické platformy</h3>
+
+            <p>
+                Trendem jsou <strong>„agentické" platformy</strong> – kombinace AI modelů a autonomních agentů, které
+                dokážou samostatně plánovat a vykonávat sekvence úkolů napříč aplikacemi. Například: „Vytvoř mi
+                report z prodejních dat, pošli ho týmu a naplánuj schůzku na příští týden" – a AI to udělá <em>celé
+                    samo</em>.
+            </p>
+
+            <h2>🎓 Co to znamená pro školu a výuku</h2>
+
+            <img src="../assets/ai-classroom-future.png" alt="AI ve vzdělávání" class="article-image">
+
+            <h3>Výukový kontext</h3>
+
+            <p>
+                <strong>Multimodální AI</strong> (text + obraz + video) umožňuje učitelům rychle vytvářet:
+            </p>
+
+            <ul>
+                <li>Výukové materiály přizpůsobené konkrétnímu tématu</li>
+                <li>Mikro-kurzy s vizuálními vysvětleními</li>
+                <li>Interaktivní testy a kvízy</li>
+                <li>Videa s vysvětlením složitých konceptů</li>
+            </ul>
+
+            <h3>Praktická dovednost pro žáky</h3>
+
+            <p>
+                Práce s AI asistenty (Copilot, Gemini) se stává <strong>podobně důležitá jako kdysi práce s tabulkovým
+                    procesorem</strong>. Je třeba učit žáky:
+            </p>
+
+            <ul>
+                <li>Promýšlet kvalitní zadání (prompt engineering)</li>
+                <li>Ověřovat fakta a zjišťovat zdroje</li>
+                <li>Citovat a pracovat s chybovostí modelu</li>
+                <li>Rozpoznávat, kdy AI pomáhá a kdy škodí</li>
+            </ul>
+
+            <h3>Etika a občanská nauka</h3>
+
+            <p>
+                Nové funkce personalizace (přístup k e-mailům, historii vyhledávání) otevírají prostor pro
+                <strong>debaty o soukromí, regulaci AI a odpovědnosti</strong> firem i státu. Tyto témata by měla být
+                součástí hodin občanské výchovy a etiky.
+            </p>
+
+            <div class="highlight-box success">
+                <h4>💡 Závěrečné doporučení pro pedagogy</h4>
+                <p>
+                    Nezaměřujte se na zákazy používání AI. Místo toho učte žáky <strong>pracovat s AI
+                        zodpovědně</strong>. AI je nástroj – stejně jako kalkulačka nebo internet. Měli bychom učit,
+                    jak ho používat efektivně a eticky, nikoli ho zakazovat.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="back-nav-container">
+            <a href="../news.html" class="btn-back">← Zpět na AI Pulse</a>
+            <a href="../index.html" class="back-link">Zpět na domovskou stránku</a>
+        </div>
+    </article>
+
+    <footer>
+        <p>&copy; 2026 AI Educator. Vzdělávání s pomocí umělé inteligence.</p>
+    </footer>
+</body>
+
+</html>

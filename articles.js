@@ -1,5 +1,12 @@
 const recentArticles = [
     {
+        title: "AI v roce 2026: Trendy, nástroje a praktický dopad",
+        description: "Kompletní přehled klíčových trendů: evoluce LLM, multimodální generace, podnikové nástroje a dopady na vzdělávání.",
+        link: "ai-news/ai-trendy-2026.html",
+        date: "Leden 2026",
+        category: "AI Pulse"
+    },
+    {
         title: "8 AI promptů pro soukromí",
         description: "Jak využít AI k ochraně vašeho soukromí, bezpečí a duševního klidu. Sada 8 praktických promptů pro digitální i reálný život.",
         link: "ai-news/ai-prompty-soukromi.html",
