@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>OpenAI Prism: AI-native workspace pro vědce a pedagogy | AI Educator</title>
+    <meta name="description"
+        content="Prism od OpenAI je nový, bezplatný pracovní prostor pro vědce a učitele, který kombinuje LaTeX editor a asistenci GPT-5.2.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .article-meta {
+            color: #10b981;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .article-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .article-content h2 {
+            color: var(--text-primary);
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .article-content ul {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .article-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .article-image {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-xl);
+            margin: 2rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .image-left {
+            float: left;
+            width: 45%;
+            margin: 0.5rem 2rem 1rem 0;
+        }
+
+        .image-right {
+            float: right;
+            width: 45%;
+            margin: 0.5rem 0 1rem 2rem;
+        }
+
+        /* Clearfix pro obtékání */
+        .article-content::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        @media (max-width: 600px) {
+
+            .image-left,
+            .image-right {
+                width: 100%;
+                float: none;
+                margin: 1rem 0;
+            }
+        }
+
+        .lead {
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .example-box {
+            background: rgba(16, 185, 129, 0.05);
+            border-left: 4px solid #10b981;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 1rem 1rem 0;
+        }
+
+        .back-nav-container {
+            margin-top: 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+        }
+
+        .back-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--text-primary);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">✨ AI Educator</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Domů</a></li>
+                <li><a href="../news.html" class="nav-link active">AI Pulse</a></li>
+                <li><a href="../index.html#explore" class="nav-link">Prozkoumejte AI</a></li>
+                <li><a href="../apps.html" class="nav-link">Nástroje</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <article class="article-container">
+        <header class="article-header">
+            <span class="article-meta">AI Pulse / Leden 2026</span>
+            <h1>Prism od OpenAI: Revoluce ve vědeckém psaní a výuce</h1>
+        </header>
+
+        <div class="article-content">
+            <img src="../assets/openai-prism-hero.png" alt="OpenAI Prism Hero" class="article-image image-right">
+            <p class="lead">
+                Prism od OpenAI je nový, bezplatný „AI‑native“ pracovní prostor pro vědce a vysokoškolské učitele, který
+                kombinuje LaTeX editor, správu projektu a asistenci modelu GPT‑5.2 přímo v prostředí pro psaní odborných
+                textů.
+            </p>
+
+            <h2>Co je Prism a pro koho je určen</h2>
+            <p>
+                Prism je online workspace zaměřený na psaní, úpravu a sazbu vědeckých článků v LaTeXu, spojený přímo s
+                modelem GPT‑5.2 (včetně verze Thinking). Je dostupný zdarma pro každého, kdo má osobní účet ChatGPT; do
+                firemních a školních plánů se má teprve rozšířit.
+            </p>
+            <p>
+                Primární cílovou skupinou jsou <strong>výzkumníci, doktorandi, akademici a jejich studenti</strong>, ale
+                dobře se hodí i pro přípravu skript, sylabů nebo diplomových prací.
+            </p>
+
+            <h2>Klíčové funkce Prismu</h2>
+            <ul>
+                <li><strong>Jednotné LaTeX prostředí:</strong> psaní, kompilace a správa projektu probíhá v jednom
+                    nástroji, není nutné přecházet mezi editorem a AI chatem.</li>
+                <li><strong>Kontextová AI asistence:</strong> integrovaný GPT‑5.2 „vidí“ celý projekt – text, rovnice,
+                    citace, obrázky – a může nad ním konzistentně uvažovat.</li>
+                <li><strong>Pokročilé LaTeX nástroje:</strong> Prism umožňuje vytvářet, refaktorovat a „rozumět“
+                    rovnicím, citacím a figurám.</li>
+                <li><strong>Převod z tabule do LaTeXu:</strong> ručně psané rovnice a diagramy z digitální tabule lze
+                    převést do LaTeXu, což šetří čas.</li>
+                <li><strong>Reálná spolupráce v týmu:</strong> více autorů může současně upravovat text a sledovat
+                    revize.</li>
+            </ul>
+
+            <img src="../assets/openai-prism-latex.png" alt="LaTeX v OpenAI Prism" class="article-image image-left">
+
+            <h2>Jak Prism mění vědeckou práci</h2>
+            <p>
+                GPT‑5.2 v Prismu umí v oblastech s axiomatickými základy (např. matematická statistika) pomáhat
+                prozkoumávat důkazy, testovat hypotézy a hledat nečekané souvislosti. Model dokáže v kontextu
+                konkrétního článku navrhovat relevantní literaturu a revidovat bibliografii.
+            </p>
+
+            <div class="example-box">
+                <strong>Příklad:</strong> Autor píše článek z teoretické fyziky; GPT‑5.2 Thinking může v rámci jednoho
+                dialogu upravovat důkaz v sekci 3, zkontrolovat konzistenci s definicemi v úvodu a navrhnout doplnění
+                odkazů v závěru.
+            </div>
+
+            <img src="../assets/openai-prism-education.png" alt="AI ve vzdělávání s Prism"
+                class="article-image image-right">
+
+            <h2>Využití Prismu ve vzdělávání</h2>
+            <p>
+                Během interní ukázky byl Prism použit k vytvoření osnovy magisterského kurzu obecné relativity a sady
+                úloh pro studenty. Učitel může nahrát celé přednášky a nechat Prism označit části, které jsou zastaralé
+                nebo nekonzistentní.
+            </p>
+            <p>
+                Vedení závěrečných prací se také mění – místo line‑by‑line oprav se školitel ptá na slabá místa
+                argumentace a sekce, které potřebují zhutnit. Prism může navíc vysvětlit jeden odborný koncept na více
+                úrovních (bakalářská vs. doktorská úroveň) při zachování přesnosti.
+            </p>
+
+            <p>
+                Pro učitele jazyků může být zajímavé využít Prism u studentů, kteří píší odborné texty v angličtině –
+                Prism může pomoci s jazykovou korekturou, strukturou argumentace a zároveň učit akademický styl psaní.
+            </p>
+
+            <h2>Dostupnost</h2>
+            <p>
+                Prism je nyní dostupný uživatelům s osobním ChatGPT účtem. OpenAI plánuje rozšíření do organizací
+                (Business, Team, Enterprise a Education), což je klíčové pro univerzity.
+            </p>
+        </div>
+
+        <div class="back-nav-container">
+            <a href="../news.html" class="btn-back">← Zpět na AI Pulse</a>
+            <a href="../index.html" class="back-link">Zpět na domovskou stránku</a>
+        </div>
+    </article>
+
+    <footer>
+        <p>&copy; 2025 AI Educator. Vzdělávání s pomocí umělé inteligence.</p>
+    </footer>
+
+</body>
+
+</html>
