@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Gemini Asistenti pro učitele | AI Educator</title>
+    <meta name="description"
+        content="AI asistenti (Gemy) od Gemini navržení speciálně pro učitele jako pomocníci s přípravou výuky.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap&subset=latin,latin-ext"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=4">
+    <style>
+        .hub-hero {
+            min-height: 40vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: var(--spacing-3xl) var(--spacing-lg);
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.2), rgba(124, 58, 237, 0.1));
+            /* Blue/Purple theme */
+            position: relative;
+        }
+
+        .hub-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('assets/gemini-teachers-hero.png') center/cover no-repeat;
+            opacity: 0.15;
+            z-index: -1;
+            filter: blur(4px);
+        }
+
+        .hub-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .hub-hero .subtitle {
+            font-size: var(--font-size-xl);
+            color: var(--text-secondary);
+            max-width: 600px;
+        }
+
+        .assistants-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--spacing-xl);
+            padding: var(--spacing-3xl) var(--spacing-lg);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .assistant-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-xl);
+            transition: all var(--transition-base);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .assistant-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl), var(--shadow-glow);
+            border-color: rgba(37, 99, 235, 0.3);
+        }
+
+        .assistant-icon {
+            width: 150px;
+            height: 150px;
+            margin-top: 2rem;
+            margin-bottom: 3.5rem;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 3px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transform: rotate(-10deg);
+            transition: all var(--transition-base);
+            background: linear-gradient(135deg, var(--bg-secondary), var(--primary-dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .assistant-card:hover .assistant-icon {
+            transform: rotate(0deg) scale(1.05);
+            border-color: rgba(37, 99, 235, 0.6);
+            box-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
+        }
+
+        .assistant-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+
+        .assistant-card:hover .assistant-icon img {
+            transform: scale(1.1);
+        }
+
+        .assistant-card h3 {
+            font-size: var(--font-size-xl);
+            margin-bottom: var(--spacing-sm);
+            color: var(--text-primary);
+        }
+
+        .role-tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: rgba(37, 99, 235, 0.2);
+            color: #60a5fa;
+            border-radius: var(--radius-full);
+            font-size: 0.85rem;
+            margin-bottom: var(--spacing-md);
+            font-weight: 600;
+        }
+
+        .assistant-card p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: var(--spacing-lg);
+            font-size: 0.95rem;
+        }
+
+        .launch-btn {
+            margin-top: auto;
+            display: inline-flex;
+            align-items: center;
+            padding: 0.75rem 2rem;
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            color: white;
+            border-radius: var(--radius-full);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all var(--transition-fast);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .launch-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(37, 99, 235, 0.4);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            color: var(--text-secondary);
+            padding: var(--spacing-lg);
+            transition: color var(--transition-fast);
+        }
+
+        .back-link:hover {
+            color: var(--text-primary);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">✨ AI Educator</a>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+                ☰
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Domů</a></li>
+                <li><a href="index.html#explore" class="nav-link">Prozkoumejte AI</a></li>
+                <li><a href="apps.html" class="nav-link">Nástroje</a></li>
+                <li><a href="index.html#contact" class="nav-link">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Point back to Apps hub -->
+    <div class="back-nav-container">
+        <a href="apps.html" class="back-link">← Zpět na Nástroje</a>
+    </div>
+
+    <!-- Hub Hero -->
+    <div class="hub-hero">
+        <h1><span
+                style="background: linear-gradient(135deg, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">✨</span>
+            Gemini Asistenti pro učitele</h1>
+        <p class="subtitle">Specializované Gemy pro efektivní přípravu výuky a školní administrativu</p>
+    </div>
+
+    <!-- Assistants Grid -->
+    <div class="assistants-grid">
+
+        <!-- Learning Maps Assistant -->
+        <div class="assistant-card">
+            <div class="assistant-icon">
+                <img src="assets/notebooklm_mindmap_viz.png" alt="Tvorba výukových map Icon">
+            </div>
+            <span class="role-tag">Role: Vizualizátor</span>
+            <h3>Tvorba výukových map</h3>
+            <p>
+                Specializovaný asistent pro vytváření strukturovaných výukových map a myšlenkových diagramů.
+                Pomůže vám vizualizovat učivo a propojit klíčové koncepty.
+            </p>
+            <a href="https://gemini.google.com/gem/1N7kB25YkN1Chdpq3oQiYpN0i2e8st3Gi?usp=sharing" target="_blank"
+                rel="noopener noreferrer" class="launch-btn">Spustit
+                asistenta ✨</a>
+        </div>
+
+        <!-- Material Generator Assistant -->
+        <div class="assistant-card">
+            <div class="assistant-icon">
+                <img src="assets/worksheets-hero.png" alt="Generátor materiálů Icon">
+            </div>
+            <span class="role-tag">Role: Kreativec</span>
+            <h3>Generátor materiálů</h3>
+            <p>
+                Rychlá tvorba pracovních listů, zadání pro skupinovou práci nebo podkladů pro prezentace.
+                Šetří čas strávený formátováním a hledáním obsahu.
+            </p>
+            <a href="https://gemini.google.com/gem/146FajFovTzwydaIUgeal36oQXaaLnfaB?usp=sharing" target="_blank"
+                rel="noopener noreferrer" class="launch-btn">Spustit
+                asistenta ✨</a>
+        </div>
+
+        <!-- Comprehension Check Assistant -->
+        <div class="assistant-card">
+            <div class="assistant-icon">
+                <img src="assets/ai-assessment-tools.png" alt="Kontrola porozumění Icon">
+            </div>
+            <span class="role-tag">Role: Examinátor</span>
+            <h3>Kontrola porozumění</h3>
+            <p>
+                Asistent pro ověření pochopení učiva žáky. Vytváří otázky, kvízy a interaktivní aktivity
+                pro kontrolu porozumění klíčovým konceptům.
+            </p>
+            <a href="https://gemini.google.com/gem/1UnjQGUOUK7sRAv0Ds6TFZgz41PSnueIy?usp=sharing" target="_blank"
+                rel="noopener noreferrer" class="launch-btn">Spustit
+                asistenta ✨</a>
+        </div>
+
+        <!-- Vocabulary from Text Assistant -->
+        <div class="assistant-card">
+            <div class="assistant-icon">
+                <img src="assets/ai-language-tools.png" alt="Slovní zásoba z textu Icon">
+            </div>
+            <span class="role-tag">Role: Lingvista</span>
+            <h3>Slovní zásoba z textu</h3>
+            <p>
+                Asistent pro extrakci a procvičování slovní zásoby z textů. Automaticky identifikuje klíčová slova
+                a vytváří cvičení pro jejich osvojení.
+            </p>
+            <a href="https://gemini.google.com/gem/1kpKLPqrs_3k8YDtOFxYIdJEGw4_tcI8d?usp=sharing" target="_blank"
+                rel="noopener noreferrer" class="launch-btn">Spustit
+                asistenta ✨</a>
+        </div>
+
+        <!-- Future Placeholder -->
+        <div class="assistant-card" style="opacity: 0.6; border-style: dashed;">
+            <div class="assistant-icon"
+                style="background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; font-size: 2rem;">
+                ➕
+            </div>
+            <h3>Další asistenti</h3>
+            <p>
+                Máte nápad na dalšího asistenta? Gemini Gemy si můžete snadno vytvořit i sami.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Bottom Navigation -->
+    <div style="text-align: center; margin: 3rem 0;">
+        <a href="apps.html" class="back-link">← Zpět na Nástroje</a>
+        <a href="index.html" class="back-link">Domů 🏠</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 AI Educator. Vzdělávání s pomocí umělé inteligence.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
