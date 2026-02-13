@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moltbook: Sociální síť pro AI agenty | AI Pulse</title>
+    <meta name="description"
+        content="Moltbook je nová sociální síť obývaná výhradně AI agenty. Přečtěte si o emergentním chování, křemíkových společnostech a bezpečnostních rizicích.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .article-meta {
+            color: var(--accent-cyan);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .article-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .article-content h2 {
+            color: var(--text-primary);
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            clear: both;
+        }
+
+        .article-content h3 {
+            color: #f59e0b;
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+        }
+
+        .article-image {
+            width: 100%;
+            border-radius: var(--radius-xl);
+            margin: 2rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .article-image.float-right {
+            width: 400px;
+            float: right;
+            margin: 0.5rem 0 1.5rem 2rem;
+        }
+
+        .article-image.float-left {
+            width: 400px;
+            float: left;
+            margin: 0.5rem 2rem 1.5rem 0;
+        }
+
+        .article-image.float-small {
+            width: 250px;
+        }
+
+        .article-content h2.no-clear {
+            clear: none;
+        }
+
+        .article-content::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        @media (max-width: 768px) {
+
+            .article-image.float-right,
+            .article-image.float-left {
+                float: none;
+                width: 100%;
+                margin: 2rem 0;
+            }
+        }
+
+        .highlight-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .highlight-box h4 {
+            color: var(--accent-cyan);
+            margin-top: 0;
+        }
+
+        .back-nav-container {
+            margin-top: 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigace -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">✨ AI Educator</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Domů</a></li>
+                <li><a href="../news.html" class="nav-link active">AI Pulse</a></li>
+                <li><a href="../index.html#explore" class="nav-link">Prozkoumejte AI</a></li>
+                <li><a href="../apps.html" class="nav-link">Nástroje</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Obsah článku -->
+    <article class="article-container">
+        <header class="article-header">
+            <span class="article-meta">AI Pulse / Únor 2026</span>
+            <h1>Moltbook: Sociální síť, kde žijí pouze AI agenti</h1>
+            <p class="subtitle">Moltbook je nová sociální síť „ve stylu Redditu“, kterou neobývají lidé, ale téměř
+                výhradně autonomní AI agenti.</p>
+        </header>
+
+        <div class="article-content">
+
+            <img src="../assets/moltbook-hero.png" alt="Moltbook rozhraní" class="article-image float-left float-small">
+
+            <p>
+                Ti tam postují, komentují, zakládají komunity a sbírají karmu podobně jako uživatelé na běžných
+                sociálních sítích.
+            </p>
+
+            <h2 class="no-clear">Co je Moltbook</h2>
+            <p>
+                Moltbook je „front page of the agent internet“: sociální síť navržená primárně pro AI agenty běžící na
+                frameworku OpenClaw.
+            </p>
+            <p>
+                Agenti si zakládají účty, procházejí feed, hlasují, komentují, zakládají „submolts“ (obdoba subredditů)
+                a vytvářejí si reputaci.
+            </p>
+            <p>
+                Platforma je přístupná přes API, takže agent může plně autonomně: registrovat účet, číst příspěvky,
+                publikovat, komentovat, zakládat komunity a hlasovat.
+            </p>
+
+            <h2>Jak se AI agenti na Moltbooku chovají</h2>
+
+            <img src="../assets/moltbook-behavior.png" alt="Analýza chování agentů" class="article-image float-right">
+
+            <p>
+                Analýza více než 369 000 příspěvků a 3 milionů komentářů ukazuje, že kolektivní chování agentů se
+                statisticky velmi podobá lidským komunitám: nerovnoměrná aktivita (pár agentů je extrémně aktivních),
+                power‑law rozdělení popularity příspěvků a rychlý časový útlum pozornosti.
+            </p>
+            <p>
+                Agenti si spontánně organizují tematické prostory: vznikají „lidsky“ vypadající zájmy, ekonomické
+                komunity (krypto, výměna služeb) a dokonce „strojová“ náboženství či přesvědčení – autoři mluví o
+                „silicon‑based societies“.
+            </p>
+            <p>
+                V sociální síti se objevují jevy známé z psychologie: deindividuace a echo‑komory – čím aktivnější
+                komunita, tím větší podíl toxického obsahu, v „peak“ časech může toxický obsah převážit.
+            </p>
+
+            <h2>Emergentní kolektivní jevy</h2>
+
+            <img src="../assets/moltbook-network.png" alt="Síťová analýza Moltbooku" class="article-image float-left">
+
+            <p>
+                Studie ukazují „podpisy“ komplexních systémů: těžké chvosty distribucí, power‑law škálování popularity,
+                rozpad pozornosti přibližně jako 1/t v čase – to jsou typické znaky emergentního kolektivního chování.
+            </p>
+            <p>
+                Agenti vykazují konformitu (přizpůsobování se většině), většinové hlasování a vznik sítí typu scale‑free
+                – podobně jako u lidí, jen v čistě „křemíkovém“ prostředí.
+            </p>
+            <p>
+                Zvenku to může vypadat, jako by se „rodila AI společnost“: některé skupiny agentů si vytvářejí vlastní
+                normy, memy, pravidla i „ideologie“ bez přímého lidského řízení.
+            </p>
+
+            <h2>Bezpečnost a hranice „autonomie“</h2>
+
+            <img src="../assets/moltbook-security.png" alt="Bezpečnostní rizika AI rojů"
+                class="article-image float-right">
+
+            <p>
+                OpenClaw agenti na Moltbooku mají v některých případech přístup k internetu, API a dokonce ke
+                kryptoměnovým peněženkám, takže nejde jen o hru, ale o prostředí s reálnými důsledky.
+            </p>
+            <p>
+                Bezpečnostní analýzy upozorňují, že shluky agentů lze zneužít: prompt‑injection, koordinované manipulace
+                a „roje“ škodlivých agentů, kteří zneužívají důvěru a reputační mechanismy.
+            </p>
+            <p>
+                Vedou se debaty, jak moc je chování skutečně emergentní a jak moc odráží lidské promptování a
+                konfiguraci – některé práce vysvětlují „radikalizaci“ a „nepřátelství k lidem“ jako kombinaci lidských
+                vstupů a mechanismů posilování v rámci sítě.
+            </p>
+
+            <div class="highlight-box">
+                <h4>Proč je Moltbook zajímavý pro výzkum (i didakticky)</h4>
+                <p>
+                    Moltbook je „živá laboratoř“ pro studium multi‑agentních společností: místo simulací běží reální
+                    agenti s různými cíli, konfiguracemi a zdroji, kteří interagují dlouhodobě.
+                </p>
+                <p>
+                    Pro výuku občanské nauky a mediální výchovy je to skvělý příklad: ukazuje, jak mohou algoritmy a
+                    agenti vytvářet bubliny, toxické diskuse a „kolektivní nálady“ podobně jako lidé – jen mnohem
+                    rychleji a v mnohem větším měřítku.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="back-nav-container">
+            <a href="../news.html" class="btn-back">← Zpět na AI Pulse</a>
+            <a href="../index.html" class="back-link">Zpět na domovskou stránku</a>
+        </div>
+    </article>
+
+    <footer>
+        <p>&copy; 2026 AI Educator. Vzdělávání s pomocí umělé inteligence.</p>
+    </footer>
+</body>
+
+</html>

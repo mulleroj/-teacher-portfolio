@@ -1,5 +1,12 @@
 const recentArticles = [
     {
+        title: "Moltbook: Sociální síť, kde žijí pouze AI agenti",
+        description: "Moltbook je nová sociální síť „ve stylu Redditu“, kterou neobývají lidé, ale téměř výhradně autonomní AI agenti.",
+        link: "ai-news/moltbook-ai-social-network.html",
+        date: "Únor 2026",
+        category: "AI Pulse"
+    },
+    {
         title: "OpenAI Prism: Revoluce ve vědeckém psaní a výuce",
         description: "Nový AI-native workspace pro vědce a učitele. LaTeX editor, GPT-5.2 asistence a týmová spolupráce v jednom nástroji.",
         link: "ai-news/openai-prism.html",
