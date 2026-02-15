@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projektová výuka v českém prostředí: ŠVP a realita 🇨🇿 | AI Educator</title>
+    <meta name="description"
+        content="Praktický průvodce pro učitele, kteří se bojí byrokracie a nestihnutí učiva. Jak využít projektovou výuku v souladu se ŠVP.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .article-meta {
+            color: var(--accent-cyan);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .article-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .article-content h2 {
+            color: var(--text-primary);
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .article-content h3 {
+            color: #f59e0b;
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .article-image {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-xl);
+            margin: 2rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .article-image.float-right {
+            float: right;
+            width: 40%;
+            margin: 0 0 1rem 2rem;
+        }
+
+        .article-image.float-left {
+            float: left;
+            width: 40%;
+            margin: 0 2rem 1rem 0;
+        }
+
+        @media (max-width: 768px) {
+
+            .article-image.float-right,
+            .article-image.float-left {
+                float: none;
+                width: 100%;
+                margin: 1rem 0;
+            }
+        }
+
+        .comparison-box {
+            background: rgba(99, 102, 241, 0.1);
+            border: 2px solid rgba(99, 102, 241, 0.3);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .comparison-box strong {
+            color: var(--primary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+        }
+
+        .project-table th,
+        .project-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .project-table th {
+            background: rgba(245, 158, 11, 0.2);
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .project-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .tip-box {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(217, 119, 6, 0.1));
+            border-left: 4px solid #f59e0b;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: var(--radius-md);
+        }
+
+        .tip-box strong {
+            color: #fbbf24;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(99, 102, 241, 0.1));
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: var(--radius-md);
+        }
+
+        .step-list {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+        }
+
+        .step-list li {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .step-list li strong {
+            color: var(--primary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .back-button-container {
+            margin-top: 4rem;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigace -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">✨ AI Educator</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Domů</a></li>
+                <li><a href="../index.html#explore" class="nav-link">Prozkoumejte AI</a></li>
+                <li><a href="../apps.html" class="nav-link">Nástroje</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Obsah článku -->
+    <article class="article-container">
+        <header class="article-header">
+            <span class="article-meta">AI Toolkit / Únor 2026</span>
+            <h1>Projektová výuka v českém prostředí: ŠVP a realita 🇨🇿</h1>
+            <p style="color: var(--text-secondary); font-size: 1.1rem;">Praktický průvodce pro učitele, kteří se
+                bojí byrokracie a nestihnutí učiva</p>
+        </header>
+
+        <div class="article-content">
+            <img src="../assets/projekt-svp-byrokratie.png" alt="ŠVP a projektová výuka"
+                class="article-image float-left">
+
+            <p class="lead">
+                Jako dlouholetý učitel a metodik slyším od kolegů v kabinetech stále totéž: <em>"Rád bych dělal
+                    projekty, ale ŠVP je neúprosné. Musím probrat látku, jinak žáci u přijímaček pohoří. A ta
+                    administrativa? To radši dopíšu třídnici."</em>
+            </p>
+
+            <p>
+                Rozumím vám. Realita českého školství je sevřená mezi ambiciózní vize a tabulky. Ale co když vám
+                řeknu, že projektová výuka není „něco navíc", co musíte do rozvrhu vklínit, ale <strong>cesta, jak
+                    „odučit" osnovy efektivněji a s menší únavou</strong>?
+            </p>
+
+            <h2>Mýtus vs. Realita: ŠVP není vězení</h2>
+
+            <p>
+                Mnoho učitelů vnímá Školní vzdělávací program (ŠVP) jako seznam stran v učebnici, které musí
+                prolistovat. Ale RVP (Rámcový vzdělávací program) mluví o <strong>kompetencích a výstupech</strong>.
+            </p>
+
+            <div class="comparison-box">
+                <strong>Mýtus:</strong> Musím probrat 50 stran o ekosystémech a 30 stran o statistice.
+                <br><br>
+                <strong>Realita:</strong> Žák má umět interpretovat data a chápat souvislosti v přírodě. Jak to
+                uděláte, je na vás.
+            </div>
+
+            <p>
+                Projektová výuka vám umožní spojit izolované „ostrůvky vědomostí" do jednoho funkčního celku. Místo
+                tří písemek v různých předmětech hodnotíte jeden komplexní výstup.
+            </p>
+
+            <h2>Příklad z praxe: Projekt „Ekologie naší školy"</h2>
+
+            <img src="../assets/projekt-ekologie-skola.png" alt="Projekt ekologie školy"
+                class="article-image float-right">
+
+            <p>
+                Tento projekt ukazuje, jak během <strong>dvou týdnů</strong> (nebo jednoho projektového dne) naplnit
+                výstupy hned tří předmětů najednou:
+            </p>
+
+            <table class="project-table">
+                <thead>
+                    <tr>
+                        <th>Předmět</th>
+                        <th>Co se reálně učí (dle ŠVP)</th>
+                        <th>Role v projektu</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Matematika</strong></td>
+                        <td>Sběr dat, aritmetický průměr, grafy</td>
+                        <td>Žáci měří množství odpadu ve třídách a tvoří statistické přehledy.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Biologie</strong></td>
+                        <td>Ekosystém, udržitelný rozvoj, odpady</td>
+                        <td>Studium rozkladu materiálů a vlivu školy na lokální biodiverzitu.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Čeština</strong></td>
+                        <td>Slohový útvar (zpráva), rétorika</td>
+                        <td>Prezentace výsledků vedení školy a psaní článku do školního časopisu.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>
+                <strong>Výsledek?</strong> Žáci nepočítají fiktivní jablka v učebnici, ale skutečné pytle plastu. To
+                je motivace, kterou frontální výuka nikdy nenabídne.
+            </p>
+
+            <h2>AI jako váš metodický asistent: Konec byrokratické noční můry</h2>
+
+            <p>
+                Největší brzdou projektů je příprava materiálů. Tady nastupuje AI (např. Gemini nebo ChatGPT).
+                Zapomeňte na hodiny strávené nad Wordem.
+            </p>
+
+            <h3>Jak vám AI pomůže během 5 minut?</h3>
+
+            <ul class="step-list">
+                <li>
+                    <strong>📝 Tvorba pracovních listů</strong>
+                    <p>Zadejte AI: <em>"Vytvoř pracovní list pro 8. třídu zaměřený na statistiku odpadu. Obsahuj
+                            tabulku pro sběr dat a 3 otázky na výpočet průměru."</em></p>
+                </li>
+                <li>
+                    <strong>🎯 Diferenciace</strong>
+                    <p>Máte ve třídě nadané žáky i žáky s IVP? AI upraví text stejného projektu do dvou úrovní
+                        náročnosti během vteřiny.</p>
+                </li>
+                <li>
+                    <strong>✅ Rubriky hodnocení</strong>
+                    <p>Požádejte AI o vytvoření hodnotící tabulky (rubriky) pro prezentaci. Budete mít jasná a
+                        objektivní kritéria pro klasifikaci, která obhájíte i před inspekcí.</p>
+                </li>
+            </ul>
+
+            <div class="tip-box">
+                <strong>💡 Tip z praxe:</strong>
+                AI nepoužívejte jen na materiály pro žáky. Nechte ji „přechroustat" váš ŠVP a navrhnout, které
+                kapitoly se k sobě hodí pro příští projekt.
+            </div>
+
+            <h2>Jak začít a nezbláznit se?</h2>
+
+            <div class="highlight-box">
+                <ol style="margin: 0; padding-left: 1.5rem;">
+                    <li style="margin-bottom: 1rem;"><strong>Nechtějte revoluci:</strong> Začněte jedním malým
+                        projektem (třeba na 2 vyučovací hodiny).</li>
+                    <li style="margin-bottom: 1rem;"><strong>Spojte se s kolegou:</strong> Najděte si parťáka.
+                        Matematik a češtinář jsou ideální duo.</li>
+                    <li><strong>Využijte AI pro „špinavou práci":</strong> Nechte stroje tvořit osnovy a kvízy, vy se
+                        věnujte žákům.</li>
+                </ol>
+            </div>
+
+            <p style="font-size: 1.2rem; font-weight: 600; margin-top: 2rem; color: var(--text-primary);">
+                Projektová výuka v českém prostředí není o ignorování osnov, ale o jejich chytrém využívání.
+                <span style="color: #fbbf24;">ŠVP je vaše hřiště, ne vaše klec.</span> 🚀
+            </p>
+
+        </div>
+
+        <div class="back-button-container">
+            <a href="../teachers-news.html" class="btn-back">← Zpět na Novinky</a>
+        </div>
+    </article>
+
+    <footer>
+        <p>&copy; 2026 AI Educator. Vzdělávání s pomocí umělé inteligence.</p>
+    </footer>
+
+</body>
+
+</html>
