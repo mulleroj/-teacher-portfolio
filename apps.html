@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="cs">
 
 <head>
@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO Meta Tags -->
-    <title>🔧 AI Nástroje | Praktické aplikace pro vzdělávání</title>
+    <title>AI Nástroje | Praktické aplikace pro vzdělávání</title>
     <meta name="description"
         content="AI nástroje pro moderní výuku - generátor testů, osmisměrek, křížovek a další praktické aplikace.">
 
@@ -216,39 +216,106 @@
     <!-- Navigation -->
     <nav class="navbar scrolled" id="navbar">
         <div class="nav-container">
-            <a href="index.html" class="logo">✨ AI Educator</a>
-            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
-                ☰
-            </button>
+            <a href="index.html" class="logo">AI Educator</a>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Otevřít menu">☰</button>
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html" class="nav-link">Domů</a></li>
-                <li><a href="index.html#explore" class="nav-link">Prozkoumejte AI</a></li>
+                <li><a href="teachers.html" class="nav-link">Pro učitele</a></li>
+                <li><a href="students.html" class="nav-link">Pro studenty</a></li>
+                <li><a href="news.html" class="nav-link">Novinky</a></li>
                 <li><a href="apps.html" class="nav-link active">Nástroje</a></li>
                 <li><a href="index.html#contact" class="nav-link">Kontakt</a></li>
             </ul>
         </div>
     </nav>
 
-    <div class="back-nav-container">
-        <a href="index.html" class="back-link">← Zpět na hlavní stránku</a>
-    </div>
 
     <!-- Hero Section -->
     <div class="hub-hero">
-        <h1>🔧 AI Nástroje</h1>
+        <div class="section-icon section-icon--tools" style="margin-bottom:1rem;">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <h1>AI Nástroje</h1>
         <p class="subtitle">Praktické aplikace pro moderní výuku</p>
     </div>
+
+    <!-- Mini Průvodce: Doporuč mi nástroj -->
+    <div id="wizard" style="max-width:1200px;margin:2rem auto 0;padding:0 var(--spacing-lg);">
+        <details class="wizard-box" id="wizard-details" style="background:linear-gradient(135deg,rgba(99,102,241,0.1),rgba(168,85,247,0.07));border:1px solid rgba(99,102,241,0.2);border-radius:var(--radius-2xl);padding:var(--spacing-xl);list-style:none;">
+            <summary style="cursor:pointer;font-weight:700;font-size:var(--font-size-lg);color:var(--text-primary);display:flex;align-items:center;gap:0.75rem;list-style:none;">
+                <span style="font-size:1.5rem;">🧭</span>
+                Nevíte, který nástroj vybrat? Nechte se provést.
+                <span id="wizard-arrow" style="margin-left:auto;color:var(--text-muted);transition:transform 0.2s;">▾</span>
+            </summary>
+            <div style="margin-top:var(--spacing-lg);">
+                <!-- Step 1 -->
+                <div class="wizard-step" id="step-1">
+                    <p style="font-weight:600;color:var(--text-secondary);margin-bottom:var(--spacing-sm);">1 / 3 &nbsp;—&nbsp; Jaký je váš hlavní cíl?</p>
+                    <div style="display:flex;flex-wrap:wrap;gap:0.5rem;">
+                        <button class="wizard-btn" onclick="wizardNext(1,'hodina')">📋 Připravit hodinu / materiál</button>
+                        <button class="wizard-btn" onclick="wizardNext(1,'procviceni')">🎮 Procvičit se studenty</button>
+                        <button class="wizard-btn" onclick="wizardNext(1,'prompty')">✍️ Generovat prompty / obsah</button>
+                        <button class="wizard-btn" onclick="wizardNext(1,'studium')">📚 Studium / příprava na zkoušku</button>
+                    </div>
+                </div>
+                <!-- Step 2 -->
+                <div class="wizard-step" id="step-2" style="display:none;">
+                    <p style="font-weight:600;color:var(--text-secondary);margin-bottom:var(--spacing-sm);">2 / 3 &nbsp;—&nbsp; Kolik času máte?</p>
+                    <div style="display:flex;flex-wrap:wrap;gap:0.5rem;">
+                        <button class="wizard-btn" onclick="wizardNext(2,'rychle')">⚡ Do 5 minut</button>
+                        <button class="wizard-btn" onclick="wizardNext(2,'pulhodina')">🕐 30 minut</button>
+                        <button class="wizard-btn" onclick="wizardNext(2,'projekt')">🗂️ Delší projekt</button>
+                    </div>
+                </div>
+                <!-- Step 3 -->
+                <div class="wizard-step" id="step-3" style="display:none;">
+                    <p style="font-weight:600;color:var(--text-secondary);margin-bottom:var(--spacing-sm);">3 / 3 &nbsp;—&nbsp; Pro koho?</p>
+                    <div style="display:flex;flex-wrap:wrap;gap:0.5rem;">
+                        <button class="wizard-btn" onclick="wizardResult('ucitel')">👩‍🏫 Jsem učitel</button>
+                        <button class="wizard-btn" onclick="wizardResult('student')">🎓 Jsem student</button>
+                    </div>
+                </div>
+                <!-- Result -->
+                <div id="wizard-result" style="display:none;margin-top:var(--spacing-md);"></div>
+                <!-- Reset -->
+                <button id="wizard-reset" onclick="wizardReset()" style="display:none;margin-top:var(--spacing-sm);background:none;border:none;color:var(--text-muted);font-size:var(--font-size-sm);cursor:pointer;font-family:var(--font-primary);">↩ Začít znovu</button>
+            </div>
+        </details>
+    </div>
+
+    <!-- Filter Bar -->
+
+    <div class="filter-bar" id="filter-bar">
+        <div class="filter-search-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="11" cy="11" r="8"/><path stroke-linecap="round" d="m21 21-4.35-4.35"/></svg>
+            <input type="search" class="filter-search" id="apps-search" placeholder="Hledat nástroj..." oninput="filterApps()">
+        </div>
+        <div class="filter-chips" id="apps-chips">
+            <button class="filter-chip active" data-filter="all" onclick="setAppsFilter(this)">Vše</button>
+            <button class="filter-chip" data-filter="ucitele" onclick="setAppsFilter(this)">Pro učitele</button>
+            <button class="filter-chip" data-filter="studenti" onclick="setAppsFilter(this)">Pro studenty</button>
+            <button class="filter-chip" data-filter="asistenti" onclick="setAppsFilter(this)">AI asistenti</button>
+            <button class="filter-chip" data-filter="prompty" onclick="setAppsFilter(this)">Prompty</button>
+            <button class="filter-chip" data-filter="hry" onclick="setAppsFilter(this)">Hry a cvičení</button>
+            <button class="filter-chip" data-filter="pruvodci" onclick="setAppsFilter(this)">Průvodci</button>
+        </div>
+    </div>
+    <p class="filter-results-count" id="apps-count"></p>
 
     <!-- Apps Grid -->
     <div class="apps-grid">
 
         <!-- Suplovací Agent -->
-        <div class="app-card">
+        <div class="app-card" data-category="ucitele" data-name="suplovací agent generátor aktivit suplování">
             <div class="app-preview app-preview--image">
-                <img src="assets/substitution-hero.png" alt="Suplovací Agent">
+                <img src="assets/substitution-hero.png" alt="Suplovací Agent" loading="lazy">
             </div>
             <div class="app-content">
                 <span class="app-tag">Nástroj</span>
+                <div class="app-meta-tags">
+                    <span class="meta-tag meta-tag--quick">⏱ 5 minut</span>
+                    <span class="meta-tag meta-tag--beginner">🟢 Začátečník</span>
+                </div>
                 <h3 class="app-title">Suplovací Agent</h3>
                 <p class="app-description">
                     Generátor rychlých aktivit pro suplované hodiny.
@@ -256,81 +323,92 @@
                     Pro plné využití je nutné použít API klíč (doporučujeme ChatGPT).
                 </p>
                 <div class="app-actions">
-                    <a href="substitution/index.html" class="btn-launch">Spustit</a>
+                    <a href="substitution/index.html" class="btn-launch">Spustit nástroj</a>
                 </div>
             </div>
         </div>
 
         <!-- Vocabulary App -->
-        <div class="app-card">
+        <div class="app-card" data-category="studenti hry" data-name="slovíčka angličtina vocabulary procvičování">
             <div class="app-preview app-preview--image">
-                <img src="assets/vocabulary-hero.png" alt="Slovíčka">
+                <img src="assets/vocabulary-hero.png" alt="Slovíčka" loading="lazy">
             </div>
             <div class="app-content">
                 <span class="app-tag">Aplikace</span>
+                <div class="app-meta-tags">
+                    <span class="meta-tag meta-tag--beginner">🟢 Začátečník</span>
+                    <span class="meta-tag meta-tag--quick">⏱ 10 minut</span>
+                </div>
                 <h3 class="app-title">Slovíčka</h3>
                 <p class="app-description">
-                    Procvičování slovíček. Procvičení slovní zásoby učebnice Maturita Solutions v jazykové úrovni
-                    Elementary a Pre-Intermediate.
+                    Procvičování slovíček. Procvičení slovní zásoby učebnice Maturita Solutions v jazykové úrovni Elementary a Pre-Intermediate.
                 </p>
                 <div class="app-actions">
-                    <a href="https://englishworkshops.netlify.app/" class="btn-launch" target="_blank"
-                        rel="noopener noreferrer">Spustit</a>
+                    <a href="https://englishworkshops.netlify.app/" class="btn-launch" target="_blank" rel="noopener noreferrer">Spustit aplikaci</a>
                 </div>
             </div>
         </div>
 
 
         <!-- Word Search App -->
-        <div class="app-card">
+        <div class="app-card" data-category="ucitele studenti hry" data-name="generátor osmisměrek slovní zásoba">
             <div class="app-preview app-preview--image">
-                <img src="assets/wordsearch-hero.png" alt="Generátor Osmisměrek">
+                <img src="assets/wordsearch-hero.png" alt="Generátor Osmisměrek" loading="lazy">
             </div>
             <div class="app-content">
                 <span class="app-tag">Nástroj</span>
+                <div class="app-meta-tags">
+                    <span class="meta-tag meta-tag--beginner">🟢 Začátečník</span>
+                    <span class="meta-tag meta-tag--quick">⏱ 5 minut</span>
+                </div>
                 <h3 class="app-title">Generátor Osmisměrek</h3>
                 <p class="app-description">
                     Vytvořte si vlastní osmisměrku ze zadaných slov. Ideální pro procvičování slovní zásoby.
                 </p>
                 <div class="app-actions">
-                    <a href="wordsearch.html" class="btn-launch">Spustit</a>
+                    <a href="wordsearch.html" class="btn-launch">Vytvořit osmisměrku</a>
                 </div>
             </div>
         </div>
 
         <!-- Crossword App -->
-        <div class="app-card">
+        <div class="app-card" data-category="ucitele studenti hry" data-name="generátor křížovek slovíčka definice">
             <div class="app-preview app-preview--image">
-                <img src="assets/crossword-hero.png" alt="Generátor Křížovek">
+                <img src="assets/crossword-hero.png" alt="Generátor Křížovek" loading="lazy">
             </div>
             <div class="app-content">
                 <span class="app-tag">Nástroj</span>
+                <div class="app-meta-tags">
+                    <span class="meta-tag meta-tag--beginner">🟢 Začátečník</span>
+                    <span class="meta-tag meta-tag--quick">⏱ 10 minut</span>
+                </div>
                 <h3 class="app-title">Generátor Křížovek</h3>
                 <p class="app-description">
                     Vytvořte si vlastní křížovku z vašich slovíček a definic. Jednoduchý nástroj pro učitele.
-                    Pro plné využití je nutné použít API klíč (doporučujeme ChatGPT).
                 </p>
                 <div class="app-actions">
-                    <a href="crossword/index.html" class="btn-launch">Spustit</a>
+                    <a href="crossword/index.html" class="btn-launch">Vytvořit křížovku</a>
                 </div>
             </div>
         </div>
 
         <!-- PromptVault -->
-        <div class="app-card">
+        <div class="app-card" data-category="ucitele studenti prompty" data-name="promptvault prompty chatgpt gemini databáze">
             <div class="app-preview app-preview--image">
-                <img src="assets/promptvault-hero.png" alt="PromptVault">
+                <img src="assets/promptvault-hero.png" alt="PromptVault" loading="lazy">
             </div>
             <div class="app-content">
                 <span class="app-tag">Nástroj</span>
+                <div class="app-meta-tags">
+                    <span class="meta-tag meta-tag--beginner">🟢 Začátečník</span>
+                    <span class="meta-tag meta-tag--quick">⏱ 5 minut</span>
+                </div>
                 <h3 class="app-title">PromptVault</h3>
                 <p class="app-description">
-                    Databáze promptů pro AI nástroje. Ukládejte, organizujte a sdílejte své oblíbené prompty.
-                    Rychlý přístup k osvědčeným promptům pro ChatGPT, Gemini a další AI asistenty.
+                    Databáze promptů pro AI nástroje. Rychlý přístup k osvědčeným promptům pro ChatGPT, Gemini a další AI asistenty.
                 </p>
                 <div class="app-actions">
-                    <a href="https://educatorai-promptvault.netlify.app/" class="btn-launch" target="_blank"
-                        rel="noopener noreferrer">Spustit</a>
+                    <a href="https://educatorai-promptvault.netlify.app/" class="btn-launch" target="_blank" rel="noopener noreferrer">Najít prompt</a>
                 </div>
             </div>
         </div>
@@ -451,20 +529,21 @@
         </div>
 
         <!-- Gemini Assistants for Teachers -->
-        <a href="gemini-pro-ucitele.html" class="app-card" style="text-decoration: none;">
+        <a href="gemini-pro-ucitele.html" class="app-card" style="text-decoration: none;" data-category="ucitele asistenti" data-name="gemini asistenti gemy pro učitele příprava hodin">
             <div class="app-preview app-preview--image">
-                <img src="assets/gemini-teachers-hero.png" alt="Gemini Asistenti pro učitele">
+                <img src="assets/gemini-teachers-hero.png" alt="Gemini Asistenti pro učitele" loading="lazy">
             </div>
             <div class="app-content">
                 <span class="app-tag" style="background: rgba(37, 99, 235, 0.2); color: #60a5fa;">Pro učitele</span>
+                <div class="app-meta-tags">
+                    <span class="meta-tag meta-tag--advanced">🔵 Pokročilý</span>
+                </div>
                 <h3 class="app-title">Gemini Gemy pro učitele</h3>
                 <p class="app-description">
-                    Speciálně vytvoření AI asistenti pro usnadnění učitelské práce.
-                    Příprava hodin, tvorba materiálů a pomoc s administrativou na jednom místě.
+                    Speciálně vytvoření AI asistenti pro usnadnění učitelské práce. Příprava hodin, tvorba materiálů a pomoc s administrativou.
                 </p>
                 <div class="app-actions">
-                    <span class="btn-launch" style="background: linear-gradient(135deg, #2563eb, #7c3aed);">Otevřít
-                        sekci</span>
+                    <span class="btn-launch" style="background: linear-gradient(135deg, #2563eb, #7c3aed);">Otevřít sekci</span>
                 </div>
             </div>
         </a>
@@ -487,16 +566,202 @@
                 </div>
             </div>
         </div>
+        <!-- GemForge -->
+        <div class="app-card" data-category="ucitele studenti pruvodci asistenti" data-name="gemforge gemy gemini katalog plánování materiály hodnocení výuka">
+            <div class="app-preview app-preview--image">
+                <img src="assets/gemforge-hero.png" alt="GemForge – Katalog Gemů pro Gemini" loading="lazy">
+            </div>
+            <div class="app-content">
+                <span class="app-tag" style="background:rgba(99,102,241,0.2);color:#818cf8;">Katalog</span>
+                <div class="app-meta-tags">
+                    <span class="meta-tag meta-tag--beginner">🟢 Začátečník</span>
+                    <span class="meta-tag meta-tag--quick">⏱ 5 minut</span>
+                </div>
+                <h3 class="app-title">GemForge</h3>
+                <p class="app-description">
+                    Katalog hotových Gemů pro Gemini AI. Plánování hodin, tvorba materiálů, hodnocení, podpora žáků i administrativa — vše připravené pro českou školu. Stačí vybrat, otevřít a použít.
+                </p>
+                <div class="app-actions">
+                    <a href="https://gemforge.netlify.app/" class="btn-launch" target="_blank" rel="noopener noreferrer">Otevřít GemForge</a>
+                </div>
+            </div>
+        </div>
 
     </div>
+    <p class="no-results-msg" id="apps-no-results">Žádný nástroj neodpovídá vašemu hledání. Zkuste jiný výraz nebo odstraňte filtr.</p>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 AI Educator. Vytvořeno s vášní pro vzdělávání a technologie.</p>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">AI Educator</a>
+                <p>Praktické AI nástroje, návody a novinky pro učitele a studenty.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Sekce</h4>
+                <ul>
+                    <li><a href="teachers.html">Pro učitele</a></li>
+                    <li><a href="students.html">Pro studenty</a></li>
+                    <li><a href="news.html">Novinky</a></li>
+                    <li><a href="apps.html">Nástroje</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Oblíbené</h4>
+                <ul>
+                    <li><a href="index.html#about">O projektu</a></li>
+                    <li><a href="index.html#contact">Kontakt</a></li>
+                    <li><a href="index.html#newsletter">Odebírat novinky</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025–2026 AI Educator. Vzdělávání s pomocí umělé inteligence.</p>
+        </div>
     </footer>
 
     <!-- JavaScript -->
     <script src="script.js"></script>
+    <script>
+    /* ---- Wizard styles injected via JS to keep HTML clean ---- */
+    const wizardStyle = document.createElement('style');
+    wizardStyle.textContent = `
+      .wizard-btn {
+        padding: 0.5rem 1rem;
+        border-radius: 2rem;
+        border: 1px solid rgba(255,255,255,0.15);
+        background: rgba(255,255,255,0.06);
+        color: var(--text-secondary);
+        font-size: var(--font-size-sm);
+        font-weight: 600;
+        font-family: var(--font-primary);
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .wizard-btn:hover {
+        background: rgba(99,102,241,0.2);
+        color: #818cf8;
+        border-color: rgba(99,102,241,0.4);
+        transform: translateY(-1px);
+      }
+      .wizard-result-card {
+        background: rgba(30,41,59,0.9);
+        border: 1px solid rgba(99,102,241,0.25);
+        border-radius: var(--radius-lg);
+        padding: 1rem 1.25rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        text-decoration: none;
+        transition: all 0.2s;
+        margin-bottom: 0.5rem;
+      }
+      .wizard-result-card:hover {
+        border-color: rgba(99,102,241,0.5);
+        transform: translateX(4px);
+      }
+      .wizard-result-card .wrc-icon { font-size: 1.75rem; flex-shrink: 0; }
+      .wizard-result-card .wrc-title { font-weight: 700; color: var(--text-primary); font-size: 0.95rem; }
+      .wizard-result-card .wrc-desc { color: var(--text-muted); font-size: 0.8rem; margin:0; }
+      details > summary::-webkit-details-marker { display: none; }
+    `;
+    document.head.appendChild(wizardStyle);
+
+    /* ---- Wizard logic ---- */
+    let wizardAnswers = {};
+
+    const TOOLS = {
+      suplovaci:   { icon:'📋', title:'Suplovací Agent',        desc:'Rychlá příprava aktivity na hodinu',     href:'substitution/index.html' },
+      wordsearch:  { icon:'🔠', title:'Generátor Osmisměrek',   desc:'Slovní zásoba jako hra',                 href:'wordsearch.html' },
+      krizovka:    { icon:'✏️', title:'Generátor Křížovek',     desc:'Křížovka z vašich slovíček',             href:'crossword/index.html' },
+      slovicka:    { icon:'📖', title:'Slovíčka',               desc:'Procvičování anglické slovní zásoby',    href:'https://englishworkshops.netlify.app/' },
+      promptvault: { icon:'🗄️', title:'PromptVault',            desc:'Databáze osvědčených promptů',           href:'https://educatorai-promptvault.netlify.app/' },
+      infoprompt:  { icon:'📊', title:'Generátor promptů – Infografika', desc:'Prompt pro tvorbu infografik v NotebookLM', href:'https://generator-promptu.netlify.app/' },
+      audioprompt: { icon:'🎧', title:'Generátor promptů – Audio & Video', desc:'Prompt pro AI audio/video nástroje', href:'https://promptgenerator-audio-video.netlify.app/' },
+      prezprompt:  { icon:'🖼️', title:'Generátor promptů – Prezentace', desc:'Podklady pro profesionální prezentace', href:'https://ntb-presentation-prompt.netlify.app/' },
+      notebooklm:  { icon:'📓', title:'NotebookLM Průvodce',    desc:'Kompletní průvodce nástrojem od Google', href:'https://notebooklm-pruvodce.netlify.app/' },
+      gemini:      { icon:'✨', title:'Gemini Gemy pro učitele', desc:'AI asistenti pro přípravu hodin',        href:'gemini-pro-ucitele.html' },
+      asistenti:   { icon:'🤖', title:'AI Asistenti (Gemy)',     desc:'AI asistenti pro žáky – EMP, ROZ',       href:'ai-assistants.html' },
+      recyklace:   { icon:'♻️', title:'Pomocník s tříděním',     desc:'Ekologická výchova – třídění odpadu',    href:'https://recyklace.netlify.app/' },
+      cviceni:     { icon:'🎯', title:'Cvičení angličtiny',      desc:'Interaktivní gramatická cvičení',        href:'https://cviceni-anj.netlify.app/' },
+    };
+
+    const RECOMMENDATIONS = {
+      hodina:     { rychle: { ucitel: ['suplovaci','promptvault','gemini'],   student: ['slovicka','cviceni','wordsearch'] },
+                    pulhodina:{ ucitel: ['gemini','notebooklm','infoprompt'],  student: ['slovicka','krizovka','wordsearch'] },
+                    projekt:  { ucitel: ['notebooklm','prezprompt','infoprompt'], student: ['notebooklm','cviceni','slovicka'] } },
+      procviceni: { rychle: { ucitel: ['wordsearch','krizovka','cviceni'],    student: ['slovicka','cviceni','krizovka'] },
+                    pulhodina:{ ucitel: ['krizovka','cviceni','recyklace'],    student: ['cviceni','slovicka','krizovka'] },
+                    projekt:  { ucitel: ['cviceni','recyklace','notebooklm'],  student: ['cviceni','slovicka','notebooklm'] } },
+      prompty:    { rychle: { ucitel: ['promptvault','infoprompt','prezprompt'],  student: ['promptvault','audioprompt','infoprompt'] },
+                    pulhodina:{ ucitel: ['infoprompt','prezprompt','audioprompt'],student: ['audioprompt','infoprompt','prezprompt'] },
+                    projekt:  { ucitel: ['prezprompt','infoprompt','notebooklm'], student: ['audioprompt','prezprompt','notebooklm'] } },
+      studium:    { rychle: { ucitel: ['promptvault','notebooklm','gemini'],   student: ['slovicka','cviceni','asistenti'] },
+                    pulhodina:{ ucitel: ['notebooklm','gemini','infoprompt'],   student: ['notebooklm','asistenti','slovicka'] },
+                    projekt:  { ucitel: ['notebooklm','gemini','prezprompt'],   student: ['notebooklm','asistenti','cviceni'] } },
+    };
+
+    function wizardNext(step, answer) {
+      wizardAnswers['step'+step] = answer;
+      document.getElementById('step-'+step).style.display = 'none';
+      if (step < 3) document.getElementById('step-'+(step+1)).style.display = 'block';
+    }
+
+    function wizardResult(audience) {
+      wizardAnswers.step3 = audience;
+      document.getElementById('step-3').style.display = 'none';
+      const goal = wizardAnswers.step1;
+      const time = wizardAnswers.step2;
+      const keys = RECOMMENDATIONS[goal]?.[time]?.[audience] || ['notebooklm','promptvault','wordsearch'];
+      const resultEl = document.getElementById('wizard-result');
+      resultEl.innerHTML = '<p style="font-weight:700;color:var(--text-primary);margin-bottom:0.75rem;">🎯 Doporučené nástroje pro vás:</p>' +
+        keys.map(k => {
+          const t = TOOLS[k];
+          const isExternal = t.href.startsWith('http');
+          return `<a href="${t.href}" class="wizard-result-card"${isExternal?' target="_blank" rel="noopener noreferrer"':''}>
+            <span class="wrc-icon">${t.icon}</span>
+            <div><div class="wrc-title">${t.title}</div><p class="wrc-desc">${t.desc}</p></div>
+          </a>`;
+        }).join('');
+      resultEl.style.display = 'block';
+      document.getElementById('wizard-reset').style.display = 'inline-block';
+    }
+
+    function wizardReset() {
+      wizardAnswers = {};
+      ['step-1','step-2','step-3'].forEach((id,i) => {
+        document.getElementById(id).style.display = i===0 ? 'block' : 'none';
+      });
+      document.getElementById('wizard-result').style.display = 'none';
+      document.getElementById('wizard-reset').style.display = 'none';
+    }
+
+    /* ---- Filter logic ---- */
+    let activeFilter = 'all';
+    function setAppsFilter(btn) {
+        document.querySelectorAll('#apps-chips .filter-chip').forEach(c => c.classList.remove('active'));
+        btn.classList.add('active');
+        activeFilter = btn.dataset.filter;
+        filterApps();
+    }
+    function filterApps() {
+        const q = document.getElementById('apps-search').value.toLowerCase();
+        const cards = document.querySelectorAll('.apps-grid .app-card, .apps-grid a.app-card');
+        let visible = 0;
+        cards.forEach(card => {
+            const cat = (card.dataset.category || '').toLowerCase();
+            const name = (card.dataset.name || '').toLowerCase();
+            const matchFilter = activeFilter === 'all' || cat.includes(activeFilter);
+            const matchSearch = !q || name.includes(q) || cat.includes(q);
+            if (matchFilter && matchSearch) { card.style.display = ''; visible++; }
+            else card.style.display = 'none';
+        });
+        const countEl = document.getElementById('apps-count');
+        countEl.textContent = q || activeFilter !== 'all' ? `Zobrazeno: ${visible} nástrojů` : '';
+        const noRes = document.getElementById('apps-no-results');
+        noRes.classList.toggle('visible', visible === 0);
+    }
+    </script>
 </body>
 
 </html>

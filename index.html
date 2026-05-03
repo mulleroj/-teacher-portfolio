@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="cs">
 
 <head>
@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO Meta Tags -->
-    <title>AI ve vzdělávání | Nástroje, novinky a inspirace pro učitele</title>
+    <title>AI Educator | Praktické AI nástroje a návody pro učitele a studenty</title>
     <meta name="description"
-        content="Objevte nejnovější trendy umělé inteligence ve vzdělávání. Praktické nástroje, tipy a novinky pro moderní výuku.">
+        content="Praktické AI nástroje, návody a novinky pro učitele a studenty. Objevte, jak umělá inteligence mění moderní vzdělávání.">
     <meta name="keywords"
-        content="AI ve vzdělávání, umělá inteligence, vzdělávací nástroje, moderní výuka, EdTech, AI tools">
+        content="AI ve vzdělávání, umělá inteligence, vzdělávací nástroje, moderní výuka, EdTech, AI tools, NotebookLM, ChatGPT ve škole">
     <meta name="author" content="AI Educator">
 
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="AI ve vzdělávání">
-    <meta property="og:description" content="Nástroje, novinky a inspirace pro moderní učitele">
+    <meta property="og:title" content="AI Educator | Nástroje a návody pro moderní výuku">
+    <meta property="og:description" content="Praktické AI nástroje, návody a novinky pro učitele a studenty">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://educatorai.netlify.app/">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,20 +25,20 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap&subset=latin,latin-ext"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="stylesheet" href="style.css?v=3">
 </head>
 
 <body>
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="index.html" class="logo">✨ AI Educator</a>
-            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
-                ☰
-            </button>
+            <a href="index.html" class="logo">AI Educator</a>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Otevřít menu">☰</button>
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#" class="nav-link active">Domů</a></li>
-                <li><a href="#explore" class="nav-link">Prozkoumejte AI</a></li>
+                <li><a href="teachers.html" class="nav-link">Pro učitele</a></li>
+                <li><a href="students.html" class="nav-link">Pro studenty</a></li>
+                <li><a href="news.html" class="nav-link">Novinky</a></li>
                 <li><a href="apps.html" class="nav-link">Nástroje</a></li>
                 <li><a href="#contact" class="nav-link">Kontakt</a></li>
             </ul>
@@ -47,85 +48,183 @@
     <!-- Hero Section -->
     <section id="hero" class="hero">
         <div class="hero-content">
-            <h1 class="fade-in">AI ve vzdělávání</h1>
-            <p class="hero-subtitle fade-in">Nástroje, novinky a inspirace pro moderní výuku</p>
-            <p class="hero-description fade-in">
-                Objevte, jak umělá inteligence mění vzdělávání. Praktické tipy, nástroje a aktuální trendy.
+            <h1 class="fade-in">Praktické AI nástroje a návody pro učitele, studenty a moderní výuku</h1>
+            <p class="hero-subtitle fade-in">
+                Objevte, testujte a využívejte umělou inteligenci ve výuce — přehledně, bezpečně a s konkrétními výsledky.
             </p>
-            <a href="#explore" class="btn-primary">Prozkoumejte AI →</a>
+            <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;" class="fade-in">
+                <a href="apps.html" class="btn-primary">Vybrat AI nástroj →</a>
+                <a href="teachers.html" class="btn-primary" style="background:rgba(255,255,255,0.08);box-shadow:none;border:1px solid rgba(255,255,255,0.18);">Prozkoumat návody</a>
+            </div>
+            <!-- Role Quick-Pick -->
+            <div class="role-picker fade-in">
+                <a href="teachers.html" class="role-btn role-btn--teachers">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    Jsem učitel
+                </a>
+                <a href="students.html" class="role-btn role-btn--students">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                    Jsem student
+                </a>
+                <a href="apps.html" class="role-btn role-btn--tools">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                    Hledám nástroj
+                </a>
+            </div>
         </div>
     </section>
-
-
 
     <!-- Explore Sections -->
     <section id="explore" class="explore-sections">
         <div class="section-header">
             <h2 class="section-title">Prozkoumejte svět AI</h2>
-            <p class="section-description">
-                Vyberte si oblast, která vás zajímá
-            </p>
+            <p class="section-description">Vyberte oblast, která vás zajímá</p>
         </div>
 
         <div class="explore-grid">
-            <!-- Students Section -->
+            <!-- Students -->
             <a href="students.html" class="explore-card explore-card--students">
                 <div class="explore-card__image">
-                    <img src="assets/students-hero.png" alt="AI Lab pro studenty">
+                    <img src="assets/students-hero.png" alt="AI Lab pro studenty" loading="lazy">
                 </div>
                 <div class="explore-card__content">
-                    <h3 class="explore-card__title">🧪 AI Lab</h3>
+                    <div class="section-icon section-icon--students">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M22 10v6M2 10l10-5 10 5-10 5z"/><path stroke-linecap="round" stroke-linejoin="round" d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                    </div>
+                    <h3 class="explore-card__title">AI Lab</h3>
                     <p class="explore-card__subtitle">Pro studenty</p>
                     <p class="explore-card__description">
                         Experimentuj s AI, nauč se nové dovednosti a objev možnosti umělé inteligence
                     </p>
-                    <span class="explore-card__cta">Prozkoumat →</span>
+                    <span class="explore-card__cta">Připravit se na zkoušku →</span>
                 </div>
             </a>
 
-            <!-- Teachers Section -->
+            <!-- Teachers -->
             <a href="teachers.html" class="explore-card explore-card--teachers">
                 <div class="explore-card__image">
-                    <img src="assets/teachers-hero.png" alt="AI Toolkit pro učitele">
+                    <img src="assets/teachers-hero.png" alt="AI Toolkit pro učitele" loading="lazy">
                 </div>
                 <div class="explore-card__content">
-                    <h3 class="explore-card__title">🛠️ AI Toolkit</h3>
+                    <div class="section-icon section-icon--teachers">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                    </div>
+                    <h3 class="explore-card__title">AI Toolkit</h3>
                     <p class="explore-card__subtitle">Pro učitele</p>
                     <p class="explore-card__description">
                         Nástroje a tipy pro moderní výuku s umělou inteligencí
                     </p>
-                    <span class="explore-card__cta">Prozkoumat →</span>
+                    <span class="explore-card__cta">Zobrazit návod pro učitele →</span>
                 </div>
             </a>
 
-            <!-- News Section -->
+            <!-- News -->
             <a href="news.html" class="explore-card explore-card--news">
                 <div class="explore-card__image">
-                    <img src="assets/news-hero.png" alt="AI Pulse novinky">
+                    <img src="assets/news-hero.png" alt="AI Pulse novinky" loading="lazy">
                 </div>
                 <div class="explore-card__content">
-                    <h3 class="explore-card__title">⚡ AI Pulse</h3>
+                    <div class="section-icon section-icon--news">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
+                    <h3 class="explore-card__title">AI Pulse</h3>
                     <p class="explore-card__subtitle">Novinky ze světa AI</p>
                     <p class="explore-card__description">
                         Co je nového ve světě umělé inteligence? Trendy, etika a budoucnost.
                     </p>
-                    <span class="explore-card__cta">Prozkoumat →</span>
+                    <span class="explore-card__cta">Číst nejnovější zprávy →</span>
                 </div>
             </a>
         </div>
+    </section>
+
+    <!-- Featured Tool of the Week -->
+    <section style="padding-top:0;">
+        <a href="https://notebooklm.google.com" target="_blank" rel="noopener noreferrer" class="featured-tool">
+            <div class="featured-tool-icon">📓</div>
+            <div class="featured-tool-content">
+                <span class="featured-tool-badge">⭐ Nástroj týdne</span>
+                <h3>NotebookLM</h3>
+                <p>AI notebook od Google, který z vašich vlastních dokumentů vytvoří přehledy, kvízy, audio shrnutí a studijní průvodce. Zdarma, bez registrace, česky.</p>
+                <span class="featured-tool-cta">Začít s NotebookLM →</span>
+            </div>
+        </a>
     </section>
 
     <!-- Recent Articles Section -->
     <section id="recent-articles" class="recent-articles-section">
         <div class="section-header">
             <h2 class="section-title">Nejnovější články</h2>
-            <p class="section-description">
-                Aktuální příspěvky ze všech sekcí webu
-            </p>
+            <p class="section-description">Aktuální příspěvky ze všech sekcí webu</p>
         </div>
-
         <div id="recent-articles-grid" class="recent-articles-grid">
-            <!-- Articles will be populated by JavaScript -->
+            <!-- Populated by articles.js -->
+        </div>
+        <div style="text-align:center;margin-top:2rem;">
+            <a href="news.html" class="btn-primary" style="font-size:0.95rem;">Zobrazit všechny novinky →</a>
+        </div>
+    </section>
+
+    <!-- O projektu / About -->
+    <section id="about">
+        <div class="about-project">
+            <div class="section-header" style="margin-bottom:0;">
+                <h2 class="section-title">O projektu</h2>
+                <p class="section-description">Proč tomuto webu věřit a kdo za ním stojí</p>
+            </div>
+            <div class="about-project-grid">
+                <div class="about-project-item">
+                    <div class="about-project-item-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                    </div>
+                    <div class="about-project-item-text">
+                        <!-- TODO: doplnit jméno/titul -->
+                        <strong>Kdo obsah připravuje</strong>
+                        <span>Učitelka s praxí, která AI nástroje aktivně testuje ve výuce a sdílí jen to, co skutečně funguje.</span>
+                    </div>
+                </div>
+                <div class="about-project-item">
+                    <div class="about-project-item-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    </div>
+                    <div class="about-project-item-text">
+                        <strong>Pro koho je web určen</strong>
+                        <span>Učitelé a studenti, kteří chtějí využívat AI prakticky — bez technického zázemí.</span>
+                    </div>
+                </div>
+                <div class="about-project-item">
+                    <div class="about-project-item-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                    </div>
+                    <div class="about-project-item-text">
+                        <strong>Jak často se aktualizuje</strong>
+                        <span>Obsah je pravidelně doplňován — novinky, nástroje i návody sledují aktuální dění v AI.</span>
+                    </div>
+                </div>
+                <div class="about-project-item">
+                    <div class="about-project-item-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    </div>
+                    <div class="about-project-item-text">
+                        <strong>Bezpečnost a ověřování</strong>
+                        <span>U zdravotních a citlivých témat jsou upozornění. Informace jsou doplněny zdroji.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section id="newsletter">
+        <div class="newsletter-section">
+            <h2>Novinky přímo do vaší schránky</h2>
+            <p>Dostávejte AI tipy, nástroje a návody pro učitele každé dva týdny. Bez spamu.</p>
+            <a href="https://aieducatorai.substack.com" target="_blank" rel="noopener noreferrer" class="btn-primary" style="display:inline-block;margin-top:0.5rem;">
+                Odebírat novinky na Substack →
+            </a>
+            <p class="newsletter-disclaimer">
+                Odhlásit se můžete kdykoliv jedním kliknutím.
+            </p>
         </div>
     </section>
 
@@ -133,27 +232,32 @@
     <section id="contact">
         <div class="contact">
             <h2 class="section-title">Kontakt</h2>
-            <p class="section-description">
-                Máte dotaz nebo chcete diskutovat o AI ve vzdělávání?
-            </p>
+            <p class="section-description">Máte dotaz nebo chcete diskutovat o AI ve vzdělávání?</p>
 
             <div class="contact-info">
                 <div class="contact-item">
-                    <div class="contact-icon">📧</div>
+                    <div class="contact-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    </div>
                     <strong>Email</strong>
-                    <a href="mailto:ucitelka@example.com">ucitelka@example.com</a>
+                    <!-- TODO: doplnit reálný email -->
+                    <a href="mailto:info@educatorai.cz">info@educatorai.cz</a>
                 </div>
 
                 <div class="contact-item">
-                    <div class="contact-icon">🏫</div>
-                    <strong>Škola</strong>
-                    <p>Vaše škola</p>
+                    <div class="contact-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+                    </div>
+                    <strong>Diskuze</strong>
+                    <p>Napište nám — rádi odpovíme</p>
                 </div>
 
                 <div class="contact-item">
-                    <div class="contact-icon">💬</div>
+                    <div class="contact-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
                     <strong>Konzultace</strong>
-                    <p>Po domluvě</p>
+                    <p>Po domluvě e-mailem</p>
                 </div>
             </div>
         </div>
@@ -161,7 +265,34 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 AI Educator. Vzdělávání s pomocí umělé inteligence.</p>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">AI Educator</a>
+                <p>Praktické AI nástroje, návody a novinky pro učitele a studenty v České republice.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Sekce</h4>
+                <ul>
+                    <li><a href="teachers.html">Pro učitele</a></li>
+                    <li><a href="students.html">Pro studenty</a></li>
+                    <li><a href="news.html">Novinky</a></li>
+                    <li><a href="apps.html">Nástroje</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Oblíbené</h4>
+                <ul>
+                    <li><a href="notebooklm/notebooklm-chaos.html">NotebookLM pro učitele</a></li>
+                    <li><a href="ai-news/notebooklm-studijni-asistent.html">NotebookLM pro studenty</a></li>
+                    <li><a href="tutorials/tvorba-pracovnich-listu-s-chatgpt.html">Tvorba pracovních listů</a></li>
+                    <li><a href="#about">O projektu</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025–2026 AI Educator. Vzdělávání s pomocí umělé inteligence.</p>
+            <p>Obsah je informační. Vždy ověřujte informace z více zdrojů.</p>
+        </div>
     </footer>
 
     <!-- JavaScript -->

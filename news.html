@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="cs">
 
 <head>
@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO Meta Tags -->
-    <title>⚡ AI Pulse | Novinky ze světa AI</title>
+    <title>AI Pulse | Novinky ze světa AI</title>
     <meta name="description"
         content="Nejnovější trendy, etika a budoucnost umělé inteligence. Co je nového ve světě AI?">
 
@@ -119,172 +119,194 @@
     <!-- Navigation -->
     <nav class="navbar scrolled" id="navbar">
         <div class="nav-container">
-            <a href="index.html" class="logo">✨ AI Educator</a>
-            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
-                ☰
-            </button>
+            <a href="index.html" class="logo">AI Educator</a>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Otevřít menu">☰</button>
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html" class="nav-link">Domů</a></li>
-                <li><a href="index.html#explore" class="nav-link">Prozkoumejte AI</a></li>
+                <li><a href="teachers.html" class="nav-link">Pro učitele</a></li>
+                <li><a href="students.html" class="nav-link">Pro studenty</a></li>
+                <li><a href="news.html" class="nav-link active">Novinky</a></li>
                 <li><a href="apps.html" class="nav-link">Nástroje</a></li>
                 <li><a href="index.html#contact" class="nav-link">Kontakt</a></li>
             </ul>
         </div>
     </nav>
 
-    <div class="back-nav-container">
-        <a href="index.html" class="back-link">← Zpět na domovskou stránku</a>
-    </div>
 
     <!-- Hub Hero -->
     <div class="hub-hero">
-        <h1>⚡ AI Pulse</h1>
+        <div class="section-icon section-icon--news" style="margin-bottom:1rem;">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        </div>
+        <h1>AI Pulse</h1>
         <p class="subtitle">Co je nového ve světě umělé inteligence</p>
     </div>
 
-    <!-- Articles Grid -->
-    <div class="articles-grid">
-        <div class="article-card">
-            <img src="assets/moltbook-hero.png" alt="Moltbook AI Social Network">
-            <span class="date">Únor 2026</span>
-            <h3>MOLTBOOK: SOCIÁLNÍ SÍŤ, KDE ŽIJÍ POUZE AI AGENTI</h3>
-            <p>
-                Moltbook je sociální síť „ve stylu Redditu“, kterou obývají téměř výhradně autonomní AI agenti.
-                Postují, komentují a vytvářejí vlastní komunity.
-            </p>
-            <a href="ai-news/moltbook-ai-social-network.html" class="read-more">Číst více →</a>
+    <!-- Filter Bar -->
+    <div class="filter-bar" id="news-filter-bar">
+        <div class="filter-search-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="11" cy="11" r="8"/><path stroke-linecap="round" d="m21 21-4.35-4.35"/></svg>
+            <input type="search" class="filter-search" id="news-search" placeholder="Hledat v článcích..." oninput="filterNews()">
         </div>
-        <div class="article-card">
-            <img src="assets/openai-prism-hero.png" alt="OpenAI Prism">
-            <span class="date">Leden 2026</span>
-            <h3>OPENAI PRISM: REVOLUCE VE VĚDECKÉM PSÁNÍ A VÝUCE</h3>
-            <p>
-                Nový AI-native workspace pro vědce a učitele. LaTeX editor, GPT-5.2 asistence a týmová spolupráce v
-                jednom nástroji.
-            </p>
-            <a href="ai-news/openai-prism.html" class="read-more">Číst více →</a>
-        </div>
-        <div class="article-card">
-            <img src="assets/ai-evolution-specialized.png" alt="AI trendy 2026">
-            <span class="date">Leden 2026</span>
-            <h3>AI V ROCE 2026: TRENDY, NÁSTROJE A PRAKTICKÝ DOPAD</h3>
-            <p>
-                Kompletní přehled klíčových trendů v AI: evoluce LLM, multimodální generace,
-                podnikové nástroje a dopady na vzdělávání.
-            </p>
-            <a href="ai-news/ai-trendy-2026.html" class="read-more">Číst více →</a>
-        </div>
-        <div class="article-card">
-            <img src="assets/ai-privacy-hero.png" alt="8 AI promptů pro soukromí">
-            <span class="date">Leden 2026</span>
-            <h3>8 AI PROMPTŮ PRO SOUKROMÍ</h3>
-            <p>
-                Jak využít AI k ochraně vašeho soukromí, bezpečí a duševního klidu.
-                Sada 8 praktických promptů pro digitální i reálný život.
-            </p>
-            <a href="ai-news/ai-prompty-soukromi.html" class="read-more">Číst více →</a>
-        </div>
-        <div class="article-card">
-            <img src="assets/claude-healthcare-hero.png" alt="Claude for Healthcare">
-            <span class="date">Leden 2026</span>
-            <h3>Anthropic představuje Claude for Healthcare</h3>
-            <p>
-                Závod o AI ve zdravotnictví se zostřuje. Anthropic uvedl Claude for Healthcare
-                pouhé dny po OpenAI.
-            </p>
-            <a href="ai-news/claude-healthcare.html" class="read-more">Číst více →</a>
-        </div>
-        <div class="article-card">
-            <img src="assets/chatgpt-health-hero.png" alt="ChatGPT Health">
-            <span class="date">Leden 2026</span>
-            <h3>OpenAI spouští zdravotního asistenta s AI</h3>
-            <p>
-                ChatGPT Health pro spotřebitele a ChatGPT for Healthcare pro nemocnice.
-                Nejambicióznější expanze AI do zdravotnictví.
-            </p>
-            <a href="ai-news/chatgpt-health.html" class="read-more">Číst více →</a>
-        </div>
-        <div class="article-card">
-            <img src="assets/chatgpt-ads-hero.png" alt="OpenAI reklamy v ChatGPT">
-            <span class="date">Leden 2026</span>
-            <h3>OpenAI poprvé testuje reklamy v ChatGPT</h3>
-            <p>
-                OpenAI oznámilo testování reklam v ChatGPT pro bezplatné uživatele.
-                Co to znamená pro uživatele a jaká jsou bezpečnostní opatření?
-            </p>
-            <a href="ai-news/chatgpt-reklamy.html" class="read-more">Číst více →</a>
-        </div>
-        <div class="article-card">
-            <img src="assets/ai-education-hero.png" alt="AI ve vzdělávání 2025-2026">
-            <span class="date">Leden 2026</span>
-            <h3>AI ve vzdělávání 2025-2026</h3>
-            <p>
-                Komplexní přehled klíčových iniciativ, nástrojů a trendů v oblasti AI ve vzdělávání.
-                Program základka.ai, kurikulum AI dětem, praktické nástroje pro pedagogy.
-            </p>
-            <a href="ai-news/ai-ve-vzdelavani-2025-2026.html" class="read-more">Číst více →</a>
-        </div>
-        <div class="article-card">
-            <img src="assets/gemini-3-5-hero.png" alt="Gemini 3.5 Hype">
-            <span class="date">Prosinec 2025</span>
-            <h3>Gemini 3.5: Hype vs Realita</h3>
-            <p>
-                Co je potvrzené, co je hype a jaká je realita o domnělém modelu Gemini 3.5?
-                Rozbor úniků, faktů a spekulací o "Fierce Falcon".
-            </p>
-            <a href="ai-news/gemini-3-5.html" class="read-more">Číst více →</a>
-        </div>
-        <div class="article-card">
-            <img src="assets/news-week-50-hero.png" alt="AI News Week 50">
-            <span class="date">Prosinec 2025</span>
-            <h3>Přehled týdne: AI modely & Regulace</h3>
-            <p>
-                Týdenní přehled AI novinek: Claude Opus 4.5, DeepSeek V3.2, Google Gemini 3, regulace USA a další.
-                Co přinesl druhý prosincový týden?
-            </p>
-            <a href="ai-news/novinky-tyden-50-2025.html" class="read-more">Číst více →</a>
-        </div>
-
-        <div class="article-card">
-            <img src="assets/ai-ethics.png" alt="Etika AI">
-            <span class="date">Říjen 2025</span>
-            <h3>Etika AI: Co by měl každý vědět</h3>
-            <p>
-                Diskuze o etických otázkách spojených s umělou inteligencí.
-                Proč je důležité rozumět AI nejen jako nástroji, ale i jejím dopadům na společnost.
-            </p>
-            <a href="ai-news/ai-ethics.html" class="read-more">Číst více →</a>
-        </div>
-
-        <div class="article-card">
-            <img src="assets/critical-thinking.png" alt="Kritické myšlení">
-            <span class="date">Září 2025</span>
-            <h3>Kritické myšlení v době AI</h3>
-            <p>
-                Proč je v době AI ještě důležitější umět kriticky myslet, ověřovat informace
-                a nebrat vše za bernou minci. Praktické návody.
-            </p>
-            <a href="ai-news/critical-thinking.html" class="read-more">Číst více →</a>
-        </div>
-
-        <!-- Placeholder for future articles -->
-        <div class="article-card" style="opacity: 0.6; border-style: dashed;">
-            <span class="date">Připravujeme</span>
-            <h3>Další novinky již brzy</h3>
-            <p>
-                Sledujeme nejnovější trendy ve světě AI.
-                Brzy přidáme další zajímavé články!
-            </p>
+        <div class="filter-chips" id="news-chips">
+            <button class="filter-chip active" data-filter="all" onclick="setNewsFilter(this)">Vše</button>
+            <button class="filter-chip" data-filter="trend" onclick="setNewsFilter(this)">Trendy</button>
+            <button class="filter-chip" data-filter="navod" onclick="setNewsFilter(this)">Návody</button>
+            <button class="filter-chip" data-filter="zprava" onclick="setNewsFilter(this)">Zprávy</button>
+            <button class="filter-chip" data-filter="bezpecnost" onclick="setNewsFilter(this)">Bezpečnost</button>
+            <button class="filter-chip" data-filter="vzdelavani" onclick="setNewsFilter(this)">Vzdělávání</button>
         </div>
     </div>
+    <p class="filter-results-count" id="news-count"></p>
+
+    <!-- Articles Grid -->
+    <div class="articles-grid" id="news-grid">
+        <div class="article-card" data-category="trend zprava" data-title="moltbook sociální síť ai agenti">
+            <img src="assets/moltbook-hero.png" alt="Moltbook AI Social Network" loading="lazy">
+            <span class="article-type-badge badge--trend">💡 Trend</span><span class="date">Únor 2026</span>
+            <h3>MOLTBOOK: SOCIÁLNÍ SÍŤ, KDE ŽIJÍ POUZE AI AGENTI</h3>
+            <p>Moltbook je sociální síť „ve stylu Redditu“, kterou obývají téměř výhradně autonomní AI agenti. Postují, komentují a vytvářejí vlastní komunity.</p>
+            <a href="ai-news/moltbook-ai-social-network.html" class="read-more">Otevřít článek →</a>
+        </div>
+        <div class="article-card" data-category="zprava" data-title="openai prism vědecké psaní latex">
+            <img src="assets/openai-prism-hero.png" alt="OpenAI Prism" loading="lazy">
+            <span class="article-type-badge badge--zprava">📰 Zpráva</span><span class="date">Leden 2026</span>
+            <h3>OPENAI PRISM: REVOLUCE VE VĚDECKÉM PSANÍ A VÝUCE</h3>
+            <p>Nový AI-native workspace pro vědce a učitele. LaTeX editor, GPT-5.2 asistence a týmová spolupráce v jednom nástroji.</p>
+            <a href="ai-news/openai-prism.html" class="read-more">Otevřít článek →</a>
+        </div>
+        <div class="article-card" data-category="trend vzdelavani" data-title="ai trendy 2026 llm multimodální vzdělávání">
+            <img src="assets/ai-evolution-specialized.png" alt="AI trendy 2026" loading="lazy">
+            <span class="article-type-badge badge--trend">💡 Trend</span><span class="date">Leden 2026</span>
+            <h3>AI V ROCE 2026: TRENDY, NÁSTROJE A PRAKTICKÝ DOPAD</h3>
+            <p>Kompletní přehled klíčových trendů v AI: evoluce LLM, multimodální generace, podnikové nástroje a dopady na vzdělávání.</p>
+            <a href="ai-news/ai-trendy-2026.html" class="read-more">Otevřít článek →</a>
+        </div>
+        <div class="article-card" data-category="bezpecnost" data-title="prompty soukromí bezpečí digitalni">
+            <img src="assets/ai-privacy-hero.png" alt="8 AI promptů pro soukromí" loading="lazy">
+            <span class="article-type-badge badge--bezpecnost">🔒 Bezpečnost</span><span class="date">Leden 2026</span>
+            <h3>8 AI PROMPTŮ PRO SOUKROMÍ</h3>
+            <p>Jak využít AI k ochraně vašeho soukromí, bezpečí a duševního klidu. Sada 8 praktických promptů pro digitální i reálný život.</p>
+            <a href="ai-news/ai-prompty-soukromi.html" class="read-more">Otevřít článek →</a>
+        </div>
+        <div class="article-card" data-category="zprava" data-title="claude healthcare anthropic zdravotnictví">
+            <img src="assets/claude-healthcare-hero.png" alt="Claude for Healthcare" loading="lazy">
+            <span class="article-type-badge badge--zprava">📰 Zpráva</span><span class="date">Leden 2026</span>
+            <h3>Anthropic představuje Claude for Healthcare</h3>
+            <p>Závod o AI ve zdravotnictví se zostřuje. Anthropic uvedl Claude for Healthcare pouhé dny po OpenAI.<br><small style="color:#f87171;">⚠️ Toto není lékařské doporučení.</small></p>
+            <a href="ai-news/claude-healthcare.html" class="read-more">Otevřít článek →</a>
+        </div>
+        <div class="article-card" data-category="zprava" data-title="chatgpt health openai zdravotní asistent">
+            <img src="assets/chatgpt-health-hero.png" alt="ChatGPT Health" loading="lazy">
+            <span class="article-type-badge badge--zprava">📰 Zpráva</span><span class="date">Leden 2026</span>
+            <h3>OpenAI spouští zdravotního asistenta s AI</h3>
+            <p>ChatGPT Health pro spotřebitele a ChatGPT for Healthcare pro nemocnice. Nejambicióznější expanze AI do zdravotnictví.<br><small style="color:#f87171;">⚠️ Toto není lékařské doporučení.</small></p>
+            <a href="ai-news/chatgpt-health.html" class="read-more">Otevřít článek →</a>
+        </div>
+        <div class="article-card" data-category="zprava" data-title="openai reklamy chatgpt bezplatní uživatelé">
+            <img src="assets/chatgpt-ads-hero.png" alt="OpenAI reklamy v ChatGPT" loading="lazy">
+            <span class="article-type-badge badge--zprava">📰 Zpráva</span><span class="date">Leden 2026</span>
+            <h3>OpenAI poprvé testuje reklamy v ChatGPT</h3>
+            <p>OpenAI oznámilo testování reklam v ChatGPT pro bezplatné uživatele. Co to znamená pro uživatele a jaká jsou bezpečnostní opatření?</p>
+            <a href="ai-news/chatgpt-reklamy.html" class="read-more">Otevřít článek →</a>
+        </div>
+        <div class="article-card" data-category="vzdelavani trend" data-title="ai ve vzdělávání základka kurikulum pedagog">
+            <img src="assets/ai-education-hero.png" alt="AI ve vzdělávání 2025-2026" loading="lazy">
+            <span class="article-type-badge badge--trend">💡 Trend</span><span class="date">Leden 2026</span>
+            <h3>AI ve vzdělávání 2025–2026</h3>
+            <p>Kompletní přehled klíčových iniciativ, nástrojů a trendů v oblasti AI ve vzdělávání. Program základka.ai, kurikulum AI dětem, praktické nástroje pro pedagogy.</p>
+            <a href="ai-news/ai-ve-vzdelavani-2025-2026.html" class="read-more">Otevřít článek →</a>
+        </div>
+        <div class="article-card" data-category="trend" data-title="gemini 3.5 hype realita fierce falcon">
+            <img src="assets/gemini-3-5-hero.png" alt="Gemini 3.5 Hype" loading="lazy">
+            <span class="article-type-badge badge--trend">💡 Trend</span><span class="date">Prosinec 2025</span>
+            <h3>Gemini 3.5: Hype vs Realita</h3>
+            <p>Co je potvrzeno, co je hype a jaká je realita o domléném modelu Gemini 3.5? Rozbor úniků, faktů a spekulací.</p>
+            <a href="ai-news/gemini-3-5.html" class="read-more">Otevřít článek →</a>
+        </div>
+        <div class="article-card" data-category="zprava" data-title="přehled týdne ai modely regulace claude deepseek">
+            <img src="assets/news-week-50-hero.png" alt="AI News Week 50" loading="lazy">
+            <span class="article-type-badge badge--zprava">📰 Zpráva</span><span class="date">Prosinec 2025</span>
+            <h3>Přehled týdne: AI modely &amp; Regulace</h3>
+            <p>Týdenní přehled AI novinek: Claude Opus 4.5, DeepSeek V3.2, Google Gemini 3, regulace USA a další.</p>
+            <a href="ai-news/novinky-tyden-50-2025.html" class="read-more">Otevřít článek →</a>
+        </div>
+        <div class="article-card" data-category="bezpecnost" data-title="etika ai společnost dopady">
+            <img src="assets/ai-ethics.png" alt="Etika AI" loading="lazy">
+            <span class="article-type-badge badge--etika">⚖️ Etika</span><span class="date">Říjen 2025</span>
+            <h3>Etika AI: Co by měl každý vědět</h3>
+            <p>Diskuze o etických otázkách spojených s umělou inteligencí. Proč je důležité rozumět AI nejen jako nástroji.</p>
+            <a href="ai-news/ai-ethics.html" class="read-more">Otevřít článek →</a>
+        </div>
+        <div class="article-card" data-category="navod" data-title="kritické myšlení ověřování informací">
+            <img src="assets/critical-thinking.png" alt="Kritické myšlení" loading="lazy">
+            <span class="article-type-badge badge--navod">📖 Návod</span><span class="date">Září 2025</span>
+            <h3>Kritické myšlení v době AI</h3>
+            <p>Proč je v době AI ještě důležitější umět kriticky myslet, ověřovat informace a nebrat vše za bernou minci.</p>
+            <a href="ai-news/critical-thinking.html" class="read-more">Otevřít článek →</a>
+        </div>
+    </div>
+    <p class="no-results-msg" id="news-no-results">Žádný článek neodpovídá vašemu hledání. Zkuste jiný výraz nebo filtr.</p>
+
+
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 AI Educator. Vzdělávání s pomocí umělé inteligence.</p>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">AI Educator</a>
+                <p>Praktické AI nástroje, návody a novinky pro učitele a studenty.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Sekce</h4>
+                <ul>
+                    <li><a href="teachers.html">Pro učitele</a></li>
+                    <li><a href="students.html">Pro studenty</a></li>
+                    <li><a href="news.html">Novinky</a></li>
+                    <li><a href="apps.html">Nástroje</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Oblíbené</h4>
+                <ul>
+                    <li><a href="index.html#about">O projektu</a></li>
+                    <li><a href="index.html#contact">Kontakt</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025–2026 AI Educator. Vzdělávání s pomocí umělé inteligence.</p>
+        </div>
     </footer>
 
     <!-- JavaScript -->
     <script src="script.js"></script>
+    <script>
+    let activeNewsFilter = 'all';
+    function setNewsFilter(btn) {
+        document.querySelectorAll('#news-chips .filter-chip').forEach(c => c.classList.remove('active'));
+        btn.classList.add('active');
+        activeNewsFilter = btn.dataset.filter;
+        filterNews();
+    }
+    function filterNews() {
+        const q = document.getElementById('news-search').value.toLowerCase();
+        const cards = document.querySelectorAll('#news-grid .article-card');
+        let visible = 0;
+        cards.forEach(card => {
+            const cat = (card.dataset.category || '').toLowerCase();
+            const title = (card.dataset.title || '').toLowerCase();
+            const matchFilter = activeNewsFilter === 'all' || cat.includes(activeNewsFilter);
+            const matchSearch = !q || title.includes(q) || cat.includes(q);
+            if (matchFilter && matchSearch) { card.style.display = ''; visible++; }
+            else card.style.display = 'none';
+        });
+        const countEl = document.getElementById('news-count');
+        countEl.textContent = q || activeNewsFilter !== 'all' ? `Zobrazeno: ${visible} článků` : '';
+        const noRes = document.getElementById('news-no-results');
+        noRes.classList.toggle('visible', visible === 0);
+    }
+    </script>
 </body>
 
 </html>
