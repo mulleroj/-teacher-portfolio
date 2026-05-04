@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="cs">
 
 <head>
@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style.css?v=3">
 
     <style>
         .article-container {
@@ -136,13 +136,14 @@
 
 <body>
     <!-- Navigace -->
-    <nav class="navbar scrolled">
+    <nav class="navbar scrolled" id="navbar">
         <div class="nav-container">
-            <a href="../index.html" class="logo">✨ AI Educator</a>
-            <ul class="nav-menu">
+            <a href="../index.html" class="logo">AI Educator</a>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Otevřít menu">☰</button>
+            <ul class="nav-menu" id="nav-menu">
                 <li><a href="../index.html" class="nav-link">Domů</a></li>
-                <li><a href="../teachers.html" class="nav-link active">AI Toolkit</a></li>
-                <li><a href="../index.html#explore" class="nav-link">Prozkoumejte AI</a></li>
+                <li><a href="../teachers.html" class="nav-link active">Pro učitele</a></li>
+                <li><a href="../news.html" class="nav-link">Novinky</a></li>
                 <li><a href="../apps.html" class="nav-link">Nástroje</a></li>
             </ul>
         </div>
@@ -261,7 +262,33 @@
     </article>
 
     <footer>
-        <p>&copy; 2025 AI Educator. Vzdělávání s pomocí umělé inteligence.</p>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo">AI Educator</a>
+                <p>Praktické AI nástroje, návody a novinky pro učitele a studenty.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Sekce</h4>
+                <ul>
+                    <li><a href="../teachers.html">Pro učitele</a></li>
+                    <li><a href="../students.html">Pro studenty</a></li>
+                    <li><a href="../news.html">Novinky</a></li>
+                    <li><a href="../apps.html">Nástroje</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Oblíbené</h4>
+                <ul>
+                    <li><a href="../notebooklm/index.html">NotebookLM</a></li>
+                    <li><a href="../tutorials.html">Návody</a></li>
+                    <li><a href="../apps.html">AI Nástroje</a></li>
+                    <li><a href="../index.html#about">O projektu</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025–2026 AI Educator. Vzdělávání s pomocí umělé inteligence.</p>
+        </div>
     </footer>
 </body>
 
